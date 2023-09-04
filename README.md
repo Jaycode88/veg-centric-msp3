@@ -22,7 +22,8 @@ add recipes.html and base.html using touch command  touch templates/base.html
 add static directory for css images js etc
 added database connection test code to display some basic data from the MongoDB
 built basic base template
-add external and project stylesheets links in head of base
+add external(materialize and fontawesome) and project stylesheets links in head of base 
+add script tags for font awesome jquery materialize and custom script
 
 
 
