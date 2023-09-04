@@ -17,8 +17,10 @@ mongo uri requried finding python version using command python --version
 update mongo uri on heroku app config
 Create a PyMongo instance linked to the Flask app for database access
 add needed imports from flask in app.py 
-add a templates directory used by python to render pages.
-add recipes.html and base.html
+add a templates directory used by python to render pages. using command mkdir templates
+add recipes.html and base.html using touch command  touch templates/base.html
+add static directory for css images js 
+
 
 
 
