@@ -22,19 +22,8 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 # Set the secret key for Flask application
 app.secret_key = os.environ.get("SECRET_KEY")
 
-# tests 
-print("MONGO_DBNAME:", app.config["MONGO_DBNAME"])
-print("MONGO_URI:", app.config["MONGO_URI"])
-
-
-try:
-    database = PyMongo(app)
-except Exception as e:
-    print("Error initializing PyMongo:", e)
-
-
 # Create a PyMongo instance linked to the Flask app for database access
-# database = PyMongo(app)
+database = PyMongo(app)
 
 
 # App routes
