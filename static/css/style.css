@@ -1,0 +1,45 @@
+/* Navbar */
+.nav-wrapper {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+/* Navbar media queries */
+@media only screen and (max-width: 992px) {
+    /* Hide the desktop navigation and show the mobile dropdown trigger */
+    #nav-desktop {
+      display: none;
+    }
+    .dropdown-trigger.hide-on-large-only {
+      display: block;
+      padding: 10px;
+      padding-top: 0px;
+      
+    }
+    .dropdown-content li a {
+        color: white;
+      }
+  }
+  @media only screen and (min-width: 993px) {
+    /* Hide the mobile dropdown trigger and show the desktop navigation */
+    #nav-desktop {
+      display: block;
+    }
+    .dropdown-trigger.hide-on-large-only {
+      display: none;
+    }
+    .dropdown-content li a {
+        color: white;
+      }
+  }
+  @media (max-width:600px) {
+    .dropdown-trigger.hide-on-large-only {
+        display: block;
+        padding: 10px;
+        padding-top: 20px;
+    }
+    .dropdown-content li a {
+        color: white;
+      }
+}
