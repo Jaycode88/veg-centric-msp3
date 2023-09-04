@@ -13,6 +13,9 @@ use terminal command: pip3 freeze --local > requirements.txt to create and updat
 Attempted to install dns python using command pip3 install dnspython but found it was already installed
 Updated requrements.txt file using command  pip3 freeze --local > requirements.txt this is for heroku so it knows what is required to run the app.
 
+mongo uri requried finding python version using command python --version 
+update mongo uri on heroku app config
+
 
 
 
