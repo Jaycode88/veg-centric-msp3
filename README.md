@@ -24,6 +24,7 @@ added database connection test code to display some basic data from the MongoDB
 built basic base template
 add external(materialize and fontawesome) and project stylesheets links in head of base 
 add script tags for font awesome jquery materialize and custom script
+create materialize navbar with mobile dropdown styl with css and functionality with JS. 
 
 
 
