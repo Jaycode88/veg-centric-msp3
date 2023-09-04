@@ -10,7 +10,8 @@ use terminal command: pip3 freeze --local > requirements.txt to create and updat
  Remove extra blank line at end of Procfile as this may cause issues with Flask 
  created app on flask website and add deatails from env.py to the config vars in flask app settings
  Installed flask pymongo using command pip3 install flask-pymongo
-
+Attempted to install dns python using command pip3 install dnspython but found it was already installed
+Updated requrements.txt file using command  pip3 freeze --local > requirements.txt this is for heroku so it knows what is required to run the app.
 
 
 
