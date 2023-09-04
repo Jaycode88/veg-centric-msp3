@@ -5,6 +5,7 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from werkzeug.security import generate_password_hash, check_password_hash
 
 # Check for existence of 'env.py' and import if it exists
 if os.path.exists("env.py"):
@@ -26,7 +27,7 @@ print("MONGO_URI:", app.config["MONGO_URI"])
 
 
 try:
-    db = PyMongo(app)
+    database = PyMongo(app)
 except Exception as e:
     print("Error initializing PyMongo:", e)
 
@@ -40,7 +41,7 @@ except Exception as e:
 @app.route("/")
 @app.route("/show_recipes")
 def show_recipes():
-    recipes = list(db.db.recipes.find())
+    recipes = database.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
 
 
