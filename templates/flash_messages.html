@@ -1,0 +1,11 @@
+<section>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="row flashes message-margin">
+                    <h4 class="amber lighten-3 center-align message-padding">{{ message }}</h4>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</section>

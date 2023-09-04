@@ -3,6 +3,16 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+/* flash messages */
+.message-margin {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding:5px;
+}
+
+.message-padding {
+  padding: 5px;
+}
 
 /* text */
 .text-shadow {
