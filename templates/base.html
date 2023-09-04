@@ -12,6 +12,32 @@
     <title>Veg-Centric Recipes</title>
 </head>
 <body>
+    <header>
+        <!-- Nav Bar -->
+        <nav class="text-shadow deep-orange accent-2">
+            <div class="nav-wrapper">
+              <a href="{{ url_for('show_recipes') }}" class="brand-logo">Veg-Centric</a>
+              <!-- Side Navigation for Larger Screens -->
+              <ul id="nav-desktop" class="right hide-on-med-and-down">
+                <li><a href="{{ url_for('show_recipes') }}">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Add Recipe</a></li>
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="#">Sign Out</a></li>
+              </ul>
+              <!-- Dropdown for Mobile -->
+              <a class="dropdown-trigger hide-on-large-only" href="#" data-target="mobile-dropdown"><i class="fas fa-solid fa-bars left"></i></a>
+              <ul id="mobile-dropdown" class="dropdown-content deep-orange accent-2">
+                <li><a href="{{ url_for('show_recipes') }}">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Add Recipe</a></li>
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="#">Sign Out</a></li>
+            </div>
+        </nav>
+      </header>
 
     {% block content %}
     {% endblock %}
