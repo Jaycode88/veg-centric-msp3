@@ -50,6 +50,13 @@ def show_recipes():
 @app.route("/sign_up", methods=["GET", "POST"])
 def sign_up():
     if request.method == "POST":
+        # check passwords match
+        password = request.form.get("password")
+        confirm_password = request.form.get("confirm_password")
+        # if passwords dont match return flash message
+        if password != confirm_password:
+            flash("Passwords do not match", "error")
+            return redirect(url_for("sign_up"))
         # Check username is not already taken
         existing_user = database.db.users.find_one(
             {"username": request.form.get("username").lower()})

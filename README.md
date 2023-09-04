@@ -30,6 +30,8 @@ built functionality from sign up form to database. had to import date time to th
 used werkzueg security to hash password to be stored onto the database.
 added confirm password on sign up for good practice 
 after sign up put user into session to be changed to request sign in when sign in built
+built flash message display html, added to template and styled
+deleted js function for checking passwords match and added it to the python sign_up function this was to achieve not seeing  the js alert message that appears in a pop-up form now after change it it a flash message that is rendered to display where all over flash messages display.    
 
 
 
