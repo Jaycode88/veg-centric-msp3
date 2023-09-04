@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veg-Centric</title>
+</head>
+<body>
+    <h1>Recipes</h1>
+    {% for recipe in recipes %}
+        {{ recipe.recipe_name }}<br>
+        {{ recipe.category }}<br>
+        {{ recipe.recipe_description }}<br>
+        
+    {% endfor %}
+
+</body>
+</html>
