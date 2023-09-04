@@ -19,7 +19,9 @@ Create a PyMongo instance linked to the Flask app for database access
 add needed imports from flask in app.py 
 add a templates directory used by python to render pages. using command mkdir templates
 add recipes.html and base.html using touch command  touch templates/base.html
-add static directory for css images js 
+add static directory for css images js etc
+added database connection test code to display some basic data from the MongoDB
+built basic base template
 
 
 
