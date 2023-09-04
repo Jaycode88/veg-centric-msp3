@@ -24,11 +24,13 @@ app.secret_key = os.environ.get("SECRET_KEY")
 database = PyMongo(app)
 
 
-# Define a route for the root URL
+# App routes
+# Home page Recipes
 @app.route("/")
 @app.route("/show_recipes")
 def show_recipes():
-    return "Flask app setup test"
+    recipes = database.db.recipes.find()
+    return render_template("recipes.html", recipes=recipes)
 
 
 # Run the Flask app if this script is the main entry point
