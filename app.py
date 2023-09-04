@@ -1,5 +1,6 @@
 # Import statements
 import os
+import datetime
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -43,6 +44,41 @@ except Exception as e:
 def show_recipes():
     recipes = database.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
+
+
+# sign up page
+@app.route("/sign_up", methods=["GET", "POST"])
+def sign_up():
+    if request.method == "POST":
+        # Check username is not already taken
+        existing_user = database.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+        if existing_user:
+            flash("Username already in use")
+            return redirect(url_for("sign_up"))
+
+        hashed_password = generate_password_hash(
+            request.form.get("password"), method='pbkdf2:sha256',
+            salt_length=16)
+        register = {
+            "firstname": request.form.get("firstname").lower(),
+            "lastname": request.form.get("lastname").lower(),
+            "email": request.form.get("email"),
+            "username": request.form.get("username").lower(),
+            "password": hashed_password,
+            "member_since": datetime.datetime.now()
+        }
+
+        database.db.users.insert_one(register)
+
+        # put new user into session(change this when sign in page is built,
+        # request sign in after sign up complete)
+        session["user"] = request.form.get("username").lower()
+        flash("Sign Up Successful!")
+        # change to url for profile when profile page is built
+        return redirect(url_for("show_recipes", username=session["user"]))
+
+    return render_template("sign_up.html")
 
 
 # Run the Flask app if this script is the main entry point

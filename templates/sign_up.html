@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block styles %}
+{% endblock %}
+{% block content %}
+<h1 class="center black-text">Sign Up</h1>
+<p class="center black-text">Please fill out to form and hit the "Sign Up" button</p>
+<div class="row">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('sign_up') }}">
+        <div class="card-panel amber lighten-3">
+            <!-- first name -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-id-card deep-orange-text prefix"></i>
+                    <input id="firstname" name="firstname" type="text" class="validate" minlength="2" 
+                    maxlength="30" pattern="^[a-zA-Z]{2,30}$">
+                    <label for="firstname">First Name</label>
+                </div>
+            </div>
+            <!-- last name-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-id-card deep-orange-text prefix"></i>
+                    <input id="lastname" name="lastname" type="text" class="validate" minlength="2" 
+                    maxlength="30" pattern="^[a-zA-Z]{2,30}$">
+                    <label for="lastname">Last Name</label>
+                </div>
+            </div>
+            <!-- email address -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-envelope deep-orange-text prefix"></i>
+                    <input id="email" name="email" type="email" class="validate" minlength="8" 
+                    maxlength="50" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                    <label for="email">Email Address</label>
+                </div>
+            </div>
+            <!-- username -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-user-tag deep-orange-text prefix"></i>
+                    <input id="username" name="username" type="text" class="validate" minlength="5" 
+                    maxlength="20" pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,20}$" required>
+                    <label for="username">UserName</label>
+                </div>
+            </div>
+            <!-- password -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-key deep-orange-text prefix"></i>
+                    <input id="password" name="password" type="password" minlength="6" 
+                    maxlength="15" pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,15}$" class="validate" required>
+                    <label for="password">Password</label>
+                </div>
+            </div>
+             <!-- confirm password -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-key deep-orange-text prefix"></i>
+                    <input id="confirm_password" name="confirm_password" type="password" minlength="6" 
+                    maxlength="15" pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,15}$" class="validate" required>
+                    <label for="confirm_password">Confirm Password</label>
+                </div>
+            </div>
+            <!-- sign up button -->
+            <div class="row">
+                <button type="submit" class="col s12 btn-large green lighten-3 text-shadow black-text"><strong>Sign Up</strong>  <i class="fas fa-user-plus deep-orange-text"></i></button>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <p class="center-align">Already A Member?
+                        <a href="#">Sign In</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+{% block scripts %}
+{% endblock %}
+</body>
+</html>

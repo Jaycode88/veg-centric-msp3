@@ -24,7 +24,12 @@ added database connection test code to display some basic data from the MongoDB
 built basic base template
 add external(materialize and fontawesome) and project stylesheets links in head of base 
 add script tags for font awesome jquery materialize and custom script
-create materialize navbar with mobile dropdown styl with css and functionality with JS. 
+create materialize navbar with mobile dropdown, style with css and functionality with JS. 
+create sign up page using materialize stlying along with materialize form and buttons
+built functionality from sign up form to database. had to import date time to the app.py file to store date user joined.
+used werkzueg security to hash password to be stored onto the database.
+added confirm password on sign up for good practice 
+after sign up put user into session to be changed to request sign in when sign in built
 
 
 
