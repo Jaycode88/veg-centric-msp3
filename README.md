@@ -9,6 +9,7 @@ use terminal command: pip3 freeze --local > requirements.txt to create and updat
  use termianl command: echo web: python app.py > Procfile to create Procfile for flask setup 
  Remove extra blank line at end of Procfile as this may cause issues with Flask 
  created app on flask website and add deatails from env.py to the config vars in flask app settings
+ Installed flask pymongo using command pip3 install flask-pymongo
 
 
 
