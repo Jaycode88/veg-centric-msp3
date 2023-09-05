@@ -31,8 +31,10 @@ used werkzueg security to hash password to be stored onto the database.
 added confirm password on sign up for good practice 
 after sign up put user into session to be changed to request sign in when sign in built
 built flash message display html, added to template and styled
-deleted js function for checking passwords match and added it to the python sign_up function this was to achieve not seeing  the js alert message that appears in a pop-up form now after change it it a flash message that is rendered to display where all over flash messages display.    
-
+deleted js function for checking passwords match and added it to the python sign_up function this was to achieve not seeing  the js alert message that appears in a pop-up form now after change it it a flash message that is rendered to display where all over flash messages display.
+add sign_in.html build materialize sign in form with button
+add sign in url for links to nav bar and at botom of signup and sign in for already signed up? and already a member?
+build sign in functionality check if current user and check password.
 
 
 

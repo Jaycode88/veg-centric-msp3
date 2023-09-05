@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block styles %}
+{% endblock %}
+{% block content %}
+<h1 class="center white-text">Sign In</h1>
+
+<div class="row">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('sign_in') }}">
+        <div class="card-panel amber lighten-3">
+            <!-- username -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-user-tag deep-orange-text prefix"></i>
+                    <input id="username" name="username" type="text" class="validate" minlength="5" 
+                    maxlength="20" pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,20}$" required>
+                    <label for="username">UserName</label>
+                </div>
+            </div>
+            <!-- password -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-key deep-orange-text prefix"></i>
+                    <input id="password" name="password" type="password" minlength="6" 
+                    maxlength="15" pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,15}$" class="validate" required>
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <!-- sign in button -->
+            <div class="row">
+                <button type="submit" class="col s12 btn-large green lighten-3 text-shadow black-text"><strong>Sign In</strong>  <i class="fas fa-arrow-right deep-orange-text"></i></button>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <p class="center-align">Not A Member yet?
+                        <a href="{{ url_for('sign_up') }}">Sign Up</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
+{% block scripts %}
+{% endblock %}
+</body>
+</html>

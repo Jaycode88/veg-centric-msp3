@@ -77,6 +77,37 @@ def sign_up():
     return render_template("sign_up.html")
 
 
+# sign in authenticate functions
+def authenticate_user(username, password):
+    # Check if the username exists in the database
+    current_user = database.db.users.find_one({"username": username.lower()})
+
+    if current_user:
+        # Ensure hashed password matches user input
+        if check_password_hash(current_user["password"], password):
+            session["user"] = username.lower()
+            flash("Welcome, {}".format(username))
+            return True
+    return False
+
+
+# sign in page
+@app.route("/sign_in", methods=["GET", "POST"])
+def sign_in():
+    if request.method == "POST":
+        username = request.form.get("username")
+        password = request.form.get("password")
+
+        if authenticate_user(username, password):
+            # change to url for profile when profile page built
+            return redirect(url_for("show_recipes", username=session["user"]))
+        else:
+            flash("Incorrect Username and/or Password")
+            return redirect(url_for("sign_in"))
+
+    return render_template("sign_in.html")
+
+
 # Run the Flask app if this script is the main entry point
 if __name__ == "__main__":
     # Retrieve IP and PORT from environment variables
