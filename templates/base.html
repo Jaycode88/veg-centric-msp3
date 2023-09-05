@@ -25,23 +25,35 @@
 
               <!-- TopBar Navigation for Larger Screens -->
               <ul id="nav-desktop" class="right hide-on-med-and-down">
+                {% if session.user %}
                 <li><a href="{{ url_for('show_recipes') }}">Home</a></li>
-                <li><a href="#">About</a></li>
                 <li><a href="#">Add Recipe</a></li>
-                <li><a href="{{ url_for('sign_in') }}">Sign In</a></li>
-                <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
+                <li><a href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
                 <li><a href="{{ url_for('sign_out') }}">Sign Out</a></li>
+                <li><a href="#">About</a></li>
+                {% else %}
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="{{ url_for('sign_in')}}">Sign In</a></li>
+                <li><a href="{{ url_for('sign_up')}}">Sign Up</a></li>
+                {% endif %}
               </ul>
 
               <!-- Dropdown Navigation for Mobile -->
               <a class="dropdown-trigger hide-on-large-only" href="#" data-target="mobile-dropdown"><i class="fas fa-solid fa-bars left"></i></a>
               <ul id="mobile-dropdown" class="dropdown-content deep-orange accent-2">
+                {% if session.user %}
                 <li><a href="{{ url_for('show_recipes') }}">Home</a></li>
-                <li><a href="#">About</a></li>
                 <li><a href="#">Add Recipe</a></li>
-                <li><a href="{{ url_for('sign_in') }}">Sign In</a></li>
-                <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
+                <li><a href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
                 <li><a href="{{ url_for('sign_out') }}">Sign Out</a></li>
+                <li><a href="#">About</a></li>
+                {% else %}
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="{{ url_for('sign_in')}}">Sign In</a></li>
+                <li><a href="{{ url_for('sign_up')}}">Sign Up</a></li>
+                {% endif %}
             </div>
         </nav>
       </header>

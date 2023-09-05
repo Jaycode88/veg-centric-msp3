@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block styles %}
+{% endblock %}
+{% block content %}
+<!-- Profile page title with username -->
+<h1 class="center white-text">{{ user.username }}'s Profile</h1>
+
+<!-- Profile details card -->
+<div class="row">
+    <div class="col s12 m8 offset-m2">
+        <div class="card-panel amber lighten-3 text-break">
+            <h3 class="left-align black-text">
+               Username:<br>   {{ user.username }}<br>
+               First Name:<br>  {{ user.firstname.capitalize() }}<br>
+               Last Name:<br>  {{ user.lastname.capitalize() }}<br>
+               Email Address:<br>  {{ user.email }}<br>
+            
+            </h3>
+        </div>
+    </div>
+</div>
+<!-- Edit profile functionality to add -->
+<!-- My recipes section/card to add -->
+{% endblock %}
+{% block scripts %}
+{% endblock %}
+
+</body>
+</html>

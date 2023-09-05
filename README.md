@@ -39,6 +39,9 @@ Updated registration process: After successful registration, users are now redir
 Add detailed doc string notes
 add sign out functionality and links
 build show recipes page using Materialize cards
+Build basic profile page showing user details need to add edit option and my recipes section
+Add functionality for profile page and add to navbar for user in session only
+Sort nav bar for users in session and users not in session
 
 
 nb

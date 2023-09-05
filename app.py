@@ -144,6 +144,30 @@ def sign_in():
     return render_template("sign_in.html")
 
 
+@app.route("/profile", methods=["GET", "POST"])
+def profile():
+    """
+    Display the user's profile page if they are authenticated.
+
+    Retrieves the username from the session, fetches user's data from database.
+    If the user is in session, profile information is rendered on profile page.
+    If the user is not in session, a flash message is displayed and
+    they are redirected to the sign-in page.
+
+    Returns:
+        flask.Response: Renders profile page or redirects to the sign-in page.
+    """
+    username = session.get("user")
+
+    if username:
+        user = database.db.users.find_one({"username": username})
+        return render_template("profile.html", user=user)
+    else:
+        # Handle case when the user is not in session
+        flash("Please sign in to access your profile.")
+        return redirect(url_for("sign_in"))
+
+
 # sign out function
 @app.route("/sign_out")
 def sign_out():
