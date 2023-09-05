@@ -44,6 +44,7 @@ Add functionality for profile page and add to navbar for user in session only
 Sort nav bar for users in session and users not in session
 updated profile page with edit profile button need to add edit functionality did try got stuck will return
 Build welcome page as home page for users not in session this page is to encourage not members to join.
+Build about page
 
 
 nb

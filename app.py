@@ -58,6 +58,18 @@ def welcome():
     return render_template("welcome.html")
 
 
+# About page
+@app.route("/about")
+def about():
+    """
+    This function renders and displays the 'About' page.
+
+    Returns:
+        rendered HTML template for the About page.
+    """
+    return render_template("about.html")
+
+
 # sign up page
 @app.route("/sign_up", methods=["GET", "POST"])
 def sign_up():
