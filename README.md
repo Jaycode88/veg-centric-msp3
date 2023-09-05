@@ -38,6 +38,7 @@ build sign in functionality check if current user and check password.
 Updated registration process: After successful registration, users are now redirected to the sign-in page with a success message
 Add detailed doc string notes
 add sign out functionality and links
+build show recipes page using Materialize cards
 
 
 nb

@@ -150,7 +150,8 @@ def sign_out():
     """
     Sign out the user and redirect to the sign-in page.
 
-    Displays a flash message to indicate successful logout and removes the user from the session.
+    Displays a flash message to indicate successful logout,
+    Removes the user from the session.
 
     Returns:
         flask.Response: Redirects the user to the sign-in page.

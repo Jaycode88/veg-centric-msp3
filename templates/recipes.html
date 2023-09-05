@@ -2,16 +2,40 @@
 {% block styles %}
 {% endblock %}
 {% block content %}
+<!-- Recipe page title -->
+<h2 class="black-text center">Recipes</h2>
 
-    <h1>Recipes</h1>
-    {% for recipe in recipes %}
-        {{ recipe.recipe_name }}<br>
-        {{ recipe.category }}<br>
-        {{ recipe.recipe_description }}<br>
-        
-    {% endfor %}
+{% for recipe in recipes %}
+<!-- Recipe Card -->
+<div class="row center-align">
+    <div class="col s10 m8 offset-m2">
+        <div class="card large">
+            <!-- Recipe Image-->
+            <div class="card-image">
+                <img src="#">
+                <div class="card-title">
+                    <!-- Recipe Name and Category -->
+                    <h2>{{ recipe.recipe_name }}</h2><br>
+                    <h3>{{ recipe.category_name }}</h3>
+                </div>
+            </div>
+            <div class="card-content">
+                <!-- Recipe Description, Author, and Date -->
+                <p>Description: {{ recipe.recipe_description}}</p>
+                <p>Posted By: {{ recipe.created_by }}</p>
+                <p>Date Posted: {{ recipe.date_added }}</p>
+            </div>
+            <div class="card-action">
+                <!-- Recipe Details link -->
+                <a href="#">View Recipe</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
 {% endblock %}
 {% block scripts %}
 {% endblock %}
 </body>
+
 </html>
