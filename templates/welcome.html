@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block styles %}
+{% endblock %}
+{% block content %}
+<!-- Page Title -->
+<h1 class="center white-text">Veg Centric</h1>
+<!-- welcome card -->
+<div class="row">
+    <div class="col s12 m10 offset-m1">
+        <div class="card-panel center-content amber lighten-3">
+            <h2 class="center-align">Welcome to Veg-Centric Recipes:<br>Where Flavor Meets Freshness!</h2>
+            <!-- Introduction Paragraphs -->
+            <p>Are you ready to embark on a culinary adventure that celebrates
+                the bountiful world of vegetables while savoring the rich flavors
+                of meat? Look no further!</p>
+            <p>At Veg-Centric Recipes, we believe that the key to a healthier and
+                more satisfying meal lies in embracing the vibrant world of vegetables,
+                without giving up your favorite meaty indulgences. We're passionate about
+                transforming traditional recipes into veg-centric masterpieces, adding an
+                abundance of colorful veggies to your plate without compromising on taste 
+                or variety.</p>
+            <h3 class="center-align">Join the Veg-Centric Revolution Now!</h3>
+            <!-- Sign up and sign in buttons -->
+            <a href="{{ url_for('sign_up') }}" role="button" class="btn deep-orange accent-2 white-text btn-center btn-large">Sign up</a>
+            <p class="center-align"><strong>Already a Member?</strong></p>
+            <a href="{{ url_for('sign_in') }}" role="button" class="btn deep-orange accent-2 white-text btn-center btn-large">Sign in</a>
+        </div>
+    </div>
+</div>
+<!-- Place cards or carousel to showcase some recipes Here -->
+<!-- Why join us card -->
+<div class="row">
+    <div class="col s12 m10 offset-m1">
+        <div class="card-panel center-content amber lighten-3">
+            <h3 class="center-align">Why Join Us?</h3>
+            <p><strong>🌱Discover Flavorful Fusion:</strong> Our community is all about creating
+                meals that are as delicious as they are nutritious. Explore a treasure trove of
+                recipes that infuse the goodness of vegetables into your favorite dishes, offering
+                a symphony of flavors that will tantalize your taste buds.</p>
+            <p><strong>🥕 Endless Inspiration:</strong> Whether you're a seasoned chef or a kitchen
+                newbie, Veg-Centric Recipes is your go-to source for culinary inspiration. Browse
+                through a diverse collection of recipes submitted by food enthusiasts from around
+                the world. From classic comfort foods to international delights, you'll find something
+                to satisfy every craving.</p>
+            <p><strong>👨‍🍳 Share Your Creations:</strong> Do you have your own veg-centric recipes that
+                you're eager to showcase? As a member, you can join our vibrant community and share your
+                culinary creations with like-minded foodies. Your recipes can inspire others to experiment
+                in the kitchen and make healthier, veg-centric choices.</p>
+            <p><strong>📚 Stay Updated:</strong>Stay in the loop with our latest recipe additions, cooking tips,
+                and nutritional insights. We're committed to helping you make informed choices about your meals,
+                all while enjoying the delicious journey of veg-centric cooking.</p>
+            <p>Joining Veg-Centric Recipes is absolutely free and takes just a few seconds. By becoming a member,
+                you'll unlock a world of flavorful possibilities, connect with fellow food enthusiasts, and embark
+                on a culinary journey like no other.</p>
+            <p>So, why wait? Sign up today, and let's embark on a veg-centric adventure together!</p>
+            <h3 class="center-align">Join the Veg-Centric Revolution Now!</h3>
+            <!-- Sign up and sign in buttons -->
+            <a href="{{ url_for('sign_up') }}" role="button" class="btn deep-orange accent-2 white-text btn-center btn-large">Sign up</a>
+            <p class="center-align"><strong>Already a Member?</strong></p>
+            <a href="{{ url_for('sign_in') }}" role="button" class="btn deep-orange accent-2 white-text btn-center btn-large">Sign in</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+{% endblock %}
+
+</body>
+</html>

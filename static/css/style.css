@@ -31,6 +31,13 @@ body {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
+/* welcome page */
+/* sign up and sign in button position */
+.btn-center {
+  display: block;
+  align-items: center;
+}
+
 /* Navbar media queries */
 @media only screen and (max-width: 992px) {
     /* Hide the desktop navigation and show the mobile dropdown trigger */

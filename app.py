@@ -28,7 +28,7 @@ database = PyMongo(app)
 
 # App routes
 
-# Home page displaying Recipes
+# Home page displaying Recipes for users in session
 @app.route("/")
 @app.route("/show_recipes")
 def show_recipes():
@@ -40,6 +40,22 @@ def show_recipes():
     """
     recipes = database.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
+
+
+# homepage for users not in session
+@app.route("/welcome")
+def welcome():
+    """
+    Renders the welcome page.
+
+    This route is used to display a welcome page for users who are not
+    currently in a session. It provides information about the
+    application and encourages users to sign in or create an account.
+
+    Returns:
+        flask.Response: The HTML response containing the welcome page.
+    """
+    return render_template("welcome.html")
 
 
 # sign up page
