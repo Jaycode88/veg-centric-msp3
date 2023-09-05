@@ -69,10 +69,9 @@ def sign_up():
 
         # put new user into session(change this when sign in page is built,
         # request sign in after sign up complete)
-        session["user"] = request.form.get("username").lower()
-        flash("Sign Up Successful!")
+        flash("Sign Up Successful! Please now Sign in with your credentials")
         # change to url for profile when profile page is built
-        return redirect(url_for("show_recipes", username=session["user"]))
+        return redirect(url_for("sign_in"))
 
     return render_template("sign_up.html")
 
@@ -85,6 +84,7 @@ def authenticate_user(username, password):
     if current_user:
         # Ensure hashed password matches user input
         if check_password_hash(current_user["password"], password):
+            # put user into session
             session["user"] = username.lower()
             flash("Welcome, {}".format(username))
             return True
