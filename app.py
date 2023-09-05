@@ -144,6 +144,22 @@ def sign_in():
     return render_template("sign_in.html")
 
 
+# sign out function
+@app.route("/sign_out")
+def sign_out():
+    """
+    Sign out the user and redirect to the sign-in page.
+
+    Displays a flash message to indicate successful logout and removes the user from the session.
+
+    Returns:
+        flask.Response: Redirects the user to the sign-in page.
+    """
+    flash("You have logged out")
+    session.pop("user", None)
+    return redirect(url_for("sign_in"))
+
+
 # Run the Flask app if this script is the main entry point
 if __name__ == "__main__":
     # Retrieve IP and PORT from environment variables
