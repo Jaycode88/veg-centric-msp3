@@ -1,21 +1,25 @@
 /* Navbar */
 .nav-wrapper {
+  /* Add margins to the left and right of the navigation bar */
     margin-left: 10px;
     margin-right: 10px;
 }
 /* flash messages */
 .message-margin {
+  /* Add margins and padding to flash messages */
   margin-left: 5px;
   margin-right: 5px;
   padding:5px;
 }
 
 .message-padding {
+  /* Add padding to flash messages */
   padding: 5px;
 }
 
-/* text */
+/* text styles */
 .text-shadow {
+  /* Apply a subtle text shadow for aesthetical purpose */
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 

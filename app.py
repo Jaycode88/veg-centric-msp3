@@ -1,4 +1,4 @@
-# Import statements
+# Import modules
 import os
 import datetime
 from flask import (
@@ -27,10 +27,17 @@ database = PyMongo(app)
 
 
 # App routes
-# Home page Recipes
+
+# Home page displaying Recipes
 @app.route("/")
 @app.route("/show_recipes")
 def show_recipes():
+    """
+    Displays a list of recipes on the home page.
+
+    Returns:
+        Flask.render_template: HTML template rendering the list of recipes.
+    """
     recipes = database.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
 
@@ -38,11 +45,18 @@ def show_recipes():
 # sign up page
 @app.route("/sign_up", methods=["GET", "POST"])
 def sign_up():
+    """
+    Handles user registration.
+
+    Returns:
+        Flask.redirect: Redirects to the sign-in page after sign up complete.
+        Flask.render_template: HTML template rendering the sign-up page.
+    """
     if request.method == "POST":
         # check passwords match
         password = request.form.get("password")
         confirm_password = request.form.get("confirm_password")
-        # if passwords dont match return flash message
+        # if passwords dont match return flash error message
         if password != confirm_password:
             flash("Passwords do not match", "error")
             return redirect(url_for("sign_up"))
@@ -52,7 +66,7 @@ def sign_up():
         if existing_user:
             flash("Username already in use")
             return redirect(url_for("sign_up"))
-
+        # Hash the password using werkzueg and create user document
         hashed_password = generate_password_hash(
             request.form.get("password"), method='pbkdf2:sha256',
             salt_length=16)
@@ -65,19 +79,30 @@ def sign_up():
             "member_since": datetime.datetime.now()
         }
 
+        # Insert user document to database
         database.db.users.insert_one(register)
 
-        # put new user into session(change this when sign in page is built,
-        # request sign in after sign up complete)
+        # Display a flash message indicating successful sign-up,
+        # request sign_in
         flash("Sign Up Successful! Please now Sign in with your credentials")
-        # change to url for profile when profile page is built
         return redirect(url_for("sign_in"))
 
+    # Render the sign up page
     return render_template("sign_up.html")
 
 
 # sign in authenticate functions
 def authenticate_user(username, password):
+    """
+    Authenticates a user based on their username and password.
+
+    Args:
+        username (str): The username provided by the user.
+        password (str): The password provided by the user.
+
+    Returns:
+        bool: True if authentication is successful, False otherwise.
+    """
     # Check if the username exists in the database
     current_user = database.db.users.find_one({"username": username.lower()})
 
@@ -86,6 +111,7 @@ def authenticate_user(username, password):
         if check_password_hash(current_user["password"], password):
             # put user into session
             session["user"] = username.lower()
+            # Display welcome Flash message
             flash("Welcome, {}".format(username))
             return True
     return False
@@ -94,17 +120,27 @@ def authenticate_user(username, password):
 # sign in page
 @app.route("/sign_in", methods=["GET", "POST"])
 def sign_in():
+    """
+    Handles user sign-in.
+
+    Returns:
+        Flask.redirect: Redirects to the profile page after successful sign-in.
+        Flask.redirect: Redirect to sign-in with error flash if sign-in fails.
+        Flask.render_template: HTML template rendering the sign-in page.
+    """
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
 
         if authenticate_user(username, password):
+            # redirect to show_recipes
             # change to url for profile when profile page built
             return redirect(url_for("show_recipes", username=session["user"]))
         else:
             flash("Incorrect Username and/or Password")
             return redirect(url_for("sign_in"))
 
+    # Render sign in page
     return render_template("sign_in.html")
 
 
