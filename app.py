@@ -196,6 +196,13 @@ def profile():
         return redirect(url_for("sign_in"))
 
 
+# Add recipe page
+@app.route("/add_recipe")
+def add_recipe():
+    categories = database.db.categories.find().sort("category", 1)
+    return render_template("add_recipe.html", categories=categories)
+
+
 # sign out function
 @app.route("/sign_out")
 def sign_out():

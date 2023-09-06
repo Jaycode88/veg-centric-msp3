@@ -12,6 +12,7 @@ body {
     margin-left: 10px;
     margin-right: 10px;
 }
+
 /* flash messages */
 .message-margin {
   /* Add margins and padding to flash messages */
@@ -36,6 +37,20 @@ body {
 .btn-center {
   display: block;
   align-items: center;
+}
+
+/* text area on add-recipe form*/
+ /* placeholder text within the textarea */
+ ::placeholder {
+  color: #a19d9d;
+}
+
+/* The textarea itself */
+#recipe_description {
+  width: 80%;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid #ccc;
 }
 
 /* Navbar media queries */

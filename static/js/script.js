@@ -9,3 +9,11 @@ $(document).ready(function() {
     var dropdownMobile = $('.dropdown-trigger');
     dropdownMobile.dropdown();
 });
+
+/**
+ * Initialize the category selection dropdown on the Add Recipe page.
+ * This function should be called when the document is ready.
+ */
+$(document).ready(function(){
+    $('select').formSelect();
+  });
