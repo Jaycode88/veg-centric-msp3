@@ -10,11 +10,11 @@
 <!-- Sign up form -->
 <div class="row">
     <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('sign_up') }}">
-        <div class="card-panel amber lighten-3">
+        <div class="card-panel custom-yellow">
             <!-- first name -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-id-card deep-orange-text prefix"></i>
+                    <i class="fas fa-id-card custom-orange-text prefix"></i>
                     <input id="firstname" name="firstname" type="text" class="validate" minlength="2" 
                     maxlength="30" pattern="^[a-zA-Z]{2,30}$" required>
                     <label for="firstname">First Name</label>
@@ -23,7 +23,7 @@
             <!-- last name-->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-id-card deep-orange-text prefix"></i>
+                    <i class="fas fa-id-card custom-orange-text prefix"></i>
                     <input id="lastname" name="lastname" type="text" class="validate" minlength="2" 
                     maxlength="30" pattern="^[a-zA-Z]{2,30}$" required>
                     <label for="lastname">Last Name</label>
@@ -32,7 +32,7 @@
             <!-- email address -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-envelope deep-orange-text prefix"></i>
+                    <i class="fas fa-envelope custom-orange-text prefix"></i>
                     <input id="email" name="email" type="email" class="validate" minlength="8" 
                     maxlength="50" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
                     <label for="email">Email Address</label>
@@ -41,7 +41,7 @@
             <!-- username -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-user-tag deep-orange-text prefix"></i>
+                    <i class="fas fa-user-tag custom-orange-text prefix"></i>
                     <input id="username" name="username" type="text" class="validate" minlength="5" 
                     maxlength="20" pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,20}$" required>
                     <label for="username">UserName</label>
@@ -50,7 +50,7 @@
             <!-- password -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-key deep-orange-text prefix"></i>
+                    <i class="fas fa-key custom-orange-text prefix"></i>
                     <input id="password" name="password" type="password" minlength="6" 
                     maxlength="15" pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,15}$" class="validate" required>
                     <label for="password">Password</label>
@@ -59,7 +59,7 @@
              <!-- confirm password -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-key deep-orange-text prefix"></i>
+                    <i class="fas fa-key custom-orange-text prefix"></i>
                     <input id="confirm_password" name="confirm_password" type="password" minlength="6" 
                     maxlength="15" pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,15}$" class="validate" required>
                     <label for="confirm_password">Confirm Password</label>
@@ -67,7 +67,7 @@
             </div>
             <!-- sign up button -->
             <div class="row">
-                <button type="submit" class="col s12 btn-large green lighten-3 text-shadow black-text"><strong>Sign Up</strong>  <i class="fas fa-user-plus deep-orange-text"></i></button>
+                <button type="submit" class="col s12 btn-large custom-red text-shadow white-text"><strong>Sign Up</strong>  <i class="fas fa-user-plus custom-orange-text"></i></button>
             </div>
             <!-- Sign in link -->
             <div class="row">

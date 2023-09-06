@@ -9,11 +9,11 @@
 <!-- Sign in form -->
 <div class="row">
     <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('sign_in') }}">
-        <div class="card-panel amber lighten-3">
+        <div class="card-panel custom-yellow">
             <!-- username -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-user-tag deep-orange-text prefix"></i>
+                    <i class="fas fa-user-tag custom-orange-text prefix"></i>
                     <input id="username" name="username" type="text" class="validate" minlength="5" 
                     maxlength="20" pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,20}$" required>
                     <label for="username">UserName</label>
@@ -22,7 +22,7 @@
             <!-- password -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-key deep-orange-text prefix"></i>
+                    <i class="fas fa-key custom-orange-text prefix"></i>
                     <input id="password" name="password" type="password" minlength="6" 
                     maxlength="15" pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,15}$" class="validate" required>
                     <label for="password">Password</label>
@@ -30,7 +30,7 @@
             </div>
             <!-- sign in button -->
             <div class="row">
-                <button type="submit" class="col s12 btn-large green lighten-3 text-shadow black-text"><strong>Sign In</strong>  <i class="fas fa-arrow-right deep-orange-text"></i></button>
+                <button type="submit" class="col s12 btn-large custom-red text-shadow white-text"><strong>Sign In</strong>  <i class="fas fa-arrow-right custom-orange-text"></i></button>
             </div>
             <!-- Sign up link -->
             <div class="row">

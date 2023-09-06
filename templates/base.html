@@ -18,7 +18,7 @@
 <body>
     <header>
         <!-- Nav Bar -->
-        <nav class="text-shadow deep-orange accent-2">
+        <nav class="text-shadow custom-red">
             <div class="nav-wrapper">
               <!-- Brand Logo -->
               <a href="{{ url_for('show_recipes') }}" class="brand-logo">Veg-Centric</a>
@@ -41,7 +41,7 @@
 
               <!-- Dropdown Navigation for Mobile -->
               <a class="dropdown-trigger hide-on-large-only" href="#" data-target="mobile-dropdown"><i class="fas fa-solid fa-bars left"></i></a>
-              <ul id="mobile-dropdown" class="dropdown-content deep-orange accent-2">
+              <ul id="mobile-dropdown" class="dropdown-content custom-red">
                 {% if session.user %}
                 <li><a href="{{ url_for('show_recipes') }}">Home</a></li>
                 <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>

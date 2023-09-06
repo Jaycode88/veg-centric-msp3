@@ -6,6 +6,25 @@ body {
   background-attachment: fixed;
 }
 
+/* Custom color classes */
+.custom-red {
+  background-color: #D90718;
+}
+
+.custom-orange {
+  background-color: #F27D16;
+}
+
+.custom-yellow {
+  background-color: #FFDF3C;
+}
+
+.custom-green {
+  background-color: #728C11;
+}
+.custom-orange-text {
+  color: #F27D16;
+}
 /* Navbar */
 .nav-wrapper {
   /* Add margins to the left and right of the navigation bar */
@@ -30,6 +49,15 @@ body {
 .text-shadow {
   /* Apply a subtle text shadow for aesthetical purpose */
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* button hover colour */
+.btn:hover, .btn-large:hover {
+  background-color: #728C11
+}
+
+.anchor-btn:hover {
+  background-color: #728C11
 }
 
 /* welcome page */

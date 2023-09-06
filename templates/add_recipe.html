@@ -7,7 +7,7 @@
 <h1 class="center white-text">Add A Recipe</h1>
 
 <!-- Materialize card -->
-<div class="row card-panel add-recipe-card center-content amber lighten-3">
+<div class="row card-panel add-recipe-card center-content custom-yellow">
 
     <!-- Add recipe Form -->
     <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
@@ -15,7 +15,7 @@
         <!-- recipe name-->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-utensils deep-orange-text prefix"></i>
+                <i class="fas fa-utensils custom-orange-text prefix"></i>
                 <input id="recipe_name" name="recipe_name" type="text" class="validate" required>
                 <label for="recipe_name">Recipe Name</label>
             </div>
@@ -24,7 +24,7 @@
         <!-- recipe category -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-folder-open deep-orange-text prefix"></i>
+                <i class="fas fa-folder-open custom-orange-text prefix"></i>
                 <select id="category" name="category" class="validate" required>
                     <option value="" disabled selected>Choose Category</option>
                     {% for category in categories %}
@@ -38,7 +38,7 @@
         <!-- Recipe description text area -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-pepper-hot prefix deep-orange-text"></i>
+                <i class="fas fa-pepper-hot prefix custom-orange-text"></i>
                 <textarea id="recipe_description" name="recipe_description"
                     minlength="15" maxlength="80" class="materialize-textarea validate"
                      placeholder="Enter your Recipe description here" required>
@@ -52,7 +52,7 @@
 
         <!-- Add ingredient button -->
         <div>
-            <button id="addIngredientButton" class="btn small waves-effect deep-orange accent-2 waves-light">Add Ingredient</button>
+            <button id="addIngredientButton" class="btn small waves-effect custom-orange waves-light">Add Ingredient</button>
         </div>
 
         <!-- Method fields -->
@@ -61,20 +61,20 @@
 
         <!-- Add Method Step button -->
         <div>
-            <button id="addMethodStepButton" class="btn small waves-effect deep-orange accent-2 waves-light">Add Step</button>
+            <button id="addMethodStepButton" class="btn small waves-effect custom-orange waves-light">Add Step</button>
         </div><br>
 
         <!-- Form Buttons -->
         <div class="row">
             <div class="col s12 center">
                 <!-- post button -->
-                <button class="btn waves-effect deep-orange accent-2 waves-light" type="submit"
+                <button class="btn waves-effect custom-red waves-light" type="submit"
                     name="post_button">Post
-                    <i class="fas fa-paper-plane right"></i>
+                    <i class="fas fa-paper-plane right custom-orange-text"></i>
                 </button>
                 <!-- reset button -->
-                <button class="btn waves-effect waves-light deep-orange accent-2" type="reset" name="reset">Reset
-                    <i class="fas fa-rotate-left right"></i>
+                <button class="btn waves-effect waves-light custom-red" type="reset" name="reset">Reset
+                    <i class="fas fa-rotate-left right custom-orange-text"></i>
                 </button>
             </div>
         </div>
