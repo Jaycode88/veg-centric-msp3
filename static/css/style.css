@@ -58,7 +58,8 @@ body {
 }
 /* button hover colour */
 .btn:hover, .btn-large:hover, .anchor-btn:hover {
-  background-color: #728C11
+  background-color: #728C11;
+  transform: scale(1.075);
 }
 
 /* welcome page */
