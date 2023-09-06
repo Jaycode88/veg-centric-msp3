@@ -25,6 +25,7 @@ body {
 .custom-orange-text {
   color: #F27D16;
 }
+
 /* Navbar */
 .nav-wrapper {
   /* Add margins to the left and right of the navigation bar */
@@ -144,21 +145,21 @@ max-width: 80%;
 /* Media queries for screens smaller than an iPad (max-width: 992px) */
 @media only screen and (max-width: 992px) {
   .col.m6 {
-    width: 100% !important;
-    margin-left: 0 !important;
+    width: 80% !important;
+    margin-left: 10% !important;
   }
 }
 
 /* Media queries for screens smaller than 600px */
 @media only screen and (max-width: 600px) {
   .col.s12 {
-    width: 100% !important;
-    margin-left: 0 !important;
+    width: 90% !important;
+    margin-left: 5% !important;
   }
 }
 
 /* Responsive recipe title */
-@media only screen and (max-width: 428px) {
+@media only screen and (max-width: 477px) {
   .card-title h2 {
     font-size: 2.75rem;
     white-space: nowrap;
@@ -166,5 +167,14 @@ max-width: 80%;
     text-overflow: none;
     margin: 0;
 
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .card-title h2 {
+    font-size: 2.25rem;
+  }
+  .card-title h3 {
+    font-size: 2.75rem;
   }
 }
