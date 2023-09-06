@@ -38,6 +38,19 @@ body {
   display: block;
   align-items: center;
 }
+
+/* show recipes page cards */
+.col.m6 {
+  width: calc(50% - 20px) !important;
+  margin: 0 10px !important;
+}
+
+/* Center-align "View Recipe" links */
+.card-action a {
+  display: block;
+  text-align: center;
+}
+
 /* Add recipe card */
 .add-recipe-card {
 align-content: center;
@@ -96,4 +109,34 @@ max-width: 80%;
     .dropdown-content li a {
         color: white;
       }
+}
+
+/* show recipes media queries */
+/* cards */
+/* Media queries for screens smaller than an iPad (max-width: 992px) */
+@media only screen and (max-width: 992px) {
+  .col.m6 {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+}
+
+/* Media queries for screens smaller than 600px */
+@media only screen and (max-width: 600px) {
+  .col.s12 {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+}
+
+/* Responsive recipe title */
+@media only screen and (max-width: 428px) {
+  .card-title h2 {
+    font-size: 2.75rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: none;
+    margin: 0;
+
+  }
 }

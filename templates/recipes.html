@@ -4,35 +4,38 @@
 {% block content %}
 <!-- Recipe page title -->
 <h2 class="white-text center">Recipes</h2>
-
-{% for recipe in recipes %}
-<!-- Recipe Card -->
-<div class="row center-align">
-    <div class="col s10 m8 offset-m2">
-        <div class="card large">
-            <!-- Recipe Image-->
-            <div class="card-image">
-                <img src="#">
-                <div class="card-title">
-                    <!-- Recipe Name and Category -->
-                    <h2>{{ recipe.recipe_name }}</h2><br>
-                    <h3>{{ recipe.category_name }}</h3>
+<div class="row">
+    {% for recipe in recipes %}
+    <!-- Recipe Card -->
+    
+        <div class="col s12 m6 offset-m2">
+            <div class="card-panel amber lighten-3">
+            <div class="card large">
+                <!-- Recipe Image-->
+                <div class="card-image">
+                    <img src="../static/images/background.webp">
+                    <div class="card-title">
+                        <!-- Recipe Name and Category -->
+                        <h2>{{ recipe.recipe_name }}</h2><br>
+                        <h3>{{ recipe.category }}</h3>
+                    </div>
                 </div>
-            </div>
-            <div class="card-content">
-                <!-- Recipe Description, Author, and Date -->
-                <p>Description: {{ recipe.recipe_description}}</p>
-                <p>Posted By: {{ recipe.created_by }}</p>
-                <p>Date Posted: {{ recipe.date_added }}</p>
-            </div>
-            <div class="card-action">
-                <!-- Recipe Details link -->
-                <a href="#">View Recipe</a>
+                <div class="card-content">
+                    <!-- Recipe Description, Author, and Date -->
+                    <p><strong>{{ recipe.recipe_description}}</strong></p>
+                    <p><strong>Posted By:</strong> {{ recipe.created_by }}</p>
+                    <p><strong>Date Posted:</strong> {{ recipe.date_added }}</p>
+                </div>
+                <div class="card-action">
+                    <!-- Recipe Details link -->
+                    <a href="#">View Recipe</a>
+                </div>
             </div>
         </div>
     </div>
+    {% endfor %}
 </div>
-{% endfor %}
+
 {% endblock %}
 {% block scripts %}
 {% endblock %}
