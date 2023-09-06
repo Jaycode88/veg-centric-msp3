@@ -50,6 +50,8 @@ Add add ingriedient and add method step buttons to add_recipe form create functi
 create add recipe form to db functionality 
 styled add recipe card 
 styled show recipes page so tiles have border to seperate background image display in rows of 2 large screen and list of tiles on screens smaller than ipad
+found new colour scheme on pinterest by lookcolor.ru they didnt add the colour codes so i inserted the picture to adobe color and allowed that to pick the colours from the picture
+added button effects to include colours from them
 
 
 nb
