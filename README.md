@@ -45,7 +45,8 @@ Sort nav bar for users in session and users not in session
 updated profile page with edit profile button need to add edit functionality did try got stuck will return
 Build welcome page as home page for users not in session this page is to encourage not members to join.
 Build about page
-Build basic add recipe form with styling and functional categorie dropdown using python to access categories db and jquery to initialize the drop down. 
+Build basic add recipe form with styling and functional categorie dropdown using python to access categories db and jquery to initialize the drop down.
+Add add ingriedient and add method step buttons to add_recipe form create functionality with jquery 
 
 
 nb
