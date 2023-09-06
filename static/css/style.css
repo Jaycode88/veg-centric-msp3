@@ -38,6 +38,12 @@ body {
   display: block;
   align-items: center;
 }
+/* Add recipe card */
+.add-recipe-card {
+align-content: center;
+margin-left: 10%;
+max-width: 80%;
+}
 
 /* text area on add-recipe form*/
  /* placeholder text within the textarea */

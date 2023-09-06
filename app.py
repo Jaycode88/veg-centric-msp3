@@ -197,8 +197,68 @@ def profile():
 
 
 # Add recipe page
-@app.route("/add_recipe")
+@app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    """
+    Add a new recipe to the database.
+
+    If method is POST, function extracts recipe information from the
+    submitted form, validates it, adds recipe to db. If the method
+    is GET, it renders the page to input a new recipe.
+
+    Parameters:
+    None
+
+    Returns:
+    GET Request:
+        Render 'add_recipe.html' template inc. list categories for selection.
+
+    POST Request:
+        - If successful, flash message, redirect to 'show_recipes' page.
+        - Validation errors, render 'add_recipe.html' with error messages.
+
+    Dependencies:
+    - The 'request' object from Flask to access form data.
+    - The 'session' object to access the current user's information.
+    - The 'datetime' module to record the date of recipe addition.
+    - The 'database' object to interact with the database.
+
+    Note:
+    - Function assumes  existence of 'database.db.recipes', for recipe storage.
+    - It expects fields named 'recipe_name', 'category', 'recipe_description',
+      'method_step[]', 'ingredient[]', and 'quantity[]'.
+    """
+    if request.method == "POST":
+        recipe_name = request.form.get("recipe_name")
+        category = request.form.get("category")
+        recipe_description = request.form.get("recipe_description")
+        created_by = session["user"]
+        ingredients = []
+        method_step = request.form.getlist("method_step[]")
+        date_added = datetime.datetime.now()
+        formatted_date = date_added.strftime('%Y-%m-%d')
+
+        for i in range(len(request.form.getlist("ingredient[]"))):
+            ingredient = {
+                "name": request.form.getlist("ingredient[]")[i],
+                "quantity": request.form.getlist("quantity[]")[i]
+            }
+            ingredients.append(ingredient)
+
+        recipe = {
+            "recipe_name": recipe_name,
+            "category": category,
+            "recipe_description": recipe_description,
+            "created_by": created_by,
+            "date_added": formatted_date,
+            "ingredients": ingredients,
+            "method_step": method_step
+            }
+
+        database.db.recipes.insert_one(recipe)
+        flash("Recipe Successfully Posted")
+        return redirect(url_for("show_recipes"))
+
     categories = database.db.categories.find().sort("category", 1)
     return render_template("add_recipe.html", categories=categories)
 
