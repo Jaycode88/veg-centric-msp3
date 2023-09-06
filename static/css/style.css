@@ -81,6 +81,13 @@ body {
   text-align: center;
 }
 
+/* card scale/zoom */
+.zoom {
+  transition: 1s;
+}
+.zoom:hover {
+  transform: scale(1.05);
+}
 /* Add recipe card */
 .add-recipe-card {
 align-content: center;
