@@ -182,6 +182,7 @@ def sign_in():
     return render_template("sign_in.html")
 
 
+# profile page
 @app.route("/profile", methods=["GET", "POST"])
 def profile():
     """
@@ -204,6 +205,46 @@ def profile():
         # Handle case when the user is not in session
         flash("Please sign in to access your profile.")
         return redirect(url_for("sign_in"))
+
+
+# Edit profile page
+@app.route("/edit_profile", methods=["GET", "POST"])
+def edit_profile():
+    # Get the current user's information from the database
+    username = session.get("user")
+    user = database.db.users.find_one({"username": username})
+
+    if request.method == "POST":
+        # Retrieve and update the user's information from the form
+        user["firstname"] = request.form.get("firstname").capitalize()
+        user["lastname"] = request.form.get("lastname").capitalize()
+        user["email"] = request.form.get("email")
+
+        # Retrieve the new password and confirm it
+        new_password = request.form.get("new_password")
+        confirm_password = request.form.get("confirm_password")
+
+        # Check if the new password matches the confirmation
+        if new_password == confirm_password:
+            # Hash the new password
+            hashed_password = generate_password_hash(
+                new_password, method='pbkdf2:sha256', salt_length=16)
+            
+            # Update the user's information in the database using update_one
+            database.db.users.update_one({"_id": user["_id"]}, {"$set": {
+                "firstname": user["firstname"],
+                "lastname": user["lastname"],
+                "email": user["email"],
+                "password": hashed_password  # Update the password
+            }})
+
+            # Redirect to the user's profile page after editing
+            return redirect(url_for("profile"))
+        else:
+            flash("Passwords do not match. Please try again.", "error")
+
+    # Render the edit profile form
+    return render_template("edit_profile.html", user=user)
 
 
 # Add recipe page

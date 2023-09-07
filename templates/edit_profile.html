@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block styles %}
+{% endblock %}
+{% block content %}
+<!--  edit Profile page title with username -->
+<h1 class="center white-text">Edit {{ user.username }}'s Profile</h1>
+<!-- Edit Profile Form -->
+<div class="row">
+    <div class="col s12 m8 offset-m2">
+        <div class="card-panel custom-yellow">
+            <h3 class="center black-text">Edit Profile</h3>
+            <form method="POST" action="/edit_profile">
+                <div class="input-field">
+                    <input type="text" id="firstname" name="firstname" value="{{ user.firstname }}" required>
+                    <label for="firstname">First Name</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="lastname" name="lastname" value="{{ user.lastname }}" required>
+                    <label for="lastname">Last Name</label>
+                </div>
+                <div class="input-field">
+                    <input type="email" id="email" name="email" value="{{ user.email }}" required>
+                    <label for="email">Email Address</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="new_password" name="new_password" required>
+                    <label for="new_password">New Password</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                    <label for="confirm_password">Confirm New Password</label>
+                </div>
+                <button type="submit" class="btn btn-large anchor-btn custom-red text-shadow white-text">Save Changes</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+{% endblock %}
+</body>
+
+</html>
