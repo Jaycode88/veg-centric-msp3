@@ -10,32 +10,60 @@
         <div class="card-panel custom-yellow">
             <h3 class="center black-text">Edit Profile</h3>
             <form method="POST" action="/edit_profile">
-                <div class="input-field">
-                    <input type="text" id="firstname" name="firstname" value="{{ user.firstname }}" required>
+                <!-- first name -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-id-card custom-orange-text prefix"></i>
+                    <input id="firstname" name="firstname" type="text" class="validate" minlength="2" 
+                    maxlength="30" pattern="^[a-zA-Z]{2,30}$" required>
                     <label for="firstname">First Name</label>
                 </div>
-                <div class="input-field">
-                    <input type="text" id="lastname" name="lastname" value="{{ user.lastname }}" required>
+            </div>
+            <!-- last name-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-id-card custom-orange-text prefix"></i>
+                    <input id="lastname" name="lastname" type="text" class="validate" minlength="2" 
+                    maxlength="30" pattern="^[a-zA-Z]{2,30}$" required>
                     <label for="lastname">Last Name</label>
                 </div>
-                <div class="input-field">
-                    <input type="email" id="email" name="email" value="{{ user.email }}" required>
+            </div>
+            <!-- email address -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-envelope custom-orange-text prefix"></i>
+                    <input id="email" name="email" type="email" class="validate" minlength="8" 
+                    maxlength="50" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
                     <label for="email">Email Address</label>
                 </div>
-                <div class="input-field">
-                    <input type="password" id="new_password" name="new_password" required>
+            </div>
+            <!-- password -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-key custom-orange-text prefix"></i>
+                    <input id="new_password" name="new_password" type="password" minlength="6" 
+                    maxlength="15" pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,15}$" class="validate" required>
                     <label for="new_password">New Password</label>
                 </div>
-                <div class="input-field">
-                    <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+             <!-- confirm password -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-key custom-orange-text prefix"></i>
+                    <input id="confirm_password" name="confirm_password" type="password" minlength="6" 
+                    maxlength="15" pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,15}$" class="validate" required>
                     <label for="confirm_password">Confirm New Password</label>
                 </div>
-                <div class="center">
-                    <a href="{{ url_for('delete_profile') }}" class="btn btn-large anchor-btn custom-red text-shadow white-text">
-                        <strong>Delete Profile</strong> <i class="fas fa-trash-alt custom-orange-text"></i>
-                    </a>
-                    <button type="submit" class="btn btn-large anchor-btn custom-red text-shadow white-text">Save Changes</button>
-                </div>
+            </div>
+            <!-- Buttons to save changes and delete profile -->
+            <div class="center">
+                <a href="{{ url_for('delete_profile') }}"
+                    class="btn btn-large anchor-btn custom-red text-shadow white-text">
+                    <strong>Delete Profile</strong> <i class="fas fa-trash-alt custom-orange-text"></i>
+                </a>
+                <button type="submit" class="btn btn-large anchor-btn custom-red text-shadow white-text">Save
+                    Changes <i class="fas fa-floppy-disk custom-orange-text"></i></button>
+            </div>
                 
             </form>
         </div>
