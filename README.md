@@ -56,8 +56,8 @@ create upload photo on recipe form required install cloudinary package usisng co
 Add cloudinary configurations to app.py
 Add cloudinary config values to env.py and flask app configs
 Update requirements.txt using command pip3 freeze --local > requirements.txt
-Added python functionality to upload photo to cloudinary and store its url path to the database enabling me to use img src {{recipe.image}} to display image on recipe card. Need to look at recipe name and category posibly better with a backgroung for visibility
-
+Added python functionality to upload photo to cloudinary and store its url path to the database enabling me to use img src {{recipe.image}} to display image on recipe card. Need to look at recipe name and category posibly better with a backgroung for visibility.
+Build basic view recipe page and functionality 
 
 
 nb

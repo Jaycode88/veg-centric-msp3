@@ -284,6 +284,30 @@ def add_recipe():
     return render_template("add_recipe.html", categories=categories)
 
 
+# view recipe page
+@app.route("/recipe/<recipe_id>")
+def view_recipe(recipe_id):
+    """
+    Display the details of a recipe.
+
+    Parameters:
+    - recipe_id (str): The unique identifier for the recipe.
+
+    Returns:
+    - str: HTML content for displaying the recipe details.
+
+    Function fetches recipe details from database using the `recipe_id`,
+    renders HTML template displaying those details,
+    and returns the rendered HTML content.
+
+    """
+    # Fetch the recipe details from the database using the recipe_id
+    recipe = database.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+
+    # Render the recipe details template and pass the recipe data
+    return render_template("recipe_details.html", recipe=recipe)
+
+
 # sign out function
 @app.route("/sign_out")
 def sign_out():

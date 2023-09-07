@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block styles %}
+{% endblock %}
+{% block content %}
+
+<!-- Page title -->
+<h1 class="center white-text">{{recipe.recipe_name}}</h1>
+
+<!-- Materialize card -->
+<div class="row card-panel add-recipe-card center-content custom-yellow">
+    <p><strong>{{ recipe.recipe_description }}</strong></p><br>
+    <p><strong>Category:</strong> {{ recipe.category }}</p>
+    <p><strong>Posted By:</strong> {{ recipe.created_by }}</p>
+    <p><strong>Date Posted:</strong> {{ recipe.date_added }}</p>
+
+</div>
+
+{% endblock %}
+{% block scripts %}
+{% endblock %}
+</body>
+
+</html>

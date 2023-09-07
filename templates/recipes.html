@@ -27,7 +27,7 @@
                     <p><strong>Date Posted:</strong> {{ recipe.date_added }}</p><br>
 
                     <!-- Recipe Details link -->
-                    <a class="white-text custom-red btn small btn-center" href="#">View Recipe</a>
+                    <a class="white-text custom-red btn small btn-center" href="{{ url_for('view_recipe', recipe_id=recipe._id) }}">View Recipe</a>
                 </div>
             </div>
         </div>
