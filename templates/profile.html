@@ -9,13 +9,14 @@
 <div class="row">
     <div class="col s12 m8 offset-m2">
         <div class="card-panel custom-yellow">
-            <h3 class="left-align black-text">Username:</h3>
+            
+            <h3 class="left-align black-text"><i class="fas fa-user-tag custom-orange-text"></i></i> Username:</h3>
             <p><strong>{{ user.username }}</strong></p>
-            <h3 class="left-align black-text">First Name:</h3>
+            <h3 class="left-align black-text"><i class="fas fa-id-card custom-orange-text prefix"></i> First Name:</h3>
             <p><strong>{{ user.firstname.capitalize() }}</strong></p>
-            <h3 class="left-align black-text">Last Name:</h3>
+            <h3 class="left-align black-text"><i class="fas fa-id-card custom-orange-text prefix"></i> Last Name:</h3>
             <p><strong>{{ user.lastname.capitalize() }}</strong></p>
-            <h3 class="left-align black-text">Email Address:</h3>
+            <h3 class="left-align black-text"><i class="fas fa-envelope custom-orange-text prefix"></i> Email Address:</h3>
             <p><strong>{{ user.email }}</strong></p>
             <!-- Edit profile button -->
             <a href="{{ url_for('edit_profile') }}" class="btn btn-large anchor-btn custom-red text-shadow white-text"><strong>Edit Profile</strong> <i class="fas fa-user-pen custom-orange-text"></i></a>
