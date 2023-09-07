@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block styles %}
+{% endblock %}
+{% block content %}
+<!--  delete Profile page title with username -->
+<h1 class="center white-text">Delete {{ user.username }}'s Profile</h1>
+
+<!-- delete Profile confirm Form -->
+<div class="row">
+    <div class="col s12 m8 offset-m2">
+        <div class="card-panel custom-yellow">
+            <h3 class="center black-text">Are you sure you want to delete your profile?</h3><br>
+            <form method="POST">
+                <div class="center">
+                    <a href="{{ url_for('profile') }}" class="btn btn-large anchor-btn custom-red text-shadow white-text">
+                        <strong>Cancel</strong> <i class="fas fa-trash-alt custom-orange-text"></i>
+                    </a>
+                    <button type="submit" class="btn btn-large anchor-btn custom-red text-shadow white-text">Yes, Delete Profile</button>
+                </div>
+
+{% endblock %}
+{% block scripts %}
+{% endblock %}
+</body>
+
+</html>

@@ -247,6 +247,31 @@ def edit_profile():
     return render_template("edit_profile.html", user=user)
 
 
+# Delete profile page
+@app.route("/delete_profile", methods=["GET", "POST"])
+def delete_profile():
+    # Get the current user's information from the session
+    username = session.get("user")
+
+    if username:
+        # Fetch the user's data from the database
+        user = database.db.users.find_one({"username": username})
+
+    if request.method == "POST":
+        # Delete the user's profile from the database
+        database.db.users.delete_one({"username": username})
+
+        # Clear the session to log the user out after deletion
+        session.clear()
+
+        # Redirect to a page after profile deletion (e.g., a thank you page)
+        flash("Your profile has been deleted.")
+        return redirect(url_for("welcome"))
+
+    # Render the delete profile confirmation form
+    return render_template("delete_profile.html", user=user)
+
+
 # Add recipe page
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
