@@ -15,7 +15,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-id-card custom-orange-text prefix"></i>
                     <input id="firstname" name="firstname" type="text" class="validate" minlength="2" 
-                    maxlength="30" pattern="^[a-zA-Z]{2,30}$" required>
+                    maxlength="30" pattern="^[a-zA-Z]{2,30}$" value="{{ user.firstname }}" required>
                     <label for="firstname">First Name</label>
                 </div>
             </div>
@@ -24,7 +24,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-id-card custom-orange-text prefix"></i>
                     <input id="lastname" name="lastname" type="text" class="validate" minlength="2" 
-                    maxlength="30" pattern="^[a-zA-Z]{2,30}$" required>
+                    maxlength="30" pattern="^[a-zA-Z]{2,30}$" value="{{ user.lastname }}" required>
                     <label for="lastname">Last Name</label>
                 </div>
             </div>
@@ -33,7 +33,8 @@
                 <div class="input-field col s12">
                     <i class="fas fa-envelope custom-orange-text prefix"></i>
                     <input id="email" name="email" type="email" class="validate" minlength="8" 
-                    maxlength="50" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                    maxlength="50" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                    value="{{ user.email }}" required>
                     <label for="email">Email Address</label>
                 </div>
             </div>
