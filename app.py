@@ -1,6 +1,9 @@
 # Import modules
 import os
 import datetime
+import cloudinary
+from cloudinary.uploader import upload
+import cloudinary.api
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -18,6 +21,13 @@ app = Flask(__name__)
 # Configure MongoDB settings using environment variables
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+
+# configure Cloudinary settings using environment variables
+cloudinary.config(
+    cloud_name=os.environ.get("CLOUDINARY_CLOUD_NAME"),
+    api_key=os.environ.get("CLOUDINARY_API_KEY"),
+    api_secret=os.environ.get("CLOUDINARY_API_SECRET")
+)
 
 # Set the secret key for Flask application
 app.secret_key = os.environ.get("SECRET_KEY")
@@ -238,6 +248,12 @@ def add_recipe():
         date_added = datetime.datetime.now()
         formatted_date = date_added.strftime('%Y-%m-%d')
 
+        # Upload the image to Cloudinary
+        image_file = request.files["recipe_image"]
+        if image_file:
+            upload_result = upload(image_file)
+            image_url = upload_result["secure_url"]
+
         for i in range(len(request.form.getlist("ingredient[]"))):
             ingredient = {
                 "name": request.form.getlist("ingredient[]")[i],
@@ -249,6 +265,7 @@ def add_recipe():
             "recipe_name": recipe_name,
             "category": category,
             "recipe_description": recipe_description,
+            "image": image_url,
             "created_by": created_by,
             "date_added": formatted_date,
             "ingredients": ingredients,

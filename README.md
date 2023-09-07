@@ -51,7 +51,13 @@ create add recipe form to db functionality
 styled add recipe card 
 styled show recipes page so tiles have border to seperate background image display in rows of 2 large screen and list of tiles on screens smaller than ipad
 found new colour scheme on pinterest by lookcolor.ru they didnt add the colour codes so i inserted the picture to adobe color and allowed that to pick the colours from the picture
-added button effects to include colours from them
+added button effects to include colours from theme
+create upload photo on recipe form required install cloudinary package usisng command pip install cloudinary, Add cloudinary imports to app.py,
+Add cloudinary configurations to app.py
+Add cloudinary config values to env.py and flask app configs
+Update requirements.txt using command pip3 freeze --local > requirements.txt
+Added python functionality to upload photo to cloudinary and store its url path to the database enabling me to use img src {{recipe.image}} to display image on recipe card. Need to look at recipe name and category posibly better with a backgroung for visibility
+
 
 
 nb
