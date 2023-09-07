@@ -213,7 +213,8 @@ def add_recipe():
     Add a new recipe to the database.
 
     If method is POST, function extracts recipe information from the
-    submitted form, validates it, adds recipe to db. If the method
+    submitted form, validates it, adds recipe to db and
+    uploads the recipe image to Cloudinary. If the method
     is GET, it renders the page to input a new recipe.
 
     Parameters:
@@ -232,11 +233,14 @@ def add_recipe():
     - The 'session' object to access the current user's information.
     - The 'datetime' module to record the date of recipe addition.
     - The 'database' object to interact with the database.
+    - The 'upload' function to upload the recipe image to Cloudinary.
 
     Note:
     - Function assumes  existence of 'database.db.recipes', for recipe storage.
     - It expects fields named 'recipe_name', 'category', 'recipe_description',
-      'method_step[]', 'ingredient[]', and 'quantity[]'.
+      'method_step[]', 'ingredient[]', and 'quantity[]', 'recipe_image'.
+      - The 'recipe_image' field should contain recipe's image file for upload.
+
     """
     if request.method == "POST":
         recipe_name = request.form.get("recipe_name")
