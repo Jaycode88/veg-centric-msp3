@@ -23,8 +23,46 @@
         </div>
     </div>
 </div>
-<!-- Edit profile functionality to add -->
-<!-- My recipes section/card to add -->
+<!-- Profile page title with username -->
+<h1 class="center white-text">{{ user.username }}'s Recipes</h1>
+<div class="row">
+    {% for recipe in user_recipes %}
+    <!-- Recipe Card -->
+
+    <div class="col s12 m6 offset-m2" id="side-by-side">
+        <div class="card-panel custom-yellow">
+            <div class="card large zoom">
+                <!-- Recipe Image-->
+                <div class="card-image">
+                    <img src="{{ recipe.image }}" alt="{{ recipe.recipe_name }}">
+                    <div class="card-title">
+                        <!-- Recipe Name and Category -->
+                        <h2 class="custom-red">{{ recipe.recipe_name }}</h2><br>
+                        <h3 class="custom-red">{{ recipe.category }}</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <!-- Recipe Description, Author, and Date -->
+                    <p><strong>{{ recipe.recipe_description}}</strong></p>
+                    <p><strong>Posted By:</strong> {{ recipe.created_by }}</p>
+                    <p><strong>Date Posted:</strong> {{ recipe.date_added }}</p><br>
+                    <div class="center">
+                        <a href="#" class="btn btn-large anchor-btn custom-red text-shadow white-text"><strong>Edit Recipe
+                        </strong> <i class="fas fa-user-pen custom-orange-text"></i></a>
+        
+                        <a href="#"
+                            class="btn btn-large anchor-btn custom-red text-shadow white-text">
+                            <strong>Delete Recipe</strong> <i class="fas fa-trash-alt custom-orange-text"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
 {% endblock %}
 {% block scripts %}
 {% endblock %}

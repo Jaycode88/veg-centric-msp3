@@ -200,7 +200,9 @@ def profile():
 
     if username:
         user = database.db.users.find_one({"username": username})
-        return render_template("profile.html", user=user)
+        user_recipes = database.db.recipes.find({"created_by": username})
+        return render_template(
+            "profile.html", user=user, user_recipes=user_recipes)
     else:
         # Handle case when the user is not in session
         flash("Please sign in to access your profile.")
