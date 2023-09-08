@@ -429,27 +429,24 @@ def edit_recipe(recipe_id):
     Dependencies:
     - Flask app instance (app) must be defined.
     - The user's session should contain user information (session["user"]).
-    - The database should have "recipes" collection containing recipe data.
+    - The database (database.db) should have a "recipes" collection containing recipe data.
     - Cloudinary library for image upload and management (cloudinary).
     - HTML template "edit_recipe.html" for rendering the edit form.
 
     Workflow:
-    1. Check if the user is authenticated.
-        If not, flash a message and redirect to the sign-in page.
+    1. Check if the user is authenticated. If not, flash a message and redirect to the sign-in page.
     2. Fetch the recipe details from the database using the provided recipe_id.
-    3. Check if the user is the creator of the recipe or admin.
+    3. Check if the user is the creator of the recipe.
     4. If the user has permission:
         - For GET requests:
             - Fetch categories from the database.
-            - Render edit recipe form with current recipe details.
+            - Render the edit recipe form with current recipe details and categories.
         - For POST requests:
-            - Parse form data to update recipe details, including image,
-                ingredients, and method steps.
+            - Parse form data to update recipe details, including image, ingredients, and method steps.
             - If a new image is uploaded, replace the old image in Cloudinary.
             - Update the recipe details in the database.
             - Flash a success message and redirect to the user's profile page.
-    5. If the user does not have permission, flash an error message
-        and redirect to the user's profile page.
+    5. If the user does not have permission, flash an error message and redirect to the user's profile page.
     """
     # Check if the user is authenticated
     if "user" not in session:
@@ -459,8 +456,8 @@ def edit_recipe(recipe_id):
     # Fetch the recipe details from the database using the recipe_id
     recipe = database.db.recipes.find_one({"_id": ObjectId(recipe_id)})
 
-    # Check if the user is the creator of the recipe
-    if recipe and recipe(
+    # Check if the user is the creator of the recipe or is admin
+    if recipe and (
             recipe["created_by"] == session[
                 "user"] or session["user"] == "admin"):
         if request.method == "POST":
