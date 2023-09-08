@@ -231,7 +231,7 @@ def edit_profile():
             # Hash the new password
             hashed_password = generate_password_hash(
                 new_password, method='pbkdf2:sha256', salt_length=16)
-            
+
             # Update the user's information in the database using update_one
             database.db.users.update_one({"_id": user["_id"]}, {"$set": {
                 "firstname": user["firstname"],
@@ -374,6 +374,38 @@ def view_recipe(recipe_id):
 
     # Render the recipe details template and pass the recipe data
     return render_template("recipe_details.html", recipe=recipe)
+
+
+@app.route("/delete_recipe/<recipe_id>", methods=["GET", "POST"])
+def delete_recipe(recipe_id):
+    # Check if the user is authenticated
+    if "user" not in session:
+        flash("Please sign in to delete a recipe.")
+        return redirect(url_for("sign_in"))
+
+    # Fetch the recipe details from the database using the recipe_id
+    recipe = database.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+
+    # Check if the user is either the creator of the recipe or an admin
+    if recipe and (
+            recipe["created_by"] == session[
+                "user"] or session["user"] == "admin"):
+
+        # Delete the recipe image from Cloudinary
+        if "image" in recipe:
+            image_url = recipe["image"]
+            # Extract public_id from the image URL
+            public_id = image_url.split("/")[-1].split(".")[0]
+            # Delete the image from Cloudinary
+            cloudinary.api.delete_resources(public_id)
+
+        # Delete the recipe from the database
+        database.db.recipes.delete_one({"_id": ObjectId(recipe_id)})
+        flash("Recipe successfully deleted.")
+        return redirect(url_for("profile"))
+    else:
+        flash("You do not have permission to delete this recipe.")
+        return redirect(url_for("profile"))
 
 
 # sign out function

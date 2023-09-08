@@ -50,7 +50,7 @@
                         <a href="#" class="btn btn-large anchor-btn custom-red text-shadow white-text"><strong>Edit Recipe
                         </strong> <i class="fas fa-user-pen custom-orange-text"></i></a>
         
-                        <a href="#"
+                        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
                             class="btn btn-large anchor-btn custom-red text-shadow white-text">
                             <strong>Delete Recipe</strong> <i class="fas fa-trash-alt custom-orange-text"></i>
                         </a>
