@@ -408,6 +408,115 @@ def delete_recipe(recipe_id):
         return redirect(url_for("profile"))
 
 
+# edit recipe page
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    """
+    Edit a recipe page.
+
+    This function allows authenticated users to edit the details of a recipe.
+    If the user is not authenticated, they are redirected to the sign-in page.
+
+    Parameters:
+    - recipe_id (str): The unique identifier for the recipe to be edited.
+
+    Returns:
+    - If the user is authenticated and has permission to edit the recipe:
+        - GET request: Renders edit recipe form with current recipe details
+        - POST request: Updates recipe details in database
+          and redirects to the user's profile page.
+
+    Dependencies:
+    - Flask app instance (app) must be defined.
+    - The user's session should contain user information (session["user"]).
+    - The database should have "recipes" collection containing recipe data.
+    - Cloudinary library for image upload and management (cloudinary).
+    - HTML template "edit_recipe.html" for rendering the edit form.
+
+    Workflow:
+    1. Check if the user is authenticated.
+        If not, flash a message and redirect to the sign-in page.
+    2. Fetch the recipe details from the database using the provided recipe_id.
+    3. Check if the user is the creator of the recipe or admin.
+    4. If the user has permission:
+        - For GET requests:
+            - Fetch categories from the database.
+            - Render edit recipe form with current recipe details.
+        - For POST requests:
+            - Parse form data to update recipe details, including image,
+                ingredients, and method steps.
+            - If a new image is uploaded, replace the old image in Cloudinary.
+            - Update the recipe details in the database.
+            - Flash a success message and redirect to the user's profile page.
+    5. If the user does not have permission, flash an error message
+        and redirect to the user's profile page.
+    """
+    # Check if the user is authenticated
+    if "user" not in session:
+        flash("Please sign in to edit a recipe.")
+        return redirect(url_for("sign_in"))
+
+    # Fetch the recipe details from the database using the recipe_id
+    recipe = database.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+
+    # Check if the user is the creator of the recipe
+    if recipe and recipe(
+            recipe["created_by"] == session[
+                "user"] or session["user"] == "admin"):
+        if request.method == "POST":
+            ingredients = []
+            method_step = request.form.getlist("method_step[]")
+
+            for i in range(len(request.form.getlist("ingredient[]"))):
+                ingredient = {
+                            "name": request.form.getlist("ingredient[]")[i],
+                            "quantity": request.form.getlist("quantity[]")[i]
+                            }
+                ingredients.append(ingredient)
+
+            # Init image_url with existing img URL, None if no image is set
+        image_url = recipe.get("image")
+
+        # Check if a new image file has been uploaded
+        image_file = request.files.get("image")
+        if image_file:
+            # Check if the recipe already has an image URL
+            if image_url:
+                # Extract the public ID from the old image URL
+                old_public_id = image_url.split("/")[-1].split(".")[0]
+                # Delete the old image from Cloudinary
+                cloudinary.uploader.destroy(old_public_id, invalidate=True)
+
+            # Upload the new image to Cloudinary
+            upload_result = cloudinary.uploader.upload(image_file)
+            image_url = upload_result["secure_url"]
+
+            # Get the updated recipe details from the form
+            updated_recipe = {
+                "recipe_name": request.form.get("recipe_name"),
+                "category": request.form.get("category"),
+                "recipe_description": request.form.get("recipe_description"),
+                "image": image_url,
+                "ingredients": ingredients,
+                "method_step": method_step
+            }
+
+            # Update the recipe details in the database
+            database.db.recipes.update_one(
+                {"_id": ObjectId(recipe_id)}, {"$set": updated_recipe})
+            flash("Recipe successfully updated.")
+            return redirect(url_for("profile"))
+
+        categories = database.db.categories.find().sort("category", 1)
+        # Render the edit recipe form with recipe details and categories
+        return render_template(
+            "edit_recipe.html", recipe=recipe, categories=categories)
+
+    else:
+        flash("You do not have permission to edit this recipe.")
+        return redirect(url_for("profile"))
+
+
 # sign out function
 @app.route("/sign_out")
 def sign_out():
