@@ -3,11 +3,29 @@
 {% endblock %}
 {% block content %}
 <h2 class="white-text center">Manage Categories</h2>
+<div class="center">
+    <a href="#"
+        class="btn btn-large anchor-btn custom-red text-shadow white-text">
+        <strong>Add Category</strong> <i class="fas fa-cloud-arrow-up custom-orange-text"></i>
+    </a>
+</div>
 <div class="row">
     {% for category in categories %}
     <div class="col s12 m6 offset-m2">
         <div class="card-panel custom-yellow">
         <h2>{{ category.category }}</h2>
+        <!-- Buttons to edits and delete category  -->
+        <div class="center">
+            <a href="#"
+                class="btn btn-large anchor-btn custom-red text-shadow white-text">
+                <strong>Edit Category</strong> <i class="fas fa-pen-to-square custom-orange-text"></i>
+            </a>
+            <a href="#"
+                class="btn btn-large anchor-btn custom-red text-shadow white-text">
+                <strong>Delete Category</strong> <i class="fas fa-trash-alt custom-orange-text"></i>
+            </a>
+        </div>
+        </div>
     </div>
     {% endfor %}
 </div>
