@@ -523,6 +523,28 @@ def manage_categories():
     return render_template("manage_categories.html", categories=categories)
 
 
+# Add a category form
+@app.route("/add_category", methods=["GET", "POST"])
+def add_category():
+    if request.method == "POST":
+        # Get the category name from the form
+        category_name = request.form.get("categoryName")
+
+        # Check if the category name already exists in the database
+        existing_category = database.db.categories.find_one(
+                            {"category": category_name})
+
+        if existing_category:
+            flash("Category already exists", "error")
+        else:
+            # Insert the new category into the database
+            database.db.categories.insert_one({"category": category_name})
+            flash("Category added successfully", "success")
+
+    # Redirect back to the manage categories page
+    return redirect(url_for("manage_categories"))
+
+
 # sign out function
 @app.route("/sign_out")
 def sign_out():

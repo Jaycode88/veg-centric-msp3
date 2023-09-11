@@ -3,12 +3,29 @@
 {% endblock %}
 {% block content %}
 <h2 class="white-text center">Manage Categories</h2>
-<div class="center">
-    <a href="#"
-        class="btn btn-large anchor-btn custom-red text-shadow white-text">
-        <strong>Add Category</strong> <i class="fas fa-cloud-arrow-up custom-orange-text"></i>
-    </a>
+<!-- Add Category Card -->
+<div class="row">
+    <div class="col s12 m8 offset-m2">
+        <div class="card-panel custom-yellow">
+            <h2 class="center custom-red-text">Add Category</h2>
+            <!-- Category Form -->
+            <form id="categoryForm" method="POST" action="{{ url_for('add_category') }}">
+                <div class="input-field">
+                    <input id="categoryName" type="text" name="categoryName" class="validate">
+                    <label for="categoryName">Category Name</label>
+                </div>
+                <div class="center">
+                    <button type="submit" class="btn btn-large anchor-btn custom-red text-shadow white-text">
+                        <strong>Add</strong>
+                        <i class="fas fa-plus-circle custom-orange-text"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
+
+
 <div class="row">
     {% for category in categories %}
     <div class="col s12 m6 offset-m2">
