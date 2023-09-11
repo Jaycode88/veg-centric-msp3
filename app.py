@@ -545,6 +545,27 @@ def add_category():
     return redirect(url_for("manage_categories"))
 
 
+# Edit category form function 
+@app.route("/edit_category/<category_id>", methods=["POST"])
+def edit_category(category_id):
+    if request.method == "POST":
+        # Get the updated category name from the form
+        updated_category_name = request.form.get("updatedCategoryName")
+
+        # Update the category in the database
+        database.db.categories.update_one(
+            {"_id": ObjectId(category_id)},
+            {"$set": {"category": updated_category_name}}
+        )
+        flash("Category updated successfully", "success")
+
+        # Redirect back to the "Manage Categories" page
+        return redirect(url_for("manage_categories"))
+
+    # Handle GET requests if needed
+    return redirect(url_for("manage_categories"))
+
+
 # sign out function
 @app.route("/sign_out")
 def sign_out():
