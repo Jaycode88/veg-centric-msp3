@@ -444,6 +444,12 @@ def edit_recipe(recipe_id):
         image file for upload.
 
     """
+
+    # Check if the user is authenticated
+    if "user" not in session:
+        flash("Please sign in to edit a recipe.")
+        return redirect(url_for("sign_in"))
+
     # Fetch the existing recipe details from the database using the recipe_id
     recipe = database.db.recipes.find_one(
             {"_id": ObjectId(recipe_id)})
@@ -505,6 +511,9 @@ def edit_recipe(recipe_id):
         categories = database.db.categories.find().sort("category", 1)
         return render_template(
                 "edit_recipe.html", recipe=recipe, categories=categories)
+    else:
+        flash("You do not have permission to edit this recipe.")
+        return redirect(url_for("profile"))
 
 
 # sign out function
