@@ -25,7 +25,14 @@
 
               <!-- TopBar Navigation for Larger Screens -->
               <ul id="nav-desktop" class="right hide-on-med-and-down">
-                {% if session.user %}
+                {% if session.user == "admin" %}
+                <li><a href="{{ url_for('show_recipes') }}">Home</a></li>
+                <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+                <li><a href="{{ url_for('manage_categories') }}">Manage Categories</a></li>
+                <li><a href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
+                <li><a href="{{ url_for('sign_out') }}">Sign Out</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                {% elif session.user %}
                 <li><a href="{{ url_for('show_recipes') }}">Home</a></li>
                 <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
                 <li><a href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
@@ -42,7 +49,14 @@
               <!-- Dropdown Navigation for Mobile -->
               <a class="dropdown-trigger hide-on-large-only" href="#" data-target="mobile-dropdown"><i class="fas fa-solid fa-bars left"></i></a>
               <ul id="mobile-dropdown" class="dropdown-content custom-red">
-                {% if session.user %}
+                {% if session.user == "admin" %}
+                <li><a href="{{ url_for('show_recipes') }}">Home</a></li>
+                <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+                <li><a href="{{ url_for('manage_categories') }}">Manage Categories</a></li>
+                <li><a href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
+                <li><a href="{{ url_for('sign_out') }}">Sign Out</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                {% elif session.user %}
                 <li><a href="{{ url_for('show_recipes') }}">Home</a></li>
                 <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
                 <li><a href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>

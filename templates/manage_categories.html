@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block styles %}
+{% endblock %}
+{% block content %}
+<h2 class="white-text center">Manage Categories</h2>
+<div class="row">
+    {% for category in categories %}
+    <div class="col s12 m6 offset-m2">
+        <div class="card-panel custom-yellow">
+        <h2>{{ category.category }}</h2>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
+{% block scripts %}
+{% endblock %}
+</body>
+
+</html>

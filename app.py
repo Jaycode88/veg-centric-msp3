@@ -516,6 +516,13 @@ def edit_recipe(recipe_id):
         return redirect(url_for("profile"))
 
 
+# Manage categories page Admin only
+@app.route("/manage_categories")
+def manage_categories():
+    categories = database.db.categories.find().sort("category", 1)
+    return render_template("manage_categories.html", categories=categories)
+
+
 # sign out function
 @app.route("/sign_out")
 def sign_out():
