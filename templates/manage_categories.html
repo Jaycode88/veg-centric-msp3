@@ -44,6 +44,10 @@
                         <strong>Update category</strong>
                         <i class="fas fa-cloud-arrow-up custom-orange-text"></i>
                     </button>
+                    <a href="{{ url_for('delete_category', category_id=category._id) }}" class="btn btn-large anchor-btn custom-red text-shadow white-text">
+                        <strong>Delete category</strong>
+                        <i class="fas fa-trash custom-orange-text"></i>
+                    </a>
                 </div>
             </form>
         </div>

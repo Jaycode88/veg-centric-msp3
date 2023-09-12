@@ -566,6 +566,30 @@ def edit_category(category_id):
     return redirect(url_for("manage_categories"))
 
 
+# Delete category route
+@app.route("/delete_category/<category_id>")
+def delete_category(category_id):
+    """
+    Deletes a category based on the provided category_id.
+
+    Args:
+        category_id (str): The unique identifier of the category to delete.
+
+    Returns:
+        flask.Response: Redirects back to the "Manage Categories" page.
+    """
+    # Check if the user is an admin or has permission to delete categories
+    if session.get("user") == "admin":
+        # Delete the category from the database using its ID
+        database.db.categories.delete_one({"_id": ObjectId(category_id)})
+        flash("Category deleted successfully", "success")
+    else:
+        flash("You do not have permission to delete categories", "error")
+
+    # Redirect back to the "Manage Categories" page
+    return redirect(url_for("manage_categories"))
+
+
 # sign out function
 @app.route("/sign_out")
 def sign_out():
