@@ -5,6 +5,26 @@
 <!-- Recipe page title -->
 <h2 class="white-text center">Recipes</h2>
 <div class="row">
+    <div class="col s12 m8 offset-m2">
+        <div class="card-panel custom-yellow">
+            <form action="{{ url_for('search_recipes') }}" method="POST" class="">
+                <div class="row center-align">
+                    <div class="input-field ">
+                        <i class="fas fa-search prefix custom-orange-text"></i>
+                        <input type="text" name="query" minlength="5" class="validate" required>
+                        <label for="query">Search Recipes</label>
+                    </div>
+                    <div>
+                        <a href="{{ url_for('show_recipes')}}" class="btn btn-small custom-red">Reset<i class="fa-solid fa-rotate-left custom-orange-text"></i></a>
+                        <button type="submit" class="btn-small custom-red">Search <i class="fas fa-search custom-orange-text"></i></button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+<div class="row">
     {% for recipe in recipes %}
     <!-- Recipe Card -->
     

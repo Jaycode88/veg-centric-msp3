@@ -52,6 +52,31 @@ def show_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+# Search recipes
+@app.route("/search_recipes", methods=["POST"])
+def search_recipes():
+    """
+    Search for recipes based on the provided search query.
+
+    Returns:
+        Flask.render_template: HTML template rendering the search results or
+            redirecting to the "show recipes" page.
+    """
+    # Retrieve the search query from the form
+    search_query = request.form.get("query")
+
+    # Query the database to find recipes that match the search query
+    recipes = list(database.db.recipes.find(
+                    {"$text": {"$search": search_query}}))
+
+    # Check if there are no search results
+    if not recipes:
+        flash("No results found.", "warning")
+        return redirect(url_for("show_recipes"))
+
+    return render_template("recipes.html", recipes=recipes)
+
+
 # homepage for users not in session
 @app.route("/welcome")
 def welcome():
@@ -545,7 +570,7 @@ def add_category():
     return redirect(url_for("manage_categories"))
 
 
-# Edit category form function 
+# Edit category form function
 @app.route("/edit_category/<category_id>", methods=["POST"])
 def edit_category(category_id):
     if request.method == "POST":
