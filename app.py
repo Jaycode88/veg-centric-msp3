@@ -48,8 +48,14 @@ def show_recipes():
     Returns:
         Flask.render_template: HTML template rendering the list of recipes.
     """
+    # Fetch the user's information from the session
+    username = session.get("user")
+    user = None
+    if username:
+        user = database.db.users.find_one({"username": username})
+
     recipes = database.db.recipes.find()
-    return render_template("recipes.html", recipes=recipes)
+    return render_template("recipes.html", recipes=recipes, user=user)
 
 
 # Search recipes
@@ -405,8 +411,14 @@ def view_recipe(recipe_id):
     # Fetch the recipe details from the database using the recipe_id
     recipe = database.db.recipes.find_one({"_id": ObjectId(recipe_id)})
 
+    # Fetch the user's information from the session
+    username = session.get("user")
+    user = None
+    if username:
+        user = database.db.users.find_one({"username": username})
+
     # Render the recipe details template and pass the recipe data
-    return render_template("recipe_details.html", recipe=recipe)
+    return render_template("recipe_details.html", recipe=recipe, user=user)
 
 
 @app.route("/delete_recipe/<recipe_id>", methods=["GET", "POST"])
@@ -599,7 +611,7 @@ def remove_favorite(recipe_id):
     else:
         flash("Please sign in to manage your favorites.", "warning")
 
-    return redirect(url_for("profile"))
+    return redirect(url_for("show_recipes"))
 
 
 # Manage categories page Admin only
