@@ -89,6 +89,7 @@ quit python interperator using commad: quit()
 built seartch recipe form and functionality added flash message and redirect for when no results are found.
 
 Created Add to favourites Functionality had to add favourites field with empty array upon sign up for the favs to be added to.
+Add favorites section to profile page and functionality to show user favorites. goit stuck due to needing convert recipe_id to an objectid(..) due to way it is stored in mongodb database.
 
  
 

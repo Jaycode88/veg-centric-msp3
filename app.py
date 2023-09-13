@@ -227,12 +227,8 @@ def profile():
     if username:
         user = database.db.users.find_one({"username": username})
         user_recipes = database.db.recipes.find({"created_by": username})
-        # Fetch the user's favorite recipe IDs
-        favorite_recipe_ids = user.get("favorites", [])
-
-        # Fetch the user's favorite recipes using the IDs
         favorite_recipes = database.db.recipes.find(
-            {"_id": {"$in": favorite_recipe_ids}})
+            {"_id": {"$in": user["favorites"]}})
 
         return render_template(
             "profile.html",
@@ -562,6 +558,8 @@ def add_to_favorites(recipe_id):
     username = session.get("user")
 
     if username:
+        # Convert recipe_id to ObjectId
+        recipe_id = ObjectId(recipe_id)
         # Check if the user has already added this recipe to their favorites
         user = database.db.users.find_one({"username": username})
         if recipe_id not in user["favorites"]:

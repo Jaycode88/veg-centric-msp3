@@ -84,13 +84,8 @@
                     <p><strong>Posted By:</strong> {{ recipe.created_by }}</p>
                     <p><strong>Date Posted:</strong> {{ recipe.date_added }}</p><br>
                     <div class="center">
-                        <!-- Recipe Details link -->
-                    <a class="white-text custom-red btn small btn-center" href="{{ url_for('view_recipe', recipe_id=recipe._id) }}">View Recipe</a>
-        
-                        <a href="#"
-                            class="btn small anchor-btn custom-red text-shadow white-text">
-                            <strong>Remove Favorite</strong> <i class="fas fa-trash-alt custom-orange-text"></i>
-                        </a>
+                        <!-- Buttons -->>
+                        
                     </div>
                     
                 </div>
@@ -102,10 +97,6 @@
 
 {% endblock %}
 {% block scripts %}
-{% for recipe in favorite_recipes %}
-        console.log("Favorite Recipe Name: {{ recipe.recipe_name }}");
-        console.log("Favorite Recipe Category: {{ recipe.category }}");
-    {% endfor %}
 {% endblock %}
 
 </body>
