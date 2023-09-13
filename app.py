@@ -575,6 +575,33 @@ def add_to_favorites(recipe_id):
     return redirect(url_for("profile", recipe_id=recipe_id))
 
 
+# Remove a recipe from user favourites
+@app.route("/remove_favorite/<recipe_id>", methods=["POST"])
+def remove_favorite(recipe_id):
+    """
+    Remove a recipe from the user's favorites.
+    """
+    username = session.get("user")
+
+    if username:
+        # Convert recipe_id to ObjectId
+        recipe_id = ObjectId(recipe_id)
+
+        # Check if the user has this recipe in their favorites
+        user = database.db.users.find_one({"username": username})
+        if recipe_id in user["favorites"]:
+            # Remove the recipe ID from the user's favorites
+            database.db.users.update_one(
+                {"username": username}, {"$pull": {"favorites": recipe_id}})
+            flash("Recipe removed from favorites successfully", "success")
+        else:
+            flash("Recipe is not in your favorites", "warning")
+    else:
+        flash("Please sign in to manage your favorites.", "warning")
+
+    return redirect(url_for("profile"))
+
+
 # Manage categories page Admin only
 @app.route("/manage_categories")
 def manage_categories():
