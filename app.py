@@ -139,7 +139,8 @@ def sign_up():
             "email": request.form.get("email"),
             "username": request.form.get("username").lower(),
             "password": hashed_password,
-            "member_since": datetime.datetime.now()
+            "member_since": datetime.datetime.now(),
+            "favorites": []
         }
 
         # Insert user document to database
@@ -226,8 +227,19 @@ def profile():
     if username:
         user = database.db.users.find_one({"username": username})
         user_recipes = database.db.recipes.find({"created_by": username})
+        # Fetch the user's favorite recipe IDs
+        favorite_recipe_ids = user.get("favorites", [])
+
+        # Fetch the user's favorite recipes using the IDs
+        favorite_recipes = database.db.recipes.find(
+            {"_id": {"$in": favorite_recipe_ids}})
+
         return render_template(
-            "profile.html", user=user, user_recipes=user_recipes)
+            "profile.html",
+            user=user,
+            user_recipes=user_recipes,
+            favorite_recipes=favorite_recipes
+        )
     else:
         # Handle case when the user is not in session
         flash("Please sign in to access your profile.")
@@ -539,6 +551,30 @@ def edit_recipe(recipe_id):
     else:
         flash("You do not have permission to edit this recipe.")
         return redirect(url_for("profile"))
+
+
+# Add a recipe to user favourites
+@app.route("/add_to_favorites/<recipe_id>", methods=["POST"])
+def add_to_favorites(recipe_id):
+    """
+    Add a recipe to the user's favorites.
+    """
+    username = session.get("user")
+
+    if username:
+        # Check if the user has already added this recipe to their favorites
+        user = database.db.users.find_one({"username": username})
+        if recipe_id not in user["favorites"]:
+            # Add the recipe ID to the user's favorites
+            database.db.users.update_one(
+                {"username": username}, {"$push": {"favorites": recipe_id}})
+            flash("Recipe added to favorites successfully", "success")
+        else:
+            flash("Recipe is already in your favorites", "warning")
+    else:
+        flash("Please sign in to add recipes to your favorites.", "warning")
+
+    return redirect(url_for("profile", recipe_id=recipe_id))
 
 
 # Manage categories page Admin only

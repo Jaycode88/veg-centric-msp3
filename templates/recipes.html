@@ -47,7 +47,14 @@
                     <p><strong>Date Posted:</strong> {{ recipe.date_added }}</p><br>
 
                     <!-- Recipe Details link -->
-                    <a class="white-text custom-red btn small btn-center" href="{{ url_for('view_recipe', recipe_id=recipe._id) }}">View Recipe</a>
+                    <div class="center">
+                        <a class="white-text custom-red btn small"
+                            href="{{ url_for('view_recipe', recipe_id=recipe._id) }}">View Recipe</a>
+                        <form method="POST" action="{{ url_for('add_to_favorites', recipe_id=recipe['_id']) }}">
+                            <button type="submit" class="btn small custom-red white-text">Add to
+                                Favorites</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

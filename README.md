@@ -88,6 +88,8 @@ quit python interperator using commad: quit()
 
 built seartch recipe form and functionality added flash message and redirect for when no results are found.
 
+Created Add to favourites Functionality had to add favourites field with empty array upon sign up for the favs to be added to.
+
  
 
 
