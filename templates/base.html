@@ -21,7 +21,7 @@
         <nav class="text-shadow custom-lightgreen">
             <div class="nav-wrapper">
               <!-- Brand Logo -->
-              <a href="{{ url_for('show_recipes') }}" class="brand-logo">Veg-Centric</a>
+              <a href="{{ url_for('show_recipes') }}" class="brand-logo white-text playfair">Veg-Centric</a>
 
               <!-- TopBar Navigation for Larger Screens -->
               <ul id="nav-desktop" class="right hide-on-med-and-down">
@@ -48,7 +48,7 @@
 
               <!-- Dropdown Navigation for Mobile -->
               <a class="dropdown-trigger hide-on-large-only" href="#" data-target="mobile-dropdown"><i class="fas fa-solid fa-bars left"></i></a>
-              <ul id="mobile-dropdown" class="dropdown-content custom-lightgreen">
+              <ul id="mobile-dropdown" class="dropdown-content custom-lightgreen black-text">
                 {% if session.user == "admin" %}
                 <li><a href="{{ url_for('show_recipes') }}">Home</a></li>
                 <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>

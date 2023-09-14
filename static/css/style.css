@@ -1,3 +1,10 @@
+/* font imports */
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&family=Playfair+Display:wght@600&display=swap');
+
+/* fonts */
+.playfair, h1 {
+  font-family: 'Playfair Display', sans-serif;
+}
 
 
 /* Custom color classes */
@@ -15,20 +22,6 @@
 }
 .custom-mushroom {
   background-color: #ded8a0;
-}
-.custom-red {
-  background-color: #D90718;
-}
-
-.custom-orange {
-  background-color: #F27D16;
-}
-
-.custom-green {
-  background-color: #728C11;
-}
-.custom-orange-text {
-  color: #F27D16;
 }
 
 /* Navbar */
