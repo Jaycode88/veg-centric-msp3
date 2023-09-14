@@ -7,7 +7,7 @@
 <div class="row">
     <div class="col s12 m8 offset-m2 custom-mushroom">
         
-            <form action="{{ url_for('search_recipes') }}" method="POST" class="">
+            <form action="{{ url_for('search_recipes') }}" method="POST" class="searchform">
                 <div class="row center-align">
                     <div class="input-field ">
                         <i class="fas fa-search prefix darkgreen-text"></i>
@@ -16,7 +16,7 @@
                     </div>
                     <div>
                         <a href="{{ url_for('show_recipes')}}" class="btn-small custom-lightgreen black-text"><strong>Reset</strong> <i class="fa-solid fa-rotate-left darkgreen-text"></i></a>
-                        <button type="submit" class="btn-small custom-lightgreen black-text">Search <i class="fas fa-search darkgreen-text"></i></button>
+                        <button type="submit" class="btn-small custom-lightgreen black-text"><strong>Search</strong> <i class="fas fa-search darkgreen-text"></i></button>
                     </div>
                 </div>
             </form>

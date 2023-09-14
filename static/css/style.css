@@ -68,6 +68,12 @@ button, .anchor-btn {
   display: block;
   align-items: center;
 }
+ /* homepage */
+ /*search feature */
+ .searchform {
+  margin-right: 5%;
+  margin-left: 5%;
+ }
 
 /* show recipes page cards */
 .col.m6 {
