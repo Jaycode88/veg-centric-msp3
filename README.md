@@ -92,9 +92,19 @@ Created Add to favourites Functionality had to add favourites field with empty a
 Add favorites section to profile page and functionality to show user favorites. goit stuck due to needing convert recipe_id to an objectid(..) due to way it is stored in mongodb database.
 
 Add remove favorite function and button
+Add functionality so the user sees either the add to favorites or remove favorite buttons depending on wether they have the recipe as a favourite or not.
 
  
 
+to research colour phycology in relation to restaurant and food brands at https://medium.com/@ashley_howell/understanding-colour-psychology-for-restaurants-brands-dbb7ffbcecae
+
+research colours that influence food sales: https://jenndavid.com/colors-that-influence-food-sales-infographic/
+
+Chose to go with greens and black and mushroom due to reasons researched and noted on notepad 
+
+updated colour to show recipes and base, change colour and layout to recipe details page
+
+edited recipes page due to layout issue
 
 
 nb

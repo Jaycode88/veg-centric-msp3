@@ -5,8 +5,9 @@
 <!-- Recipe page title -->
 <h2 class="black-text center">Recipes</h2>
 <div class="row">
-    <div class="col s12 m8 offset-m2 white">
-            <form action="{{ url_for('search_recipes') }}" method="POST">
+    <div class="col s12 m8 offset-m2 custom-mushroom">
+        
+            <form action="{{ url_for('search_recipes') }}" method="POST" class="">
                 <div class="row center-align">
                     <div class="input-field ">
                         <i class="fas fa-search prefix darkgreen-text"></i>
@@ -14,29 +15,32 @@
                         <label for="query">Search Recipes</label>
                     </div>
                     <div>
-                        <a href="{{ url_for('show_recipes')}}" class="btn-small black-text custom-lightgreen"><strong>Reset</strong> <i class="fa-solid fa-rotate-left darkgreen-text"></i></a>
-                        <button type="submit" class="btn-small black-text custom-lightgreen"><strong>Search</strong> <i class="fas fa-search darkgreen-text"></i></button>
+                        <a href="{{ url_for('show_recipes')}}" class="btn-small custom-lightgreen black-text"><strong>Reset</strong> <i class="fa-solid fa-rotate-left darkgreen-text"></i></a>
+                        <button type="submit" class="btn-small custom-lightgreen black-text">Search <i class="fas fa-search darkgreen-text"></i></button>
                     </div>
                 </div>
             </form>
+
+        </div>
     </div>
 </div>
 <div class="row">
     {% for recipe in recipes %}
     <!-- Recipe Card -->
     
-        <div class="col s12 m5 offset-m1 custom-mushroom zoom">
-            <div class="card large">
+        <div class="col s12 m6 offset-m2">
+            <div class="card">
+            <div class="card large zoom">
                 <!-- Recipe Image-->
                 <div class="card-image">
                     <img src="{{ recipe.image }}" alt="{{ recipe.recipe_name }}">
                     <div class="card-title">
                         <!-- Recipe Name and Category -->
-                        <h2 class="custom-lightgreen">{{ recipe.recipe_name }}</h2><br>
-                        <h3 class="custom-lightgreen">{{ recipe.category }}</h3>
+                        <h2 class="custom-lightgreen black-text">{{ recipe.recipe_name }}</h2><br>
+                        <h3 class="custom-lightgreen black-text">{{ recipe.category }}</h3>
                     </div>
                 </div>
-                <div class="card-content">
+                <div class="card-content custom-mushroom">
                     <!-- Recipe Description, Author, and Date -->
                     <p><strong>{{ recipe.recipe_description}}</strong></p>
                     <p><strong>Posted By:</strong> {{ recipe.created_by }}</p>
@@ -48,14 +52,14 @@
                         {% if recipe._id in user.favorites %}
                         <form method="POST" action="{{ url_for('remove_favorite', recipe_id=recipe['_id']) }}">
                             <a class="black-text custom-lightgreen btn-small"
-                            href="{{ url_for('view_recipe', recipe_id=recipe._id) }}">View Recipe <i class="fas fa-circle-info darkgreen-text"></i></a></a>
+                            href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"><strong>View Recipe</strong> <i class="fas fa-circle-info darkgreen-text"></i></a>
                             <button type="submit" class="btn-small custom-lightgreen black-text"><strong>Remove
                                 Favorite</strong><i class="fas fa-trash-alt darkgreen-text"></i></button>
                         </form>
                         {% else %}
                         <form method="POST" action="{{ url_for('add_to_favorites', recipe_id=recipe['_id']) }}">
                             <a class="black-text custom-lightgreen btn-small"
-                            href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"><strong>View Recipe</strong> <i class="fas fa-circle-info darkgreen-text"></i></a>
+                            href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"><strong>Recipe</strong> <i class="fas fa-circle-info darkgreen-text"></i></a>
                             <button type="submit" class="btn-small custom-lightgreen black-text"><strong>Add to
                                 Favorites</strong> <i class="fas fa-plus darkgreen-text"></i></button>
                         </form>
