@@ -1,22 +1,27 @@
-/* Body Background image */
-body {
-  background-image: url(/static/images/background.webp);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
+
 
 /* Custom color classes */
+.white {
+  background-color: #ffff;
+}
+.darkgreen-text {
+  color: #5a873c;
+}
+.custom-darkgreen {
+  background-color: #5a873c;
+}
+.custom-lightgreen {
+  background-color: #8abd4d;
+}
+.custom-mushroom {
+  background-color: #ded8a0;
+}
 .custom-red {
   background-color: #D90718;
 }
 
 .custom-orange {
   background-color: #F27D16;
-}
-
-.custom-yellow {
-  background-color: #FFDF3C;
 }
 
 .custom-green {
@@ -33,6 +38,10 @@ body {
     margin-right: 10px;
 }
 
+/* button spacing */
+button, .anchor-btn {
+  margin: 20px;
+}
 /* flash messages */
 .message-margin {
   /* Add margins and padding to flash messages */
@@ -52,13 +61,11 @@ body {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 /* button hover effects */
-.btn, .btn-large, .anchor-btn {
+.btn-small, .anchor-btn {
   transition: 1s;
-  
 }
 /* button hover colour */
-.btn:hover, .btn-large:hover, .anchor-btn:hover {
-  background-color: #728C11;
+.btn:hover, .btn-small:hover, .anchor-btn:hover {
   transform: scale(1.075);
 }
 
@@ -124,9 +131,51 @@ max-width: 80%;
 }
 
 /* recipe details page */
-.recipe-details-image {
-  max-width: 100%;
-  max-height: 600px;
+
+/* Recipe Image */
+.recipe-details-img {
+  max-width: 80%;
+  height: auto;
+  
+}
+
+/* Recipe Description */
+.recipe-description {
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* Recipe Information */
+.recipe-info {
+  margin-top: 20px;
+}
+
+/* Ingredients */
+.recipe-ingredients {
+  margin-top: 20px;
+  margin-left: 15%;
+}
+
+/* Ingredients List */
+.recipe-ingredients ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* Steps */
+.recipe-steps {
+  margin-left: 15%;
+  margin-right: 15%;  
+}
+
+/* Steps List */
+.recipe-steps ol {
+  list-style-type: decimal;
+}
+
+/* buttons */
+.buttons {
+  margin: 10px;
 }
 
 /* Navbar media queries */
@@ -167,6 +216,16 @@ max-width: 80%;
         color: white;
       }
 }
+ /* recipe details media queries */
+ /* Recipe Image */
+ @media (min-width:900px) {
+  .recipe-details-img {
+    max-width: 70%;
+    height: auto;
+  
+  }
+}
+
 
 /* show recipes media queries */
 /* cards */

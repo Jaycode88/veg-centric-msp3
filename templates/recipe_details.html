@@ -1,67 +1,68 @@
 {% extends "base.html" %}
 {% block styles %}
+  <link rel="stylesheet" href="styles.css">
 {% endblock %}
 {% block content %}
+<!-- Recipe Title -->
+<h1 class="center">{{ recipe.recipe_name }}</h1>
 
-<!-- Page title -->
-<h1 class="center white-text">{{recipe.recipe_name}}</h1>
-
-<!-- Materialize card -->
-<div class="row card-panel add-recipe-card center-content custom-yellow">
-    <div class="col s12 m6 offset-m2">
-        <img src="{{ recipe.image }}" alt="{{ recipe.recipe_name }}" class="recipe-details-image">
+    <!-- Recipe Image -->
+    <div class="center">
+        <img src="{{ recipe.image }}" alt="{{ recipe.recipe_name }}" class="recipe-details-img">
     </div>
-    <div class="col s12 m6 offset-m2">
-        <p><strong>{{ recipe.recipe_description }}</strong></p><br>
-        <p><strong>Category:</strong> {{ recipe.category }}</p>
-        <p><strong>Posted By:</strong> {{ recipe.created_by }}</p>
-        <p><strong>Date Posted:</strong> {{ recipe.date_added }}</p><br>
-        <h3>Ingredients:</h3>
-            <ul>
-                {% for ingredient in recipe.ingredients %}
-                <li>{{ ingredient.name }} - {{ ingredient.quantity }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        <div class="row">
-            <div class="col s12 m12">
-                <h3>Steps:</h3>
-                <ol>
-                    {% for step in recipe.method_step %}
-                    <li>{{ step }}</li>
-                    {% endfor %}
-                </ol>
-            </div>
-        </div>
-        <!-- Recipe buttons -->
-        <div class="center">
-            {% if user %}
-            {% if recipe._id in user.favorites %}
-            <form method="POST" action="{{ url_for('remove_favorite', recipe_id=recipe['_id']) }}">
-                <a class="white-text custom-red btn small"
-                    href="{{ url_for('show_recipes', recipe_id=recipe._id) }}">Back
-                    to Recipes</a>
-                <button type="submit" class="btn small custom-red text-shadow"><strong>Remove
-                    Favorite</strong><i class="fas fa-trash-alt custom-orange-text"></i></button>
-            </form>
-            {% else %}
-            <form method="POST" action="{{ url_for('add_to_favorites', recipe_id=recipe['_id']) }}">
-                <a class="white-text custom-red btn small"
-                    href="{{ url_for('show_recipes', recipe_id=recipe._id) }}">Back
-                    to Recipes</a>
-                <button type="submit" class="btn small custom-red white-text">Add to
-                    Favorites</button>
-            </form>
-    {% endif %}
+    <div class="center">
+    <div class="recipe-details-info">
+      <p class="recipe-description"><strong>{{ recipe.recipe_description }}</strong></p>
+      <p><strong>Category:</strong> {{ recipe.category }}</p>
+      <p><strong>Posted By:</strong> {{ recipe.created_by }}</p>
+      <p><strong>Date Posted:</strong> {{ recipe.date_added }}</p>
+    </div>
+    </div>
+
+    <!-- Ingredients -->
+    <div class="recipe-ingredients">
+      <h3>Ingredients:</h3>
+      <ul>
+        {% for ingredient in recipe.ingredients %}
+          <li>{{ ingredient.name }} - {{ ingredient.quantity }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <!-- Steps -->
+    <div class="recipe-steps">
+      <h3>Steps:</h3>
+      <ol>
+        {% for step in recipe.method_step %}
+          <li>{{ step }}</li>
+        {% endfor %}
+      </ol>
+    </div>
+
+    <!-- Recipe Buttons -->
+    <div class="center">
+        {% if user %}
+        {% if recipe._id in user.favorites %}
+        <form method="POST" action="{{ url_for('remove_favorite', recipe_id=recipe['_id']) }}">
+            <a class="white-text custom-red btn small"
+                href="{{ url_for('show_recipes', recipe_id=recipe._id) }}">Back
+                to Recipes</a>
+            <button type="submit" class="btn small custom-red text-shadow"><strong>Remove
+                Favorite</strong><i class="fas fa-trash-alt darkgreen-text"></i></button>
+        </form>
+        {% else %}
+        <form method="POST" action="{{ url_for('add_to_favorites', recipe_id=recipe['_id']) }}">
+            <a class="custom-lightgreen btn-small black-text"
+                href="{{ url_for('show_recipes', recipe_id=recipe._id) }}"><strong>Back
+                to Recipes</strong> <i class="fas fa-rotate-left darkgreen-text"></i></a>
+            <button type="submit" class="btn-small custom-lightgreen black-text"><strong>Add to
+                Favorites</strong> <i class="fas fa-plus darkgreen-text"></i></button>
+        </form>
 {% endif %}
-            
-        </div>
+{% endif %}
+        
     </div>
-</div>
-
+  </div>
 {% endblock %}
 {% block scripts %}
 {% endblock %}
-</body>
-
-</html>

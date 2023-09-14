@@ -4,10 +4,10 @@
 {% block content %}
 
 <!-- Page title -->
-<h1 class="center white-text">Add A Recipe</h1>
+<h1 class="center black-text">Add A Recipe</h1>
 
 <!-- Materialize card -->
-<div class="row card-panel add-recipe-card center-content custom-yellow">
+<div class="row add-recipe-card center-content">
 
     <!-- Add recipe Form -->
     <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}" enctype="multipart/form-data">
@@ -15,7 +15,7 @@
         <!-- recipe name-->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-utensils custom-orange-text prefix"></i>
+                <i class="fas fa-utensils darkgreen-text prefix"></i>
                 <input id="recipe_name" name="recipe_name" type="text"  class="validate" required>
                 <label for="recipe_name">Recipe Name</label>
             </div>
@@ -24,7 +24,7 @@
         <!-- recipe category -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-folder-open custom-orange-text prefix"></i>
+                <i class="fas fa-folder-open darkgreen-text prefix"></i>
                 <select id="category" name="category" class="validate" required>
                     <option value="" disabled selected>Choose Category</option>
                     {% for category in categories %}
@@ -38,7 +38,7 @@
         <!-- Recipe description text area -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-pepper-hot prefix custom-orange-text"></i>
+                <i class="fas fa-pepper-hot prefix darkgreen-text"></i>
                 <textarea id="recipe_description" name="recipe_description"
                     minlength="15" maxlength="80" class="materialize-textarea validate"
                      placeholder="Enter your Recipe description here" required>
@@ -49,7 +49,7 @@
         <!-- Recipe photo upload area -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-image prefix custom-orange-text"></i>
+                <i class="fas fa-image prefix darkgreen-text"></i>
                 <input type="file" name="recipe_image" accept="image/*" required>
                 <p>Please upload a Photo of the prepared dish</p>
             </div>
@@ -61,7 +61,7 @@
 
         <!-- Add ingredient button -->
         <div>
-            <button id="addIngredientButton" class="btn small custom-orange">Add Ingredient</button>
+            <button id="addIngredientButton" class="btn-small custom-darkgreen white-text"><strong>Add Ingredient</strong> <i class="fas fa-plus white-text"></i></button>
         </div>
 
         <!-- Method fields -->
@@ -70,20 +70,20 @@
 
         <!-- Add Method Step button -->
         <div>
-            <button id="addMethodStepButton" class="btn small custom-orange">Add Step</button>
+            <button id="addMethodStepButton" class="btn-small custom-darkgreen white-text"><strong>Add Step</strong> <i class="fas fa-plus white-text"></i></button>
         </div><br>
 
         <!-- Form Buttons -->
         <div class="row">
             <div class="col s12 center">
                 <!-- post button -->
-                <button class="btn custom-red" type="submit"
-                    name="post_button">Post
-                    <i class="fas fa-paper-plane right custom-orange-text"></i>
+                <button class="btn-small custom-lightgreen black-text" type="submit"
+                    name="post_button"><strong>Post</strong>
+                     <i class="fas fa-paper-plane darkgreen-text"></i>
                 </button>
                 <!-- reset button -->
-                <button class="btn custom-red" type="reset" name="reset">Reset
-                    <i class="fas fa-rotate-left right custom-orange-text"></i>
+                <button class="btn-small custom-lightgreen black-text" type="reset" name="reset"><strong>Reset</strong>
+                    <i class="fas fa-rotate-left darkgreen-text"></i>
                 </button>
             </div>
         </div>
