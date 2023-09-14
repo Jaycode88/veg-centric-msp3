@@ -92,9 +92,10 @@ button, .anchor-btn {
   transform: scale(1.05);
 }
 /* Add recipe card */
-.add-recipe-card {
+.add-recipe {
 align-content: center;
 margin-left: 10%;
+margin-right: 10%;
 max-width: 80%;
 }
 
@@ -254,5 +255,15 @@ max-width: 80%;
   }
   .card-title h3 {
     font-size: 2.75rem;
+  }
+}
+
+@media only screen and (max-width:450px) {
+  /* Add recipe card */
+.add-recipe {
+  align-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  max-width: 90%;
   }
 }
