@@ -105,6 +105,7 @@ Chose to go with greens and black and mushroom due to reasons researched and not
 updated colour to show recipes and base, change colour and layout to recipe details page
 
 edited recipes page due to layout issue
+updated profile page colours and layout
 
 
 nb

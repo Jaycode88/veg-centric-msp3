@@ -3,59 +3,59 @@
 {% endblock %}
 {% block content %}
 <!-- Profile page title with username -->
-<h1 class="center white-text">{{ user.username }}'s Profile</h1>
+<h1 class="center black-text">{{ user.username.capitalize() }}'s Profile</h1>
 
 <!-- Profile details card -->
 <div class="row">
     <div class="col s12 m8 offset-m2">
-        <div class="card-panel custom-yellow">
+        <div class="card-panel custom-mushroom">
 
-            <h3 class="left-align black-text"><i class="fas fa-user-tag custom-orange-text"></i></i> Username:</h3>
-            <p><strong>{{ user.username }}</strong></p>
-            <h3 class="left-align black-text"><i class="fas fa-id-card custom-orange-text prefix"></i> First Name:</h3>
+            <h3 class="left-align black-text"><i class="fas fa-user-tag darkgreen-text prefix"></i></i> Username:</h3>
+            <p><strong>{{ user.username.capitalize() }}</strong></p>
+            <h3 class="left-align black-text"><i class="fas fa-id-card darkgreen-text prefix"></i> First Name:</h3>
             <p><strong>{{ user.firstname.capitalize() }}</strong></p>
-            <h3 class="left-align black-text"><i class="fas fa-id-card custom-orange-text prefix"></i> Last Name:</h3>
+            <h3 class="left-align black-text"><i class="fas fa-id-card darkgreen-text prefix"></i> Last Name:</h3>
             <p><strong>{{ user.lastname.capitalize() }}</strong></p>
-            <h3 class="left-align black-text"><i class="fas fa-envelope custom-orange-text prefix"></i> Email Address:
+            <h3 class="left-align black-text"><i class="fas fa-envelope darkgreen-text prefix"></i> Email Address:
             </h3>
             <p><strong>{{ user.email }}</strong></p>
             <!-- Edit profile button -->
             <a href="{{ url_for('edit_profile') }}"
-                class="btn btn-large anchor-btn custom-red text-shadow white-text"><strong>Edit Profile</strong> <i
-                    class="fas fa-user-pen custom-orange-text"></i></a>
+                class="btn-small anchor-btn custom-lightgreen black-text"><strong>Edit Profile</strong> <i
+                    class="fas fa-user-pen darkgreen-text"></i></a>
         </div>
     </div>
 </div>
 <!-- users recipe section -->
-<h1 class="center white-text">{{ user.username }}'s Recipes</h1>
+<h1 class="center black-text">{{ user.username.capitalize() }}'s Recipes</h1>
 <div class="row">
     {% for recipe in user_recipes %}
     <!-- Recipe Card -->
-    <div class="col s12 m6 offset-m2" id="side-by-side">
-        <div class="card-panel custom-yellow">
+    <div class="col s12 m6 offset-m2">
+        <div class="card">
             <div class="card large zoom">
                 <!-- Recipe Image-->
                 <div class="card-image">
                     <img src="{{ recipe.image }}" alt="{{ recipe.recipe_name }}">
                     <div class="card-title">
                         <!-- Recipe Name and Category -->
-                        <h2 class="custom-red">{{ recipe.recipe_name }}</h2><br>
-                        <h3 class="custom-red">{{ recipe.category }}</h3>
+                        <h2 class="custom-lightgreen">{{ recipe.recipe_name }}</h2><br>
+                        <h3 class="custom-lightgreen">{{ recipe.category }}</h3>
                     </div>
                 </div>
-                <div class="card-content">
+                <div class="card-content custom-mushroom">
                     <!-- Recipe Description, Author, and Date -->
                     <p><strong>{{ recipe.recipe_description}}</strong></p>
                     <p><strong>Posted By:</strong> {{ recipe.created_by }}</p>
                     <p><strong>Date Posted:</strong> {{ recipe.date_added }}</p><br>
                     <div class="center">
                         <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
-                            class="btn btn-large anchor-btn custom-red text-shadow white-text"><strong>Edit Recipe
-                            </strong> <i class="fas fa-pen-to-square custom-orange-text"></i></a>
+                            class="btn-small anchor-btn custom-lightgreen black-text"><strong>Edit Recipe
+                            </strong> <i class="fas fa-pen-to-square darkgreen-text"></i></a>
 
                         <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
-                            class="btn btn-large anchor-btn custom-red text-shadow white-text">
-                            <strong>Delete Recipe</strong> <i class="fas fa-trash-alt custom-orange-text"></i>
+                            class="btn-small anchor-btn custom-lightgreen black-text">
+                            <strong>Delete Recipe</strong> <i class="fas fa-trash-alt darkgreen-text"></i>
                         </a>
                     </div>
 
@@ -66,23 +66,23 @@
     {% endfor %}
 </div>
 <!-- users favourite recipes section -->
-<h1 class="center white-text">{{ user.username }}'s Favorite Recipes</h1>
+<h1 class="center black-text">{{ user.username.capitalize() }}'s Favorite Recipes</h1>
 <div class="row">
     {% for recipe in favorite_recipes %}
-    <!-- Recipe Card -->
-    <div class="col s12 m6 offset-m2" id="side-by-side">
-        <div class="card-panel custom-yellow">
+     <!-- Recipe Card -->
+     <div class="col s12 m6 offset-m2">
+        <div class="card">
             <div class="card large zoom">
                 <!-- Recipe Image-->
                 <div class="card-image">
                     <img src="{{ recipe.image }}" alt="{{ recipe.recipe_name }}">
                     <div class="card-title">
                         <!-- Recipe Name and Category -->
-                        <h2 class="custom-red">{{ recipe.recipe_name }}</h2><br>
-                        <h3 class="custom-red">{{ recipe.category }}</h3>
+                        <h2 class="custom-lightgreen">{{ recipe.recipe_name }}</h2><br>
+                        <h3 class="custom-lightgreen">{{ recipe.category }}</h3>
                     </div>
                 </div>
-                <div class="card-content">
+                <div class="card-content custom-mushroom">
                     <!-- Recipe Description, Author, and Date -->
                     <p><strong>{{ recipe.recipe_description}}</strong></p>
                     <p><strong>Posted By:</strong> {{ recipe.created_by }}</p>
@@ -90,10 +90,10 @@
                     <div class="center">
                         <!-- Buttons -->
                         <form action="{{ url_for('remove_favorite', recipe_id=recipe._id) }}" method="post">
-                            <a class="white-text custom-red btn anchor-btn btn-small"
-                                href="{{ url_for('view_recipe', recipe_id=recipe._id) }}">View Recipe</a>
-                            <button type="submit" class="btn btn-small anchor-btn custom-red text-shadow white-text">
-                                <strong>Remove Favorite</strong> <i class="fas fa-trash-alt custom-orange-text"></i>
+                            <a class="black-text custom-lightgreen anchor-btn btn-small"
+                                href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"><strong>View Recipe</strong> <i class="fas fa-circle-info darkgreen-text"></i></a>
+                            <button type="submit" class="btn-small anchor-btn custom-lightgreen black-text">
+                                <strong>Remove Favorite</strong> <i class="fas fa-trash-alt darkgreen-text"></i>
                             </button>
                         </form>
 
