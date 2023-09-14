@@ -35,7 +35,7 @@ $(document).ready(function() {
       const newIngredient = $("<div class='ingredient'>" +
         "<input type='text' name='ingredient[]' placeholder='Ingredient'>" +
         "<input type='text' name='quantity[]' placeholder='Quantity'>" +
-        "<button class='removeButton btn small waves-effect custom-orange waves-light'>Remove</button><br>" +
+        "<button class='removeButton btn-small custom-darkgreen'><strong>Remove</strong></button><br>" +
         "</div>");
   
       ingredientFields.append(newIngredient); // Add the new ingredient field to the container
@@ -65,7 +65,7 @@ $(document).ready(function() {
       // Create a new method step field container
       const newMethodStep = $("<div class='method-step'>" +
         "<input type='text' name='method_step[]' placeholder='Step'>" +
-        "<button class='removeButton btn small waves-effect custom-orange waves-light'>Remove</button>" +
+        "<button class='removeButton btn-small custom-darkgreen'><strong>Remove</strong></button>" +
         "</div>");
   
       methodFields.append(newMethodStep); // Add the new method step field to the container
