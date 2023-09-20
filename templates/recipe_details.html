@@ -44,11 +44,11 @@
         {% if user %}
         {% if recipe._id in user.favorites %}
         <form method="POST" action="{{ url_for('remove_favorite', recipe_id=recipe['_id']) }}">
-            <a class="white-text custom-red btn small"
-                href="{{ url_for('show_recipes', recipe_id=recipe._id) }}">Back
-                to Recipes</a>
-            <button type="submit" class="btn small custom-red text-shadow"><strong>Remove
-                Favorite</strong><i class="fas fa-trash-alt darkgreen-text"></i></button>
+            <a class="black-text custom-lightgreen btn-small"
+                href="{{ url_for('show_recipes', recipe_id=recipe._id) }}"><strong>Back
+                to Recipes</strong> <i class="fas fa-rotate-left darkgreen-text"></i></a>
+            <button type="submit" class="btn-small custom-lightgreen black-text"><strong>Remove
+                Favorite</strong> <i class="fas fa-trash-alt darkgreen-text"></i></button>
         </form>
         {% else %}
         <form method="POST" action="{{ url_for('add_to_favorites', recipe_id=recipe['_id']) }}">
