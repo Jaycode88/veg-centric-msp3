@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fasthand&family=Playfair+Display:wght@600&display=swap');
 
 /* fonts */
-.playfair, h1 {
+.playfair, h1, h2, h3 {
   font-family: 'Playfair Display', sans-serif;
 }
 
