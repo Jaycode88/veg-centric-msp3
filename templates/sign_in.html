@@ -4,16 +4,16 @@
 {% block content %}
 
 <!-- Sign in page title -->
-<h1 class="center white-text">Sign In</h1>
+<h1 class="center black-text">Sign In</h1>
 
 <!-- Sign in form -->
 <div class="row">
     <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('sign_in') }}">
-        <div class="card-panel custom-yellow">
+        <div class="card-panel custom-mushroom">
             <!-- username -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-user-tag custom-orange-text prefix"></i>
+                    <i class="fas fa-user-tag darkgreen-text prefix"></i>
                     <input id="username" name="username" type="text" class="validate" minlength="5" 
                     maxlength="20" pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,20}$" required>
                     <label for="username">UserName</label>
@@ -22,15 +22,15 @@
             <!-- password -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-key custom-orange-text prefix"></i>
+                    <i class="fas fa-key darkgreen-text prefix"></i>
                     <input id="password" name="password" type="password" minlength="6" 
                     maxlength="15" pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,15}$" class="validate" required>
                     <label for="password">Password</label>
                 </div>
             </div>
             <!-- sign in button -->
-            <div class="row">
-                <button type="submit" class="col s12 btn-large custom-red text-shadow white-text"><strong>Sign In</strong>  <i class="fas fa-arrow-right custom-orange-text"></i></button>
+            <div class="row center-align">
+                <button type="submit" class="btn-small custom-lightgreen black-text"><strong>Sign In</strong> <i class="fas fa-arrow-right darkgreen-text"></i></button>
             </div>
             <!-- Sign up link -->
             <div class="row">
