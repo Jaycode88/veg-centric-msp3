@@ -4,19 +4,21 @@
 {% block content %}
 
 <!-- Page title -->
-<h1 class="center white-text">Edit {{ recipe.recipe_name }}</h1>
+<h1 class="center black-text">Edit {{ recipe.recipe_name }}</h1>
 
 <!-- Materialize card -->
-<div class="row card-panel add-recipe-card center-content custom-yellow">
+<div class="row card-panel add-recipe-card center-content">
 
     <!-- Edit recipe Form -->
-    <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" enctype="multipart/form-data">
+    <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+        enctype="multipart/form-data">
 
         <!-- recipe name-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-utensils darkgreen-text prefix"></i>
-                <input id="recipe_name" name="recipe_name" type="text"  class="validate" value="{{ recipe.recipe_name}}" required>
+                <input id="recipe_name" name="recipe_name" type="text" class="validate" value="{{ recipe.recipe_name}}"
+                    required>
                 <label for="recipe_name">Recipe Name</label>
             </div>
         </div>
@@ -24,13 +26,13 @@
         <!-- recipe category -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-folder-open custom-orange-text prefix"></i>
+                <i class="fas fa-folder-open darkgreen-text prefix"></i>
                 <select id="category" name="category" class="validate" required>
                     <option value="#" disabled selected>Choose Category</option>
                     {% for category in categories %}
                     <option value="{{ category.category }}" {%
                     if category.category == recipe.category %}selected{% endif %}>
-                    {{ category.category }}
+                        {{ category.category }}
                     </option>
                     {% endfor %}
                 </select>
@@ -41,10 +43,9 @@
         <!-- Recipe description text area -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-pepper-hot prefix custom-orange-text"></i>
-                <textarea id="recipe_description" name="recipe_description"
-                    minlength="15" maxlength="80" class="materialize-textarea validate"
-                     value="{{ recipe.recipe_description }}" required>
+                <i class="fas fa-pepper-hot prefix darkgreen-text"></i>
+                <textarea id="recipe_description" name="recipe_description" minlength="15" maxlength="80"
+                    class="materialize-textarea validate" value="{{ recipe.recipe_description }}" required>
                 </textarea>
             </div>
         </div>
@@ -52,55 +53,61 @@
         <!-- Recipe photo upload area -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-image prefix custom-orange-text"></i>
+                <i class="fas fa-image prefix darkgreen-text"></i>
                 <input type="file" name="image" accept="image/*">
-                <p>If you would like to change the image of the prepared dish please upload the new 1. The current image will be deleted</p>
+                <p>If you would like to change the image of the prepared dish please upload the new 1. The current image
+                    will be deleted</p>
                 <p>If you do not upload an image the current image will be kept</p>
             </div>
         </div>
 
         <!-- ingridients fields -->
         <div id="ingredientFields" class="row input-field col s12">
+            <h3>Ingredients</h3>
             {% for ingredient in recipe.ingredients %}
             <div class='ingredient'>
                 <input type='text' name='ingredient[]' placeholder='Ingredient' value="{{ ingredient.name }}">
                 <input type='text' name='quantity[]' placeholder='Quantity' value="{{ ingredient.quantity }}">
-                <button class='removeButton btn small waves-effect custom-orange waves-light'>Remove</button><br>
+                <button class='removeButton btn-small custom-darkgreen'><strong>Remove</strong> <i
+                        class='fas fa-trash-alt white-text'></i></button><br>
             </div>
             {% endfor %}
         </div>
 
         <!-- Add ingredient button -->
         <div>
-            <button id="addIngredientButton" class="btn small custom-orange">Add Ingredient</button>
+            <button id="addIngredientButton" class="btn-small custom-darkgreen"><strong>Add Ingredient</strong> <i
+                    class="fas fa-plus white-text"></i></button>
         </div>
 
         <!-- Method fields -->
         <div id="methodFields" class="row input-field col s12">
+            <h3>Method</h3>
             {% for step in recipe.method_step %}
             <div class='method-step'>
                 <input type='text' name='method_step[]' value="{{ step }}">
-                <button class='removeButton btn small waves-effect custom-orange waves-light'>Remove</button>
+                <button class='removeButton btn-small custom-darkgreen'><strong>Remove</strong> <i
+                        class='fas fa-trash-alt white-text'></i></button>
             </div>
             {% endfor %}
         </div>
 
         <!-- Add Method Step button -->
         <div>
-            <button id="addMethodStepButton" class="btn small custom-orange">Add Step</button>
+            <button id="addMethodStepButton" class="btn-small custom-darkgreen"><strong>Add Step</strong> <i
+                    class="fas fa-plus white-text"></i></button>
         </div><br>
 
         <!-- Form Buttons -->
         <div class="row">
             <div class="col s12 center">
                 <!-- post button -->
-                <button class="btn custom-red" type="submit"
-                    name="post_button">Update
-                    <i class="fas fa-cloud-arrow-up right custom-orange-text"></i>
-                </button>
+                <button class="btn-small custom-lightgreen black-text" type="submit"
+                    name="post_button"><strong>Update</strong> <i
+                        class="fas fa-cloud-arrow-up darkgreen-text"></i></button>
                 <!-- reset button -->
-                <button class="btn custom-red" type="reset" name="reset">Reset
-                    <i class="fas fa-rotate-left right custom-orange-text"></i>
+                <button class="btn-small custom-lightgreen black-text" type="reset" name="reset"><strong>Reset</strong>
+                    <i class="fas fa-rotate-left right darkgreen-text"></i>
                 </button>
             </div>
         </div>
