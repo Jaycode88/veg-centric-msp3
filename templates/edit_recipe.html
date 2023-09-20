@@ -6,8 +6,7 @@
 <!-- Page title -->
 <h1 class="center black-text">Edit {{ recipe.recipe_name }}</h1>
 
-<!-- Materialize card -->
-<div class="row card-panel add-recipe-card center-content">
+<div class="row add-recipe">
 
     <!-- Edit recipe Form -->
     <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
