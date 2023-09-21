@@ -99,6 +99,16 @@ margin-right: 10%;
 max-width: 80%;
 }
 
+/* recipe card */ 
+.card-content.custom-mushroom .center {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+.btn-small.custom-lightgreen {
+  display: inline-block;
+}
+
 /* Recipe Card Image */
 .card-image {
   max-width: 100%; 
@@ -265,5 +275,11 @@ max-width: 80%;
   margin-left: 5%;
   margin-right: 5%;
   max-width: 90%;
+  }
+}
+@media only screen and (max-width:500px) {
+  .btn-small.custom-lightgreen {
+    display: inline-block;
+    margin-right: 10%;
   }
 }

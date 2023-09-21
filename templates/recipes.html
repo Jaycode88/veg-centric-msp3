@@ -39,6 +39,7 @@
                         <h2 class="custom-lightgreen white-text">{{ recipe.recipe_name }}</h2><br>
                         <h3 class="custom-lightgreen white-text">{{ recipe.category }}</h3>
                     </div>
+                    <br>
                 </div>
                 <div class="card-content custom-mushroom">
                     <!-- Recipe Description, Author, and Date -->
@@ -60,9 +61,9 @@
                         {% else %}
                         <form method="POST" action="{{ url_for('add_to_favorites', recipe_id=recipe['_id']) }}">
                             <a class="black-text custom-lightgreen btn-small"
-                            href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"><strong>Recipe</strong> <i class="fas fa-circle-info darkgreen-text"></i></a>
+                            href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"><strong>View Recipe</strong> <i class="fas fa-circle-info darkgreen-text"></i></a>
                             <button type="submit" class="btn-small custom-lightgreen black-text"><strong>Add to
-                                Favorites</strong> <i class="fas fa-plus darkgreen-text"></i></button>
+                                Favorites</strong> <i class="fas fa-plus darkgreen-text"></i></button><br>
                         </form>
                         {% endif %}
                         {% endif %} 
