@@ -29,7 +29,7 @@
 <!-- users recipe section -->
 <h1 class="center black-text">{{ user.username.capitalize() }}'s Recipes</h1>
 <div class="row">
-    {% if recipe in user_recipes %}
+    {% if user_recipes %}
     {% for recipe in user_recipes %}
     <!-- Recipe Card -->
     <div class="col s12 m6 offset-m2">

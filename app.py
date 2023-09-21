@@ -232,7 +232,8 @@ def profile():
 
     if username:
         user = database.db.users.find_one({"username": username})
-        user_recipes = database.db.recipes.find({"created_by": username})
+        user_recipes_pack = database.db.recipes.find({"created_by": username})
+        user_recipes = list(user_recipes_pack)
         favorite_recipes = database.db.recipes.find(
             {"_id": {"$in": user["favorites"]}})
 
