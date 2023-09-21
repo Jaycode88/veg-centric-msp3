@@ -234,8 +234,9 @@ def profile():
         user = database.db.users.find_one({"username": username})
         user_recipes_pack = database.db.recipes.find({"created_by": username})
         user_recipes = list(user_recipes_pack)
-        favorite_recipes = database.db.recipes.find(
+        favorite_recipes_pack = database.db.recipes.find(
             {"_id": {"$in": user["favorites"]}})
+        favorite_recipes = list(favorite_recipes_pack)
 
         return render_template(
             "profile.html",

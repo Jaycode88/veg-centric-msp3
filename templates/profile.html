@@ -74,7 +74,11 @@
 <!-- users favourite recipes section -->
 <h1 class="center black-text">{{ user.username.capitalize() }}'s Favorite Recipes</h1>
 <div class="row">
-    {% if favorite_recipes %}
+    {% if not favorite_recipes %}
+    <div class="center-align">
+        <p class="black-text"><strong>You have not added any favorites yet.</strong></p>
+    </div>
+    {% else %}
     {% for recipe in favorite_recipes %}
      <!-- Recipe Card -->
      <div class="col s12 m6 offset-m2">
@@ -110,11 +114,7 @@
             </div>
         </div>
     </div>
-    {% endfor %}
-    {% else %}
-    <div class="center-align">
-        <p><strong>You have not added any favorites yet.</strong></p>
-    </div>
+    {% endfor %}    
     {% endif %}
 </div>
 
