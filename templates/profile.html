@@ -29,6 +29,7 @@
 <!-- users recipe section -->
 <h1 class="center black-text">{{ user.username.capitalize() }}'s Recipes</h1>
 <div class="row">
+    {% if recipe in user_recipes %}
     {% for recipe in user_recipes %}
     <!-- Recipe Card -->
     <div class="col s12 m6 offset-m2">
@@ -64,10 +65,16 @@
         </div>
     </div>
     {% endfor %}
+    {% else %}
+    <div class="center-align">
+        <p class="black-text"><strong>You have not uploaded any recipes yet.</strong></p>
+    </div>
+    {% endif %}
 </div>
 <!-- users favourite recipes section -->
 <h1 class="center black-text">{{ user.username.capitalize() }}'s Favorite Recipes</h1>
 <div class="row">
+    {% if favourite_recipes %}
     {% for recipe in favorite_recipes %}
      <!-- Recipe Card -->
      <div class="col s12 m6 offset-m2">
@@ -104,6 +111,11 @@
         </div>
     </div>
     {% endfor %}
+    {% else %}
+    <div class="center-align">
+        <p><strong>You have not added any favorites yet.</strong></p>
+    </div>
+    {% endif %}
 </div>
 
 {% endblock %}
