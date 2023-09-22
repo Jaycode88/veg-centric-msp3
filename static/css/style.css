@@ -70,7 +70,7 @@
 
 /* Button Spacing */
 /* ---------------------------------------- */
-button {
+button, .btn-spacing {
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 5px;
