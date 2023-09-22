@@ -48,6 +48,25 @@
   margin-top: 70px;
 }
 
+/* Footer Bar */
+/* ---------------------------------------- */
+.page-footer {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-text {
+  margin-left: 15%;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-right: 15%;
+}
+
 /* Button Spacing */
 /* ---------------------------------------- */
 button, .anchor-btn {
