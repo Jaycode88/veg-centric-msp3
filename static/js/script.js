@@ -12,14 +12,25 @@ $(document).ready(function() {
 
 /**
  * Initialize the category selection dropdown on the Add Recipe page.
- * This function should be called when the document is ready.
+ *
+ * This function initializes the category selection dropdown by calling the 'formSelect' method
+ * on all 'select' elements within the document. It should be called when the document is ready
+ * to ensure that the dropdowns are properly enhanced and functional.
+ *
+ * @function initializeCategoryDropdown
  */
 $(document).ready(function(){
     $('select').formSelect();
   });
 
 /**
- *  handles the Add Ingredients functionality.
+ * Handles the "Add Ingredients" functionality for a dynamic form.
+ *
+ * This function sets up event handlers to add and remove ingredient fields in a dynamic form.
+ * It targets the specified elements, such as the form, ingredient container, and buttons, and
+ * provides the logic for adding new ingredient fields and removing them when needed.
+ *
+ * @function handleAddIngredients
  */
 $(document).ready(function() {
     // Select necessary elements
@@ -50,8 +61,14 @@ $(document).ready(function() {
     });
   });
 
-  /**
- *  Handles the Add Method Step functionality.
+/**
+ * Handles the "Add Method Step" functionality for a dynamic form.
+ *
+ * This function sets up event handlers to add and remove method steps in a dynamic form.
+ * It targets the specified elements and provides the logic for adding new method step fields
+ * and removing them when needed.
+ *
+ * @function handleAddMethodStep
  */
   $(document).ready(function() {
     // Select necessary elements
@@ -79,7 +96,21 @@ $(document).ready(function() {
       $(this).closest(".method-step").remove();
     });
   });
-  
+
+  /**
+ * Initializes a full-width carousel with indicators for the welcome page.
+ *
+ * This function initializes a carousel on elements with the class 'carousel.carousel-slider'
+ * to create a full-width carousel with navigation indicators. It provides a user-friendly
+ * way to display content on the welcome page with a carousel effect.
+ *
+ * @function initWelcomePageCarousel
+ *
+ * @param {Object} options - The configuration options for the carousel.
+ * @param {boolean} options.fullWidth - Set to `true` to enable full-width mode for the carousel.
+ * @param {boolean} options.indicators - Set to `true` to display navigation indicators for the carousel.
+ *
+ */
   $('.carousel.carousel-slider').carousel({
     fullWidth: true,
     indicators: true
