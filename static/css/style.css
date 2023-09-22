@@ -66,10 +66,43 @@ button, .anchor-btn {
 }
 
 /* welcome page */
-/* sign up and sign in button position */
-.btn-center {
-  display: block;
+/* carousel */
+.carousel {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
+}
+
+.carousel-item {
+  position: relative;
+  text-align: center;
+  margin-right: 10%;
+}
+
+.carousel-item img {
+  max-width: 800px;
+  max-height: auto;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Style for the text inside the overlay */
+.overlay-text p {
+  margin: 0;
+}
+
+.overlay-text h2 {
+  margin-top: 5px;
 }
  /* homepage */
  /*search feature */

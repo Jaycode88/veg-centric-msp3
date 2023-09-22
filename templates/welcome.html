@@ -32,6 +32,24 @@
     </div>
 </div>
 <!-- Place cards or carousel to showcase some recipes Here -->
+<div class="carousel carousel-slider center">
+    <div class="carousel-fixed-item center">
+      
+    </div>
+    {% for recipe in recipes %}
+    <div class="carousel-item  black-text">
+        <img src="{{ recipe.image }}" alt="{{ recipe.title }}" class="responsive-img">
+        <div class="overlay-text">
+            <h2>{{ recipe.recipe_name }}</h2>
+            <h2>{{ recipe.category }}</h2>
+            <p><strong>Prep time:</strong> {{ recipe.prep_time }}</p>
+            <p><strong>Posted By:</strong> {{ recipe.created_by }}</p><br>
+            <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="btn-small custom-lightgreen black-text"><strong>View Recipe</strong> <i class="fas fa-circle-info darkgreen-text"></i></a>
+        </div>
+      </div>
+    {% endfor %}
+
+</div>
 <!-- Why join us card -->
 <div class="row">
     <div class="col s12 m10 offset-m1">

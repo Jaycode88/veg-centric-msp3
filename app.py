@@ -93,10 +93,14 @@ def welcome():
     currently in a session. It provides information about the
     application and encourages users to sign in or create an account.
 
+    This route also retrieves a list of recipes from the database
+    and passes them to the template for display.
+
     Returns:
         flask.Response: The HTML response containing the welcome page.
     """
-    return render_template("welcome.html")
+    recipes = database.db.recipes.find()
+    return render_template("welcome.html", recipes=recipes)
 
 
 # About page
