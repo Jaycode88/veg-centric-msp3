@@ -51,6 +51,10 @@
                     <p><strong>Posted By:</strong> {{ recipe.created_by }}</p>
                     <p><strong>Date Posted:</strong> {{ recipe.date_added }}</p><br>
                     <div class="center">
+                        <a class="black-text custom-lightgreen btn-small"
+                            href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"><strong>View Recipe</strong> <i
+                                class="fas fa-circle-info darkgreen-text"></i></a>
+
                         <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
                             class="btn-small anchor-btn custom-lightgreen black-text"><strong>Edit Recipe
                             </strong> <i class="fas fa-pen-to-square darkgreen-text"></i></a>
