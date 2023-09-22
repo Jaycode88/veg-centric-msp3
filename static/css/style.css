@@ -1,13 +1,15 @@
-/* font imports */
+/* Font Imports */
+/* ---------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Fasthand&family=Playfair+Display:wght@600&display=swap');
 
-/* fonts */
+/* Fonts */
+/* ---------------------------------------- */
 .playfair, h1, h2, h3 {
   font-family: 'Playfair Display', sans-serif;
 }
 
-
-/* Custom color classes */
+/* Custom Colors */
+/* ---------------------------------------- */
 .white {
   background-color: #ffff;
 }
@@ -25,20 +27,34 @@
 }
 
 /* Navbar */
+/* ---------------------------------------- */
 .nav-wrapper {
   /* Add margins to the left and right of the navigation bar */
     margin-left: 10px;
     margin-right: 10px;
 }
 
-/* button spacing */
+/* Button Spacing */
+/* ---------------------------------------- */
 button, .anchor-btn {
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
+/* button hover effects */
+.btn-small, .anchor-btn {
+  transition: 1s;
+}
+
+/* button hover scale */
+.btn:hover, .btn-small:hover, .anchor-btn:hover {
+  transform: scale(1.075);
+}
+
 /* flash messages */
+/* ---------------------------------------- */
 .message-margin {
   /* Add margins and padding to flash messages */
   margin-left: 5px;
@@ -52,20 +68,13 @@ button, .anchor-btn {
 }
 
 /* text styles */
+/* ---------------------------------------- */
 .text-shadow {
-  /* Apply a subtle text shadow for aesthetical purpose */
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-/* button hover effects */
-.btn-small, .anchor-btn {
-  transition: 1s;
-}
-/* button hover scale */
-.btn:hover, .btn-small:hover, .anchor-btn:hover {
-  transform: scale(1.075);
 }
 
 /* welcome page */
+/* ---------------------------------------- */
 /* carousel */
 .carousel {
   display: flex;
@@ -104,14 +113,22 @@ button, .anchor-btn {
 .overlay-text h2 {
   margin-top: 5px;
 }
- /* homepage */
+
+ /* show recipes page / Homepage */
+ /* ---------------------------------------- */
  /*search feature */
  .searchform {
   margin-right: 5%;
   margin-left: 5%;
  }
 
-/* show recipes page cards */
+/* recipes cards */ 
+.card-content.custom-mushroom .center {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
 .col.m6 {
   width: calc(50% - 20px) !important;
   margin: 0 10px !important;
@@ -132,12 +149,7 @@ margin-right: 10%;
 max-width: 80%;
 }
 
-/* recipe card */ 
-.card-content.custom-mushroom .center {
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
-}
+/* recipe card button */
 .btn-small.custom-lightgreen {
   display: inline-block;
 }
@@ -151,6 +163,8 @@ max-width: 80%;
   align-items: center;
 }
 
+/* Add a recipe page */
+/* ---------------------------------------- */
 /* text area on add-recipe form*/
  /* placeholder text within the textarea */
  ::placeholder {
@@ -166,7 +180,7 @@ max-width: 80%;
 }
 
 /* recipe details page */
-
+/* ---------------------------------------- */
 /* Recipe Image */
 .recipe-details-img {
   max-width: 80%;
@@ -213,6 +227,8 @@ max-width: 80%;
   margin: 10px;
 }
 
+/* Media Queries */
+/* ---------------------------------------- */
 /* Navbar media queries */
 @media only screen and (max-width: 992px) {
     /* Hide the desktop navigation and show the mobile dropdown trigger */
@@ -251,7 +267,8 @@ max-width: 80%;
         color: white;
       }
 }
- /* recipe details media queries */
+
+ /* recipe details page media queries */
  /* Recipe Image */
  @media (min-width:900px) {
   .recipe-details-img {
@@ -261,10 +278,57 @@ max-width: 80%;
   }
 }
 
+/* Media Queries */
+/* ---------------------------------------- */
 
-/* show recipes media queries */
-/* cards */
-/* Media queries for screens smaller than an iPad (max-width: 992px) */
+/* Navbar media queries */
+@media only screen and (max-width: 992px) {
+  #nav-desktop {
+    display: none;
+  }
+  .dropdown-trigger.hide-on-large-only {
+    display: block;
+    padding: 10px;
+    padding-top: 0px;
+  }
+  .dropdown-content li a {
+    color: white;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  #nav-desktop {
+    display: block;
+  }
+  .dropdown-trigger.hide-on-large-only {
+    display: none;
+  }
+  .dropdown-content li a {
+    color: white;
+  }
+}
+
+@media (max-width: 600px) {
+  .dropdown-trigger.hide-on-large-only {
+    display: block;
+    padding: 10px;
+    padding-top: 20px;
+  }
+  .dropdown-content li a {
+    color: white;
+  }
+}
+
+/* Recipe details page media queries */
+@media (min-width: 900px) {
+  .recipe-details-img {
+    max-width: 70%;
+    height: auto;
+  }
+}
+
+/* Show recipes media queries */
+/* Cards */
 @media only screen and (max-width: 992px) {
   .col.m6 {
     width: 80% !important;
@@ -272,7 +336,6 @@ max-width: 80%;
   }
 }
 
-/* Media queries for screens smaller than 600px */
 @media only screen and (max-width: 600px) {
   .col.s12 {
     width: 90% !important;
@@ -288,7 +351,6 @@ max-width: 80%;
     overflow: hidden;
     text-overflow: none;
     margin: 0;
-
   }
 }
 
@@ -301,16 +363,18 @@ max-width: 80%;
   }
 }
 
-@media only screen and (max-width:450px) {
-  /* Add recipe card */
-.add-recipe {
-  align-content: center;
-  margin-left: 5%;
-  margin-right: 5%;
-  max-width: 90%;
+/* Add recipe card */
+@media only screen and (max-width: 450px) {
+  .add-recipe {
+    align-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 90%;
   }
 }
-@media only screen and (max-width:500px) {
+
+/* Buttons */
+@media only screen and (max-width: 500px) {
   .btn-small.custom-lightgreen {
     display: inline-block;
     margin-right: 10%;
