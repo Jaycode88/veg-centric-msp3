@@ -2,12 +2,10 @@
 {% block styles %}
 {% endblock %}
 {% block content %}
-<!-- Page Title -->
-<h1 class="center white-text">Veg Centric</h1>
 <!-- About card -->
 <div class="row">
     <div class="col s12 m10 offset-m1">
-        <div class="card-panel center-content custom-yellow">
+        <div class="card-panel center-content custom-mushroom">
             <!-- About Text -->
             <h2 class="center-align">About us!</h2>
             <p>Welcome to the heart and soul of Veg-Centric Recipes, where our passion for food and a love for
@@ -39,11 +37,15 @@
                 As a member, you'll have access to a treasure trove of recipes, a supportive community of like-minded individuals, and the opportunity
                 to share your own culinary creations with the world.</p>
             <!-- Sign up and sign in buttons -->
-            <a href="{{ url_for('sign_up') }}" role="button" class="btn custom-red
-                white-text btn-center btn-large">Sign up</a>
-            <p class="center-align"><strong>Already a Member?</strong></p>
-            <a href="{{ url_for('sign_in') }}" role="button" class="btn custom-red
-                white-text btn-center btn-large">Sign in</a>
+            <div class="center-align">
+                <a href="{{ url_for('sign_up') }}" role="button"
+                    class="btn-small custom-lightgreen black-text"><strong>Sign Up</strong> <i
+                        class="fas fa-user-plus darkgreen-text"></i></a>
+                <p class="center-align"><strong>Already a Member?</strong></p>
+                <a href="{{ url_for('sign_in') }}" role="button"
+                    class="btn-small custom-lightgreen black-text"><strong>Sign In</strong> <i
+                        class="fas fa-arrow-right darkgreen-text"></i></a>
+            </div>
         </div>
     </div>
 </div>
