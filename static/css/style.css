@@ -34,6 +34,20 @@
     margin-right: 10px;
 }
 
+/* Sticky Nav Bar */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* margin for the content to compensate for the sticky navbar height */
+.content {
+  margin-top: 70px;
+}
+
 /* Button Spacing */
 /* ---------------------------------------- */
 button, .anchor-btn {
