@@ -1,11 +1,16 @@
 /* Font Imports */
 /* ---------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Fasthand&family=Playfair+Display:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Playfair+Display:wght@600&display=swap');
 
 /* Fonts */
 /* ---------------------------------------- */
 .playfair, h1, h2, h3 {
   font-family: 'Playfair Display', sans-serif;
+}
+/* Add btn-small to this once overlaying problem is solved */
+p, li, .alice {
+  font-family: 'Alice', sans-serif;
+  font-size: large;
 }
 
 /* Custom Colors */
@@ -91,7 +96,7 @@ button, .btn-spacing {
 /* flash messages */
 /* ---------------------------------------- */
 .message-margin {
-  /* Add margins and padding to flash messages */
+  /* margins and padding for flash messages */
   margin-left: 5px;
   margin-right: 5px;
   padding:5px;
