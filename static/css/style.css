@@ -51,6 +51,7 @@
 /* Footer Bar */
 /* ---------------------------------------- */
 .page-footer {
+  margin-top: 10px;
   padding: 20px 0;
   display: flex;
   justify-content: space-between;
@@ -69,7 +70,7 @@
 
 /* Button Spacing */
 /* ---------------------------------------- */
-button, .anchor-btn {
+button {
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 5px;
@@ -77,12 +78,13 @@ button, .anchor-btn {
 }
 
 /* button hover effects */
-.btn-small, .anchor-btn {
+.btn-small {
   transition: 1s;
+  display: inline-block;
 }
 
 /* button hover scale */
-.btn:hover, .btn-small:hover, .anchor-btn:hover {
+.btn:hover, .btn-small:hover {
   transform: scale(1.075);
 }
 
@@ -182,11 +184,6 @@ margin-right: 10%;
 max-width: 80%;
 }
 
-/* recipe card button */
-.btn-small.custom-lightgreen {
-  display: inline-block;
-}
-
 /* Recipe Card Image */
 .card-image {
   max-width: 100%; 
@@ -253,11 +250,6 @@ max-width: 80%;
 /* Steps List */
 .recipe-steps ol {
   list-style-type: decimal;
-}
-
-/* buttons */
-.buttons {
-  margin: 10px;
 }
 
 /* Media Queries */
