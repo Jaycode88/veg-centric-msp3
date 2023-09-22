@@ -59,6 +59,11 @@
         Favorites</strong> <i class="fas fa-plus darkgreen-text"></i></button>
   </form>
   {% endif %}
+  {% if session.user == 'admin' or (user and user.username == recipe.created_by) %}
+  <!-- Add buttons for admin users to edit and delete the recipe -->
+  <a class="custom-lightgreen btn-small black-text btn-spacing" href="{{ url_for('edit_recipe', recipe_id=recipe['_id']) }}"><strong>Edit Recipe</strong> <i class="fas fa-edit darkgreen-text"></i></a>
+  <a class="custom-lightgreen btn-small black-text btn-spacing" href="{{ url_for('delete_recipe', recipe_id=recipe['_id']) }}"><strong>Delete Recipe</strong> <i class="fas fa-trash-alt darkgreen-text"></i></a>
+  {% endif %}
   {% else %}
   <!-- Add buttons for users not signed in or in session -->
   <a class="custom-lightgreen btn-small black-text btn-spacing" href="{{ url_for('welcome') }}"><strong>Back to
@@ -69,7 +74,6 @@
     href="{{ url_for('sign_up') }}"><strong>Register</strong> <i class="fas fa-user-plus darkgreen-text"></i></a>
   {% endif %}
 
-</div>
 </div>
 {% endblock %}
 {% block scripts %}
