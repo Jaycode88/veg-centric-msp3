@@ -359,6 +359,7 @@ def add_recipe():
         recipe_name = request.form.get("recipe_name")
         category = request.form.get("category")
         recipe_description = request.form.get("recipe_description")
+        prep_time = request.form.get("prep_time")
         created_by = session["user"]
         ingredients = []
         method_step = request.form.getlist("method_step[]")
@@ -382,6 +383,7 @@ def add_recipe():
             "recipe_name": recipe_name,
             "category": category,
             "recipe_description": recipe_description,
+            "prep_time": prep_time,
             "image": image_url,
             "created_by": created_by,
             "date_added": formatted_date,
@@ -515,6 +517,7 @@ def edit_recipe(recipe_id):
             recipe_name = request.form.get("recipe_name")
             category = request.form.get("category")
             recipe_description = request.form.get("recipe_description")
+            prep_time = request.form.get("prep_time")
             ingredients = []
             method_step = request.form.getlist("method_step[]")
 
@@ -550,6 +553,7 @@ def edit_recipe(recipe_id):
                         "recipe_name": recipe_name,
                         "category": category,
                         "recipe_description": recipe_description,
+                        "prep_time": prep_time,
                         "image": image_url,
                         "ingredients": ingredients,
                         "method_step": method_step

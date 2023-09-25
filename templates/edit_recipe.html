@@ -48,6 +48,15 @@
             </div>
         </div>
 
+        <!-- Prep time input -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-clock prefix darkgreen-text"></i>
+                <input type="text" id="prep_time" name="prep_time" minlength="4" maxlength="20"
+                    class="validate" placeholder="Enter the preperation time here" value="{{ recipe.prep_time }}" required>
+            </div>
+        </div>
+
         <!-- Recipe photo upload area -->
         <div class="row">
             <div class="input-field col s12">
