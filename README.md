@@ -111,8 +111,73 @@ Veg-Centric Recipes addresses a growing need for economical and sustainable dini
 
 ## Design
 - ### Theme and Color Scheme
-    Green And Mushroom On White with Black Text:
-    This pallete Consists of the colors Olive Green (#5a873c), Apple Green (#8ABD4D), 
+    Green And Goldenrod:
+    This pallete Consists of the colors Olive Green (#5A873C), Apple Green (#8ABD4D) and Pale Goldenrod (#DED8A0).
+
+- #### **Color by Color:**
+Below is the Physcology of each color and its relation to food.
+
+- **Olive Green**
+    - Earthy and Sophisticated: Olive green is often associated with earthiness and sophistication. It's reminiscent of olive trees and has a muted, subdued quality.
+
+    - Stability and Endurance: This shade of green can convey a sense of stability and endurance, making it suitable for products or environments that want to project reliability.
+
+    - Military and Utility: Due to its use in military uniforms and utilitarian equipment, olive green can also evoke feelings of strength, resilience, and preparedness.
+
+- **Olive Green in relation to food**
+    -   Olive green may be associated with earthy and savory flavors. It's often found in Mediterranean cuisine due to its connection with olives. It can also be used in packaging or decor to suggest a more mature or refined culinary experience.
+
+- **Apple Green**
+    - Vibrancy and Freshness: Apple green, or bright green, is associated with vibrancy, freshness, and youthfulness. It's often used to create a lively and energetic atmosphere.
+    
+    - Creativity and Innovation: This shade of green can stimulate creativity and innovation. It's often used in marketing to catch attention and convey a sense of excitement.
+
+    - Positive and Playful: Apple green is a playful and positive color. It can evoke feelings of happiness and cheerfulness, making it suitable for products and designs aimed at children or those seeking a fun experience.
+
+- **Apple Green in relation to food**
+    - Health and Natural Foods: Like other shades of green, apple green is linked to health and natural foods. It can be used to suggest that a product is fresh, organic, and good for you.
+
+    -  Bright green is frequently used in marketing fresh and vibrant foods, such as green apples, limes, and kiwis. It can make food appear more appealing, especially if the goal is to convey a sense of freshness and healthiness.
+
+- **Research of green used by Food Companys and Authoritys**
+    - Upon research into the use of the color green used in the food sector I found many large companies and Authorities Use this color in different shades in their logos and marketing, Including 2 recipe websites.
+![Mock-up](static/documentation/greencompanies.webp)
+
+- **Pale Goldenrod**
+     Whilst this colour is not normally considered in the normal mushroom range of colours I chose it due to it closeness to the mushroom range without the grey hue which can cause slight visibility problems with text, yet still holds the earthy undertones of mushroom. This color offers:
+
+     - Warmth: #DED8A0 is a warm color with yellow undertones. Warm colors are often associated with feelings of comfort and positivity.
+
+     - Cheerfulness: The goldenrod hue in #DED8A0 can evoke feelings of cheerfulness and optimism.
+
+     - Earthiness: This color has earthy qualities, which can convey a sense of stability and groundedness.
+
+     - Subtlety: It's a relatively muted color, suggesting a sense of understated elegance and calmness.
+
+- **Pale Goldenrod in relation to food**
+    - Natural and Wholesome: This color has earthy qualities, making it suitable for describing foods that are natural, organic, and wholesome. Think of fresh produce from a farmer's market.
+
+    - Warm Desserts: In the realm of desserts, #DED8A0 might be likened to the golden-brown crust of a freshly baked pie or the warm, inviting color of a bread pudding. It conveys a sense of indulgence.
+
+- ### Design Brief:
+- **Color:**
+
+![Mock-up](static/documentation/colorpallete.webp)
+
+- **Background:**
+In This design, I have chosen a white background as the primary canvas for several compelling reasons:
+    - Cleanliness and Freshness: White is universally associated with cleanliness and freshness. It provides a pristine and uncluttered visual canvas that conveys a sense of purity and simplicity. This choice aligns with our goal of presenting a clean and inviting user interface.
+
+    - High Readability: White backgrounds offer excellent contrast for text, ensuring that content is highly readable. This is especially important for user interfaces where readability plays a crucial role in user engagement and understanding.
+
+    - Timelessness: White backgrounds have a timeless quality. They don't go out of style and can provide a neutral backdrop that allows other design elements to shine. This ensures that our design remains relevant and appealing over time.
+
+To complement the white background, I've introduced pale goldenrod cards (#DED8A0) strategically in certain sections of the interface. These cards serve several purposes:
+- Visual Interest: The pale goldenrod color adds a touch of warmth and visual interest to the design, breaking up the monotony of an all-white interface and creating focal points for important content.
+
+- Subtle Elegance: The muted golden-yellow hue of the cards conveys a sense of understated elegance and sophistication, enhancing the overall aesthetic appeal.
+
+- Information Hierarchy: We use pale goldenrod cards to highlight specific sections or content, helping users quickly identify and engage with key information.
 
 Build notes 
 
