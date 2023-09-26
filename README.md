@@ -1,3 +1,121 @@
+# Veg-Centric Recipes
+
+# A responsice web application for Users to view and share Veg-Centric recipes.
+
+## Code Intstitute - Milestone Project 3
+
+## HTML / CSS / Jquery / Python / Flask / MongoDB / Materialize / Cloudinary / Heroku
+
+### By Joe Seabrook
+
+N.B Home and recipe page mock-up images here
+
+### Repository Link
+
+[View in GitHub Pages](https://github.com/Jaycode88/veg-centric-msp3)
+
+### Live Project Link
+
+[View Deployment Link](https://veg-centric-msp3-64721c5e710e.herokuapp.com/welcome)
+
+# Content
+
+- ## The Why
+
+Veg-Centric Recipes addresses a growing need for economical and sustainable dining options. As people seek ways to reduce food costs, we recognize that incorporating more vegetables into meals is not only healthier but also more budget-friendly than heavy meat-based dishes. We're here to show that delicious, wallet-friendly meals can be centered around vibrant veggies.
+
+- ## Business Goal
+
+- Expand our user base to build a thriving community.
+
+- Gain revenue streams through advertising opportunities and affiliate marketing partnerships, enabling us to continue offering valuable resources and content to our users.
+
+- ### User Stories
+
+    - #### First-Time User Goals
+
+        - Enjoy a User-Friendly Experience: A user-friendly interface and navigation system that allows users to easily explore the website and discover recipes and resources.
+
+        - Browse Veg-Centric Recipes: Users will want to discover simple and time-efficient vegetable-based recipes for their meals.
+
+        - Discover New Flavors and Ingredients: Users may have a goal of expanding their culinary horizons by trying out new vegetables and flavors they haven't cooked with before.
+
+        - Join the community: A User may want to join the community and share their own recipes
+
+        - Find information about Veg-Centric.
+
+    - #### Returning User Goals
+
+        - Contribute to the Community: Enable returning users to actively contribute to the community by sharing their own veg-centric recipes.
+
+        - Save Favorite Recipes: Allow users to save their favorite veg-centric recipes to their profile for easy access on return visits.
+
+        - To be able to view, edit and Delete their uploaded recipes.
+
+        - To have a page with user information with the option to update.
+
+    - #### Website Owner Goals
+
+        - Edit all Recipes to remove speling errors, make easier to understand etc
+
+        - Edit recipe images for aesthetical purposes.
+
+        - The ability to add Categories.
+
+        - Generate revenue Through Affiliate Marketing.
+
+## THE 5 PLANES
+- ### Strategy
+
+    - **Purpose of the website?**
+
+        Provide a diverse and accessible collection of veg-centric recipes, cooking tips, and resources to inspire and assist users in their culinary journey.
+
+    - **Target audience?**
+
+        * Home Cooks and Food Enthusiasts: Those who enjoy cooking and are looking for creative, vegetable-centric recipes that offer both flavor and nutrition.
+
+        * Health-Conscious Consumers: Individuals who prioritize their health and are seeking ways to incorporate more vegetables into their diets for improved well-being.
+
+        * Budget-Conscious Shoppers: People who are mindful of their food expenses and are interested in cost-effective meal options that don't compromise on taste or nutrition.
+
+    - **Value to the user?**
+
+        * Economical Dining Solutions: We empower users to save money on their food expenses by sharing budget-friendly veg-centric recipes that prove that healthy eating doesn't have to break the bank.
+
+        * Inspiration for Healthier Living: The platform inspires users to make healthier dietary choices by showcasing the nutritional benefits of vegetable-centric meals, helping them achieve their wellness goals.
+
+        * Community and Connection: We foster a vibrant and supportive community where users can connect with like-minded individuals, share their culinary experiences, and exchange ideas for veg-centric living.
+
+    - **What makes a good experience ?**
+
+      * User-Friendly Interface: A well-designed and intuitive interface that is easy to navigate, ensuring that users can find and upload recipes.
+
+      * Responsive Design: A website that adapts seamlessly to various devices and screen sizes, ensuring a consistent and enjoyable experience whether users are on desktop, tablet, or mobile.
+
+      * Search Option: Robust search feature that allow users to find specific recipes by Name, Category and User.
+
+      * Accessibility: Ensuring that the website is accessible to users with disabilities, including features like alt text for images and keyboard navigation.
+
+      * Community Engagement: A vibrant and active community where users can share their own recipes with others who share their interests.
+
+    - **What we shouldn't do?**
+
+        * Spam or Over-Promotion: We do not engage in spammy practices, including excessive advertising, unsolicited emails, or intrusive pop-ups that disrupt the user experience.
+
+        * Misleading Information: We do not provide misleading or inaccurate information, especially regarding health, nutrition, or the environmental impact of food choices.
+
+        * Plagiarism: We do not plagiarize content from other sources. All content on our platform is original, properly attributed, and respects copyright laws.
+
+        * Neglecting User Privacy: We do not compromise user privacy by sharing or selling personal information without consent. We adhere to strict privacy policies to protect user data.
+
+## Design
+- ### Theme and Color Scheme
+    Green And Mushroom On White with Black Text:
+    This pallete Consists of the colors Olive Green (#5a873c), Apple Green (#8ABD4D), 
+
+Build notes 
+
 Installed flask using pip3 install flask which also installs packages: werkzueg, blinker, click and itsdangerous 
 created app.py file 
 created env.py file to hold sensitive information the app requires 
