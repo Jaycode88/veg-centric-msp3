@@ -115,7 +115,7 @@ Veg-Centric Recipes addresses a growing need for economical and sustainable dini
     This pallete Consists of the colors Olive Green (#5A873C), Apple Green (#8ABD4D) and Pale Goldenrod (#DED8A0).
 
 - #### **Color by Color:**
-Below is the Physcology of each color and its relation to food.
+    Below is the Physcology of each color and its relation to food.
 
 - **Olive Green**
     - Earthy and Sophisticated: Olive green is often associated with earthiness and sophistication. It's reminiscent of olive trees and has a muted, subdued quality.
@@ -414,9 +414,20 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
 
     Now, your application should be configured to use MongoDB as its database.
 
+## Credits
 
+- ### Content
+N.B Add content creds eg. gpt for text
 
+- ### Media
+N.B Reference all images used and there sources icons from font awesome
 
+- ### Acknowledgements
+    - I would like to thank my Code Institute mentor, [Alex K](https://calendly.com/alex_mentor) for his amazing help, advice and support throughout the development of this project.
+    - I would like to thank Tim Nelson for his ongoing support.
+    - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
+    - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the great advice.
+    - I would like to thank freinds for there on going support and reviewing of the Web App.
 
 
 
