@@ -348,7 +348,9 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
 
     2. **Configure Environment Variables**: If your application requires environment variables, create a `.env` file in the project directory and add the necessary variables.
 
-    3. **Run the Application**: Start the local development server using the following command:
+    3. **.gitignore File**: Ensure that you have a `.gitignore` file in your project to exclude sensitive information and files from being committed to version control. Common entries in a `.gitignore` file include `.env`, `.pyc` files, and other temporary or generated files.
+
+    4. **Run the Application**: Start the local development server using the following command:
 
         ```
         python3 app.py
