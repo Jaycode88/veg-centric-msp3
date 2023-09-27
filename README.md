@@ -190,6 +190,61 @@ The Prototype for the main page was made with [Figma](https://www.figma.com/)
 
 ![Mock-up](static/documentation/highfidelity.webp)
 
+- ## Features
+ - #### Navigation Bar
+    - The navigation bar is a central feature that enhances the user experience by providing easy access to key functionalities and content within Veg-Centric.  Whether on a desktop or a mobile device, users can seamlessly navigate through the application with the help of this feature.
+
+    - The Nav Bar consist of: The Brand Logo which when clicked directs the user to the homepage, Top bar Navigation for larger screens and Dropdown Nav for Mobile decvices.
+
+    -  Depending on the user's role and session status, the Nav Bar & Dropdown provide a set of relevant links for easy navigation
+
+![screenshot](static/documentation/navigation.webp)
+
+ - #### Footer Bar
+    - The footer bar in our web application, Veg-Centric, is a helpful component that appears at the bottom of each page. The Footer bar acknowledges the developer behind the project, and offers links to the developer's GitHub and LinkedIn profiles. This promotes transparency, user engagement, and a seamless browsing experience for our users.
+
+![screenshot](static/documentation/footer.webp)
+
+- #### Recipe Search
+    - The search feature enhances the user experience by providing a tailored way to find recipes that match their preferences. Users can quickly filter through a large collection of recipes and discover the ones that align with their culinary interests.
+
+    - The search form was created with [Materialize](https://materializecss.com/)
+
+![screenshot](static/documentation/search.webp)
+
+- #### Recipe Cards
+    - Recipe cards are the visual representation of individual recipes within our web application. Each recipe card provides a comprehensive overview of a specific recipe, allowing users to quickly assess its details, category, and more.
+
+    - The recipe cards are designed to offer a visually pleasing and user-friendly experience. They provide a quick and convenient way for users to browse through our recipe collection, find dishes of interest, and take actions based on their preferences.
+
+![screenshot](static/documentation/recipecard.webp)
+
+- #### Recipe Details page
+    - The Recipe Details Page offers users a rich and informative experience, enabling them to explore recipes in detail
+
+    - It encourages user interaction by offering the option of adding to favorites.
+
+![screensot](static/documentation/recipedetails.webp)
+
+- #### Sign In and Sign Up
+    - I added a Sign up Feature so users can upload their own recipes.
+
+    - Users that are signed Up and Signed in are able to save favourite recipes aswell as edit and delete their own recipes.
+
+![screenshot](static/documentation/signinup.webp)
+
+- #### Profile Page
+    - The Profile Page enhances the user experience by centralizing user-related information and actions. It allows users to manage their profile, access their uploaded recipes, and easily revisit their favorite recipes. Additionally, it provides a sense of ownership and engagement within the Veg-Centric community.
+
+![screenshot](static/documentation/profile.webp)
+
+ - ## Future Features I would like to include
+    - #### create point for each feature
+    And decribe below
+
+
+
+
 Build notes 
 
 Installed flask using pip3 install flask which also installs packages: werkzueg, blinker, click and itsdangerous 
