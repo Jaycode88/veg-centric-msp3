@@ -140,7 +140,7 @@ Below is the Physcology of each color and its relation to food.
     -  Bright green is frequently used in marketing fresh and vibrant foods, such as green apples, limes, and kiwis. It can make food appear more appealing, especially if the goal is to convey a sense of freshness and healthiness.
 
 - **Research of green used by Food Companys and Authoritys**
-    - Upon research into the use of the color green used in the food sector I found many large companies and Authorities Use this color in different shades in their logos and marketing, Including 2 recipe websites.
+    - Upon research into the use of the color green within in the food sector I found many large companies and Authorities Use this color in different shades in their logos and marketing, Including 2 recipe websites.
 ![Mock-up](static/documentation/greencompanies.webp)
 
 - **Pale Goldenrod**
@@ -253,6 +253,121 @@ The Prototype for the main page was made with [Figma](https://www.figma.com/)
 - #### Recipes and Users
 
 ![screenshot](static/documentation/userrecipeflow.webp)
+
+## **TESTING**
+
+For the documentation of all testing,Please see TESTING.md(TESTING.md) 
+
+## **DEPLOYMENT**
+- ### Deployment with Heroku
+    This application can be deployed on Heroku to make it accessible on the web. Follow these steps to deploy your app:
+
+    - #### Prerequisites
+
+        Before deploying the app on Heroku, make sure you have the following prerequisites:
+
+        1. [Heroku Account](https://signup.heroku.com/) - You need a Heroku account to deploy your app.
+        2. [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) - Install the Heroku Command Line Interface to interact with Heroku from your terminal.
+
+### Deployment Steps
+
+1. **Login to Heroku**: Open your terminal and log in to your Heroku account using the following command:
+   
+   ```
+   heroku login
+    ```
+    Follow the prompts to log in to your Heroku account.
+
+2. **Create a Heroku App**: Navigate to your project directory in the terminal and create a new Heroku app
+    ```
+    heroku create your-app-name
+    ```
+    Replace your-app-name with a unique name for your app. Heroku will provide you with a URL for your app (e.g., https://your-app-name.herokuapp.com/).
+
+3. **Configure Environment Variables**: Store sensitive information like secret keys and API credentials as environment variables on Heroku. You can set these variables using the Heroku CLI or through the Heroku Dashboard
+    ```
+    heroku config:set SECRET_KEY=your-secret-key
+    heroku config:set API_KEY=your-api-key
+    ```
+    Replace your-secret-key and your-api-key with the actual values you need to configure.
+
+4. **Deploy to Heroku**: Deploy your app to Heroku by pushing your code to the Heroku remote repository
+    ```
+    git push heroku main
+    ```
+    Ensure that you have committed all your changes to the main branch before running this command.
+
+5. **Open the App**: Once the deployment is complete, you can open your app in your web browser using the following command.
+    ```
+    heroku open
+    ```
+    This will open your app in a new browser window.
+
+    #### Congratulations
+    Your app is now deployed and live on Heroku with sensitive information securely managed as environment variables. You can share the Heroku app URL with others to access your application online.
+
+- ### Local Deployment
+This project can be cloned or forked in order to make a local copy on your own system.
+
+- #### Cloning
+    You can clone this repository by following these steps:
+
+    1. Go to the [GitHub repository](https://github.com/Jaycode88/veg-centric-msp3) 
+    2. Locate the Code button above the list of files and click it 
+    3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
+    4. Open Git Bash or Terminal
+    5. Change the current working directory to the one where you want the cloned directory
+    6. In your IDE Terminal, type the following command to clone my repository:
+        - `git clone https://github.com/Jaycode88/veg-centric-msp3.git`
+    7. Press Enter to create your local clone.
+
+    Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Jaycode88/veg-centric-msp3)
+
+Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
+A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension)
+
+- #### Forking
+    By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
+    You can fork this repository by using the following steps:
+
+    1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Jaycode88/veg-centric-msp3)
+    2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+    3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
+
+ - **Running Locally**
+
+    After you have cloned or forked the repository and navigated to the project directory, you can set up your local environment as follows:
+
+    1. **Install Dependencies**: Make sure you have Python 3.x installed on your system. Then, install the required dependencies listed in the `requirements.txt` file:
+
+        ```  
+        pip install -r requirements.txt
+        ``` 
+
+    2. **Configure Environment Variables**: If your application requires environment variables, create a `.env` file in the project directory and add the necessary variables.
+
+    3. **Run the Application**: Start the local development server using the following command:
+
+        ```
+        python3 app.py
+        ```
+
+        Replace `app.py` with the actual name of your main application file.
+
+- #### Local vs Deployment
+
+    When working with this project, it's important to understand the differences between running the application locally and deploying it to Heroku:
+
+    - **Local Development**: Running the application locally is ideal for development and testing purposes. You can make changes, test new features, and experiment with the code in a controlled environment.
+
+    - **Heroku Deployment**: Deploying the application to Heroku makes it accessible to a wider audience on the web. It's suitable for sharing your project with others and providing a public URL for access.
+
+    Choose the deployment option that best suits your needs and project goals.
+
+
+
 
 
 
