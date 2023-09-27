@@ -8,7 +8,7 @@
 
 ### By Joe Seabrook
 
-N.B Home and recipe page mock-up images here
+N.B am i responsive images here
 
 ### Repository Link
 
@@ -144,6 +144,7 @@ Below is the Physcology of each color and its relation to food.
 ![Mock-up](static/documentation/greencompanies.webp)
 
 - **Pale Goldenrod**
+
      Whilst this colour is not normally considered in the normal mushroom range of colours I chose it due to it closeness to the mushroom range without the grey hue which can cause slight visibility problems with text, yet still holds the earthy undertones of mushroom. This color offers:
 
      - Warmth: #DED8A0 is a warm color with yellow undertones. Warm colors are often associated with feelings of comfort and positivity.
@@ -178,6 +179,11 @@ To complement the white background, I've introduced pale goldenrod cards (#DED8A
 - Subtle Elegance: The muted golden-yellow hue of the cards conveys a sense of understated elegance and sophistication, enhancing the overall aesthetic appeal.
 
 - Information Hierarchy: We use pale goldenrod cards to highlight specific sections or content, helping users quickly identify and engage with key information.
+
+- ## Wireframes
+The basic layout of Veg-Centric Recipes was created with [Balsamiq](https://balsamiq.com/).
+
+![Mock-up](static/documentation/wireframes.webp)
 
 Build notes 
 
