@@ -185,6 +185,11 @@ The basic layout of Veg-Centric Recipes was created with [Balsamiq](https://bals
 
 ![Mock-up](static/documentation/wireframes.webp)
 
+- ## High Fidelity Prototype
+The Prototype for the main page was made with [Figma](https://www.figma.com/)
+
+![Mock-up](static/documentation/highfidelity.webp)
+
 Build notes 
 
 Installed flask using pip3 install flask which also installs packages: werkzueg, blinker, click and itsdangerous 
