@@ -259,53 +259,6 @@ The Prototype for the main page was made with [Figma](https://www.figma.com/)
 For the documentation of all testing,Please see TESTING.md(TESTING.md) 
 
 ## **DEPLOYMENT**
-- ### Deployment with Heroku
-    This application can be deployed on Heroku to make it accessible on the web. Follow these steps to deploy your app:
-
-    - #### Prerequisites
-
-        Before deploying the app on Heroku, make sure you have the following prerequisites:
-
-        1. [Heroku Account](https://signup.heroku.com/) - You need a Heroku account to deploy your app.
-        2. [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) - Install the Heroku Command Line Interface to interact with Heroku from your terminal.
-
-### Deployment Steps
-
-1. **Login to Heroku**: Open your terminal and log in to your Heroku account using the following command:
-   
-   ```
-   heroku login
-    ```
-    Follow the prompts to log in to your Heroku account.
-
-2. **Create a Heroku App**: Navigate to your project directory in the terminal and create a new Heroku app
-    ```
-    heroku create your-app-name
-    ```
-    Replace your-app-name with a unique name for your app. Heroku will provide you with a URL for your app (e.g., https://your-app-name.herokuapp.com/).
-
-3. **Configure Environment Variables**: Store sensitive information like secret keys and API credentials as environment variables on Heroku. You can set these variables using the Heroku CLI or through the Heroku Dashboard
-    ```
-    heroku config:set SECRET_KEY=your-secret-key
-    heroku config:set API_KEY=your-api-key
-    ```
-    Replace your-secret-key and your-api-key with the actual values you need to configure.
-
-4. **Deploy to Heroku**: Deploy your app to Heroku by pushing your code to the Heroku remote repository
-    ```
-    git push heroku main
-    ```
-    Ensure that you have committed all your changes to the main branch before running this command.
-
-5. **Open the App**: Once the deployment is complete, you can open your app in your web browser using the following command.
-    ```
-    heroku open
-    ```
-    This will open your app in a new browser window.
-
-    #### Congratulations
-    Your app is now deployed and live on Heroku with sensitive information securely managed as environment variables. You can share the Heroku app URL with others to access your application online.
-
 - ### Local Deployment
 This project can be cloned or forked in order to make a local copy on your own system.
 
@@ -358,6 +311,53 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
 
         Replace `app.py` with the actual name of your main application file.
 
+- ### Deployment with Heroku
+    This application can be deployed on Heroku to make it accessible on the web. Follow these steps to deploy your app:
+
+    - #### Prerequisites
+
+        Before deploying the app on Heroku, make sure you have the following prerequisites:
+
+        1. [Heroku Account](https://signup.heroku.com/) - You need a Heroku account to deploy your app.
+        2. [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) - Install the Heroku Command Line Interface to interact with Heroku from your terminal.
+
+    - ### Deployment Steps
+
+    1. **Login to Heroku**: Open your terminal and log in to your Heroku account using the following command:
+   
+        ```
+        heroku login
+        ```
+        Follow the prompts to log in to your Heroku account.
+
+    2. **Create a Heroku App**: Navigate to your project directory in the terminal and create a new Heroku app
+        ```
+        heroku create your-app-name
+        ```
+        Replace your-app-name with a unique name for your app. Heroku will provide you with a URL for your app (e.g., https://your-app-name.herokuapp.com/).
+
+    3. **Configure Environment Variables**: Store sensitive information like secret keys and API credentials as environment variables on Heroku. You can set these variables using the Heroku CLI or through the Heroku Dashboard
+        ```
+        heroku config:set SECRET_KEY=your-secret-key
+        heroku config:set API_KEY=your-api-key
+        ```
+        Replace your-secret-key and your-api-key with the actual values you need to configure.
+
+    4. **Deploy to Heroku**: Deploy your app to Heroku by pushing your code to the Heroku remote repository
+        ```
+        git push heroku main
+        ```
+        Ensure that you have committed all your changes to the main branch before running this command.
+
+    5. **Open the App**: Once the deployment is complete, you can open your app in your web browser using the following command.
+        ```
+        heroku open
+        ```
+        This will open your app in a new browser window.
+
+    #### Congratulations
+    Your app is now deployed and live on Heroku with sensitive information securely managed as environment variables. You can share the Heroku app URL with others to access your application online.
+
 - #### Local vs Deployment
 
     When working with this project, it's important to understand the differences between running the application locally and deploying it to Heroku:
@@ -367,6 +367,57 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
     - **Heroku Deployment**: Deploying the application to Heroku makes it accessible to a wider audience on the web. It's suitable for sharing your project with others and providing a public URL for access.
 
     Choose the deployment option that best suits your needs and project goals.
+
+    Always follow the steps and ensure that your sensitive information(API Keys, Database credentials, etc) are not visible to the public.
+
+- ### Connecting to Cloudinary for User-Uploaded Images
+
+    This application uses Cloudinary to store user-uploaded images. To configure your own Cloudinary integration, follow these steps:
+
+    1. **Create a Cloudinary Account**: If you don't already have a Cloudinary account, sign up for one [here](https://cloudinary.com/).
+
+    2. **Obtain API Credentials**: After creating your Cloudinary account, obtain your API key, API secret, and cloud name from your Cloudinary dashboard.
+
+    3. **Configure Environment Variables**: Store your Cloudinary API credentials as environment variables in your local `.env` file or on your hosting platform. Here's an example of what your `.env` file might look like:
+
+        ```env
+        CLOUDINARY_API_KEY=your-api-key
+        CLOUDINARY_API_SECRET=your-api-secret
+        CLOUDINARY_CLOUD_NAME=your-cloud-name
+        ```
+
+        Replace `your-api-key`, `your-api-secret`, and `your-cloud-name` with your actual Cloudinary credentials.
+
+    4. **Integrate Cloudinary in Your Application**: Modify your application code to use these environment variables to connect to Cloudinary for image uploads and management. Refer to your application's documentation for specific integration details.
+
+    Now, your application should be configured to use Cloudinary for storing user-uploaded images.
+
+- ### Connecting to MongoDB Database
+
+    This application uses MongoDB as its database. To set up your own MongoDB database and configure it for your application, follow these steps:
+
+    1. **Create a MongoDB Account**: If you don't already have a MongoDB account, sign up for one [here](https://www.mongodb.com/cloud/atlas).
+
+    2. **Set Up a Database Cluster**: Create a new database cluster in your MongoDB Atlas dashboard. Follow the MongoDB documentation or your application's documentation for guidance on cluster creation.
+
+    3. **Obtain Connection Credentials**: After setting up your cluster, obtain the connection string, including the username and password, from your MongoDB Atlas dashboard.
+
+    4. **Configure Environment Variables**: Store your MongoDB connection string as an environment variable in your local `.env` file or on your hosting platform. Here's an example of what your `.env` file might look like:
+
+        ```
+        MONGODB_URI=your-connection-string
+        ```
+
+        Replace `your-connection-string` with your actual MongoDB connection string.
+
+    5. **Integrate MongoDB in Your Application**: Modify your application code to use the environment variable to connect to your MongoDB database. Refer to your application's documentation for specific integration details.
+
+    Now, your application should be configured to use MongoDB as its database.
+
+
+
+
+
 
 
 
