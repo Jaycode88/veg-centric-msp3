@@ -180,6 +180,22 @@ To complement the white background, I've introduced pale goldenrod cards (#DED8A
 
 - Information Hierarchy: We use pale goldenrod cards to highlight specific sections or content, helping users quickly identify and engage with key information.
 
+- ## Typography
+ #### Font Choices
+In designing this project, I carefully selected fonts to convey the desired visual identity and user experience. My font choices are as follows:
+   - **Playfair Display (Logo and Headings)**
+
+- *Psychology*: Playfair Display is a serif font known for its elegance and sophistication. It carries a sense of tradition and classicism, making it an excellent choice for logos and headings. The distinctive serifs and high contrast between thick and thin strokes create a sense of luxury and refinement, aligning with the project's premium and professional aesthetic.
+
+- **Alice (Body Text)**
+
+- *Psychology*: Alice is a modern and legible sans-serif font. It offers a clean and friendly appearance, making it an ideal choice for body text. The simplicity and readability of Alice ensure that users can comfortably consume content without distraction. This font choice promotes a user-friendly experience, enhancing readability and accessibility. 
+
+ #### Fallback Font
+ As a best practice, I have also included a fallback font in The design. In cases where browsers or devices may not support the specific fonts mentioned above, we use a generic sans-serif font. This ensures that the text remains legible and maintains a consistent appearance across various platforms.
+
+Our font choices, including the fallback option, reflect the project's personality and goals, combining elegance with readability to create an engaging and visually appealing user interface.
+
 - ## Wireframes
 The basic layout of Veg-Centric Recipes was created with [Balsamiq](https://balsamiq.com/).
 
