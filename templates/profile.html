@@ -21,7 +21,7 @@
             <p><strong>{{ user.email }}</strong></p>
             <!-- Edit profile button -->
             <a href="{{ url_for('edit_profile') }}"
-                class="btn-small anchor-btn custom-lightgreen black-text"><strong>Edit Profile</strong> <i
+                class="btn-small custom-lightgreen black-text"><strong>Edit Profile</strong> <i
                     class="fas fa-user-pen darkgreen-text"></i></a>
         </div>
     </div>
@@ -51,18 +51,15 @@
                     <p><strong>Posted By:</strong> {{ recipe.created_by }}</p>
                     <p><strong>Date Posted:</strong> {{ recipe.date_added }}</p><br>
                     <div class="center">
-                        <a class="black-text custom-lightgreen btn-small"
-                            href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"><strong>View Recipe</strong> <i
-                                class="fas fa-circle-info darkgreen-text"></i></a>
-
+                        <form action="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" method="post">
                         <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
-                            class="btn-small anchor-btn custom-lightgreen black-text"><strong>Edit Recipe
+                            class="btn-small custom-lightgreen black-text"><strong>Edit Recipe
                             </strong> <i class="fas fa-pen-to-square darkgreen-text"></i></a>
 
-                        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
-                            class="btn-small anchor-btn custom-lightgreen black-text">
+                        <button type="submit"class="btn-small custom-lightgreen black-text">
                             <strong>Delete Recipe</strong> <i class="fas fa-trash-alt darkgreen-text"></i>
-                        </a>
+                        </button>
+                        </form>
                     </div>
 
                 </div>
@@ -107,9 +104,9 @@
                     <div class="center">
                         <!-- Buttons -->
                         <form action="{{ url_for('remove_favorite', recipe_id=recipe._id) }}" method="post">
-                            <a class="black-text custom-lightgreen anchor-btn btn-small"
+                            <a class="black-text custom-lightgreen btn-small"
                                 href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"><strong>View Recipe</strong> <i class="fas fa-circle-info darkgreen-text"></i></a>
-                            <button type="submit" class="btn-small anchor-btn custom-lightgreen black-text">
+                            <button type="submit" class="btn-small custom-lightgreen black-text">
                                 <strong>Remove Favorite</strong> <i class="fas fa-trash-alt darkgreen-text"></i>
                             </button>
                         </form>
