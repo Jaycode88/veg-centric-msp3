@@ -38,6 +38,26 @@ database = PyMongo(app)
 
 # App routes
 
+# 404 Error page
+@app.errorhandler(404)
+def page_not_found(error):
+    """
+    Handle a 404 error by rendering a custom 404 error page.
+
+    This function is a Flask error handler for handling 404 errors. When a
+    user accesses a route that does not exist, Flask will automatically
+    call this function and return a custom 404 error page.
+
+    Parameters:
+    error (Exception): The exception that triggered the 404 error.
+
+    Returns:
+    tuple: A tuple containing the rendered HTML template for the 404 error
+           page and the HTTP status code 404.
+    """
+    return render_template('404.html'), 404
+
+
 # Home page
 @app.route("/")
 @app.route("/show_recipes")
