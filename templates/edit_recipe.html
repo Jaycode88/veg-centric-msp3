@@ -44,7 +44,8 @@
             <div class="input-field col s12">
                 <i class="fas fa-pepper-hot prefix darkgreen-text"></i>
                 <input type="text" id="recipe_description" name="recipe_description" minlength="15" maxlength="120"
-                    class="validate" placeholder="Enter your Recipe description here" value="{{ recipe.recipe_description }}" required>
+                    class="validate" value="{{ recipe.recipe_description }}" required>
+                <label for="recipe_description">Recipe Description</label>
             </div>
         </div>
 
@@ -52,8 +53,9 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-clock prefix darkgreen-text"></i>
-                <input type="text" id="prep_time" name="prep_time" minlength="4" maxlength="20"
-                    class="validate" placeholder="Enter the preperation time here" value="{{ recipe.prep_time }}" required>
+                <input type="text" id="prep_time" name="prep_time" minlength="4" maxlength="20" class="validate"
+                    value="{{ recipe.prep_time }}" required>
+                <label for="prep_time">Preparation Time</label>
             </div>
         </div>
 
@@ -61,7 +63,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-image prefix darkgreen-text"></i>
-                <input type="file" name="image" accept="image/*">
+                <input type="file" name="image" accept="image/*" aria-label="Upload Image Button">
                 <p>If you would like to change the image of the prepared dish please upload the new 1. The current image
                     will be deleted</p>
                 <p>If you do not upload an image the current image will be kept</p>
@@ -73,9 +75,12 @@
             <h3>Ingredients</h3>
             {% for ingredient in recipe.ingredients %}
             <div class='ingredient'>
-                <input type='text' name='ingredient[]' placeholder='Ingredient' value="{{ ingredient.name }}">
-                <input type='text' name='quantity[]' placeholder='Quantity' value="{{ ingredient.quantity }}">
-                <button class='removeButton btn-small custom-darkgreen'><strong>Remove</strong> <i
+                <input type='text' name='ingredient[]' placeholder='Ingredient' value="{{ ingredient.name }}"
+                    aria-label="Ingredient">
+                <input type='text' name='quantity[]' placeholder='Quantity' value="{{ ingredient.quantity }}"
+                    aria-label="Quantity of Ingredient">
+                <button class='removeButton btn-small custom-darkgreen'
+                    aria-label="Remove Ingredient Button"><strong>Remove</strong> <i
                         class='fas fa-trash-alt white-text'></i></button><br>
             </div>
             {% endfor %}
@@ -83,7 +88,8 @@
 
         <!-- Add ingredient button -->
         <div>
-            <button id="addIngredientButton" class="btn-small custom-darkgreen"><strong>Add Ingredient</strong> <i
+            <button id="addIngredientButton" class="btn-small custom-darkgreen"
+                aria-label="Add Ingredient Button"><strong>Add Ingredient</strong> <i
                     class="fas fa-plus white-text"></i></button>
         </div>
 
@@ -92,8 +98,9 @@
             <h3>Method</h3>
             {% for step in recipe.method_step %}
             <div class='method-step'>
-                <input type='text' name='method_step[]' value="{{ step }}">
-                <button class='removeButton btn-small custom-darkgreen'><strong>Remove</strong> <i
+                <input type='text' name='method_step[]' value="{{ step }}" aria-label="Step of Method">
+                <button class='removeButton btn-small custom-darkgreen'
+                    aria-label="Remove Step Button"><strong>Remove</strong> <i
                         class='fas fa-trash-alt white-text'></i></button>
             </div>
             {% endfor %}
@@ -101,19 +108,20 @@
 
         <!-- Add Method Step button -->
         <div>
-            <button id="addMethodStepButton" class="btn-small custom-darkgreen"><strong>Add Step</strong> <i
-                    class="fas fa-plus white-text"></i></button>
+            <button id="addMethodStepButton" class="btn-small custom-darkgreen" aria-label="Add Step Button"><strong>Add
+                    Step</strong> <i class="fas fa-plus white-text"></i></button>
         </div><br>
 
         <!-- Form Buttons -->
         <div class="row">
             <div class="col s12 center">
                 <!-- post button -->
-                <button class="btn-small custom-lightgreen black-text" type="submit"
-                    name="post_button"><strong>Update</strong> <i
+                <button class="btn-small custom-lightgreen black-text" type="submit" name="post_button"
+                    aria-label="Update Recipe Button"><strong>Update</strong> <i
                         class="fas fa-cloud-arrow-up darkgreen-text"></i></button>
                 <!-- reset button -->
-                <button class="btn-small custom-lightgreen black-text" type="reset" name="reset"><strong>Reset</strong>
+                <button class="btn-small custom-lightgreen black-text" type="reset" name="reset"
+                    aria-label="Reset Form Button"><strong>Reset</strong>
                     <i class="fas fa-rotate-left right darkgreen-text"></i>
                 </button>
             </div>

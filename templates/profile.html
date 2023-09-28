@@ -20,8 +20,8 @@
             </h3>
             <p><strong>{{ user.email }}</strong></p>
             <!-- Edit profile button -->
-            <a href="{{ url_for('edit_profile') }}"
-                class="btn-small custom-lightgreen black-text"><strong>Edit Profile</strong> <i
+            <a href="{{ url_for('edit_profile') }}" class="btn-small custom-lightgreen black-text"
+                aria-label="Edit Profile Button"><strong>Edit Profile</strong> <i
                     class="fas fa-user-pen darkgreen-text"></i></a>
         </div>
     </div>
@@ -37,7 +37,7 @@
             <div class="card large zoom custom-mushroom">
                 <!-- Recipe Image-->
                 <div class="card-image">
-                    <img src="{{ recipe.image }}" alt="{{ recipe.recipe_name }}">
+                    <img src="{{ recipe.image }}" alt="Image for {{ recipe.recipe_name }}">
                     <div class="card-title">
                         <!-- Recipe Name and Category -->
                         <h2 class="custom-lightgreen">{{ recipe.recipe_name }}</h2><br>
@@ -52,13 +52,15 @@
                     <p><strong>Date Posted:</strong> {{ recipe.date_added }}</p><br>
                     <div class="center">
                         <form action="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" method="post">
-                        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
-                            class="btn-small custom-lightgreen black-text"><strong>Edit Recipe
-                            </strong> <i class="fas fa-pen-to-square darkgreen-text"></i></a>
+                            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+                                class="btn-small custom-lightgreen black-text"
+                                aria-label="Edit Recipe Button"><strong>Edit Recipe
+                                </strong> <i class="fas fa-pen-to-square darkgreen-text"></i></a>
 
-                        <button type="submit"class="btn-small custom-lightgreen black-text">
-                            <strong>Delete Recipe</strong> <i class="fas fa-trash-alt darkgreen-text"></i>
-                        </button>
+                            <button type="submit" class="btn-small custom-lightgreen black-text"
+                                aria-label="Delete Recipe Button">
+                                <strong>Delete Recipe</strong> <i class="fas fa-trash-alt darkgreen-text"></i>
+                            </button>
                         </form>
                     </div>
 
@@ -82,13 +84,13 @@
     </div>
     {% else %}
     {% for recipe in favorite_recipes %}
-     <!-- Recipe Card -->
-     <div class="col s12 m6 offset-m2">
+    <!-- Recipe Card -->
+    <div class="col s12 m6 offset-m2">
         <div class="card">
             <div class="card large zoom custom-mushroom">
                 <!-- Recipe Image-->
                 <div class="card-image">
-                    <img src="{{ recipe.image }}" alt="{{ recipe.recipe_name }}">
+                    <img src="{{ recipe.image }}" alt="Image For {{ recipe.recipe_name }}">
                     <div class="card-title">
                         <!-- Recipe Name and Category -->
                         <h2 class="custom-lightgreen">{{ recipe.recipe_name }}</h2><br>
@@ -105,8 +107,11 @@
                         <!-- Buttons -->
                         <form action="{{ url_for('remove_favorite', recipe_id=recipe._id) }}" method="post">
                             <a class="black-text custom-lightgreen btn-small"
-                                href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"><strong>View Recipe</strong> <i class="fas fa-circle-info darkgreen-text"></i></a>
-                            <button type="submit" class="btn-small custom-lightgreen black-text">
+                                href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"
+                                aria-label="View Recipe Button"><strong>View Recipe</strong> <i
+                                    class="fas fa-circle-info darkgreen-text"></i></a>
+                            <button type="submit" class="btn-small custom-lightgreen black-text"
+                                aria-label="Remove Recipe From Favorites Button">
                                 <strong>Remove Favorite</strong> <i class="fas fa-trash-alt darkgreen-text"></i>
                             </button>
                         </form>
@@ -117,7 +122,7 @@
             </div>
         </div>
     </div>
-    {% endfor %}    
+    {% endfor %}
     {% endif %}
 </div>
 
@@ -126,4 +131,5 @@
 {% endblock %}
 
 </body>
+
 </html>

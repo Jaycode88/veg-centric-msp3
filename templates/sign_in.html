@@ -14,8 +14,8 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-user-tag darkgreen-text prefix"></i>
-                    <input id="username" name="username" type="text" class="validate" minlength="5" 
-                    maxlength="20" pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,20}$" required>
+                    <input id="username" name="username" type="text" class="validate" minlength="5" maxlength="20"
+                        pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,20}$" required>
                     <label for="username">UserName</label>
                 </div>
             </div>
@@ -23,20 +23,22 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-key darkgreen-text prefix"></i>
-                    <input id="password" name="password" type="password" minlength="6" 
-                    maxlength="15" pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,15}$" class="validate" required>
+                    <input id="password" name="password" type="password" minlength="6" maxlength="15"
+                        pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,15}$" class="validate" required>
                     <label for="password">Password</label>
                 </div>
             </div>
             <!-- sign in button -->
             <div class="row center-align">
-                <button type="submit" class="btn-small custom-lightgreen black-text"><strong>Sign In</strong> <i class="fas fa-arrow-right darkgreen-text"></i></button>
+                <button type="submit" class="btn-small custom-lightgreen black-text"
+                    aria-label="Sign In Button"><strong>Sign In</strong> <i
+                        class="fas fa-arrow-right darkgreen-text"></i></button>
             </div>
             <!-- Sign up link -->
             <div class="row">
                 <div class="col s12">
                     <p class="center-align">Not A Member yet?
-                        <a href="{{ url_for('sign_up') }}">Sign Up</a>
+                        <a href="{{ url_for('sign_up') }}" aria-label="Sign Up Button">Sign Up</a>
                     </p>
                 </div>
             </div>
@@ -49,4 +51,5 @@
 {% endblock %}
 
 </body>
+
 </html>

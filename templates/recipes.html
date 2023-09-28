@@ -7,34 +7,38 @@
 <h1 class="black-text center">Recipes</h1>
 <div class="row">
     <div class="col s12 m8 offset-m2 custom-mushroom">
-        
-            <form action="{{ url_for('search_recipes') }}" method="POST" class="searchform">
-                <div class="row center-align">
-                    <div class="input-field ">
-                        <i class="fas fa-search prefix darkgreen-text"></i>
-                        <input type="text" name="query" minlength="5" class="validate" required>
-                        <label for="query">Search Recipes</label>
-                    </div>
-                    <div>
-                        <a href="{{ url_for('show_recipes')}}" class="btn-small custom-lightgreen black-text"><strong>Reset</strong> <i class="fa-solid fa-rotate-left darkgreen-text"></i></a>
-                        <button type="submit" class="btn-small custom-lightgreen black-text"><strong>Search</strong> <i class="fas fa-search darkgreen-text"></i></button>
-                    </div>
-                </div>
-            </form>
 
-        </div>
+        <form action="{{ url_for('search_recipes') }}" method="POST" class="searchform">
+            <div class="row center-align">
+                <div class="input-field ">
+                    <i class="fas fa-search prefix darkgreen-text"></i>
+                    <input type="text" name="query" minlength="5" class="validate" required>
+                    <label for="query">Search Recipes</label>
+                </div>
+                <div>
+                    <a href="{{ url_for('show_recipes')}}" class="btn-small custom-lightgreen black-text"
+                        aria-label="Reset Search From Button"><strong>Reset</strong> <i
+                            class="fa-solid fa-rotate-left darkgreen-text"></i></a>
+                    <button type="submit" class="btn-small custom-lightgreen black-text"
+                        aria-label="Search Recipes Button"><strong>Search</strong> <i
+                            class="fas fa-search darkgreen-text"></i></button>
+                </div>
+            </div>
+        </form>
+
     </div>
+</div>
 </div>
 <div class="row">
     {% for recipe in recipes %}
     <!-- Recipe Card -->
-    
-        <div class="col s12 m6 offset-m2">
-            <div class="card">
+
+    <div class="col s12 m6 offset-m2">
+        <div class="card">
             <div class="card large zoom custom-mushroom">
                 <!-- Recipe Image-->
                 <div class="card-image">
-                    <img src="{{ recipe.image }}" alt="{{ recipe.recipe_name }}">
+                    <img src="{{ recipe.image }}" alt="Image for {{ recipe.recipe_name }}">
                     <div class="card-title">
                         <!-- Recipe Name and Category -->
                         <h2 class="custom-lightgreen white-text">{{ recipe.recipe_name }}</h2><br>
@@ -55,17 +59,21 @@
                         {% if recipe._id in user.favorites %}
                         <form method="POST" action="{{ url_for('remove_favorite', recipe_id=recipe['_id']) }}">
                             <a class="black-text custom-lightgreen btn-small"
-                                href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"><strong>View Recipe</strong>
+                                href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"
+                                aria-label="View Recipe Button"><strong>View Recipe</strong>
                                 <i class="fas fa-circle-info darkgreen-text"></i></a>
                             <button type="submit" class="btn-small custom-lightgreen black-text"><strong>Remove
-                                    Favorite</strong> <i class="fas fa-trash-alt darkgreen-text"></i></button>
+                                    Favorite</strong> <i class="fas fa-trash-alt darkgreen-text"
+                                    aria-label="Remove Recipe from Favorites Button"></i></button>
                         </form>
                         {% else %}
                         <form method="POST" action="{{ url_for('add_to_favorites', recipe_id=recipe['_id']) }}">
                             <a class="black-text custom-lightgreen btn-small"
-                                href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"><strong>View Recipe</strong>
+                                href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"
+                                aria-label="View Recipe Button"><strong>View Recipe</strong>
                                 <i class="fas fa-circle-info darkgreen-text"></i></a>
-                            <button type="submit" class="btn-small custom-lightgreen black-text"><strong>Add to
+                            <button type="submit" class="btn-small custom-lightgreen black-text"
+                                aria-label="Add Recipe to Favorites Button"><strong>Add to
                                     Favorites</strong> <i class="fas fa-plus darkgreen-text"></i></button><br>
                         </form>
                         {% endif %}
@@ -96,12 +104,12 @@
             <h3 class="center-align">Join the Veg-Centric Revolution Now!</h3>
             <!-- Sign up and sign in buttons -->
             <div class="center-align">
-                <a href="{{ url_for('sign_up') }}" role="button"
-                    class="btn-small custom-lightgreen black-text"><strong>Sign Up</strong> <i
+                <a href="{{ url_for('sign_up') }}" role="button" class="btn-small custom-lightgreen black-text"
+                    aria-label="Sign Up Button"><strong>Sign Up</strong> <i
                         class="fas fa-user-plus darkgreen-text"></i></a>
                 <p class="center-align"><strong>Already a Member?</strong></p>
-                <a href="{{ url_for('sign_in') }}" role="button"
-                    class="btn-small custom-lightgreen black-text"><strong>Sign In</strong> <i
+                <a href="{{ url_for('sign_in') }}" role="button" class="btn-small custom-lightgreen black-text"
+                    aria-label="Sign In Button"><strong>Sign In</strong> <i
                         class="fas fa-arrow-right darkgreen-text"></i></a>
             </div>
         </div>
@@ -110,34 +118,38 @@
 <h1 class="black-text center">Recipes</h1>
 <div class="row">
     <div class="col s12 m8 offset-m2 custom-mushroom">
-        
-            <form action="{{ url_for('search_recipes') }}" method="POST" class="searchform">
-                <div class="row center-align">
-                    <div class="input-field ">
-                        <i class="fas fa-search prefix darkgreen-text"></i>
-                        <input type="text" name="query" minlength="5" class="validate" required>
-                        <label for="query">Search Recipes</label>
-                    </div>
-                    <div>
-                        <a href="{{ url_for('show_recipes')}}" class="btn-small custom-lightgreen black-text"><strong>Reset</strong> <i class="fa-solid fa-rotate-left darkgreen-text"></i></a>
-                        <button type="submit" class="btn-small custom-lightgreen black-text"><strong>Search</strong> <i class="fas fa-search darkgreen-text"></i></button>
-                    </div>
-                </div>
-            </form>
 
-        </div>
+        <form action="{{ url_for('search_recipes') }}" method="POST" class="searchform">
+            <div class="row center-align">
+                <div class="input-field ">
+                    <i class="fas fa-search prefix darkgreen-text"></i>
+                    <input type="text" name="query" minlength="5" class="validate" required>
+                    <label for="query">Search Recipes</label>
+                </div>
+                <div>
+                    <a href="{{ url_for('show_recipes')}}" class="btn-small custom-lightgreen black-text"
+                        aria-label="Reset Search Form Button"><strong>Reset</strong> <i
+                            class="fa-solid fa-rotate-left darkgreen-text"></i></a>
+                    <button type="submit" class="btn-small custom-lightgreen black-text"
+                        aria-label="Search Recipes Button"><strong>Search</strong> <i
+                            class="fas fa-search darkgreen-text"></i></button>
+                </div>
+            </div>
+        </form>
+
     </div>
+</div>
 </div>
 <div class="row">
     {% for recipe in recipes %}
     <!-- Recipe Card -->
-    
-        <div class="col s12 m6 offset-m2">
-            <div class="card">
+
+    <div class="col s12 m6 offset-m2">
+        <div class="card">
             <div class="card large zoom custom-mushroom">
                 <!-- Recipe Image-->
                 <div class="card-image">
-                    <img src="{{ recipe.image }}" alt="{{ recipe.recipe_name }}">
+                    <img src="{{ recipe.image }}" alt="Image for {{ recipe.recipe_name }}">
                     <div class="card-title">
                         <!-- Recipe Name and Category -->
                         <h2 class="custom-lightgreen white-text">{{ recipe.recipe_name }}</h2><br>
@@ -155,11 +167,12 @@
                     <!-- Recipe Details link For non-users -->
                     <div class="center">
                         <a class="black-text custom-lightgreen btn-small"
-                            href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"><strong>View Recipe</strong> <i
+                            href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"
+                            aria-label="View Recipe Button"><strong>View Recipe</strong> <i
                                 class="fas fa-circle-info darkgreen-text"></i></a>
-                                <a href="{{ url_for('sign_up') }}" role="button"
-                                class="btn-small custom-lightgreen black-text"><strong>Sign Up</strong> <i
-                                    class="fas fa-user-plus darkgreen-text"></i></a>
+                        <a href="{{ url_for('sign_up') }}" role="button" class="btn-small custom-lightgreen black-text"
+                            aria-label="Sign Up Button"><strong>Sign Up</strong> <i
+                                class="fas fa-user-plus darkgreen-text"></i></a>
                     </div>
                 </div>
             </div>
@@ -195,12 +208,12 @@
             <h3 class="center-align">Join the Veg-Centric Revolution Now!</h3>
             <!-- Sign up and sign in buttons -->
             <div class="center-align">
-                <a href="{{ url_for('sign_up') }}" role="button"
-                    class="btn-small custom-lightgreen black-text"><strong>Sign Up</strong> <i
+                <a href="{{ url_for('sign_up') }}" role="button" class="btn-small custom-lightgreen black-text"
+                    aria-label="Sign Up Button"><strong>Sign Up</strong> <i
                         class="fas fa-user-plus darkgreen-text"></i></a>
                 <p class="center-align"><strong>Already a Member?</strong></p>
-                <a href="{{ url_for('sign_in') }}" role="button"
-                    class="btn-small custom-lightgreen black-text"><strong>Sign In</strong> <i
+                <a href="{{ url_for('sign_in') }}" role="button" class="btn-small custom-lightgreen black-text"
+                    aria-label="Sign In Button"><strong>Sign In</strong> <i
                         class="fas fa-arrow-right darkgreen-text"></i></a>
             </div>
         </div>
