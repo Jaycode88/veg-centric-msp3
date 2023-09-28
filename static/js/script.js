@@ -97,21 +97,27 @@ $(document).ready(function() {
     });
   });
 
-  /**
- * Initializes a full-width carousel with indicators for the welcome page.
- *
- * This function initializes a carousel on elements with the class 'carousel.carousel-slider'
- * to create a full-width carousel with navigation indicators. It provides a user-friendly
- * way to display content on the welcome page with a carousel effect.
- *
- * @function initWelcomePageCarousel
- *
- * @param {Object} options - The configuration options for the carousel.
- * @param {boolean} options.fullWidth - Set to `true` to enable full-width mode for the carousel.
- * @param {boolean} options.indicators - Set to `true` to display navigation indicators for the carousel.
- *
+/**
+ * Function to initialize and control the Terms and Privacy modals.
+ * This function should be called when the document is ready.
  */
-  $('.carousel.carousel-slider').carousel({
-    fullWidth: true,
-    indicators: true
+$(document).ready(function () {
+  // Initialize all elements with the 'modal' class as modals
+  $('.modal').modal();
+
+  /**
+   * Open the Terms and Conditions modal when the 'Terms' link is clicked.
+   * This click event handler opens the modal with the ID 'termsModal'.
+   */
+  $('#termsLink').click(function () {
+      $('#termsModal').modal('open');
   });
+
+  /**
+   * Open the Privacy Policy modal when the 'Privacy' link is clicked.
+   * This click event handler opens the modal with the ID 'privacyModal'.
+   */
+  $('#privacyLink').click(function () {
+      $('#privacyModal').modal('open');
+  });
+});
