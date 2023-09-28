@@ -13,6 +13,10 @@ p, li, .alice {
   font-size: large;
 }
 
+.btn-small {
+  font-family: 'Alice', sans-serif;
+}
+
 /* Custom Colors */
 /* ---------------------------------------- */
 .white {
