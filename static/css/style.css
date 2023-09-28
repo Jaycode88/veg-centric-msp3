@@ -42,16 +42,25 @@ p, li, .alice {
   	flex-direction: column;
  	  align-items: center;
   	justify-content: center;
-  	min-height: 90vh; /* Adjust the height of section */
+  	min-height: 90vh;
   	text-align: center;
-  	margin-bottom: -15px; /*Remove margin */
+  	margin-bottom: -15px; 
 	  padding-top: 0;
+}
+
+/* flash messages */
+.flashes h4 {
+  background-color: #ded8a0;
+  border-radius: 10px; 
+    padding: 10px;
+    margin: 10px 0;
+    max-width: 800px; 
+    display: inline-block; /* This makes the message container not expand to full width */
 }
 
 /* Navbar */
 /* ---------------------------------------- */
 .nav-wrapper {
-  /* Add margins to the left and right of the navigation bar */
     margin-left: 10px;
     margin-right: 10px;
 }
