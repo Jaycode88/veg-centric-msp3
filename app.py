@@ -38,15 +38,16 @@ database = PyMongo(app)
 
 # App routes
 
-# Home page displaying Recipes for users in session
+# Home page
 @app.route("/")
 @app.route("/show_recipes")
 def show_recipes():
     """
-    Displays a list of recipes on the home page.
+    Displays a list of recipes on the home page with sections for non-users.
 
     Returns:
-        Flask.render_template: HTML template rendering the list of recipes.
+        Flask.render_template: HTML template rendering the list of
+        recipes and Non-user sections.
     """
     # Fetch the user's information from the session
     username = session.get("user")
@@ -81,26 +82,6 @@ def search_recipes():
         return redirect(url_for("show_recipes"))
 
     return render_template("recipes.html", recipes=recipes)
-
-
-# homepage for users not in session
-@app.route("/welcome")
-def welcome():
-    """
-    Renders the welcome page.
-
-    This route is used to display a welcome page for users who are not
-    currently in a session. It provides information about the
-    application and encourages users to sign in or create an account.
-
-    This route also retrieves a list of recipes from the database
-    and passes them to the template for display.
-
-    Returns:
-        flask.Response: The HTML response containing the welcome page.
-    """
-    recipes = database.db.recipes.find()
-    return render_template("welcome.html", recipes=recipes)
 
 
 # About page
@@ -313,7 +294,7 @@ def delete_profile():
 
         # Redirect to a page after profile deletion (e.g., a thank you page)
         flash("Your profile has been deleted.")
-        return redirect(url_for("welcome"))
+        return redirect(url_for("show_recipes"))
 
     # Render the delete profile confirmation form
     return render_template("delete_profile.html", user=user)
