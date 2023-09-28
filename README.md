@@ -242,6 +242,16 @@ The Prototype for the main page was made with [Figma](https://www.figma.com/)
 
 ![screensot](static/documentation/recipedetails.webp)
 
+- #### Add and Edit Recipe Forms
+    - The Add and Edit Recipe forms are a fundamental feature of our veg-centric recipe sharing site, allowing users to contribute their own delicious Veg-Centric recipes to our growing community. 
+    
+    - The Edit recipe form Is pre-populated with the recipe data for the user to change.
+
+![screenshot](static/documentation/addrecipe.webp)
+
+![screenshot](static/documentation/editrecipe.webp)
+
+
 - #### Sign In and Sign Up
     - I added a Sign up Feature so users can upload their own recipes.
 
