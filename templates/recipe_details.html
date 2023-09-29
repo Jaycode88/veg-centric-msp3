@@ -13,9 +13,13 @@
 <div class="center">
   <div class="recipe-details-info">
     <p class="recipe-description"><strong>{{ recipe.recipe_description }}</strong></p>
-    <p><strong>Category:</strong> {{ recipe.category }}</p>
-    <p><strong>Posted By:</strong> {{ recipe.created_by }}</p>
-    <p><strong>Date Posted:</strong> {{ recipe.date_added }}</p>
+    <p><i class="fas fa-folder-open darkgreen-text prefix"></i> <strong>Category:</strong> {{ recipe.category }}</p>
+    <p><i class="fas fa-clock prefix darkgreen-text"></i> <strong>Prep Time:</strong> {{ recipe.prep_time }}</p>
+    <p><i class="fas fa-clock prefix darkgreen-text"></i> <strong>Cook Time:</strong> {{ recipe.cook_time }}</p>
+    <p><i class="fas fa-utensils darkgreen-text prefix"></i> <strong>Servings:</strong> {{ recipe.servings }}</p>
+    <p><i class="fas fa-user prefix darkgreen-text"></i> <strong>Posted By:</strong> {{ recipe.created_by }}</p>
+    <p><i class="fas fa-calendar-days prefix darkgreen-text"></i> <strong>Date Posted:</strong> {{ recipe.date_added }}
+    </p>
   </div>
 </div>
 
