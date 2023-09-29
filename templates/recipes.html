@@ -55,7 +55,6 @@
 
                     <!-- Recipe Details link -->
                     <div class="center">
-                        {% if user %}
                         {% if recipe._id in user.favorites %}
                         <form method="POST" action="{{ url_for('remove_favorite', recipe_id=recipe['_id']) }}">
                             <a class="black-text custom-lightgreen btn-small"
@@ -76,7 +75,6 @@
                                 aria-label="Add Recipe to Favorites Button"><strong>Add to
                                     Favorites</strong> <i class="fas fa-plus darkgreen-text"></i></button><br>
                         </form>
-                        {% endif %}
                         {% endif %}
                     </div>
                 </div>
