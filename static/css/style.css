@@ -7,7 +7,7 @@
 .playfair, h1, h2, h3 {
   font-family: 'Playfair Display', sans-serif;
 }
-/* Add btn-small to this once overlaying problem is solved */
+
 p, li, .alice {
   font-family: 'Alice', sans-serif;
   font-size: large;
@@ -99,13 +99,14 @@ p, li, .alice {
   margin-right: 15%;
 }
 
-/* Button Spacing */
+/* Buttons */
 /* ---------------------------------------- */
-button, .btn-spacing {
+.btn-small {
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 5px;
   margin-bottom: 5px;
+  border-radius: 5px;
 }
 
 /* button hover effects */
@@ -115,8 +116,9 @@ button, .btn-spacing {
 }
 
 /* button hover scale */
-.btn:hover, .btn-small:hover {
+.btn-small:hover {
   transform: scale(1.075);
+  background-color: #ffff;
 }
 
 /* Round cards */
