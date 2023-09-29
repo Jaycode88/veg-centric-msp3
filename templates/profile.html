@@ -47,10 +47,14 @@
                 <div class="card-content custom-mushroom">
                     <!-- Recipe Description, Author, and Date -->
                     <p><strong>{{ recipe.recipe_description}}</strong></p>
-                    <p><strong>Prep time:</strong> {{ recipe.prep_time }}</p>
-                    <p><strong>Cook time:</strong> {{ recipe.cook_time }}</p>
-                    <p><strong>Servings:</strong> {{ recipe.servings }}</p>
-                    <p><strong>Posted By:</strong> {{ recipe.created_by }}</p>
+                    <p><i class="fas fa-clock prefix darkgreen-text"></i> <strong>Prep Time:</strong>
+                        {{ recipe.prep_time }}</p>
+                    <p><i class="fas fa-clock prefix darkgreen-text"></i> <strong>Cook Time:</strong>
+                        {{ recipe.cook_time }}</p>
+                    <p><i class="fas fa-utensils darkgreen-text prefix"></i> <strong>Servings:</strong>
+                        {{ recipe.servings }}</p>
+                    <p><i class="fas fa-user prefix darkgreen-text"></i> <strong>Posted By:</strong>
+                        {{ recipe.created_by }}</p>
                     <br>
 
                     <!-- Buttons -->
@@ -106,11 +110,16 @@
                 <div class="card-content custom-mushroom">
                     <!-- Recipe Description, Author, and Date -->
                     <p><strong>{{ recipe.recipe_description}}</strong></p>
-                    <p><strong>Prep time:</strong> {{ recipe.prep_time }}</p>
-                    <p><strong>Cook time:</strong> {{ recipe.cook_time }}</p>
-                    <p><strong>Servings:</strong> {{ recipe.servings }}</p>
-                    <p><strong>Posted By:</strong> {{ recipe.created_by }}</p>
+                    <p><i class="fas fa-clock prefix darkgreen-text"></i> <strong>Prep Time:</strong>
+                        {{ recipe.prep_time }}</p>
+                    <p><i class="fas fa-clock prefix darkgreen-text"></i> <strong>Cook Time:</strong>
+                        {{ recipe.cook_time }}</p>
+                    <p><i class="fas fa-utensils darkgreen-text prefix"></i> <strong>Servings:</strong>
+                        {{ recipe.servings }}</p>
+                    <p><i class="fas fa-user prefix darkgreen-text"></i> <strong>Posted By:</strong>
+                        {{ recipe.created_by }}</p>
                     <br>
+
                     <div class="center">
                         <!-- Buttons -->
                         <form action="{{ url_for('remove_favorite', recipe_id=recipe._id) }}" method="post">
