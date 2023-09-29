@@ -164,13 +164,14 @@
 
                     <!-- Recipe Details link For non-users -->
                     <div class="center">
-                        <a class="black-text custom-lightgreen btn-small"
-                            href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"
-                            aria-label="View Recipe Button"><strong>View Recipe</strong> <i
-                                class="fas fa-circle-info darkgreen-text"></i></a>
-                        <a href="{{ url_for('sign_up') }}" role="button" class="btn-small custom-lightgreen black-text"
-                            aria-label="Sign Up Button"><strong>Sign Up</strong> <i
-                                class="fas fa-user-plus darkgreen-text"></i></a>
+                        <form method="GET" action="{{ url_for('view_recipe', recipe_id=recipe._id) }}">
+                            <a href="{{ url_for('sign_up') }}" role="button"
+                                class="btn-small custom-lightgreen black-text" aria-label="Sign Up Button"><strong>Sign
+                                    Up</strong> <i class="fas fa-user-plus darkgreen-text"></i></a>
+                            <button type="submit" class="btn-small custom-lightgreen black-text"
+                                aria-label="View Recipe Button"><strong>View Recipe</strong> <i
+                                    class="fas fa-circle-info darkgreen-text"></i></button><br>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -183,16 +184,19 @@
     <div class="col s12 m10 offset-m1">
         <div class="card-panel center-content custom-mushroom">
             <h3 class="center-align">Why Join Us?</h3>
-            <p><i class="fas fa-shrimp darkgreen-text"></i> <strong>Discover Flavorful Fusion:</strong> Our community is all about creating
+            <p><i class="fas fa-shrimp darkgreen-text"></i> <strong>Discover Flavorful Fusion:</strong> Our community is
+                all about creating
                 meals that are as delicious as they are nutritious. Explore a treasure trove of
                 recipes that infuse the goodness of vegetables into your favorite dishes, offering
                 a symphony of flavors that will tantalize your taste buds.</p>
-            <p><i class="fas fa-carrot darkgreen-text"></i> </a><strong>Endless Inspiration:</strong> Whether you're a seasoned chef or a kitchen
+            <p><i class="fas fa-carrot darkgreen-text"></i> </a><strong>Endless Inspiration:</strong> Whether you're a
+                seasoned chef or a kitchen
                 newbie, Veg-Centric Recipes is your go-to source for culinary inspiration. Browse
                 through a diverse collection of recipes submitted by food enthusiasts from around
                 the world. From classic comfort foods to international delights, you'll find something
                 to satisfy every craving.</p>
-            <p><i class="fas fa-champagne-glasses darkgreen-text"></i> <strong>Share Your Creations:</strong> Do you have your own veg-centric recipes that
+            <p><i class="fas fa-champagne-glasses darkgreen-text"></i> <strong>Share Your Creations:</strong> Do you
+                have your own veg-centric recipes that
                 you're eager to showcase? As a member, you can join our vibrant community and share your
                 culinary creations with like-minded foodies. Your recipes can inspire others to experiment
                 in the kitchen and make healthier, veg-centric choices.</p>
