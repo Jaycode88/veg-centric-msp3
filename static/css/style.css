@@ -148,6 +148,7 @@ button, .btn-spacing {
 }
 .card {
   min-height: 700px;
+  border-radius: 20px;
 }
 
 .col.m6 {
@@ -162,13 +163,6 @@ button, .btn-spacing {
 .zoom:hover {
   transform: scale(1.05);
 }
-/* Add recipe card */
-.add-recipe {
-align-content: center;
-margin-left: 10%;
-margin-right: 10%;
-max-width: 80%;
-}
 
 /* Recipe Card Image */
 .card-image {
@@ -177,14 +171,17 @@ max-width: 80%;
   display: flex;
   justify-content: center; 
   align-items: center;
+  border-radius: 20px;
 }
 
 /* Add a recipe page */
 /* ---------------------------------------- */
-/* text area on add-recipe form*/
- /* placeholder text within the textarea */
- ::placeholder {
-  color: #a19d9d;
+/* Add recipe card */
+.add-recipe {
+align-content: center;
+margin-left: 10%;
+margin-right: 10%;
+max-width: 80%;
 }
 
 /* recipe details page */
