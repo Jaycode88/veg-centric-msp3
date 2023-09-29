@@ -119,6 +119,12 @@ button, .btn-spacing {
   transform: scale(1.075);
 }
 
+/* Round cards */
+/* --------------- */
+.round {
+  border-radius: 20px;
+}
+
 /* text styles */
 /* ---------------------------------------- */
 .text-shadow {
