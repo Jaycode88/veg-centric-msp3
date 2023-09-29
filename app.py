@@ -523,6 +523,9 @@ def edit_recipe(recipe_id):
             category = request.form.get("category")
             recipe_description = request.form.get("recipe_description")
             prep_time = request.form.get("prep_time")
+            cook_time = request.form.get("cook_time")
+            servings = request.form.get("servings")
+            prep_time = request.form.get("prep_time")
             ingredients = []
             method_step = request.form.getlist("method_step[]")
 
@@ -559,6 +562,8 @@ def edit_recipe(recipe_id):
                         "category": category,
                         "recipe_description": recipe_description,
                         "prep_time": prep_time,
+                        "cook_time": cook_time,
+                        "servings": servings,
                         "image": image_url,
                         "ingredients": ingredients,
                         "method_step": method_step
