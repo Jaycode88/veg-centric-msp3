@@ -61,6 +61,30 @@
                     aria-label="Sign In Button"><strong>Sign In</strong> <i
                         class="fas fa-arrow-right darkgreen-text"></i></a>
             </div>
+            <p class="center black-text">
+                Click the links to view our
+                <a href="#" id="termsLink">Terms and Conditions</a> and
+                <a href="#" id="privacyLink">Privacy Policy</a>.
+            </p>
+            
+            <!-- modals for Terms and Privacy Policy -->
+            <div id="termsModal" class="modal">
+                <div class="modal-content">
+                    {% include 'termsandconditions.html' %}
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+            </div>
+            
+            <div id="privacyModal" class="modal">
+                <div class="modal-content">
+                    {% include 'privacypolicy.html' %}
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
