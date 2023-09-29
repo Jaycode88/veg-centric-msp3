@@ -59,6 +59,26 @@
             </div>
         </div>
 
+        <!-- Cook time input -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-clock prefix darkgreen-text"></i>
+                <input type="text" id="cook_time" name="cook_time" minlength="4" maxlength="20" class="validate"
+                value="{{ recipe.cook_time }}" required>
+                <label for="cook_time">Cooking Time</label>
+            </div>
+        </div>
+
+        <!-- Servings input -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-utensils prefix darkgreen-text"></i>
+                <input type="number" id="servings" name="servings" minlength="1" maxlength="2" class="validate"
+                value="{{ recipe.servings }}" required>
+                <label for="Servings">Servings</label>
+            </div>
+        </div>
+
         <!-- Recipe photo upload area -->
         <div class="row">
             <div class="input-field col s12">
