@@ -240,7 +240,11 @@ The Prototype for the main page was made with [Figma](https://www.figma.com/)
 
     - It encourages user interaction by offering the option of adding to favorites.
 
+    - If Admin has edited a recipe to add affiliate products the Recipe Details page Transforms to include the product intro and affiliate link
+
 ![screensot](static/documentation/recipedetails.webp)
+
+![screenshot](static/documentation/recipewithproduct.webp)
 
 - #### Add and Edit Recipe Forms
     - The Add and Edit Recipe forms are a fundamental feature of our veg-centric recipe sharing site, allowing users to contribute their own delicious Veg-Centric recipes to our growing community. 
