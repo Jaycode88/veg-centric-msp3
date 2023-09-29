@@ -38,8 +38,17 @@
                 <label>Category</label>
             </div>
         </div>
-
+        {% if session.user == "admin" %}
         <!-- Recipe description text area -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-pepper-hot prefix darkgreen-text"></i>
+                <input type="text" id="recipe_description" name="recipe_description" minlength="15" maxlength="500"
+                    class="validate" value="{{ recipe.recipe_description }}" required>
+                <label for="recipe_description">Recipe Description</label>
+            </div>
+        </div>
+        {% else %}
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-pepper-hot prefix darkgreen-text"></i>
@@ -48,6 +57,19 @@
                 <label for="recipe_description">Recipe Description</label>
             </div>
         </div>
+        {% endif %}
+
+        {% if session.user == "admin" %}
+        <!-- Admin Long Description With affiliate link -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-pepper-hot prefix darkgreen-text"></i>
+                <textarea type="text" id="admin_description" name="admin_description" minlength="15" maxlength="5000"
+                    class="validate" value="{{ recipe.admin_description }}" required></textarea>
+                <label for="admin_description">Admin's Description</label>
+            </div>
+        </div>
+        {% endif %}
 
         <!-- Prep time input -->
         <div class="row">
