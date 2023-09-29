@@ -51,6 +51,8 @@
                 As a member, you'll have access to a treasure trove of recipes, a supportive community of like-minded
                 individuals, and the opportunity
                 to share your own culinary creations with the world.</p>
+
+            {% if not session.user %}
             <!-- Sign up and sign in buttons -->
             <div class="center-align">
                 <a href="{{ url_for('sign_up') }}" role="button" class="btn-small custom-lightgreen black-text"
@@ -61,12 +63,14 @@
                     aria-label="Sign In Button"><strong>Sign In</strong> <i
                         class="fas fa-arrow-right darkgreen-text"></i></a>
             </div>
+            {% endif %}
+
             <p class="center black-text">
                 Click the links to view our
                 <a href="#" id="termsLink" aria-label="Terms and Conditions">Terms and Conditions</a> and
                 <a href="#" id="privacyLink" aria-label="Privacy Policy">Privacy Policy</a>.
             </p>
-            
+
             <!-- modals for Terms and Privacy Policy -->
             <div id="termsModal" class="modal">
                 <div class="modal-content">
@@ -76,7 +80,7 @@
                     <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
                 </div>
             </div>
-            
+
             <div id="privacyModal" class="modal">
                 <div class="modal-content">
                     {% include 'privacypolicy.html' %}
