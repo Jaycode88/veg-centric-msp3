@@ -142,18 +142,18 @@
                     aria-label="Ingredient">
                 <input type='text' name='quantity[]' placeholder='Quantity' value="{{ ingredient.quantity }}"
                     aria-label="Quantity of Ingredient">
-                <button class='removeButton btn-small custom-darkgreen'
+                <button class='removeButton btn-small custom-darkgreen black-text'
                     aria-label="Remove Ingredient Button"><strong>Remove</strong> <i
-                        class='fas fa-trash-alt white-text'></i></button><br>
+                        class='fas fa-trash-alt black-text'></i></button><br>
             </div>
             {% endfor %}
         </div>
 
         <!-- Add ingredient button -->
         <div>
-            <button id="addIngredientButton" class="btn-small custom-darkgreen"
+            <button id="addIngredientButton" class="btn-small custom-darkgreen black-text"
                 aria-label="Add Ingredient Button"><strong>Add Ingredient</strong> <i
-                    class="fas fa-plus white-text"></i></button>
+                    class="fas fa-plus black-text"></i></button>
         </div>
 
         <!-- Method fields -->
@@ -162,17 +162,17 @@
             {% for step in recipe.method_step %}
             <div class='method-step'>
                 <input type='text' name='method_step[]' value="{{ step }}" aria-label="Step of Method">
-                <button class='removeButton btn-small custom-darkgreen'
+                <button class='removeButton btn-small custom-darkgreen black-text'
                     aria-label="Remove Step Button"><strong>Remove</strong> <i
-                        class='fas fa-trash-alt white-text'></i></button>
+                        class='fas fa-trash-alt black-text'></i></button>
             </div>
             {% endfor %}
         </div>
 
         <!-- Add Method Step button -->
         <div>
-            <button id="addMethodStepButton" class="btn-small custom-darkgreen" aria-label="Add Step Button"><strong>Add
-                    Step</strong> <i class="fas fa-plus white-text"></i></button>
+            <button id="addMethodStepButton" class="btn-small custom-darkgreen black-text" aria-label="Add Step Button"><strong>Add
+                    Step</strong> <i class="fas fa-plus black-text"></i></button>
         </div><br>
 
         <!-- Form Buttons -->

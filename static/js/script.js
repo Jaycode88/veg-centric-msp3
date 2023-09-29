@@ -46,7 +46,7 @@ $(document).ready(function() {
       const newIngredient = $("<div class='ingredient'>" +
         "<input type='text' name='ingredient[]' placeholder='Ingredient' aria-label='Ingredient Input'>" +
         "<input type='text' name='quantity[]' placeholder='Quantity' aria-label='Quantity Input'>" +
-        "<button class='removeButton btn-small custom-darkgreen' aria-label='Remove Ingredient Button'><strong>Remove</strong> <i class='fas fa-trash-alt white-text'></i></button>" +
+        "<button class='removeButton btn-small custom-darkgreen black-text' aria-label='Remove Ingredient Button'><strong>Remove</strong> <i class='fas fa-trash-alt black-text'></i></button>" +
         "</div>");
   
       ingredientFields.append(newIngredient); // Add the new ingredient field to the container
@@ -82,7 +82,7 @@ $(document).ready(function() {
       // Create a new method step field container
       const newMethodStep = $("<div class='method-step'>" +
         "<input type='text' name='method_step[]' placeholder='Step' aria-label='Step of Method Input'>" +
-        "<button class='removeButton btn-small custom-darkgreen' aria-label='Remove Step Button'><strong>Remove</strong> <i class='fas fa-trash-alt white-text'></i></button>" +
+        "<button class='removeButton btn-small custom-darkgreen black-text' aria-label='Remove Step Button'><strong>Remove</strong> <i class='fas fa-trash-alt black-text'></i></button>" +
         "</div>");
   
       methodFields.append(newMethodStep); // Add the new method step field to the container

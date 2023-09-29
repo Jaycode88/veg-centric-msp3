@@ -107,6 +107,7 @@ p, li, .alice {
   margin-top: 5px;
   margin-bottom: 5px;
   border-radius: 5px;
+  border: 1px solid transparent;
 }
 
 /* button hover effects */
@@ -119,6 +120,7 @@ p, li, .alice {
 .btn-small:hover {
   transform: scale(1.075);
   background-color: #ffff;
+  border: 1px solid #5a873c
 }
 
 /* Round cards */
