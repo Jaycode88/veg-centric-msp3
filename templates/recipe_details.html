@@ -10,6 +10,26 @@
 <div class="center">
   <img src="{{ recipe.image }}" alt="Image for {{ recipe.recipe_name }}" class="recipe-details-img">
 </div>
+{% if recipe.admin_description %}
+<div class="center">
+  <div class="recipe-details-info">
+    <p><i class="fas fa-folder-open darkgreen-text prefix"></i> <strong>Category:</strong> {{ recipe.category }}</p>
+    <p><i class="fas fa-clock prefix darkgreen-text"></i> <strong>Prep Time:</strong> {{ recipe.prep_time }}</p>
+    <p><i class="fas fa-clock prefix darkgreen-text"></i> <strong>Cook Time:</strong> {{ recipe.cook_time }}</p>
+    <p><i class="fas fa-utensils darkgreen-text prefix"></i> <strong>Servings:</strong> {{ recipe.servings }}</p>
+    <p><i class="fas fa-user prefix darkgreen-text"></i> <strong>Posted By:</strong> {{ recipe.created_by }}</p>
+    <p><i class="fas fa-calendar-days prefix darkgreen-text"></i> <strong>Date Posted:</strong> {{ recipe.date_added }}
+    </p>
+    <p class="recipe-description admin-text"><strong>{{ recipe.admin_description }}</strong></p>
+  </div>
+  <div class="center admin-text">
+    <h3>Top Tips</h3>
+    <p>{{ recipe.product_text }}</p>
+    <a href="{{ recipe.product_link }}" target="_blank" class="btn-small custom-lightgreen black-text"
+      aria-label="Button To View Product Suggestion"> View Product</a>
+  </div>
+</div>
+{% else %}
 <div class="center">
   <div class="recipe-details-info">
     <p class="recipe-description"><strong>{{ recipe.recipe_description }}</strong></p>
@@ -22,6 +42,7 @@
     </p>
   </div>
 </div>
+{% endif %}
 
 <!-- Ingredients -->
 <div class="recipe-ingredients">
