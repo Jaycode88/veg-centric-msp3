@@ -300,13 +300,7 @@ The Prototype for the main page was made with [Figma](https://www.figma.com/)
 
 - **Models Flow Chart**
 
-- #### Categories and Recipes
-
-![screenshot](static/documentation/caterecipeflow.webp)
-
-- #### Recipes and Users
-
-![screenshot](static/documentation/userrecipeflow.webp)
+![screenshot](static/documentation/dataflow.webp)
 
 ## **TESTING**
 
