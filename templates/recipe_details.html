@@ -25,9 +25,13 @@
   <div class="center admin-text">
     <h3>Top Tips</h3>
     <p>{{ recipe.product_text }}</p>
+  </div>
+  <div class="center">
+    <a  href="{{ recipe.product_link }}" target="_blank"><img src="{{ recipe.product_image }}" alt="Image Of Suggested Product" class="recipe-details-img"></a>
+  </div> 
     <a href="{{ recipe.product_link }}" target="_blank" class="btn-small custom-lightgreen black-text"
       aria-label="Button To View Product Suggestion"> View Product</a>
-  </div>
+  
 </div>
 {% else %}
 <div class="center">

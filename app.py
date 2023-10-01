@@ -531,6 +531,7 @@ def edit_recipe(recipe_id):
             admin_description = request.form.get("admin_description")
             product_link = request.form.get("product_link")
             product_text = request.form.get("product_text")
+            product_image = request.form.get("product_image")
 
             # Init image_url with existing img URL, None if no image is set
             image_url = recipe.get("image")
@@ -572,7 +573,8 @@ def edit_recipe(recipe_id):
                         "method_step": method_step,
                         "admin_description": admin_description,
                         "product_link": product_link,
-                        "product_text": product_text
+                        "product_text": product_text,
+                        "product_image": product_image
                     }
                 }
             )

@@ -200,10 +200,10 @@ max-width: 80%;
 .recipe-details-img {
   max-width: 80%;
   height: auto;
-  
+  border-radius: 10px;
 }
 
-/* adnmin texts */
+/* admin texts */
 .admin-text {
   margin-left: 10%;
   margin-right: 10%;
