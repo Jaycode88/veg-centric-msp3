@@ -76,6 +76,12 @@ p, li, .alice {
   font-weight: bold;
 }
 
+/* nav hover color */
+.nav-wrapper ul li a:hover {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #5a873c;
+}
 
 /* Sticky Nav Bar */
 .sticky {
@@ -135,12 +141,6 @@ p, li, .alice {
   border: 1px solid #5a873c
 }
 
-/* Round cards */
-/* --------------- */
-.round {
-  border-radius: 20px;
-}
-
 /* text styles */
 /* ---------------------------------------- */
 .text-shadow {
@@ -176,6 +176,12 @@ p, li, .alice {
 .col.m6 {
   width: calc(50% - 20px) !important;
   margin: 0 10px !important;
+}
+
+/* Round cards */
+/* --------------- */
+.round {
+  border-radius: 20px;
 }
 
 /* card scale/zoom */
