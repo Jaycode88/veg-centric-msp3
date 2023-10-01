@@ -65,6 +65,18 @@ p, li, .alice {
     margin-right: 10px;
 }
 
+.brand-logo {
+  text-shadow: none;
+  font-weight: bold;
+}
+
+#nav-desktop li a, #mobile-dropdown li a {
+  text-shadow: none;
+  color: black;
+  font-weight: bold;
+}
+
+
 /* Sticky Nav Bar */
 .sticky {
   position: fixed;
