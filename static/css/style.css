@@ -147,6 +147,11 @@ p, li, .alice {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
+/* form labels */
+.input-field label {
+  color: #5a873c;
+}
+
  /* show recipes page / Homepage */
  /* ---------------------------------------- */
  /*search feature */
