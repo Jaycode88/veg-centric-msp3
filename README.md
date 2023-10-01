@@ -112,7 +112,7 @@ Veg-Centric Recipes addresses a growing need for economical and sustainable dini
 ## Design
 - ### Theme and Color Scheme
     Green And Goldenrod:
-    This pallete Consists of the colors Olive Green (#5A873C), Apple Green (#8ABD4D) and Pale Goldenrod (#DED8A0).
+    This pallete Consists of the colors Olive Green (#5A873C), Apple Green (#8ABD4D), Pale Goldenrod (#DED8A0) and White (#FFFFF).
 
 - #### **Color by Color:**
     Below is the Physcology of each color and its relation to food.
@@ -160,6 +160,24 @@ Veg-Centric Recipes addresses a growing need for economical and sustainable dini
 
     - Warm Desserts: In the realm of desserts, #DED8A0 might be likened to the golden-brown crust of a freshly baked pie or the warm, inviting color of a bread pudding. It conveys a sense of indulgence.
 
+- **White**
+
+    While white may not be a traditional color associated with specific emotions, it carries its own psychological connotations:
+    - Simplicity and Minimalism: White is frequently associated with simplicity and minimalism. It represents clarity, order, and a sense of space. In design and aesthetics, it's used to create clean, uncluttered visuals.
+
+    - Cleanliness and Hygiene: White is often used in healthcare settings and for sterile environments because it conveys a sense of cleanliness and hygiene. It's associated with sterility and a lack of contaminants.
+
+    - Versatility: White is a neutral color that pairs well with other colors. It can act as a canvas to make other colors pop and stand out. Its versatility makes it a popular choice in various design contexts.
+
+- **White in relation to food**
+
+    - Clean and Fresh: In food presentation, white plates and table settings are often used to convey cleanliness and freshness. White makes food appear clean and appetizing.
+
+    - Contrast: The contrast of white against vibrant food colors can make dishes visually striking. For example, a bright red tomato sauce on a white plate creates an appealing contrast.
+
+    - Neutrality: White is a neutral background that allows the colors, textures, and shapes of food to stand out. It's a common choice for food presentation in fine dining.
+
+
 - ### Design Brief:
 - **Color:**
 
@@ -177,8 +195,6 @@ To complement the white background, I've introduced pale goldenrod cards (#DED8A
 - Visual Interest: The pale goldenrod color adds a touch of warmth and visual interest to the design, breaking up the monotony of an all-white interface and creating focal points for important content.
 
 - Subtle Elegance: The muted golden-yellow hue of the cards conveys a sense of understated elegance and sophistication, enhancing the overall aesthetic appeal.
-
-- Information Hierarchy: We use pale goldenrod cards to highlight specific sections or content, helping users quickly identify and engage with key information.
 
 - ## Typography
  #### Font Choices
@@ -217,7 +233,13 @@ The Prototype for the main page was made with [Figma](https://www.figma.com/)
 ![screenshot](static/documentation/navigation.webp)
 
  - #### Footer Bar
-    - The footer bar in our web application, Veg-Centric, is a helpful component that appears at the bottom of each page. The Footer bar acknowledges the developer behind the project, and offers links to the developer's GitHub and LinkedIn profiles. This promotes transparency, user engagement, and a seamless browsing experience for our users.
+    - The footer bar is a key component of Veg-Centric, designed to enhance user engagement, transparency, and accessibility. It appears at the bottom of every page and contains valuable information and links to various resources.
+
+    - The Join our community section:  This is a a strategically placed text to entice users to join the community
+
+    - The contact us section: This section offers the user the option to get in contact via either email or facebook with icons for links.
+
+    - The Developer information section: Here you can find important information behind Veg-Centric, Including icon links to the GitHub Repo and the developers LinkedIn Page.
 
 ![screenshot](static/documentation/footer.webp)
 
@@ -240,7 +262,9 @@ The Prototype for the main page was made with [Figma](https://www.figma.com/)
 
     - It encourages user interaction by offering the option of adding to favorites.
 
-    - If Admin has edited a recipe to add affiliate products the Recipe Details page Transforms to include the product intro and affiliate link
+    - If Admin has edited a recipe to add affiliate products the Recipe Details page Transforms to include the product intro, Image and affiliate link
+
+![screensot](static/documentation/recipedetails1.webp)
 
 ![screensot](static/documentation/recipedetails.webp)
 
