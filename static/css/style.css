@@ -196,6 +196,15 @@ p, li, .alice {
   border-radius: 20px;
 }
 
+.recipe_img_txt {
+  background-color:  #fff;
+  color: #000;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  padding: 10px;
+}
+
 /* Add a recipe page */
 /* ---------------------------------------- */
 /* Add recipe card */
