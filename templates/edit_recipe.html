@@ -131,6 +131,7 @@
             </div>
         </div>
 
+        {% if session.user == "admin" %}
         <!-- Recipe photo upload area -->
         <div class="row">
             <div class="input-field col s12">
@@ -141,6 +142,7 @@
                 <p>If you do not upload an image the current image will be kept</p>
             </div>
         </div>
+        {% endif %}
 
         <!-- ingridients fields -->
         <div id="ingredientFields" class="row input-field col s12">
