@@ -4,11 +4,16 @@
 
 /* Fonts */
 /* ---------------------------------------- */
-.playfair, h1, h2, h3 {
+.playfair,
+h1,
+h2,
+h3 {
   font-family: 'Playfair Display', sans-serif;
 }
 
-p, li, .alice {
+p,
+li,
+.alice {
   font-family: 'Alice', sans-serif;
   font-size: large;
 }
@@ -22,15 +27,19 @@ p, li, .alice {
 .white {
   background-color: #ffff;
 }
+
 .darkgreen-text {
   color: #5a873c;
 }
+
 .custom-darkgreen {
   background-color: #5a873c;
 }
+
 .custom-lightgreen {
   background-color: #8abd4d;
 }
+
 .custom-mushroom {
   background-color: #ded8a0;
 }
@@ -38,31 +47,32 @@ p, li, .alice {
 /* 404 error page
 /* 404 error page */
 .error {
-	  display: flex;
-  	flex-direction: column;
- 	  align-items: center;
-  	justify-content: center;
-  	min-height: 90vh;
-  	text-align: center;
-  	margin-bottom: -15px; 
-	  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  text-align: center;
+  margin-bottom: -15px;
+  padding-top: 0;
 }
 
 /* flash messages */
 .flashes h4 {
   background-color: #ded8a0;
-  border-radius: 10px; 
+  border-radius: 10px;
   padding: 10px;
   margin: 10px 0;
-  max-width: 800px; 
-  display: inline-block; /* This makes the message container not expand to full width */
+  max-width: 800px;
+  display: inline-block;
+  /* This makes the message container not expand to full width */
 }
 
 /* Navbar */
 /* ---------------------------------------- */
 .nav-wrapper {
-    margin-left: 10px;
-    margin-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .brand-logo {
@@ -70,7 +80,8 @@ p, li, .alice {
   font-weight: bold;
 }
 
-#nav-desktop li a, #mobile-dropdown li a {
+#nav-desktop li a,
+#mobile-dropdown li a {
   text-shadow: none;
   color: black;
   font-weight: bold;
@@ -147,7 +158,7 @@ p, li, .alice {
 /* text styles */
 /* ---------------------------------------- */
 .text-shadow {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* form labels */
@@ -155,27 +166,28 @@ p, li, .alice {
   color: #000;
 }
 
- /* show recipes page / Homepage */
- /* ---------------------------------------- */
- /*search feature */
- .searchform {
+/* show recipes page / Homepage */
+/* ---------------------------------------- */
+/*search feature */
+.searchform {
   margin-right: 5%;
   margin-left: 5%;
- }
+}
 
- .search {
-  border-radius: 20px; 
+.search {
+  border-radius: 20px;
   padding: 10px;
-  margin: 10px 0; 
+  margin: 10px 0;
   display: inline-block;
- }
+}
 
-/* recipes cards */ 
+/* recipes cards */
 .card-content.custom-mushroom .center {
   position: absolute;
   bottom: 10px;
   width: 100%;
 }
+
 .card {
   min-height: 700px;
   border-radius: 20px;
@@ -196,22 +208,23 @@ p, li, .alice {
 .zoom {
   transition: 1s;
 }
+
 .zoom:hover {
   transform: scale(1.05);
 }
 
 /* Recipe Card Image */
 .card-image {
-  max-width: 100%; 
-  max-height: auto; 
+  max-width: 100%;
+  height: auto;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   border-radius: 20px;
 }
 
 .recipe_img_txt {
-  background-color:  #fff;
+  background-color: #fff;
   color: #000;
   border-radius: 10px;
   margin-top: 5px;
@@ -224,10 +237,10 @@ p, li, .alice {
 /* ---------------------------------------- */
 /* Add recipe card */
 .add-recipe {
-align-content: center;
-margin-left: 10%;
-margin-right: 10%;
-max-width: 80%;
+  align-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  max-width: 80%;
 }
 
 /* recipe details page */
@@ -271,7 +284,7 @@ max-width: 80%;
 /* Steps */
 .recipe-steps {
   margin-left: 15%;
-  margin-right: 15%;  
+  margin-right: 15%;
 }
 
 /* Steps List */
@@ -286,11 +299,13 @@ max-width: 80%;
   #nav-desktop {
     display: none;
   }
+
   .dropdown-trigger.hide-on-large-only {
     display: block;
     padding: 10px;
     padding-top: 0px;
   }
+
   .dropdown-content li a {
     color: white;
   }
@@ -300,9 +315,11 @@ max-width: 80%;
   #nav-desktop {
     display: block;
   }
+
   .dropdown-trigger.hide-on-large-only {
     display: none;
   }
+
   .dropdown-content li a {
     color: white;
   }
@@ -314,6 +331,7 @@ max-width: 80%;
     padding: 10px;
     padding-top: 20px;
   }
+
   .dropdown-content li a {
     color: white;
   }
@@ -342,7 +360,7 @@ max-width: 80%;
     margin-left: 5% !important;
   }
 
-  
+
 }
 
 @media only screen and (max-width: 530px) {
@@ -363,7 +381,6 @@ max-width: 80%;
     font-size: 2.75rem;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: none;
     margin: 0;
   }
 }
@@ -372,6 +389,7 @@ max-width: 80%;
   .card-title h2 {
     font-size: 2.25rem;
   }
+
   .card-title h3 {
     font-size: 2.75rem;
   }
