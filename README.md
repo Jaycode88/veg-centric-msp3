@@ -293,8 +293,13 @@ The Prototype for the main page was made with [Figma](https://www.figma.com/)
 ![screenshot](static/documentation/profile.webp)
 
  - ## Future Features I would like to include
-    - #### create point for each feature
-    And decribe below
+    - #### User ratings
+    
+        I think it would be a nice touch for users to be able to rate recipes they have tried, With these ratings displaying among the recipe details.
+
+    - #### Social Media Share
+        
+        I would like to add option for users to be able to share recipes to their social media pages.
 
 - ## **DATABASES**
 
@@ -465,10 +470,29 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
 ## Credits
 
 - ### Content
-N.B Add content creds eg. gpt for text
+ - All worded content was originally creating by myself and then edited and improved with suggestions from [Chat GPT](https://chat.openai.com/).
 
 - ### Media
-N.B Reference all images used and there sources icons from font awesome
+    - All Icons Used were from [Font Awesome](https://fontawesome.com/) 
+
+- ### Tools & Technologies Used
+    - [HTML](https://en.wikipedia.org/wiki/HTML)
+    - [CSS](https://en.wikipedia.org/wiki/CSS)
+    - [JavaScript](https://www.javascript.com)
+    - [Python](https://www.python.org/)
+    - [Jinja](https://jinja.palletsprojects.com/en/3.1.x/)
+    - [Cloudinary](https://cloudinary.com/)
+    - [MongoDB](https://mongodb.com/)
+    - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
+    - [GitHub](https://github.com) used for secure online code storage.
+    - [GitHub Pages](https://pages.github.com) used for hosting the deployed front-end site.
+    - [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
+    - [Canva](https://www.canva.com/) used for meta icon creation
+    - [Figma](https://www.figma.com/) used for wireframes and high fidelity prototypes.
+    - [Adobe colour wheel](https://color.adobe.com/) used for selecting colour scheme.
+    - [Chat GPT](https://chat.openai.com/) Used for trouble shooting.
+    - [Font Awesome](https://fontawesome.com/)
+    
 
 - ### Acknowledgements
     - I would like to thank my Code Institute mentor, [Alex K](https://calendly.com/alex_mentor) for his amazing help, advice and support throughout the development of this project.
