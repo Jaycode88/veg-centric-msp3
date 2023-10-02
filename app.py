@@ -140,6 +140,14 @@ def sign_up():
         if existing_user:
             flash("Username already in use")
             return redirect(url_for("sign_up"))
+
+        # Check if the email is already registered
+        existing_email = database.db.users.find_one(
+            {"email": request.form.get("email").lower()})
+        if existing_email:
+            flash("Email already registered")
+            return redirect(url_for("sign_up"))
+
         # Hash the password using werkzueg and create user document
         hashed_password = generate_password_hash(
             request.form.get("password"), method='pbkdf2:sha256',
