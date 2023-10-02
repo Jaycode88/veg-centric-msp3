@@ -43,9 +43,9 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-pepper-hot prefix darkgreen-text"></i>
-                <input type="text" id="recipe_description" name="recipe_description" minlength="15" maxlength="500"
+                <input type="text" id="recipe_description1" name="recipe_description" minlength="15" maxlength="500"
                     class="validate" value="{{ recipe.recipe_description }}" required>
-                <label for="recipe_description">Recipe Description</label>
+                <label for="recipe_description1">Recipe Description</label>
             </div>
         </div>
         {% else %}
@@ -64,8 +64,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-pepper-hot prefix darkgreen-text"></i>
-                <textarea type="text" id="admin_description" name="admin_description" minlength="15" maxlength="5000"
-                    class="validate" value="{{ recipe.admin_description }}" required></textarea>
+                <textarea id="admin_description" name="admin_description" minlength="15" maxlength="5000"
+                    class="validate" required>{{ recipe.admin_description }}</textarea>
                 <label for="admin_description">Admin's Description</label>
             </div>
         </div>
@@ -127,7 +127,7 @@
                 <i class="fas fa-utensils prefix darkgreen-text"></i>
                 <input type="number" id="servings" name="servings" minlength="1" maxlength="2" class="validate"
                 value="{{ recipe.servings }}" required>
-                <label for="Servings">Servings</label>
+                <label for="servings">Servings</label>
             </div>
         </div>
 
