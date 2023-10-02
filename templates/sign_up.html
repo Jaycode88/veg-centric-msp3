@@ -15,8 +15,8 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-id-card darkgreen-text prefix"></i>
-                    <input id="firstname" name="firstname" type="text" class="validate" minlength="2" 
-                    maxlength="30" pattern="^[a-zA-Z]{2,30}$" required>
+                    <input id="firstname" name="firstname" type="text" class="validate" minlength="2" maxlength="30"
+                        pattern="^[a-zA-Z]{2,30}$" required>
                     <label for="firstname">First Name</label>
                 </div>
             </div>
@@ -24,8 +24,8 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-id-card darkgreen-text prefix"></i>
-                    <input id="lastname" name="lastname" type="text" class="validate" minlength="2" 
-                    maxlength="30" pattern="^[a-zA-Z]{2,30}$" required>
+                    <input id="lastname" name="lastname" type="text" class="validate" minlength="2" maxlength="30"
+                        pattern="^[a-zA-Z]{2,30}$" required>
                     <label for="lastname">Last Name</label>
                 </div>
             </div>
@@ -33,8 +33,8 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-envelope darkgreen-text prefix"></i>
-                    <input id="email" name="email" type="email" class="validate" minlength="8" 
-                    maxlength="50" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                    <input id="email" name="email" type="email" class="validate" minlength="8" maxlength="50"
+                        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
                     <label for="email">Email Address</label>
                 </div>
             </div>
@@ -42,8 +42,8 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-user-tag darkgreen-text prefix"></i>
-                    <input id="username" name="username" type="text" class="validate" minlength="5" 
-                    maxlength="20" pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,20}$" required>
+                    <input id="username" name="username" type="text" class="validate" minlength="5" maxlength="20"
+                        pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,20}$" required>
                     <label for="username">UserName</label>
                 </div>
             </div>
@@ -51,17 +51,17 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-key darkgreen-text prefix"></i>
-                    <input id="password" name="password" type="password" minlength="6" 
-                    maxlength="15" pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,15}$" class="validate" required>
+                    <input id="password" name="password" type="password" minlength="6" maxlength="15"
+                        pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,15}$" class="validate" required>
                     <label for="password">Password</label>
                 </div>
             </div>
-             <!-- confirm password -->
+            <!-- confirm password -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-key darkgreen-text prefix"></i>
-                    <input id="confirm_password" name="confirm_password" type="password" minlength="6" 
-                    maxlength="15" pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,15}$" class="validate" required>
+                    <input id="confirm_password" name="confirm_password" type="password" minlength="6" maxlength="15"
+                        pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,15}$" class="validate" required>
                     <label for="confirm_password">Confirm Password</label>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                 <a href="#" id="termsLink" aria-label="Terms and Conditions">Terms and Conditions</a> and
                 <a href="#" id="privacyLink" aria-label="Privacy Policy">Privacy Policy</a>.
             </p>
-            
+
             <!-- modals for Terms and Privacy Policy -->
             <div id="termsModal" class="modal">
                 <div class="modal-content">
@@ -80,7 +80,7 @@
                     <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
                 </div>
             </div>
-            
+
             <div id="privacyModal" class="modal">
                 <div class="modal-content">
                     {% include 'privacypolicy.html' %}
@@ -91,7 +91,9 @@
             </div>
             <!-- sign up button -->
             <div class="row center-align">
-                <button type="submit" class="btn-small custom-lightgreen black-text" aria-label="Sign Up Button"><strong>Sign Up</strong>  <i class="fas fa-user-plus darkgreen-text"></i></button>
+                <button type="submit" class="btn-small custom-lightgreen black-text"
+                    aria-label="Sign Up Button"><strong>Sign Up</strong> <i
+                        class="fas fa-user-plus darkgreen-text"></i></button>
             </div>
             <!-- Sign in link -->
             <div class="row">
@@ -111,4 +113,5 @@
 {% endblock %}
 
 </body>
+
 </html>
