@@ -10,6 +10,10 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+from settings import (
+    MONGO_DBNAME, MONGO_URI, SECRET_KEY,
+    CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY,
+    CLOUDINARY_API_SECRET)
 
 # Check for existence of 'env.py' and import if it exists
 if os.path.exists("env.py"):
@@ -19,18 +23,18 @@ if os.path.exists("env.py"):
 app = Flask(__name__)
 
 # Configure MongoDB settings using environment variables
-app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
-app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+app.config["MONGO_DBNAME"] = MONGO_DBNAME
+app.config["MONGO_URI"] = MONGO_URI
 
 # configure Cloudinary settings using environment variables
 cloudinary.config(
-    cloud_name=os.environ.get("CLOUDINARY_CLOUD_NAME"),
-    api_key=os.environ.get("CLOUDINARY_API_KEY"),
-    api_secret=os.environ.get("CLOUDINARY_API_SECRET")
+    cloud_name=CLOUDINARY_CLOUD_NAME,
+    api_key=CLOUDINARY_API_KEY,
+    api_secret=CLOUDINARY_API_SECRET
 )
 
 # Set the secret key for Flask application
-app.secret_key = os.environ.get("SECRET_KEY")
+app.secret_key = SECRET_KEY
 
 # Create a PyMongo instance linked to the Flask app for database access
 database = PyMongo(app)
