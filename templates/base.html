@@ -36,18 +36,12 @@
 
         <!-- TopBar Navigation for Larger Screens -->
         <ul id="nav-desktop" class="right hide-on-med-and-down">
+          {% if session.user %}
+          <li><a href="{{ url_for('show_recipes') }}">Home</a></li>
+          <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
           {% if session.user == "admin" %}
-          <li><a href="{{ url_for('show_recipes') }}">Home</a></li>
-          <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
           <li><a href="{{ url_for('manage_categories') }}">Manage Categories</a></li>
-          <li><a href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
-          <li><a href="{{ url_for('sign_out') }}">Sign Out</a></li>
-          <li><a href="{{ url_for('about') }}">About</a></li>
-          <li><a href="https://www.facebook.com/profile.php?id=61551788318438" target="_blank"><i
-                class="fas fa-brands fa-facebook black-text"></i></a></li>
-          {% elif session.user %}
-          <li><a href="{{ url_for('show_recipes') }}">Home</a></li>
-          <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+          {% endif %}
           <li><a href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
           <li><a href="{{ url_for('sign_out') }}">Sign Out</a></li>
           <li><a href="{{ url_for('about') }}">About</a></li>
@@ -67,18 +61,12 @@
         <a class="dropdown-trigger hide-on-large-only" href="#" data-target="mobile-dropdown"><i
             class="fas fa-solid fa-bars left black-text"></i></a>
         <ul id="mobile-dropdown" class="dropdown-content custom-lightgreen">
+          {% if session.user %}
+          <li><a href="{{ url_for('show_recipes') }}">Home</a></li>
+          <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
           {% if session.user == "admin" %}
-          <li><a href="{{ url_for('show_recipes') }}">Home</a></li>
-          <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
           <li><a href="{{ url_for('manage_categories') }}">Manage Categories</a></li>
-          <li><a href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
-          <li><a href="{{ url_for('sign_out') }}">Sign Out</a></li>
-          <li><a href="{{ url_for('about') }}">About</a></li>
-          <li><a href="https://www.facebook.com/profile.php?id=61551788318438" target="_blank"><i
-                class="fas fa-brands fa-facebook black-text"></i></a></li>
-          {% elif session.user %}
-          <li><a href="{{ url_for('show_recipes') }}">Home</a></li>
-          <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+          {% endif %}
           <li><a href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
           <li><a href="{{ url_for('sign_out') }}">Sign Out</a></li>
           <li><a href="{{ url_for('about') }}">About</a></li>
@@ -87,8 +75,8 @@
           {% else %}
           <li><a href="{{ url_for('show_recipes') }}">Home</a></li>
           <li><a href="{{ url_for('about') }}">About</a></li>
-          <li><a href="{{ url_for('sign_in')}}">Sign In</a></li>
-          <li><a href="{{ url_for('sign_up')}}">Sign Up</a></li>
+          <li><a href="{{ url_for('sign_in') }}">Sign In</a></li>
+          <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
           <li><a href="https://www.facebook.com/profile.php?id=61551788318438" target="_blank"><i
                 class="fas fa-brands fa-facebook black-text"></i></a></li>
           {% endif %}
