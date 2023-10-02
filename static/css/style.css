@@ -214,7 +214,8 @@ p, li, .alice {
   background-color:  #fff;
   color: #000;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   margin-left: 10px;
   padding: 10px;
 }
