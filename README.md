@@ -493,7 +493,8 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
     - [Adobe colour wheel](https://color.adobe.com/) used for selecting colour scheme.
     - [Chat GPT](https://chat.openai.com/) Used for trouble shooting.
     - [Font Awesome](https://fontawesome.com/)
-    
+    - [Medium]( https://medium.com/@ashley_howell/understanding-colour-psychology-for-restaurants-brands-dbb7ffbcecae) Used to research colour phycology in relation to restaurant and food brands.
+    - [JennDavid](https://jenndavid.com/colors-that-influence-food-sales-infographic/) Used to research colours that influence food sales. 
 
 - ### Acknowledgements
     - I would like to thank my Code Institute mentor, [Alex K](https://calendly.com/alex_mentor) for his amazing help, advice and support throughout the development of this project.
