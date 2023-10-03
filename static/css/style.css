@@ -2,6 +2,7 @@
 /* ---------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Alice&family=Playfair+Display:wght@600&display=swap');
 
+/* Body overflow hidden to stop horizontal scroll */
 body {
   overflow-x: hidden;
 }
@@ -219,7 +220,7 @@ li,
 
 /* Recipe Card Image */
 .card-image {
-  max-width: 100%;
+  max-width: 800px;
   height: auto;
   display: flex;
   justify-content: center;
@@ -363,8 +364,6 @@ li,
     width: 90% !important;
     margin-left: 5% !important;
   }
-
-
 }
 
 @media only screen and (max-width: 530px) {
