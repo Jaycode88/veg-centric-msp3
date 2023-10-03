@@ -131,6 +131,12 @@ li,
   transition: 1s;
 }
 
+.footer-heading {
+  font-size: 200%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 .footer-zoom:hover {
   transform: scale(1.075);
   color: #fff;
