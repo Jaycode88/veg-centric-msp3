@@ -2,6 +2,10 @@
 /* ---------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Alice&family=Playfair+Display:wght@600&display=swap');
 
+body {
+  overflow-x: hidden;
+}
+
 /* Fonts */
 /* ---------------------------------------- */
 .playfair,
@@ -195,7 +199,7 @@ li,
 
 .col.m6 {
   width: calc(50% - 20px) !important;
-  margin: 0 10px !important;
+  margin: 0 5px !important;
 }
 
 /* Round cards */

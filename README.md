@@ -309,7 +309,7 @@ The Prototype for the main page was made with [Figma](https://www.figma.com/)
 
 ## **TESTING**
 
-For the documentation of all testing,Please see TESTING.md(TESTING.md) 
+For the documentation of all testing,Please see [TESTING.md](TESTING.md) 
 
 ## **DEPLOYMENT**
 - ### Local Deployment

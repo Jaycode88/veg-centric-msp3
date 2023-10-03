@@ -15,10 +15,6 @@ from settings import (
     CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY,
     CLOUDINARY_API_SECRET)
 
-# Check for existence of 'env.py' and import if it exists
-if os.path.exists("env.py"):
-    import env
-
 # Create a Flask application instance
 app = Flask(__name__)
 

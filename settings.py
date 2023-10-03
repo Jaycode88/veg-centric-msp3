@@ -1,6 +1,9 @@
 import os
 import cloudinary
 
+if os.path.exists('env.py'):
+    import env
+
 # MongoDB configuration
 MONGO_DBNAME = os.environ.get("MONGO_DBNAME")
 MONGO_URI = os.environ.get("MONGO_URI")
