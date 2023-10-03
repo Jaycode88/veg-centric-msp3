@@ -476,18 +476,19 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
     - All Icons Used were from [Font Awesome](https://fontawesome.com/) 
 
 - ### Tools & Technologies Used
-    - [HTML](https://en.wikipedia.org/wiki/HTML)
-    - [CSS](https://en.wikipedia.org/wiki/CSS)
-    - [JavaScript](https://www.javascript.com)
-    - [Python](https://www.python.org/)
-    - [Jinja](https://jinja.palletsprojects.com/en/3.1.x/)
-    - [Cloudinary](https://cloudinary.com/)
-    - [MongoDB](https://mongodb.com/)
+    - [HTML](https://en.wikipedia.org/wiki/HTML)  is the backbone of web content. It defines the structure and content of the web pages.
+    - [CSS](https://en.wikipedia.org/wiki/CSS) used to control the visual presentation of the web application. It defines the layout, colors, fonts etc.
+    - [JavaScript](https://www.javascript.com) is a client-side scripting language that enhances user interactivity on the web pages.
+    - [Python](https://www.python.org/) is a versatile programming language commonly used for server-side development. It powers the logic and data processing of the web application.
+    - [Jinja](https://jinja.palletsprojects.com/en/3.1.x/) Is a Python-based templating engine used to dynamically generate HTML content by inserting data into predefined templates.
+    - [Cloudinary](https://cloudinary.com/) is a cloud-based service for uploading, storing, optimizing, and delivering media assets such as images and videos.
+    - [MongoDB](https://mongodb.com/) is a document-oriented NoSQL database used for storing and managing structured data.
     - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
     - [GitHub](https://github.com) used for secure online code storage.
-    - [GitHub Pages](https://pages.github.com) used for hosting the deployed front-end site.
+    - [Heroku](https://heroku.com) To create and Host the Deployed App.
     - [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
-    - [Canva](https://www.canva.com/) used for meta icon creation
+    - [Canva](https://www.canva.com/) used for meta icon and logo creation.
+    - [Balsamiq](https://balsamiq.com/) used to create Wireframes.
     - [Figma](https://www.figma.com/) used for wireframes and high fidelity prototypes.
     - [Adobe colour wheel](https://color.adobe.com/) used for selecting colour scheme.
     - [Chat GPT](https://chat.openai.com/) Used for trouble shooting.
