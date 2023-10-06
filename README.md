@@ -111,6 +111,7 @@ Veg-Centric Recipes addresses a growing need for economical and sustainable dini
 
 ## Design
 - ### Theme and Color Scheme
+![Mock-up](static/documentation/colorpallete.webp)
     Green And Goldenrod:
     This pallete Consists of the colors Olive Green (#5A873C), Apple Green (#8ABD4D), Pale Goldenrod (#DED8A0) and White (#FFFFF).
 
@@ -118,6 +119,7 @@ Veg-Centric Recipes addresses a growing need for economical and sustainable dini
     Below is the Physcology of each color and its relation to food.
 
 - **Olive Green**
+![mockup](static/documentation/olivegreen.webp)
     - Earthy and Sophisticated: Olive green is often associated with earthiness and sophistication. It's reminiscent of olive trees and has a muted, subdued quality.
 
     - Stability and Endurance: This shade of green can convey a sense of stability and endurance, making it suitable for products or environments that want to project reliability.
@@ -128,6 +130,7 @@ Veg-Centric Recipes addresses a growing need for economical and sustainable dini
     -   Olive green may be associated with earthy and savory flavors. It's often found in Mediterranean cuisine due to its connection with olives. It can also be used in packaging or decor to suggest a more mature or refined culinary experience.
 
 - **Apple Green**
+![mockup](static/documentation/applegreen.webp)
     - Vibrancy and Freshness: Apple green, or bright green, is associated with vibrancy, freshness, and youthfulness. It's often used to create a lively and energetic atmosphere.
     
     - Creativity and Innovation: This shade of green can stimulate creativity and innovation. It's often used in marketing to catch attention and convey a sense of excitement.
@@ -144,6 +147,7 @@ Veg-Centric Recipes addresses a growing need for economical and sustainable dini
 ![Mock-up](static/documentation/greencompanies.webp)
 
 - **Pale Goldenrod**
+![mockup](static/documentation/mushroom.webp)
 
      Whilst this colour is not normally considered in the normal mushroom range of colours I chose it due to it closeness to the mushroom range without the grey hue which can cause slight visibility problems with text, yet still holds the earthy undertones of mushroom. This color offers:
 
@@ -161,6 +165,7 @@ Veg-Centric Recipes addresses a growing need for economical and sustainable dini
     - Warm Desserts: In the realm of desserts, #DED8A0 might be likened to the golden-brown crust of a freshly baked pie or the warm, inviting color of a bread pudding. It conveys a sense of indulgence.
 
 - **White**
+![mockup](static/documentation/white.webp)
 
     While white may not be a traditional color associated with specific emotions, it carries its own psychological connotations:
     - Simplicity and Minimalism: White is frequently associated with simplicity and minimalism. It represents clarity, order, and a sense of space. In design and aesthetics, it's used to create clean, uncluttered visuals.
@@ -179,35 +184,39 @@ Veg-Centric Recipes addresses a growing need for economical and sustainable dini
 
 
 - ### Design Brief:
-- **Color:**
-
-![Mock-up](static/documentation/colorpallete.webp)
-
 - **Background:**
 In This design, I have chosen a white background as the primary canvas for several compelling reasons:
-    - Cleanliness and Freshness: White is universally associated with cleanliness and freshness. It provides a pristine and uncluttered visual canvas that conveys a sense of purity and simplicity. This choice aligns with our goal of presenting a clean and inviting user interface.
+    - Cleanliness and Freshness: White universally signifies cleanliness and freshness, aligning with our goal of presenting a clean and inviting interface. It provides a pristine, clutter-free backdrop that conveys purity and simplicity.
 
-    - High Readability: White backgrounds offer excellent contrast for text, ensuring that content is highly readable. This is especially important for user interfaces where readability plays a crucial role in user engagement and understanding.
+    - High Readability: White backgrounds ensure excellent text contrast, enhancing content readability. This is crucial for user engagement and comprehension in our user interface.
 
-    - Timelessness: White backgrounds have a timeless quality. They don't go out of style and can provide a neutral backdrop that allows other design elements to shine. This ensures that our design remains relevant and appealing over time.
+    - Timelessness: hite backgrounds have a timeless quality, remaining relevant and appealing over time. They serve as a neutral canvas that allows other design elements to shine.
 
-To complement the white background, I've introduced pale goldenrod cards (#DED8A0) strategically in certain sections of the interface. These cards serve several purposes:
-- Visual Interest: The pale goldenrod color adds a touch of warmth and visual interest to the design, breaking up the monotony of an all-white interface and creating focal points for important content.
+    - Image Appeal: The decision to employ a plain white background serves a crucial purpose within the design. By opting for a minimalist backdrop, we intentionally create a canvas that allows the vibrant colors within the images to take center stage and captivate the user's attention.
 
-- Subtle Elegance: The muted golden-yellow hue of the cards conveys a sense of understated elegance and sophistication, enhancing the overall aesthetic appeal.
+Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in certain interface sections for visual interest and subtle elegance.
+
+
 
 - ## Typography
  #### Font Choices
 In designing this project, I carefully selected fonts to convey the desired visual identity and user experience. My font choices are as follows:
    - **Playfair Display (Logo and Headings)**
 
+   ![mockup](static/documentation/playfair.webp)
+
 - *Psychology*: Playfair Display is a serif font known for its elegance and sophistication. It carries a sense of tradition and classicism, making it an excellent choice for logos and headings. The distinctive serifs and high contrast between thick and thin strokes create a sense of luxury and refinement, aligning with the project's premium and professional aesthetic.
 
 - **Alice (Body Text)**
 
+![mockup](static/documentation/alice.webp)
+
 - *Psychology*: Alice is a modern and legible sans-serif font. It offers a clean and friendly appearance, making it an ideal choice for body text. The simplicity and readability of Alice ensure that users can comfortably consume content without distraction. This font choice promotes a user-friendly experience, enhancing readability and accessibility. 
 
  #### Fallback Font
+ 
+ ![mockup](static/documentation/sanserif.webp)
+
  As a best practice, I have also included a fallback font in The design. In cases where browsers or devices may not support the specific fonts mentioned above, we use a generic sans-serif font. This ensures that the text remains legible and maintains a consistent appearance across various platforms.
 
 Our font choices, including the fallback option, reflect the project's personality and goals, combining elegance with readability to create an engaging and visually appealing user interface.
