@@ -410,6 +410,12 @@ li,
   }
 }
 
+@media only screen and (max-width:335px) {
+  .response {
+    font-size: 2.25rem;
+  }
+}
+
 /* Add recipe card */
 @media only screen and (max-width: 450px) {
   .add-recipe {
