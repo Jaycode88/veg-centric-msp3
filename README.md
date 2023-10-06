@@ -288,11 +288,14 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
 
 
 - #### Sign In and Sign Up
-    - I added a Sign up Feature so users can upload their own recipes.
+    - I added a Sign up Feature so users can join the community and upload their own recipes and save other user's recipes to their favorites.
+
+    - The User is notified that by signing up they agree to the terms and conditions and privacy policy which can be viewed via the linked text which opens a modal to display the information.
 
     - Users that are signed Up and Signed in are able to save favourite recipes aswell as edit and delete their own recipes.
 
 ![screenshot](static/documentation/signinup.webp)
+![screenshot](static/documentation/signin.webp)
 
 - #### Profile Page
     - The Profile Page enhances the user experience by centralizing user-related information and actions. It allows users to manage their profile, access their uploaded recipes, and easily revisit their favorite recipes. Additionally, it provides a sense of ownership and engagement within the Veg-Centric community.
@@ -310,6 +313,21 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
 
 ![screenshot](static/documentation/fbpage.webp)
 
+- #### Admin Features
+The Admin Has extra options over Standard users many of these are to maintain readability standards such as editing spelling mistakes etc.
+
+ - **Manage Catagories page**
+    On this page the Admin can add, edit and remove categories.
+    ![mockup](static/documentation/admincat.webp)
+
+- **Edit Recipe**
+    The Admin's Edit recipe form includes more inputs, Allowing the site owner to edit users recipes for the purpose of removing spelling mistkes, changing the image for aesthetical purposes, Adding product information and links to affiliates.
+
+    ![mockup](static/documentation/adminedit.webp)
+
+    Admin also have extra buttons on the recipes details page allowing them to edit and delete all user recipes.
+
+    ![mockup](static/documentation/adminxbtns.webp)
 
  - ## Future Features I would like to include
     - #### User ratings
