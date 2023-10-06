@@ -339,12 +339,19 @@ The Admin Has extra options over Standard users many of these are to maintain re
         I would like to add option for users to be able to share recipes to their social media pages.
 
 - ## **DATABASES**
+In this application, I rely on [MongoDB](https://mongodb.com/) as the primary database management system. MongoDB is a flexible NoSQL database that allows us to store and manage data in a format that seamlessly fits the dynamic nature of our project. It plays a crucial role in storing user information, recipes, categories, and other essential data.
+
+The database schema is designed to efficiently handle the storage and retrieval of data, ensuring that users can seamlessly interact with the application. This section provides an insight into how the application leverages MongoDB to perform various operations, including user management, recipe management, and more.
 
 - **Models Flow Chart**
-I used a non-relational database with [MongoDB](https://mongodb.com/).
-The arrows on the chart show the connections made between database in my code.
+
+The arrows on the chart show the connections made between databases in my code.
 
 ![screenshot](static/documentation/dataflow.webp)
+
+### **CRUD Functionality**
+##### User Management:
+
 
 ## **TESTING**
 
