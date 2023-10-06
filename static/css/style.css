@@ -193,6 +193,10 @@ li,
 }
 
 /* recipes cards */
+.card-title {
+  word-wrap: break-word;
+
+}
 .card-content.custom-mushroom .center {
   position: absolute;
   bottom: 10px;
@@ -372,15 +376,9 @@ li,
   }
 }
 
-@media only screen and (max-width: 530px) {
+@media only screen and (max-width: 500px) {
   .card {
-    min-height: 700px;
-  }
-}
-
-@media only screen and (max-width: 487px) {
-  .card {
-    min-height: 800px;
+    min-height: 900px;
   }
 }
 
@@ -388,19 +386,20 @@ li,
 @media only screen and (max-width: 477px) {
   .card-title h2 {
     font-size: 2.75rem;
-    white-space: nowrap;
-    overflow: hidden;
     margin: 0;
+    word-wrap: break-word;
   }
 }
 
 @media only screen and (max-width: 400px) {
   .card-title h2 {
     font-size: 2.25rem;
+    word-wrap: break-word;
   }
 
   .card-title h3 {
     font-size: 2.75rem;
+    word-wrap: break-word;
   }
 }
 
