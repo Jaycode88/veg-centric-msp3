@@ -200,7 +200,8 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
 
 - ## Typography
  #### Font Choices
-In designing this project, I carefully selected fonts to convey the desired visual identity and user experience. My font choices are as follows:
+In designing this project, I carefully selected fonts to convey the desired visual identity and user experience. My font choices which all came from [Google Fonts](https://fonts.google.com/), are as follows:
+
    - **Playfair Display (Logo and Headings)**
 
    ![mockup](static/documentation/playfair.webp)
@@ -214,7 +215,7 @@ In designing this project, I carefully selected fonts to convey the desired visu
 - *Psychology*: Alice is a modern and legible sans-serif font. It offers a clean and friendly appearance, making it an ideal choice for body text. The simplicity and readability of Alice ensure that users can comfortably consume content without distraction. This font choice promotes a user-friendly experience, enhancing readability and accessibility. 
 
  #### Fallback Font
- 
+
  ![mockup](static/documentation/sanserif.webp)
 
  As a best practice, I have also included a fallback font in The design. In cases where browsers or devices may not support the specific fonts mentioned above, we use a generic sans-serif font. This ensures that the text remains legible and maintains a consistent appearance across various platforms.
@@ -301,6 +302,18 @@ The Prototype for the main page was made with [Figma](https://www.figma.com/)
 
 ![screenshot](static/documentation/profile.webp)
 
+- #### Facebook Page
+  The design seamlessly integrates with the official Facebook page, enhancing user engagement and keeping users connected:
+
+    - Community Connection: Join our culinary community for updates, discussions, and like-minded connections.
+
+    - Real-Time Updates: Stay in the loop with the latest platform news, events, and culinary trends.
+
+    - User Engagement: Engage with our community through interactive posts and discussions.
+
+![screenshot](static/documentation/fbpage.webp)
+
+
  - ## Future Features I would like to include
     - #### User ratings
     
@@ -313,6 +326,8 @@ The Prototype for the main page was made with [Figma](https://www.figma.com/)
 - ## **DATABASES**
 
 - **Models Flow Chart**
+I used a non-relational database with [MongoDB](https://mongodb.com/).
+The arrows on the chart show the connections made between database in my code.
 
 ![screenshot](static/documentation/dataflow.webp)
 
