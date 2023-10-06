@@ -38,8 +38,6 @@ Veg-Centric Recipes addresses a growing need for economical and sustainable dini
 
         - Browse Veg-Centric Recipes: Users will want to discover simple and time-efficient vegetable-based recipes for their meals.
 
-        - Discover New Flavors and Ingredients: Users may have a goal of expanding their culinary horizons by trying out new vegetables and flavors they haven't cooked with before.
-
         - Join the community: A User may want to join the community and share their own recipes
 
         - Find information about Veg-Centric.
@@ -56,7 +54,7 @@ Veg-Centric Recipes addresses a growing need for economical and sustainable dini
 
     - #### Website Owner Goals
 
-        - Edit all Recipes to remove speling errors, make easier to understand etc
+        - Edit all Recipes to ensure content quality.
 
         - Edit recipe images for aesthetical purposes.
 
@@ -183,21 +181,7 @@ Veg-Centric Recipes addresses a growing need for economical and sustainable dini
     - Neutrality: White is a neutral background that allows the colors, textures, and shapes of food to stand out. It's a common choice for food presentation in fine dining.
 
 
-- ### Design Brief:
-- **Background:**
-In This design, I have chosen a white background as the primary canvas for several compelling reasons:
-    - Cleanliness and Freshness: White universally signifies cleanliness and freshness, aligning with our goal of presenting a clean and inviting interface. It provides a pristine, clutter-free backdrop that conveys purity and simplicity.
-
-    - High Readability: White backgrounds ensure excellent text contrast, enhancing content readability. This is crucial for user engagement and comprehension in our user interface.
-
-    - Timelessness: hite backgrounds have a timeless quality, remaining relevant and appealing over time. They serve as a neutral canvas that allows other design elements to shine.
-
-    - Image Appeal: The decision to employ a plain white background serves a crucial purpose within the design. By opting for a minimalist backdrop, we intentionally create a canvas that allows the vibrant colors within the images to take center stage and captivate the user's attention.
-
-Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in certain interface sections for visual interest and subtle elegance.
-
-
-
+ ### Design Brief:
 - ## Typography
  #### Font Choices
 In designing this project, I carefully selected fonts to convey the desired visual identity and user experience. My font choices which all came from [Google Fonts](https://fonts.google.com/), are as follows:
@@ -222,13 +206,26 @@ In designing this project, I carefully selected fonts to convey the desired visu
 
 Our font choices, including the fallback option, reflect the project's personality and goals, combining elegance with readability to create an engaging and visually appealing user interface.
 
+- ## Background
+    In This design, I have chosen a white background as the primary canvas for several compelling reasons:
+    
+    - Cleanliness and Freshness: White universally signifies cleanliness and freshness, aligning with our goal of presenting a clean and inviting interface. It provides a pristine, clutter-free backdrop that conveys purity and simplicity.
+
+    - High Readability: White backgrounds ensure excellent text contrast, enhancing content readability. This is crucial for user engagement and comprehension in our user interface.
+
+    - Timelessness: hite backgrounds have a timeless quality, remaining relevant and appealing over time. They serve as a neutral canvas that allows other design elements to shine.
+
+    - Image Appeal: The decision to employ a plain white background serves a crucial purpose within the design. By opting for a minimalist backdrop, we intentionally create a canvas that allows the vibrant colors within the images to take center stage and captivate the user's attention.
+
+Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in certain interface sections for visual interest and subtle elegance.
+
 - ## Wireframes
-The basic layout of Veg-Centric Recipes was created with [Balsamiq](https://balsamiq.com/).
+    The basic layout of Veg-Centric Recipes was created with [Balsamiq](https://balsamiq.com/).
 
 ![Mock-up](static/documentation/wireframes.webp)
 
 - ## High Fidelity Prototype
-The Prototype for the main page was made with [Figma](https://www.figma.com/)
+    The Prototype for the main page was made with [Figma](https://www.figma.com/)
 
 ![Mock-up](static/documentation/highfidelity.webp)
 
