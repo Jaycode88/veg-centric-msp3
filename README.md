@@ -351,7 +351,174 @@ The arrows on the chart show the connections made between databases in my code.
 
 ### **CRUD Functionality**
 ##### User Management:
+1. **Create User (C):**
+    - Function: 'sign_up'
+   - Description: Allows users to register by providing necessary information. Includes checks for:
+     - Matching passwords
+     - Existing username
+     - Existing email
 
+    - HTTP Method: POST
+
+    - Database Operation: Inserts new user document into the "users" collection.
+
+2. **Read User (R):**
+    - Function: 'autheticate_user'
+
+    - Description: Authenticates a user based on their username and password.
+
+    - HTTP Method: N/A(Called within the sign_in route)
+
+    - Database Operation: Reads user information to verify credentials.
+
+3. **Update User (U):**
+    - Function: 'edit_profile'
+
+    - Description: Allows users to update their profile information, including name and email.
+
+    - HTTP Method: POST
+
+    - Database Operation: Updates the user's document in the "users" collection.
+
+4. **Delete User (D):**
+    - Function: 'delete_profile'
+
+    - Description: Allows users to delete their profiles.
+
+    - HTTP Method: POST
+
+    - Database Operation: Deletes the user's document from the "users" collection.
+
+##### Recipe Management:
+1. **Create Recipe (C):**
+    - Function: 'add_recipe'
+
+    - Description: Allows users to add new recipes, including recipe details and ingredients.
+
+    - HTTP Method: POST
+
+    - Database Operation: Inserts a new recipe document into the "recipes" collection.
+
+2. **Read Recipe (R):**
+    - Function: 'view_recipe'
+
+    - Description: Displays the details of a specific recipe.
+
+    - HTTP Method: GET
+
+    - Database Operation: Retrieves the recipe details from the "recipes" collection.
+
+3. **Update Recipe (U):**
+    - Function: 'edit_recipe'
+
+    - Description: Allows users (or admins) to edit existing recipes, including image and details. Includes checks for:
+        - Ownership of the recipe
+
+    - HTTP Method: POST
+
+    - Database Operation: Updates the recipe document in the "recipes" collection.
+
+4. **Delete Recipe (D):**
+    - Function: 'delete_recipe'
+
+    - Description: Allows users (or admins) to delete recipes. Includes checks for:
+    Ownership of the recipe
+
+    - HTTP Method: POST
+
+    - Database Operation: Deletes the recipe document from the "recipes" collection.
+
+##### Favorite Recipes:
+1. **Create Favorite Recipe (C):**
+    - Function: 'add_to_favorites'
+
+    - Description: Allows users to add a recipe to their list of favorite recipes.
+
+    - HTTP Method: POST
+
+    - Database Operation: Updates the user's document to add the recipe ID to their "favorites" list.
+
+2. **Delete Favorite Recipe (D):**
+     - Function: 'remove_favorite'
+
+    - Description: Allows users to remove a recipe from their list of favorite recipes.
+
+    - HTTP Method: POST
+
+    - Database Operation: Updates the user's document to remove the recipe ID from their "favorites" list.
+
+##### Category Management (Admin Only):
+1. **Create Category (C):**
+    - Function: 'add_category'
+
+    - Description: Allows admins to add new recipe categories.
+
+    - HTTP Method: POST
+
+    - Database Operation: Inserts a new category document into the "categories" collection.
+
+2. **Read Category**
+    - Function: N/A
+
+    - Description: Categories are read directly from the "categories" collection for displaying recipe categories.
+
+3. **Update Category (U):**
+    - Function: 'edit_category'
+
+    - Description: Allows admins to edit existing recipe categories.
+
+    - HTTP Method: POST
+
+    - Database Operation: Updates the category document in the "categories" collection.
+
+4. **Delete Category (D):**
+    - Function: 'delete_category'
+
+    - Description: Allows admins to delete recipe categories.
+
+    - HTTP Method: GET
+
+    - Database Operation: Deletes the category document from the "categories" collection.
+
+##### Other Functionality:
+1. **Search Recipes (R):**
+    - Function: 'search_recipes'
+
+    - Description: Allows users to search for recipes based on a search query.
+
+    - HTTP Method: POST
+
+    - Database Operation: Queries the "recipes" collection for matching recipes.
+
+2. **Sign In (R):**
+    - Function: 'sign_in'
+
+    - Description: Allows users to sign in by providing their credentials. Includes checks for:
+        - Incorrect username or password
+
+    - HTTP Method: GET and POST
+
+    - Database Operation: Calls authenticate_user to validate user credentials.
+
+3. **Sign Out:**
+    - Function: 'sign_out'
+
+    - Description: Allows users to sign out of their accounts.
+
+    - HTTP Method: GET
+
+    - Database Operation: N/A 
+
+The sign out function works by removing the users session cookie.
+
+4. **404 Error Handling (R):**
+    - Function: 'page_not_found'
+
+    - Description: Handles 404 errors by rendering a custom error page.
+
+    - HTTP Method: N/A
+
+    - Database Operation: N/A
 
 ## **TESTING**
 
