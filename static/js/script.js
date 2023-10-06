@@ -121,3 +121,8 @@ $(document).ready(function () {
       $('#privacyModal').modal('open');
   });
 });
+
+// Profile Page collapsibles
+$(document).ready(function(){
+  $('.collapsible').collapsible();
+});
