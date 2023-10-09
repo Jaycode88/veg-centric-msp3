@@ -63,4 +63,55 @@ N.B Add responsiveness table as in previous project
 ## Automated Testing
 ### Jest Testing JQuery
 
-N.B explain here issues with jest testing jquery and the decission to then rewrite the jquery as javascript to run tests (Once Done)
+I first attempted to test my JQuery code with jest version 29.7.0, I first installed the nessacery packages using the commands bellow:
+
+To install Jest:
+```
+npm install --save-dev jest
+```
+
+To install jsdom:
+```
+npm install --save-dev jest-environment-jsdom
+```
+
+To install jQuery as a development dependancy:
+```
+npm install --save-dev juery
+```
+
+I then created the jest.config.js file in the root directory as well as a new ```__tests__```folder containing my jquery-mock.js(to mock jquery globally. instead of writing it into each test) and my script.test.js(containing my tests). I kept recieving the this error:
+```
+ReferenceError: $ is not defined
+```
+Despite having installed jquery as a dependancy I could not find a way for Jest to test my jQuery code. 
+
+### Jest Testing JavaScript
+I decided to re-write all jQuery functions into Javascript functions in a seperate  file called javascript.js(in the same directory as my script.js file)Just for the purpose of testing those functions with jest. To do this I found I also needed to install Babel and some related packages using:
+```
+npm install --save-dev @babel/core @babel/preset-env babel-jest
+```
+I also had to create a "babel.config.js file in my root directory its contents as follows:
+```
+module.exports = {
+  presets: [
+    [
+      '@babel/preset-env',
+      {
+        targets: {
+          node: 'current',
+        },
+      },
+    ],
+  ],
+};
+```
+This also required me to Update my jest configuration file to match below:
+```
+module.exports = {
+  testEnvironment: 'jsdom',
+  transform: {
+    '^.+\\.js$': 'babel-jest',
+  },
+};
+```
