@@ -69,6 +69,10 @@ def show_recipes():
         Flask.render_template: HTML template rendering the list of
         recipes and Non-user sections.
     """
+
+    # Set active page
+    active_page = "home"
+
     # Fetch the user's information from the session
     username = session.get("user")
     user = None
@@ -76,7 +80,8 @@ def show_recipes():
         user = database.db.users.find_one({"username": username})
 
     recipes = database.db.recipes.find()
-    return render_template("recipes.html", recipes=recipes, user=user)
+    return render_template(
+        "recipes.html", recipes=recipes, user=user, active_page=active_page)
 
 
 # Search recipes
@@ -113,7 +118,11 @@ def about():
     Returns:
         rendered HTML template for the About page.
     """
-    return render_template("about.html")
+
+    # set active page
+    active_page = "about"
+
+    return render_template("about.html", active_page=active_page)
 
 
 # sign up page
@@ -126,6 +135,10 @@ def sign_up():
         Flask.redirect: Redirects to the sign-in page after sign up complete.
         Flask.render_template: HTML template rendering the sign-up page.
     """
+
+    # set active page
+    active_page = "sign_up"
+
     if request.method == "POST":
         # check passwords match
         password = request.form.get("password")
@@ -171,7 +184,7 @@ def sign_up():
         return redirect(url_for("sign_in"))
 
     # Render the sign up page
-    return render_template("sign_up.html")
+    return render_template("sign_up.html", active_page=active_page)
 
 
 # sign in authenticate functions
@@ -211,6 +224,10 @@ def sign_in():
         Flask.redirect: Redirect to sign-in with error flash if sign-in fails.
         Flask.render_template: HTML template rendering the sign-in page.
     """
+
+    # set active page
+    active_page = "sign_in"
+
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
@@ -224,7 +241,7 @@ def sign_in():
             return redirect(url_for("sign_in"))
 
     # Render sign in page
-    return render_template("sign_in.html")
+    return render_template("sign_in.html", active_page=active_page)
 
 
 # profile page
@@ -241,6 +258,10 @@ def profile():
     Returns:
         flask.Response: Renders profile page or redirects to the sign-in page.
     """
+
+    # set active page
+    active_page = "profile"
+
     username = session.get("user")
 
     if username:
@@ -255,7 +276,8 @@ def profile():
             "profile.html",
             user=user,
             user_recipes=user_recipes,
-            favorite_recipes=favorite_recipes
+            favorite_recipes=favorite_recipes,
+            active_page=active_page
         )
     else:
         # Handle case when the user is not in session
@@ -364,6 +386,10 @@ def add_recipe():
       - The 'recipe_image' field should contain recipe's image file for upload.
 
     """
+
+    # set active page
+    active_page = "add_recipe"
+
     if request.method == "POST":
         recipe_name = request.form.get("recipe_name")
         category = request.form.get("category")
@@ -409,7 +435,8 @@ def add_recipe():
         return redirect(url_for("show_recipes"))
 
     categories = database.db.categories.find().sort("category", 1)
-    return render_template("add_recipe.html", categories=categories)
+    return render_template(
+        "add_recipe.html", categories=categories, active_page=active_page)
 
 
 # view recipe page
@@ -653,8 +680,15 @@ def remove_favorite(recipe_id):
 # Manage categories page Admin only
 @app.route("/manage_categories")
 def manage_categories():
+
+    # set active page
+    active_page = "categories"
+
     categories = database.db.categories.find().sort("category", 1)
-    return render_template("manage_categories.html", categories=categories)
+    return render_template(
+        "manage_categories.html",
+        categories=categories,
+        active_page=active_page)
 
 
 # Add a category form

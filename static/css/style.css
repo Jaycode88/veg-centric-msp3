@@ -80,6 +80,10 @@ li,
   margin-right: 10px;
 }
 
+.active a {
+  text-decoration: underline;
+}
+
 .brand-logo {
   text-shadow: none;
   font-weight: bold;
