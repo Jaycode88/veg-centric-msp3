@@ -129,7 +129,17 @@ def about():
 @app.route("/sign_up", methods=["GET", "POST"])
 def sign_up():
     """
-    Handles user registration.
+    Handles user registration, performing various checks during the process.
+
+     This route allows users to sign up by providing their personal
+     information.
+    It performs several checks, including:
+    - Ensuring that passwords match.
+    - Checking if the chosen username is available.
+    - Verifying that the provided email is not already registered.
+
+    If all checks pass, the user's information is stored securely, and they
+    are redirected to the sign-in page.
 
     Returns:
         Flask.redirect: Redirects to the sign-in page after sign up complete.
@@ -288,6 +298,27 @@ def profile():
 # Edit profile page
 @app.route("/edit_profile", methods=["GET", "POST"])
 def edit_profile():
+    """
+        Allows users to edit their profile information, including name, email,
+        and password.
+
+        This route provides a form for users to edit their profile information,
+        including their first name, last name, email, and password. Users can
+        update their profile details and change their password if desired.
+
+        If the form is submitted with matching new passwords, the user's
+        information is updated in the database, and they are redirected
+        to their profile page. If the passwords do not match, an error message
+        is displayed.
+
+        Returns:
+            Flask.redirect: Redirects to the user's profile page after
+            successful profile update.
+            Flask.render_template: HTML template rendering the edit profile
+            form.
+
+        """
+
     # Get the current user's information from the database
     username = session.get("user")
     user = database.db.users.find_one({"username": username})
@@ -328,6 +359,24 @@ def edit_profile():
 # Delete profile page
 @app.route("/delete_profile", methods=["GET", "POST"])
 def delete_profile():
+
+    """
+    Allows users to delete their profile.
+
+    This route provides a confirmation form for users to delete their profile.
+    Users are presented with a confirmation prompt before proceeding with
+    profile deletion.
+
+    If the form is submitted, the user's profile is deleted from the database,
+    and they are logged out automatically. A flash message confirms the
+    deletion.
+
+    Returns:
+        Flask.redirect: Redirects to a page after successful profile deletion.
+        Flask.render_template: HTML template rendering the delete profile
+        confirmation form.
+    """
+
     # Get the current user's information from the session
     username = session.get("user")
 
@@ -471,6 +520,30 @@ def view_recipe(recipe_id):
 
 @app.route("/delete_recipe/<recipe_id>", methods=["GET", "POST"])
 def delete_recipe(recipe_id):
+    """
+    Allows users to delete a recipe if they have the necessary permissions.
+
+    This route handles the deletion of a recipe. It checks whether the user is
+    authenticated and has the appropriate permissions to delete the recipe.
+
+    If the user is authenticated and authorized to delete the recipe, the
+    function deletes the recipe's image from Cloudinary (if present),
+    removes the recipe from the database, and provides a flash message
+    confirming the deletion.
+
+    If the user is not authorized to delete the recipe, An error message is
+    displayed.
+
+    Args:
+        recipe_id (str): The unique identifier of the recipe to be deleted.
+
+    Returns:
+        Flask.redirect: Redirects to user's profile page after successful
+        recipe deletion.
+        Flask.render_template: HTML template rendering an error message if the
+        user lacks the necessary permissions.
+    """
+
     # Check if the user is authenticated
     if "user" not in session:
         flash("Please sign in to delete a recipe.")
@@ -680,6 +753,17 @@ def remove_favorite(recipe_id):
 # Manage categories page Admin only
 @app.route("/manage_categories")
 def manage_categories():
+    """
+    Allows administrator to manage recipe categories.
+
+    This route is intended for administrators to manage recipe categories.
+    It provides a list of categories that can be modified or deleted by
+    administrators.
+
+    Returns:
+        Flask.render_template: HTML template rendering the manage categories
+        page.
+    """
 
     # set active page
     active_page = "categories"
@@ -694,6 +778,20 @@ def manage_categories():
 # Add a category form
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
+    """
+    Allows administrator to add a new recipe category.
+
+    This route enables administrators to add a new recipe category by
+    submitting a category name through a form. It checks if the category
+    name already existsin the database and inserts the new category if
+    it's unique.
+
+    Returns:
+        Flask.redirect: Redirects back to the manage categories page.
+        Flash messages are displayed for category addition success or if the
+        category already exists.
+    """
+
     if request.method == "POST":
         # Get the category name from the form
         category_name = request.form.get("categoryName")
@@ -716,6 +814,26 @@ def add_category():
 # Edit category form function
 @app.route("/edit_category/<category_id>", methods=["POST"])
 def edit_category(category_id):
+    """
+    Allows administrator to edit an existing recipe category.
+
+    This route enables administrators to edit an existing recipe category by
+    submitting an updated category name through a form. It updates the category
+    in the database and provides a flash message confirming the update.
+
+    Args:
+        category_id (str): The unique identifier of the category to be edited.
+
+    Returns:
+        Flask.redirect: Redirects back to the "Manage Categories" page after
+        the category is updated successfully.
+        Flash messages are displayed to confirm the category update.
+
+    Note:
+        This route handles POST requests to update the category.
+        GET requests are redirected to the "Manage Categories" page.
+    """
+
     if request.method == "POST":
         # Get the updated category name from the form
         updated_category_name = request.form.get("updatedCategoryName")

@@ -122,7 +122,12 @@ $(document).ready(function () {
   });
 });
 
-// Profile Page collapsibles
+/**
+ * Initialize collapsible elements on the profile page.
+ * This function should be called when the document is ready.
+ * It initializes collapsible elements using the Materialize CSS framework.
+ */
 $(document).ready(function(){
+  // Initialize collapsible elements
   $('.collapsible').collapsible();
 });
