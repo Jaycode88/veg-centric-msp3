@@ -5,142 +5,153 @@
 <!-- Profile page title with username -->
 <h1 class="center black-text">{{ user.username.capitalize() }}'s Profile</h1>
 
-<!-- Profile details card -->
-<div class="row">
-    <div class="col s12 m8 offset-m2">
-        <div class="card-panel custom-mushroom round">
-
-            <h3 class="left-align black-text"><i class="fas fa-user-tag darkgreen-text prefix"></i> Username:</h3>
-            <p><strong>{{ user.username.capitalize() }}</strong></p>
-            <h3 class="left-align black-text"><i class="fas fa-id-card darkgreen-text prefix"></i> First Name:</h3>
-            <p><strong>{{ user.firstname.capitalize() }}</strong></p>
-            <h3 class="left-align black-text"><i class="fas fa-id-card darkgreen-text prefix"></i> Last Name:</h3>
-            <p><strong>{{ user.lastname.capitalize() }}</strong></p>
-            <h3 class="left-align black-text"><i class="fas fa-envelope darkgreen-text prefix"></i> Email Address:
-            </h3>
-            <p><strong>{{ user.email }}</strong></p>
-            <!-- Edit profile button -->
-            <a href="{{ url_for('edit_profile') }}" class="btn-small custom-lightgreen black-text"
-                aria-label="Edit Profile Button"><strong>Edit Profile</strong> <i
-                    class="fas fa-user-pen darkgreen-text"></i></a>
-        </div>
-    </div>
-</div>
-<!-- users recipe section -->
-<h1 class="center black-text">{{ user.username.capitalize() }}'s Recipes</h1>
-<div class="row">
-    {% if user_recipes %}
-    {% for recipe in user_recipes %}
-    <!-- Recipe Card -->
-    <div class="col s12 m6 offset-m2">
-        <div class="card">
-            <div class="card large zoom custom-mushroom">
-                <!-- Recipe Image-->
-                <div class="card-image">
-                    <img src="{{ recipe.image }}" alt="Image for {{ recipe.recipe_name }}">
-                    <div class="card-title">
-                        <!-- Recipe Name and Category -->
-                        <h2 class="recipe_img_txt">{{ recipe.recipe_name }}</h2><br>
-                        <h3 class="recipe_img_txt">{{ recipe.category }}</h3>
-                    </div>
-                </div>
-                <div class="card-content custom-mushroom">
-                    <!-- Recipe Description, Author, and Date -->
-                    <p><strong>{{ recipe.recipe_description}}</strong></p>
-                    <p><i class="fas fa-clock prefix darkgreen-text"></i> <strong>Prep Time:</strong>
-                        {{ recipe.prep_time }}</p>
-                    <p><i class="fas fa-clock prefix darkgreen-text"></i> <strong>Cook Time:</strong>
-                        {{ recipe.cook_time }}</p>
-                    <p><i class="fas fa-utensils darkgreen-text prefix"></i> <strong>Servings:</strong>
-                        {{ recipe.servings }}</p>
-                    <p><i class="fas fa-user prefix darkgreen-text"></i> <strong>Posted By:</strong>
-                        {{ recipe.created_by }}</p>
-                    <br>
-
-                    <!-- Buttons -->
-                    <div class="center">
-                        <form id="deleteRecipeForm{{ recipe._id }}"
-                            action="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" method="post"
-                            onsubmit="return confirm('Are you sure you want to delete this recipe?');">
-                            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
-                                class="btn-small custom-lightgreen black-text"
-                                aria-label="Edit Recipe Button"><strong>Edit Recipe
-                                </strong> <i class="fas fa-pen-to-square darkgreen-text"></i></a>
-
-                            <button type="submit" class="btn-small custom-lightgreen black-text"
-                                aria-label="Delete Recipe Button">
-                                <strong>Delete Recipe</strong> <i class="fas fa-trash-alt darkgreen-text"></i>
-                            </button>
-                        </form>
-                    </div>
-
+<ul class="collapsible">
+    <li>
+      <div class="collapsible-header"><i class="fas fa-id-card darkgreen-text"></i>Your profile</div>
+      <div class="collapsible-body"><span><!-- Profile details card -->
+        <div class="row">
+            <div class="col s12 m8 offset-m2">
+                <div class="card-panel custom-mushroom round">
+        
+                    <h3 class="left-align black-text"><i class="fas fa-user-tag darkgreen-text prefix"></i> Username:</h3>
+                    <p><strong>{{ user.username.capitalize() }}</strong></p>
+                    <h3 class="left-align black-text"><i class="fas fa-id-card darkgreen-text prefix"></i> First Name:</h3>
+                    <p><strong>{{ user.firstname.capitalize() }}</strong></p>
+                    <h3 class="left-align black-text"><i class="fas fa-id-card darkgreen-text prefix"></i> Last Name:</h3>
+                    <p><strong>{{ user.lastname.capitalize() }}</strong></p>
+                    <h3 class="left-align black-text"><i class="fas fa-envelope darkgreen-text prefix"></i> Email Address:
+                    </h3>
+                    <p><strong>{{ user.email }}</strong></p>
+                    <!-- Edit profile button -->
+                    <a href="{{ url_for('edit_profile') }}" class="btn-small custom-lightgreen black-text"
+                        aria-label="Edit Profile Button"><strong>Edit Profile</strong> <i
+                            class="fas fa-user-pen darkgreen-text"></i></a>
                 </div>
             </div>
-        </div>
-    </div>
-    {% endfor %}
-    {% else %}
-    <div class="center-align">
-        <p class="black-text"><strong>You have not uploaded any recipes yet.</strong></p>
-    </div>
-    {% endif %}
-</div>
-<!-- users favourite recipes section -->
-<h1 class="center black-text">{{ user.username.capitalize() }}'s Favorite Recipes</h1>
-<div class="row">
-    {% if not favorite_recipes %}
-    <div class="center-align">
-        <p class="black-text"><strong>You have not added any favorites yet.</strong></p>
-    </div>
-    {% else %}
-    {% for recipe in favorite_recipes %}
-    <!-- Recipe Card -->
-    <div class="col s12 m6 offset-m2">
-        <div class="card">
-            <div class="card large zoom custom-mushroom">
-                <!-- Recipe Image-->
-                <div class="card-image">
-                    <img src="{{ recipe.image }}" alt="Image For {{ recipe.recipe_name }}">
-                    <div class="card-title">
-                        <!-- Recipe Name and Category -->
-                        <h2 class="recipe_img_txt">{{ recipe.recipe_name }}</h2><br>
-                        <h3 class="recipe_img_txt">{{ recipe.category }}</h3>
+        </div></span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="fas fa-clipboard-user darkgreen-text"></i>Your Recipes</div>
+      <div class="collapsible-body"><span>
+        {% if user_recipes %}
+        <div class="row">
+        {% for recipe in user_recipes %}
+        <!-- Recipe Card -->
+        <div class="col s12 m6 offset-m2">
+            <div class="card">
+                <div class="card large zoom custom-mushroom">
+                    <!-- Recipe Image-->
+                    <div class="card-image">
+                        <img src="{{ recipe.image }}" alt="Image for {{ recipe.recipe_name }}">
+                        <div class="card-title">
+                            <!-- Recipe Name and Category -->
+                            <h2 class="recipe_img_txt">{{ recipe.recipe_name }}</h2><br>
+                            <h3 class="recipe_img_txt">{{ recipe.category }}</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="card-content custom-mushroom">
-                    <!-- Recipe Description, Author, and Date -->
-                    <p><strong>{{ recipe.recipe_description}}</strong></p>
-                    <p><i class="fas fa-clock prefix darkgreen-text"></i> <strong>Prep Time:</strong>
-                        {{ recipe.prep_time }}</p>
-                    <p><i class="fas fa-clock prefix darkgreen-text"></i> <strong>Cook Time:</strong>
-                        {{ recipe.cook_time }}</p>
-                    <p><i class="fas fa-utensils darkgreen-text prefix"></i> <strong>Servings:</strong>
-                        {{ recipe.servings }}</p>
-                    <p><i class="fas fa-user prefix darkgreen-text"></i> <strong>Posted By:</strong>
-                        {{ recipe.created_by }}</p>
-                    <br>
-
-                    <div class="center">
+                    <div class="card-content custom-mushroom">
+                        <!-- Recipe Description, Author, and Date -->
+                        <p><strong>{{ recipe.recipe_description}}</strong></p>
+                        <p><i class="fas fa-clock prefix darkgreen-text"></i> <strong>Prep Time:</strong>
+                            {{ recipe.prep_time }}</p>
+                        <p><i class="fas fa-clock prefix darkgreen-text"></i> <strong>Cook Time:</strong>
+                            {{ recipe.cook_time }}</p>
+                        <p><i class="fas fa-utensils darkgreen-text prefix"></i> <strong>Servings:</strong>
+                            {{ recipe.servings }}</p>
+                        <p><i class="fas fa-user prefix darkgreen-text"></i> <strong>Posted By:</strong>
+                            {{ recipe.created_by }}</p>
+                        <br>
+    
                         <!-- Buttons -->
-                        <form action="{{ url_for('remove_favorite', recipe_id=recipe._id) }}" method="post">
-                            <a class="black-text custom-lightgreen btn-small"
-                                href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"
-                                aria-label="View Recipe Button"><strong>View Recipe</strong> <i
-                                    class="fas fa-circle-info darkgreen-text"></i></a>
-                            <button type="submit" class="btn-small custom-lightgreen black-text"
-                                aria-label="Remove Recipe From Favorites Button">
-                                <strong>Remove Favorite</strong> <i class="fas fa-trash-alt darkgreen-text"></i>
-                            </button>
-                        </form>
-
+                        <div class="center">
+                            <form id="deleteRecipeForm{{ recipe._id }}"
+                                action="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" method="post"
+                                onsubmit="return confirm('Are you sure you want to delete this recipe?');">
+                                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+                                    class="btn-small custom-lightgreen black-text"
+                                    aria-label="Edit Recipe Button"><strong>Edit Recipe
+                                    </strong> <i class="fas fa-pen-to-square darkgreen-text"></i></a>
+    
+                                <button type="submit" class="btn-small custom-lightgreen black-text"
+                                    aria-label="Delete Recipe Button">
+                                    <strong>Delete Recipe</strong> <i class="fas fa-trash-alt darkgreen-text"></i>
+                                </button>
+                            </form>
+                        </div>
+    
                     </div>
-
                 </div>
             </div>
         </div>
-    </div>
-    {% endfor %}
-    {% endif %}
+        {% endfor %}
+        {% else %}
+        <div class="center-align">
+            <p class="black-text"><strong>You have not uploaded any recipes yet.</strong></p>
+        </div>
+        {% endif %}</span></div></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="fas fa-bookmark darkgreen-text"></i>Your Favorites</div>
+      <div class="collapsible-body"><span><div class="row">
+        {% if not favorite_recipes %}
+        <div class="center-align">
+            <p class="black-text"><strong>You have not added any favorites yet.</strong></p>
+        </div>
+        {% else %}
+        {% for recipe in favorite_recipes %}
+        <!-- Recipe Card -->
+        <div class="col s12 m6 offset-m2">
+            <div class="card">
+                <div class="card large zoom custom-mushroom">
+                    <!-- Recipe Image-->
+                    <div class="card-image">
+                        <img src="{{ recipe.image }}" alt="Image For {{ recipe.recipe_name }}">
+                        <div class="card-title">
+                            <!-- Recipe Name and Category -->
+                            <h2 class="recipe_img_txt">{{ recipe.recipe_name }}</h2><br>
+                            <h3 class="recipe_img_txt">{{ recipe.category }}</h3>
+                        </div>
+                    </div>
+                    <div class="card-content custom-mushroom">
+                        <!-- Recipe Description, Author, and Date -->
+                        <p><strong>{{ recipe.recipe_description}}</strong></p>
+                        <p><i class="fas fa-clock prefix darkgreen-text"></i> <strong>Prep Time:</strong>
+                            {{ recipe.prep_time }}</p>
+                        <p><i class="fas fa-clock prefix darkgreen-text"></i> <strong>Cook Time:</strong>
+                            {{ recipe.cook_time }}</p>
+                        <p><i class="fas fa-utensils darkgreen-text prefix"></i> <strong>Servings:</strong>
+                            {{ recipe.servings }}</p>
+                        <p><i class="fas fa-user prefix darkgreen-text"></i> <strong>Posted By:</strong>
+                            {{ recipe.created_by }}</p>
+                        <br>
+    
+                        <div class="center">
+                            <!-- Buttons -->
+                            <form action="{{ url_for('remove_favorite', recipe_id=recipe._id) }}" method="post">
+                                <a class="black-text custom-lightgreen btn-small"
+                                    href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"
+                                    aria-label="View Recipe Button"><strong>View Recipe</strong> <i
+                                        class="fas fa-circle-info darkgreen-text"></i></a>
+                                <button type="submit" class="btn-small custom-lightgreen black-text"
+                                    aria-label="Remove Recipe From Favorites Button">
+                                    <strong>Remove Favorite</strong> <i class="fas fa-trash-alt darkgreen-text"></i>
+                                </button>
+                            </form>
+    
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div></span></div>
+    </li>
+  </ul>
+
+  <div class="center">
+    <img src="../static/images/logo.png" alt="Veg-Centric Logo" class="responsive-img" width="335px" height="auto">
 </div>
 
 {% endblock %}

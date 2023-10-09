@@ -80,7 +80,7 @@ li,
   margin-right: 10px;
 }
 
-.active a {
+.nav-item.active a {
   text-decoration: underline;
 }
 
