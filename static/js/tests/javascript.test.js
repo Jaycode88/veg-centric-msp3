@@ -1,5 +1,5 @@
 // Import the functions to test
-import { initializeDropdown, initializeFormSelect, } from '../js/javascript';
+import { initializeDropdown, initializeFormSelect, initializeCollapsible, } from './javascript';
 
 // Add polyfills for TextEncoder and TextDecoder
 global.TextEncoder = require('util').TextEncoder;
@@ -38,3 +38,20 @@ test('Initialize form select elements', () => {
   expect(mockFormSelectInit).toHaveBeenCalledTimes(selectElements.length);
 });
 
+// Mock the document and M.Collapsible
+document.body.innerHTML = '<div class="collapsible"></div>';
+const mockCollapsibleInit = jest.fn();
+window.M = {
+  Collapsible: {
+    init: mockCollapsibleInit,
+  },
+};
+
+// Test the initializeCollapsible function
+test('Initialize collapsible elements on the profile page', () => {
+  initializeCollapsible();
+
+  // Ensure M.Collapsible.init is called for each element with the '.collapsible' class
+  const collapsibleElements = document.querySelectorAll('.collapsible');
+  expect(mockCollapsibleInit).toHaveBeenCalledTimes(collapsibleElements.length);
+});

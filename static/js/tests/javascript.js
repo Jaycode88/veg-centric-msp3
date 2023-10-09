@@ -110,4 +110,5 @@ document.addEventListener("DOMContentLoaded", initializeCollapsible);
 module.exports = {
     initializeDropdown,
     initializeFormSelect,
+    initializeCollapsible,
 }

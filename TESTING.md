@@ -87,7 +87,7 @@ ReferenceError: $ is not defined
 Despite having installed jquery as a dependancy I could not find a way for Jest to test my jQuery code. 
 
 ### Jest Testing JavaScript
-I decided to re-write all jQuery functions into Javascript functions in a seperate  file called javascript.js(in the same directory as my script.js file)Just for the purpose of testing those functions with jest. To do this I found I also needed to install Babel and some related packages using:
+I decided to re-write all jQuery functions into Javascript functions in a seperate  file called javascript.js(in a tests directory within the "JS" directory where my script.js file is located). I found I also needed to install Babel and some related packages using:
 ```
 npm install --save-dev @babel/core @babel/preset-env babel-jest
 ```
@@ -115,3 +115,24 @@ module.exports = {
   },
 };
 ```
+From there I was able to write tests for the initializeDropdown, initializeCollapsible and initializeFormSelect Functions which all passed:
+![mockup](./static/documentation/jestpassed.webp)
+
+Below is a description of the the functions I attempted to test with no success.
+
+- **initializeModals Function**
+    1. **Setup**: I set up a testing environment using Jest and included the tests for the `initializeModals` function within the same file as the other tests.
+
+    2. **Mocking Dependencies**: I successfully mocked the dependencies required by the `initializeModals` function, such as `M.Modal.init` and the event listeners for the Terms and Privacy links.
+
+    3. **Testing Initialization**: I initially attempted to test whether the `initializeModals` function correctly initializes the modals by checking if `M.Modal.init` is called for each modal element with the '.modal' class. This part of the test passed without issues.
+
+    4. **Simulating Click Events**: To test the modal control functionality, I tried to simulate click events on the Terms and Privacy links ('#termsLink' and '#privacyLink') to ensure that the respective modals are opened.
+
+    5. **Challenges and Issues**:
+
+    - **Failure to Open Modals**: Despite my efforts, I encountered persistent issues with simulating the click events on the links. Specifically, I faced challenges with the modal not opening as expected when simulating the click events. This issue prevented me from verifying a valid test for this function.
+
+    - **Debugging Attempts**: I made several debugging attempts by adding `console.log` statements and using `async/await` to synchronize the test, but the problem persisted. Even though I could verify that the event listeners were correctly set up, the modals were not being opened during the test.
+
+    6. **Conclusion**: Due to the issues encountered and the challenges faced in simulating the modal open behavior, I was unable to complete testing for the `initializeModals` function. I have documented my testing process and challenges in this document for future reference.
