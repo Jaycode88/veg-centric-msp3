@@ -10,9 +10,13 @@ I have used various tools to Test Funcionality, Validity and responsiveness. I h
 
 I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
 
-- links to results:
+- Results: 
+  - [Home](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2F)
+  ![mockup](static/documentation/homehtml.webp)
 
-N.B Images of results
+  - [Add Recipe](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fadd_recipe)
+  ![mockup](static/documentation/addrecipehtml.webp)
+
 
 ### CSS
 
