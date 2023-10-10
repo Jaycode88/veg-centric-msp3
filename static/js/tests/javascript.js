@@ -111,4 +111,6 @@ module.exports = {
     initializeDropdown,
     initializeFormSelect,
     initializeCollapsible,
+    handleAddIngredient,
+    handleAddMethodStep,
 }

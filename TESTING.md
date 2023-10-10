@@ -77,7 +77,7 @@ npm install --save-dev jest-environment-jsdom
 
 To install jQuery as a development dependancy:
 ```
-npm install --save-dev juery
+npm install --save-dev jquery
 ```
 
 I then created the jest.config.js file in the root directory as well as a new ```__tests__```folder containing my jquery-mock.js(to mock jquery globally. instead of writing it into each test) and my script.test.js(containing my tests). I kept recieving the this error:
@@ -115,10 +115,10 @@ module.exports = {
   },
 };
 ```
-From there I was able to write tests for the initializeDropdown, initializeCollapsible and initializeFormSelect Functions which all passed:
+From there I was able to write tests for the initializeDropdown, initializeCollapsible, handleAddIngridient, handleAddMethodStep and initializeFormSelect Functions which all passed:
 ![mockup](./static/documentation/jestpassed.webp)
 
-Below is a description of the the functions I attempted to test with no success.
+Below is a description of the one function I attempted to test with no success.
 
 - **initializeModals Function**
     1. **Setup**: I set up a testing environment using Jest and included the tests for the `initializeModals` function within the same file as the other tests.
@@ -135,4 +135,4 @@ Below is a description of the the functions I attempted to test with no success.
 
     - **Debugging Attempts**: I made several debugging attempts by adding `console.log` statements and using `async/await` to synchronize the test, but the problem persisted. Even though I could verify that the event listeners were correctly set up, the modals were not being opened during the test.
 
-    6. **Conclusion**: Due to the issues encountered and the challenges faced in simulating the modal open behavior, I was unable to complete testing for the `initializeModals` function. I have documented my testing process and challenges in this document for future reference.
+    6. **Conclusion**: Due to the issues encountered and the challenges faced in simulating the modal open behavior, I was unable to complete testing for the `initializeModals` function. I have documented my testing process and challenges in this document for future reference. As well as conduct manual user testing on these modals.
