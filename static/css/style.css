@@ -49,6 +49,11 @@ li,
   background-color: #ded8a0;
 }
 
+/* Images */
+img {
+  object-fit: cover;
+}
+
 /* 404 error page
 /* 404 error page */
 .error {
@@ -204,6 +209,10 @@ li,
 .card-content.custom-mushroom .center {
   position: absolute;
   bottom: 10px;
+  width: 100%;
+}
+
+.card-image img {
   width: 100%;
 }
 
@@ -436,4 +445,23 @@ li,
     display: inline-block;
     margin-right: 10%;
   }
+}
+
+/* Card image media Queries */
+@media only screen and (max-width: 992px) {
+  .card-image img {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+.card-image img {
+  width: 33%;
+}
+}
+
+@media only screen and (max-width: 400px) {
+.card {
+  min-height: 800px;
+}
 }
