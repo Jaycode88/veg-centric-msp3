@@ -16,17 +16,22 @@ N.B Images of results
 
 ### CSS
 
-I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
+I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files. when testing by Direct input The only warning recieved was due to external stylesheets not being able to be reached and when tested  by URI there is 1 Error and many warnings all related to the external stylesheets. All CSS Written by myself Passed Validation.
 
-- link to results:
+- link to results: [click here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
-N.B Images of Results
+![mockup](static/documentation/cssvalid.webp)
 
 ### JavaScript
 
-I have used the recommended [JShint Validator](https://jshint.com) to validate my JS file. I used version 11 which does not throw errors due to use of ES6 syntax.
+I have used the recommended [JShint Validator](https://jshint.com) to validate my JS file. I used version 11 which does not throw errors due to use of ES6 syntax, Aswell as informing JSHint that I was intenionally using jQuery and the $ symbol. To set up JSHint in the same manner use the following notes at the top of your test:
+```
+/* jshint esversion: 11 */
+/* global $ */
+```
 
-N.B Image of results
+**Results**
+![screenshot](static/documentation/jsvalidate.webp)
 
 ### PEP8
 

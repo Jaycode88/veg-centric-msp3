@@ -34,7 +34,6 @@ $(document).ready(function(){
  */
 $(document).ready(function() {
     // Select necessary elements
-    const form = $("#recipeForm"); // The form element
     const ingredientFields = $("#ingredientFields"); // The container for ingredient fields
     const addIngredientButton = $("#addIngredientButton"); // The button to add new ingredients
   
