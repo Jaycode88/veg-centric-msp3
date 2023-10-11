@@ -140,6 +140,10 @@ img {
   transition: 1s;
 }
 
+.footer-marg {
+  margin: 10px;
+}
+
 .footer-heading {
   font-size: 200%;
   margin-top: 5px;
