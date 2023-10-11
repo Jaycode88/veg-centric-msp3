@@ -67,8 +67,8 @@
             </div>
             <p class="center black-text">
                 By clicking "Sign Up" you agree to our
-                <a href="#" id="termsLink" aria-label="Terms and Conditions">Terms and Conditions</a> and
-                <a href="#" id="privacyLink" aria-label="Privacy Policy">Privacy Policy</a>.
+                <a href="#" id="termsLink" aria-label="Terms and Conditions" class="modal-link">Terms and Conditions</a> and
+                <a href="#" id="privacyLink" aria-label="Privacy Policy" class="modal-link">Privacy Policy</a>.
             </p>
 
             <!-- modals for Terms and Privacy Policy -->
@@ -98,9 +98,12 @@
             <!-- Sign in link -->
             <div class="row">
                 <div class="col s12">
-                    <p class="center-align">Already A Member?
-                        <a href="{{ url_for('sign_in') }}" aria-label="Sign In Link">Sign In</a>
-                    </p>
+                    <p class="center-align">Already A Member?</p>
+                </div>
+                <div class="center-align">
+                    <a href="{{ url_for('sign_in') }}" role="button" class="btn-small custom-lightgreen black-text"
+                    aria-label="Sign up Button"><strong>Sign In</strong> <i
+                        class="fas fa-arrow-right darkgreen-text"></i></a>
                 </div>
             </div>
         </div>

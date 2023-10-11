@@ -27,15 +27,12 @@
             <div class="input-field col s12">
                 <i class="fas fa-folder-open darkgreen-text prefix"></i>
                 <select id="category" name="category" class="validate" required>
-                    <option value="#" disabled selected>Choose Category</option>
+                    <option value="" disabled selected>Choose Category</option>
                     {% for category in categories %}
-                    <option value="{{ category.category }}" {%
-                    if category.category == recipe.category %}selected{% endif %}>
-                        {{ category.category }}
-                    </option>
+                    <option value="{{ category.category }}">{{ category.category }}</option>
                     {% endfor %}
                 </select>
-                <label>Category</label>
+                <label for="category">Category</label>
             </div>
         </div>
 
@@ -114,7 +111,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-utensils prefix darkgreen-text"></i>
-                <input type="number" id="servings" name="servings" minlength="1" maxlength="2" class="validate"
+                <input type="number" id="servings" name="servings" class="validate"
                 value="{{ recipe.servings }}" required>
                 <label for="servings">Servings</label>
             </div>

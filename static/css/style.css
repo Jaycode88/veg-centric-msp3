@@ -185,6 +185,12 @@ img {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
+/* Modal Links */
+.modal-link {
+  color:#2F4F4F;
+  text-decoration: underline;
+}
+
 /* form labels */
 .input-field label {
   color: #000;

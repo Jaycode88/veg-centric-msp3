@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% block styles %}
-<link rel="stylesheet" href="styles.css">
 {% endblock %}
 {% block content %}
 <!-- Recipe Title -->
@@ -23,7 +22,7 @@
     <p class="recipe-description admin-text"><strong>{{ recipe.admin_description }}</strong></p>
   </div>
   <div class="center admin-text">
-    <h3>Top Tips</h3>
+    <h2>Top Tips</h2>
     <p>{{ recipe.product_text }}</p>
   </div>
   <div class="center">
