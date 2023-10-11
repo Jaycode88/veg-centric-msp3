@@ -1,7 +1,9 @@
 # Import modules
 import os
+import io
 import datetime
 import cloudinary
+from PIL import Image
 from cloudinary.uploader import upload
 import cloudinary.api
 from flask import (
@@ -455,7 +457,20 @@ def add_recipe():
         # Upload the image to Cloudinary
         image_file = request.files["recipe_image"]
         if image_file:
-            upload_result = upload(image_file)
+            # Open the image using Pillow
+            image = Image.open(image_file)
+
+            # Resize the image
+            image = image.resize((800, 400))
+
+            # Convert the image to WebP format
+            output = io.BytesIO()
+            image.save(output, format='WebP')
+            image_file = io.BytesIO(output.getvalue())
+            image_file.seek(0)
+
+            # Upload the modified image to Cloudinary
+            upload_result = upload(image_file, transformation={"crop": "fill"})
             image_url = upload_result["secure_url"]
 
         for i in range(len(request.form.getlist("ingredient[]"))):
@@ -654,7 +669,19 @@ def edit_recipe(recipe_id):
                     # Delete the old image from Cloudinary
                     cloudinary.uploader.destroy(old_public_id, invalidate=True)
 
-                # Upload the new image to Cloudinary
+                # Open the image using Pillow
+                image = Image.open(image_file)
+
+                # Resize the image
+                image = image.resize((800, 400))
+
+                # Convert the image to WebP format
+                output = io.BytesIO()
+                image.save(output, format='WebP')
+                image_file = io.BytesIO(output.getvalue())
+                image_file.seek(0)
+
+                # Upload the modified image to Cloudinary
                 upload_result = cloudinary.uploader.upload(image_file)
                 image_url = upload_result["secure_url"]
 
