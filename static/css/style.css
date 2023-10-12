@@ -427,6 +427,12 @@ img {
   }
 }
 
+@media only screen and (max-width: 350px) {
+  .card.profile-card { 
+    min-height: 925px;
+  }
+} 
+
 @media only screen and (max-width: 285px) {
   .card {
     min-height: 950px;
