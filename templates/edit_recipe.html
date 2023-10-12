@@ -27,9 +27,11 @@
             <div class="input-field col s12">
                 <i class="fas fa-folder-open darkgreen-text prefix"></i>
                 <select id="category" name="category" class="validate" required>
-                    <option value="" disabled selected>Choose Category</option>
+                    <option value="" disabled>Choose Category</option>
                     {% for category in categories %}
-                    <option value="{{ category.category }}">{{ category.category }}</option>
+                        <option value="{{ category.category }}" {% if category.category == recipe.category %}selected{% endif %}>
+                            {{ category.category }}
+                        </option>
                     {% endfor %}
                 </select>
                 <label for="category">Category</label>
@@ -117,7 +119,7 @@
             </div>
         </div>
 
-        {% if session.user == "admin" %}
+        
         <!-- Recipe photo upload area -->
         <div class="row">
             <div class="input-field col s12">
@@ -128,7 +130,7 @@
                 <p>If you do not upload an image the current image will be kept</p>
             </div>
         </div>
-        {% endif %}
+        
 
         <!-- ingridients fields -->
         <div id="ingredientFields" class="row input-field col s12">
