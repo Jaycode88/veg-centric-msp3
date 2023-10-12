@@ -12,41 +12,52 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
 - Results: 
   - [Home](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2F)
-  ![mockup](static/documentation/homehtml.webp)
+  
+    ![mockup](static/documentation/homehtml.webp)
 
   - [Add Recipe](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fadd_recipe)
-  ![mockup](static/documentation/addrecipehtml.webp)
+  
+    ![mockup](static/documentation/addrecipehtml.webp)
 
   - [Profile](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fprofile%3Fusername%3Dtestuser)
-  ![mockup](static/documentation/validprofile.webp)
+  
+    ![mockup](static/documentation/validprofile.webp)
 
   - [Sign In](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fsign_in)
-  ![mockup](static/documentation/validsignin.webp)
+  
+    ![mockup](static/documentation/validsignin.webp)
 
   - [Sign Up](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fsign_up)
-  ![mockup](static/documentation/validsignup.webp)
+  
+    ![mockup](static/documentation/validsignup.webp)
 
   - [About](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fabout)
-  ![mockup](static/documentation/validabout.webp)
+  
+    ![mockup](static/documentation/validabout.webp)
 
   - [Edit Recipe](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fedit_recipe%2F6527b0b957b0bcdad6782f15)
-  ![mockup](static/documentation/valideditrecipe.webp)
+  
+    ![mockup](static/documentation/valideditrecipe.webp)
 
   - [Edit Profile](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fedit_profile)
-  ![mockup](static/documentation/valideditprofile.webp)
+  
+    ![mockup](static/documentation/valideditprofile.webp)
 
   - Delete Profile (Via Source code Input)
-  ![mockup](static/documentation/validdeleteprofile.webp)
+  
+    ![mockup](static/documentation/validdeleteprofile.webp)
 
   - [Recipe Details](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Frecipe%2F65004285e4bb3a34c6930886)
 
     ![mockup](static/documentation/validrecipedetails.webp)
 
   - [Manage Categories(admin only page)](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fmanage_categories)
-  ![mockup](static/documentation/validmanagecat.webp)
+  
+    ![mockup](static/documentation/validmanagecat.webp)
 
   - 404 Error Page (Via Source code Input)
-  ![mockup](static/documentation/valid404.webp)
+  
+    ![mockup](static/documentation/valid404.webp)
 
 ### CSS
 
@@ -289,3 +300,44 @@ Below is a description of the one function I attempted to test with no success.
     - **Debugging Attempts**: I made several debugging attempts by adding `console.log` statements and using `async/await` to synchronize the test, but the problem persisted. Even though I could verify that the event listeners were correctly set up, the modals were not being opened during the test.
 
     6. **Conclusion**: Due to the issues encountered and the challenges faced in simulating the modal open behavior, I was unable to complete testing for the `initializeModals` function. I have documented my testing process and challenges in this document for future reference. As well as conduct manual user testing on these modals.
+
+## Bugs
+### Fixed Bugs
+- **Materialize Card Sizes**
+
+  1. Image Sizing: Due to using user uploaded images it was impossible to determine there size In the card I found when pictures where square or portrait I would have an issue with space for the text beneath and the buttons overlaying the text.
+
+  The Solve: I found I was able to manipulate the image using Pillow before it was uploaded to cloudinary. I chose to set the image to 800x400px, Convert its format to webp and Crop the image to fit the size.
+  ```
+  # Upload the image to Cloudinary
+        image_file = request.files["recipe_image"]
+        if image_file:
+            # Open the image using Pillow
+            image = Image.open(image_file)
+
+            # Resize the image
+            image = image.resize((800, 400))
+
+            # Convert the image to WebP format
+            output = io.BytesIO()
+            image.save(output, format='WebP')
+            image_file = io.BytesIO(output.getvalue())
+            image_file.seek(0)
+
+            # Upload the modified image to Cloudinary
+            upload_result = upload(image_file, transformation={"crop": "fill"})
+            image_url = upload_result["secure_url"]
+  ```
+  To achive this I had to add the following imports:
+  ```
+  import io
+  from PIL import Image
+  ```
+  2. Text overlay when resizing: I had an issue with text being overlayed by buttons or dissapearing(being cut short) when changing screen sizes.
+
+  The Solve: This was much easier to solve once I had the image issue resolved..
+  Now I could determine the image size. I could restrict the character amount on the description and set the minimum card height for the screen size break points.
+
+- **Text area PlaceHolder**
+  
+  I experienced an Issue were Instead of displaying placeholder text in the text area of the admin description field of the edit recipe form, All that would display was a few tabbed spaces. With a little research I found this rather a rookie error and one I will not forget due to its simplicity. I was trying to use a placeholder attribute with the textarea which I found is not possible the place holder text goes between the text areas opening and closing tags.
