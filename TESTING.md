@@ -39,7 +39,8 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
   ![mockup](static/documentation/validdeleteprofile.webp)
 
   - [Recipe Details](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Frecipe%2F65004285e4bb3a34c6930886)
-  ![mockup](static/documentation/validrecipedetails.webp)
+
+    ![mockup](static/documentation/validrecipedetails.webp)
 
   - [Manage Categories(admin only page)](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fmanage_categories)
   ![mockup](static/documentation/validmanagecat.webp)
@@ -91,7 +92,7 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 | To have a page with user information | Yes | ![mockup](static/documentation/profile.webp) |
 **As Website Owner I would like to...**
 | Edit all recipes to ensure content quality | Yes | ![mockup](static/documentation/editrecipe.webp) ![mockup](static/documentation/editdeleterecipe.webp) |
-| Edit recipe images for aesthitical purposes | Yes | ![mockup](static/documentation/editdeleterecipe.webp) |
+| Edit recipe images for aesthitical purposes | Yes | ![mockup](static/documentation/editdeleterecipe.webp) ![mockup](static/documentation/imageupload.webp) |
 | Add categories | Yes | ![mockup](static/documentation/admincat.webp) |
 | Generate profit through affiliate marketing | Yes | ![mockup](static/documentation/recipewithproduct.webp) |
 
@@ -135,10 +136,13 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 | Confirm Password field accepts only alphanumeric and limited special characters, must match password field and hide characters, Be between 6 - 15 charachters and is required | Yes | Yes | Yes |
 | Shows Terms and Privacy Policy read options | Yes | Yes | Yes |
 | Form Submits upon use of button | Yes | Yes | Yes |
-| From Resets upon use of button | Yes | Yes | Yes |
+| Form Resets upon use of button | Yes | Yes | Yes |
+| Sign Up button is visible and functioning | Yes | Yes | Yes || Sign Up button is visible and functioning | Yes | Yes | Yes |
 **Sign In**
 | Username Must match with user in the database | Yes | Yes | Yes |
 | Password field Must match with the password in the database for the username given | Yes | Yes | Yes |
+| Form Submits upon use of Sign In button | Yes | Yes | Yes |
+| Sign Up Button is visible and functional | Yes | Yes | Yes |
 **Edit Profile**
 | First Name field must only contain letters from 2 to 20 characters and is required | Yes | Yes | Yes |
 | Last Name field must only contain letters from 2 to 20 characters and is required | Yes | Yes | Yes |
