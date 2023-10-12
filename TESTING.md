@@ -68,13 +68,17 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate m
 
 ### PEP8
 
-I have used ..............  to check all Python files are PEP8 compliant.
+I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInstitute) to check all Python files are PEP8 compliant.
+  - App.py
+  ![mockup](static/documentation/pep8.webp)
 
-N.B Image of Results
+  - settings.py
+  ![mockup](static/documentation/pep8settings.webp)
 
 ## User Story Testing
 
-N.B Add table for user stories with link to image like example.
+| AIM | Achieved | Image|
+|------
 
 ## Browser Compatability / Cross Platform Testing
 
