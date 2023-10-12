@@ -5,6 +5,9 @@
 /* Body overflow hidden to stop horizontal scroll */
 body {
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Fonts */
@@ -125,7 +128,7 @@ img {
 /* Footer Bar */
 /* ---------------------------------------- */
 .page-footer {
-  margin-top: 10px;
+  margin-top: auto;
   padding: 20px 0;
   display: flex;
   justify-content: space-between;
