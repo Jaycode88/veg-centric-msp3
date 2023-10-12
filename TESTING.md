@@ -8,7 +8,7 @@ I have used various tools to Test Funcionality, Validity and responsiveness. I h
 
 ### HTML
 
-I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
+I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files. I checked validated by both URI and Copying and pasting the rendered page's source code into the checker.
 
 - Results: 
   - [Home](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2F)
@@ -17,6 +17,32 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
   - [Add Recipe](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fadd_recipe)
   ![mockup](static/documentation/addrecipehtml.webp)
 
+  - [Profile](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fprofile%3Fusername%3Dtestuser)
+  ![mockup](static/documentation/validprofile.webp)
+
+  - [Sign In](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fsign_in)
+  ![mockup](static/documentation/validsignin.webp)
+
+  - [Sign Up](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fsign_up)
+  ![mockup](static/documentation/validsignup.webp)
+
+  - [About](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fabout)
+  ![mockup](static/documentation/validabout.webp)
+
+  - [Edit Recipe](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fedit_recipe%2F6527b0b957b0bcdad6782f15)
+  ![mockup](static/documentation/valideditrecipe.webp)
+
+  - [Edit Profile](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fedit_profile)
+  ![mockup](static/documentation/valideditprofile.webp)
+
+  - Delete Profile (Via Source code Input)
+  ![mockup](static/documentation/validdeleteprofile.webp)
+
+  - [Recipe Details](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Frecipe%2F65004285e4bb3a34c6930886)
+  ![mockup](static/documentation/validrecipedetails.webp)
+
+  - [Manage Categories(admin only page)](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fmanage_categories)
+  ![mockup](static/documentation/validmanagecat.webp)
 
 ### CSS
 
