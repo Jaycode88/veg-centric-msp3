@@ -389,6 +389,13 @@ img {
   }
 }
 
+@media (max-width: 360px) {
+  .recipe-details-btns {
+    margin-left: 15% !important;
+  }
+}
+
+
 /* Show recipes media queries */
 /* Cards */
 @media only screen and (max-width: 992px) {

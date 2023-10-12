@@ -70,7 +70,7 @@
 </div>
 
 <!-- Recipe Buttons -->
-<div class="center">
+<div class="center-align recipe-details-btns">
   {% if user %}
   {% if recipe._id in user.favorites %}
   <form method="POST" action="{{ url_for('remove_favorite', recipe_id=recipe['_id']) }}">
