@@ -99,7 +99,28 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 
 ### CRUD (create, read, update, delete) Testing
 
-N.B Add table following example
+| Aim | Admin | User | Non User |
+|-----|-------|------|----------|
+**Profile**
+| CREATE a Profile | Yes | Yes | Yes |
+| READ Profile Details | Yes | Yes | No(As Intended) |
+| UPDATE Profile Details | Yes | Yes | No(As Intended) |
+| DELETE Profile | Yes | Yes | Yes | No(As Intended) |
+**Recipe**
+| CREATE a Recipe | Yes | Yes | No(As Intended) |
+| READ a Recipe | Yes | Yes | Yes |
+| UPDATE a Recipe | Yes | Yes | No(As Intended) |
+| DELETE a Recipe | Yes | Yes | No(As Intended) |
+**Recipe Product Suggestions**
+| CREATE a Suggestion | Yes | No(As Intended) | No(As Intended) |
+| READ a Suggestion | Yes | Yes | Yes |
+| UPDATE a Suggestion | Yes | No(As Intended) | No(As Intended) |
+| DELETE a Suggestion | Yes | No(As Intended) | No(As Intended) |
+**Favorites**
+| CREATE a Favorite | Yes | Yes | No(As Intended) |
+| READ a Favorite | Yes | Yes | No(As Intended) |
+| UPDATE a Favorite | No(As Intended) | No(As Intended) | No(As Intended) |
+| DELETE a Favorite | Yes | Yes | No(As Intended) |
 
 ### Form Validation Testing
 
