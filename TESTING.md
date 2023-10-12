@@ -44,6 +44,9 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
   - [Manage Categories(admin only page)](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fmanage_categories)
   ![mockup](static/documentation/validmanagecat.webp)
 
+  - 404 Error Page (Via Source code Input)
+  ![mockup](static/documentation/valid404.webp)
+
 ### CSS
 
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files. when testing by Direct input The only warning recieved was due to external stylesheets not being able to be reached and when tested  by URI there is 1 Error and many warnings all related to the external stylesheets. All CSS Written by myself Passed Validation.
