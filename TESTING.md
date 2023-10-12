@@ -79,11 +79,21 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 
 | AIM | Achieved | Image|
 |-----|----------|------|
-**As a first time user to the website, I would like to...*
+**As a first time user to the website, I would like to...**
 | Enjoy a user freindly experience | Yes | ![mockup](static/documentation/navigation.webp)|
 | Browse Veg-Centric Recipes | Yes | ![mockup](static/documentation/search.webp) ![mockup](static/documentation/recipecard.webp) |
 | Join The Community | Yes | ![mockup](static/documentation/signinup.webp) |
 | Find information about Veg-Centric | Yes | ![mockup](static/documentation/about.webp) |
+**As a Returning user, I would like to...**
+| Contribute to the community | Yes | ![mockup](static/documentation/addrecipe.webp) |
+| Save Recipes As Favorites and view favorites | Yes | ![mockup](static/documentation/favorites.webp) |
+| View, Edit and Delete their own recipes | Yes | ![mockup](static/documentation/editrecipe.webp) ![mockup](static/documentation/editdeleterecipe.webp) |
+| To have a page with user information | Yes | ![mockup](static/documentation/profile.webp) |
+**As Website Owner I would like to...**
+| Edit all recipes to ensure content quality | Yes | ![mockup](static/documentation/editrecipe.webp) ![mockup](static/documentation/editdeleterecipe.webp) |
+| Edit recipe images for aesthitical purposes | Yes | ![mockup](static/documentation/editdeleterecipe.webp) |
+| Add categories | Yes | ![mockup](static/documentation/admincat.webp) |
+| Generate profit through affiliate marketing | Yes | ![mockup](static/documentation/recipewithproduct.webp) |
 
 ## Browser Compatability / Cross Platform Testing
 
