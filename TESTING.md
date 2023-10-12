@@ -174,7 +174,7 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 | Add ingredients field must contain alphanumeric characters, Remove ingredient field button is visible and functional | Yes | Yes | Yes |
 | Add method step field must contain alphanumeric characters, Remove step field button is visible and functional | Yes | Yes | Yes |
 | Form Submits upon use of Post button | Yes | Yes | Yes |
-| Form Resets upon use of Post button | Yes | Yes | Yes |
+| Form Resets upon use of Reset button | Yes | Yes | Yes |
 **Edit a Recipe for user**
 | Recipe name field must contain only alphanumeric characters, Be between 3 -30 characters, is required and prefilled| Yes | Yes | Yes |
 | Recipe Category field Must display Dropdown of categories from database, Only dropdown Items can be selected(no manual input), is required and prefilled | Yes | Yes | Yes |
