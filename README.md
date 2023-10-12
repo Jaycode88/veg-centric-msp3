@@ -302,6 +302,11 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
 
 ![screenshot](static/documentation/profile.webp)
 
+- #### About Page
+    - The About page in the project provides users with a comprehensive overview of Veg-Centric Recipes. It introduces the project's mission, highlights the significance of a veg-centric lifestyle, and delves into the vibrant community that makes this project unique. Additionally, links are provided to our Terms and Conditions and Privacy Policy for users to reference. This page aims to give users a clear understanding of what Veg-Centric Recipes is all about and how they can get involved.
+
+![mockup](static/documentation/about.webp)
+
 - #### Facebook Page
   The design seamlessly integrates with the official Facebook page, enhancing user engagement and keeping users connected:
 
