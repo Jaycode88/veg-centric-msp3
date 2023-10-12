@@ -78,7 +78,12 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 ## User Story Testing
 
 | AIM | Achieved | Image|
-|------
+|-----|----------|------|
+**As a first time user to the website, I would like to...*
+| Enjoy a user freindly experience | Yes | ![mockup](static/documentation/navigation.webp)|
+| Browse Veg-Centric Recipes | Yes | ![mockup](static/documentation/search.webp) ![mockup](static/documentation/recipecard.webp) |
+| Join The Community | Yes | ![mockup](static/documentation/signinup.webp) |
+| Find information about Veg-Centric | Yes | ![mockup](static/documentation/about.webp) |
 
 ## Browser Compatability / Cross Platform Testing
 
