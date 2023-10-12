@@ -8,7 +8,7 @@
 
 ### By Joe Seabrook
 
-N.B am i responsive images here
+![screenshot](static/documentation/amiresponsive.webp)
 
 ### Repository Link
 

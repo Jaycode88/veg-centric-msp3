@@ -280,6 +280,7 @@ module.exports = {
 };
 ```
 From there I was able to write tests for the initializeDropdown, initializeCollapsible, handleAddIngridient, handleAddMethodStep and initializeFormSelect Functions which all passed:
+
 ![mockup](./static/documentation/jestpassed.webp)
 
 Below is a description of the one function I attempted to test with no success.
