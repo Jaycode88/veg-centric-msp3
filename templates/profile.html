@@ -64,7 +64,7 @@
                                 <br>
     
                                     <!-- Buttons -->
-                                    <div class="center">
+                                    <div class="center recipe-details-btns">
                                         <form id="deleteRecipeForm{{ recipe._id }}"
                                             action="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" method="post"
                                             onsubmit="return confirm('Are you sure you want to delete this recipe?');">
