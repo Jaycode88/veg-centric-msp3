@@ -37,48 +37,66 @@
         <!-- TopBar Navigation for Larger Screens -->
         <ul id="nav-desktop" class="right hide-on-med-and-down">
           {% if session.user %}
-          <li class="nav-item {% if active_page == 'home' %}active{% endif %}"><a href="{{ url_for('show_recipes') }}">Home</a></li>
-          <li class="nav-item {% if active_page == 'add_recipe' %}active{% endif %}"><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+          <li class="nav-item {% if active_page == 'home' %}active{% endif %}"><a
+              href="{{ url_for('show_recipes') }}">Home</a></li>
+          <li class="nav-item {% if active_page == 'add_recipe' %}active{% endif %}"><a
+              href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
           {% if session.user == "admin" %}
-          <li class="nav-item {% if active_page == 'categories' %}active{% endif %}"><a href="{{ url_for('manage_categories') }}">Manage Categories</a></li>
+          <li class="nav-item {% if active_page == 'categories' %}active{% endif %}"><a
+              href="{{ url_for('manage_categories') }}">Manage Categories</a></li>
           {% endif %}
-          <li class="nav-item {% if active_page == 'profile' %}active{% endif %}"><a href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
+          <li class="nav-item {% if active_page == 'profile' %}active{% endif %}"><a
+              href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
           <li><a href="{{ url_for('sign_out') }}">Sign Out</a></li>
-          <li class="nav-item {% if active_page == 'about' %}active{% endif %}"><a href="{{ url_for('about') }}">About</a></li>
+          <li class="nav-item {% if active_page == 'about' %}active{% endif %}"><a
+              href="{{ url_for('about') }}">About</a></li>
           <li><a href="https://www.facebook.com/profile.php?id=61551788318438" target="_blank"><i
                 class="fas fa-brands fa-facebook black-text"></i></a></li>
           {% else %}
-          <li class="nav-item {% if active_page == 'home' %}active{% endif %}"><a href="{{ url_for('show_recipes') }}">Home</a></li>
-          <li class="nav-item {% if active_page == 'about' %}active{% endif %}"><a href="{{ url_for('about') }}">About</a></li>
-          <li class="nav-item {% if active_page == 'sign_in' %}active{% endif %}"><a href="{{ url_for('sign_in') }}">Sign In</a></li>
-          <li class="nav-item {% if active_page == 'sign_up' %}active{% endif %}"><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
-          <li><a href="https://www.facebook.com/profile.php?id=61551788318438" target="_blank"  aria-label="Visit us on Facebook"><i
-                class="fas fa-brands fa-facebook black-text"></i></a></li>
+          <li class="nav-item {% if active_page == 'home' %}active{% endif %}"><a
+              href="{{ url_for('show_recipes') }}">Home</a></li>
+          <li class="nav-item {% if active_page == 'about' %}active{% endif %}"><a
+              href="{{ url_for('about') }}">About</a></li>
+          <li class="nav-item {% if active_page == 'sign_in' %}active{% endif %}"><a
+              href="{{ url_for('sign_in') }}">Sign In</a></li>
+          <li class="nav-item {% if active_page == 'sign_up' %}active{% endif %}"><a
+              href="{{ url_for('sign_up') }}">Sign Up</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61551788318438" target="_blank"
+              aria-label="Visit us on Facebook"><i class="fas fa-brands fa-facebook black-text"></i></a></li>
           {% endif %}
         </ul>
 
         <!-- Dropdown Navigation for Mobile -->
-        <a class="dropdown-trigger hide-on-large-only" href="#" data-target="mobile-dropdown" aria-label="Toggle Menu"><i
-            class="fas fa-solid fa-bars left black-text"></i></a>
+        <a class="dropdown-trigger hide-on-large-only" href="#" data-target="mobile-dropdown"
+          aria-label="Toggle Menu"><i class="fas fa-solid fa-bars left black-text"></i></a>
         <ul id="mobile-dropdown" class="dropdown-content custom-lightgreen">
           {% if session.user %}
-          <li class="nav-item {% if active_page == 'home' %}active{% endif %}"><a href="{{ url_for('show_recipes') }}">Home</a></li>
-          <li class="nav-item {% if active_page == 'add_recipe' %}active{% endif %}"><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+          <li class="nav-item {% if active_page == 'home' %}active{% endif %}"><a
+              href="{{ url_for('show_recipes') }}">Home</a></li>
+          <li class="nav-item {% if active_page == 'add_recipe' %}active{% endif %}"><a
+              href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
           {% if session.user == "admin" %}
-          <li class="nav-item {% if active_page == 'categories' %}active{% endif %}"><a href="{{ url_for('manage_categories') }}">Manage Categories</a></li>
+          <li class="nav-item {% if active_page == 'categories' %}active{% endif %}"><a
+              href="{{ url_for('manage_categories') }}">Manage Categories</a></li>
           {% endif %}
-          <li class="nav-item {% if active_page == 'profile' %}active{% endif %}"><a href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
+          <li class="nav-item {% if active_page == 'profile' %}active{% endif %}"><a
+              href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
           <li><a href="{{ url_for('sign_out') }}">Sign Out</a></li>
-          <li class="nav-item {% if active_page == 'about' %}active{% endif %}"><a href="{{ url_for('about') }}">About</a></li>
+          <li class="nav-item {% if active_page == 'about' %}active{% endif %}"><a
+              href="{{ url_for('about') }}">About</a></li>
           <li><a href="https://www.facebook.com/profile.php?id=61551788318438" target="_blank"><i
                 class="fas fa-brands fa-facebook black-text"></i></a></li>
           {% else %}
-          <li class="nav-item {% if active_page == 'home' %}active{% endif %}"><a href="{{ url_for('show_recipes') }}">Home</a></li>
-          <li class="nav-item {% if active_page == 'about' %}active{% endif %}"><a href="{{ url_for('about') }}">About</a></li>
-          <li class="nav-item {% if active_page == 'sign_in' %}active{% endif %}"><a href="{{ url_for('sign_in') }}">Sign In</a></li>
-          <li class="nav-item {% if active_page == 'sign_up' %}active{% endif %}"><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
-          <li><a href="https://www.facebook.com/profile.php?id=61551788318438" target="_blank"  aria-label="Visit us on Facebook"><i
-                class="fas fa-brands fa-facebook black-text"></i></a></li>
+          <li class="nav-item {% if active_page == 'home' %}active{% endif %}"><a
+              href="{{ url_for('show_recipes') }}">Home</a></li>
+          <li class="nav-item {% if active_page == 'about' %}active{% endif %}"><a
+              href="{{ url_for('about') }}">About</a></li>
+          <li class="nav-item {% if active_page == 'sign_in' %}active{% endif %}"><a
+              href="{{ url_for('sign_in') }}">Sign In</a></li>
+          <li class="nav-item {% if active_page == 'sign_up' %}active{% endif %}"><a
+              href="{{ url_for('sign_up') }}">Sign Up</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61551788318438" target="_blank"
+              aria-label="Visit us on Facebook"><i class="fas fa-brands fa-facebook black-text"></i></a></li>
           {% endif %}
         </ul>
       </div>
@@ -139,4 +157,5 @@
   {% block scripts %}
   {% endblock %}
 </body>
+
 </html>

@@ -1,7 +1,4 @@
-{% extends "base.html" %}
-{% block styles %}
-{% endblock %}
-{% block content %}
+{% extends "base.html" %} {% block styles %} {% endblock %} {% block content %}
 <!-- About card -->
 <div class="row">
     <div class="col s12 m10 offset-m1">
@@ -14,89 +11,66 @@
             <!-- Our mission -->
             <h3 class="center-align response">Our Mission</h3>
             <p>At Veg-Centric Recipes, our mission is simple yet powerful: we're here to revolutionize the way you
-                experience
-                food. We believe that a meal can be both indulgent and wholesome, comforting and healthful, familiar and
-                adventurous.
-                Our goal is to inspire you to embrace a veg-centric lifestyle without compromising on taste or variety.
-            </p>
+                experience food. We believe that a meal can be both indulgent and wholesome, comforting and healthful,
+                familiar and adventurous. Our goal is to inspire you to embrace a veg-centric lifestyle without
+                compromising on taste or variety. </p>
             <!-- Why Veg-Centric -->
             <h3 class="center-align response">Why Veg-Centric?</h3>
             <p>In a world filled with dietary choices, we've carved our niche as the bridge between traditional and
-                modern eating
-                habits. We celebrate the humble vegetable and its ability to transform ordinary dishes into
-                extraordinary culinary
-                experiences. Our recipes offer a unique fusion of flavors, textures, and colors that elevate your dining
-                experience
-                to a whole new level.</p>
+                modern eating habits. We celebrate the humble vegetable and its ability to transform ordinary dishes
+                into extraordinary culinary experiences. Our recipes offer a unique fusion of flavors, textures, and
+                colors that elevate your dining experience to a whole new level.</p>
             <!-- Our Comumnity -->
             <h3 class="center-align response">Our Community</h3>
             <p>Veg-Centric Recipes is more than just a website; it's a vibrant, inclusive community of food enthusiasts,
-                home cooks,
-                and culinary adventurers. We're united by a shared passion for great food and a commitment to healthier,
-                more sustainable
-                eating habits. Our community members come from diverse backgrounds and bring a wealth of culinary
-                traditions to the table.</p>
+                home cooks, and culinary adventurers. We're united by a shared passion for great food and a commitment
+                to healthier, more sustainable eating habits. Our community members come from diverse backgrounds and
+                bring a wealth of culinary traditions to the table.</p>
             <!-- Our Promise -->
             <h3 class="center-align response">Our Promise</h3>
             <p>When you explore our recipes, you can trust that each one has been carefully curated to balance taste,
-                nutrition, and variety.
-                We're dedicated to providing you with a reliable resource for all your culinary adventures, whether
-                you're looking for a
-                weeknight dinner idea, a special occasion showstopper, or simply seeking inspiration to make your meals
-                more veg-centric.</p>
+                nutrition, and variety. We're dedicated to providing you with a reliable resource for all your culinary
+                adventures, whether you're looking for a weeknight dinner idea, a special occasion showstopper, or
+                simply seeking inspiration to make your meals more veg-centric.</p>
             <!-- Join Veg-Centric -->
             <h3 class="center-align response">Join the Veg-Centric Journey!</h3>
             <p>Becoming a part of Veg-Centric Recipes is more than just signing up; it's an invitation to embark on a
-                delicious journey with us.
-                As a member, you'll have access to a treasure trove of recipes, a supportive community of like-minded
-                individuals, and the opportunity
-                to share your own culinary creations with the world.</p>
-
-            {% if not session.user %}
+                delicious journey with us. As a member, you'll have access to a treasure trove of recipes, a supportive
+                community of like-minded individuals, and the opportunity to share your own culinary creations with the
+                world.</p> {% if not session.user %}
             <!-- Sign up and sign in buttons -->
             <div class="center-align recipe-details-btns">
                 <a href="{{ url_for('sign_up') }}" role="button" class="btn-small custom-lightgreen black-text"
-                    aria-label="Sign Up Button"><strong>Sign Up</strong> <i
-                        class="fas fa-user-plus darkgreen-text"></i></a>
-                <p class="center-align"><strong>Already a Member?</strong></p>
+                    aria-label="Sign Up Button">
+                    <strong>Sign Up</strong>
+                    <i class="fas fa-user-plus darkgreen-text"></i>
+                </a>
+                <p class="center-align">
+                    <strong>Already a Member?</strong>
+                </p>
                 <a href="{{ url_for('sign_in') }}" role="button" class="btn-small custom-lightgreen black-text"
-                    aria-label="Sign In Button"><strong>Sign In</strong> <i
-                        class="fas fa-arrow-right darkgreen-text"></i></a>
-            </div>
-            {% endif %}
-
-            <p class="center black-text">
-                Click the links to view our
-                <a href="#" id="termsLink" aria-label="Terms and Conditions" class="modal-link">Terms and Conditions</a> and
-                <a href="#" id="privacyLink" aria-label="Privacy Policy" class="modal-link">Privacy Policy</a>.
-            </p>
-
+                    aria-label="Sign In Button">
+                    <strong>Sign In</strong>
+                    <i class="fas fa-arrow-right darkgreen-text"></i>
+                </a>
+            </div> {% endif %} <p class="center black-text"> Click the links to view our <a href="#" id="termsLink"
+                    aria-label="Terms and Conditions" class="modal-link">Terms and Conditions</a> and <a href="#"
+                    id="privacyLink" aria-label="Privacy Policy" class="modal-link">Privacy Policy</a>. </p>
             <!-- modals for Terms and Privacy Policy -->
             <div id="termsModal" class="modal">
-                <div class="modal-content">
-                    {% include 'termsandconditions.html' %}
-                </div>
+                <div class="modal-content"> {% include 'termsandconditions.html' %} </div>
                 <div class="modal-footer">
                     <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
                 </div>
             </div>
-
             <div id="privacyModal" class="modal">
-                <div class="modal-content">
-                    {% include 'privacypolicy.html' %}
-                </div>
+                <div class="modal-content"> {% include 'privacypolicy.html' %} </div>
                 <div class="modal-footer">
                     <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-{% endblock %}
-{% block scripts %}
-{% endblock %}
-
-</body>
+</div> {% endblock %} {% block scripts %} {% endblock %} undefined</body>undefined
 
 </html>

@@ -4,10 +4,10 @@
 
 /* Body overflow hidden to stop horizontal scroll */
 body {
-  overflow-x: hidden;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+	overflow-x: hidden;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 /* Fonts */
@@ -16,477 +16,480 @@ body {
 h1,
 h2,
 h3 {
-  font-family: 'Playfair Display', sans-serif;
+	font-family: 'Playfair Display', sans-serif;
 }
 
 p,
 li,
 .alice {
-  font-family: 'Alice', sans-serif;
-  font-size: large;
+	font-family: 'Alice', sans-serif;
+	font-size: large;
 }
 
 .btn-small {
-  font-family: 'Alice', sans-serif;
+	font-family: 'Alice', sans-serif;
 }
 
 /* Custom Colors */
 /* ---------------------------------------- */
 .white {
-  background-color: #ffff;
+	background-color: #ffff;
 }
 
 .darkgreen-text {
-  color: #5a873c;
+	color: #5a873c;
 }
 
 .custom-darkgreen {
-  background-color: #5a873c;
+	background-color: #5a873c;
 }
 
 .custom-lightgreen {
-  background-color: #8abd4d;
+	background-color: #8abd4d;
 }
 
 .custom-mushroom {
-  background-color: #ded8a0;
+	background-color: #ded8a0;
 }
 
 /* Images */
 img {
-  object-fit: cover;
+	object-fit: cover;
 }
 
 /* 404 error page
 /* 404 error page */
 .error {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 90vh;
-  text-align: center;
-  margin-bottom: -15px;
-  padding-top: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 90vh;
+	text-align: center;
+	margin-bottom: -15px;
+	padding-top: 0;
 }
 
 /* flash messages */
 .flashes h4 {
-  background-color: #ded8a0;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px 0;
-  max-width: 800px;
-  display: inline-block;
-  /* This makes the message container not expand to full width */
+	background-color: #ded8a0;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 10px 0;
+	max-width: 800px;
+	display: inline-block;
+	/* This makes the message container not expand to full width */
 }
 
 /* Navbar */
 /* ---------------------------------------- */
 .nav-wrapper {
-  margin-left: 10px;
-  margin-right: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .nav-item.active a {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 .brand-logo {
-  text-shadow: none;
-  font-weight: bold;
+	text-shadow: none;
+	font-weight: bold;
 }
 
 #nav-desktop li a,
 #mobile-dropdown li a {
-  text-shadow: none;
-  color: black;
-  font-weight: bold;
+	text-shadow: none;
+	color: black;
+	font-weight: bold;
 }
 
 /* nav hover color */
 .nav-wrapper ul li a:hover {
-  background-color: white;
-  border-radius: 5px;
-  border: 1px solid #5a873c;
+	background-color: white;
+	border-radius: 5px;
+	border: 1px solid #5a873c;
 }
 
 /* Sticky Nav Bar */
 .sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
 }
 
 /* margin for the content to compensate for the sticky navbar height */
 .content {
-  margin-top: 70px;
+	margin-top: 70px;
 }
 
 /* Footer Bar */
 /* ---------------------------------------- */
 .page-footer {
-  margin-top: auto;
-  padding: 20px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	margin-top: auto;
+	padding: 20px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .footer-text {
-  margin-left: 15%;
+	margin-left: 15%;
 }
 
 .footer-zoom {
-  transition: 1s;
+	transition: 1s;
 }
 
 .footer-marg {
-  margin: 10px;
+	margin: 10px;
 }
 
 .footer-heading {
-  font-size: 200%;
-  margin-top: 5px;
-  margin-bottom: 5px;
+	font-size: 200%;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 .footer-zoom:hover {
-  transform: scale(1.075);
-  color: #fff;
+	transform: scale(1.075);
+	color: #fff;
 }
 
 /* Buttons */
 /* ---------------------------------------- */
 .btn-small {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  border: 1px solid transparent;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	border: 1px solid transparent;
 }
 
 /* button hover effects */
 .btn-small {
-  transition: 1s;
-  display: inline-block;
+	transition: 1s;
+	display: inline-block;
 }
 
 /* button hover scale */
 .btn-small:hover {
-  transform: scale(1.075);
-  background-color: #ffff;
-  border: 1px solid #5a873c
+	transform: scale(1.075);
+	background-color: #ffff;
+	border: 1px solid #5a873c
 }
 
 /* text styles */
 /* ---------------------------------------- */
 .text-shadow {
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Modal Links */
 .modal-link {
-  color:#2F4F4F;
-  text-decoration: underline;
+	color: #2F4F4F;
+	text-decoration: underline;
 }
 
 /* form labels */
 .input-field label {
-  color: #000;
+	color: #000;
 }
 
 /* show recipes page / Homepage */
 /* ---------------------------------------- */
 /*search feature */
 .searchform {
-  margin-right: 5%;
-  margin-left: 5%;
+	margin-right: 5%;
+	margin-left: 5%;
 }
 
 .search {
-  border-radius: 20px;
-  padding: 10px;
-  margin: 10px 0;
-  display: inline-block;
+	border-radius: 20px;
+	padding: 10px;
+	margin: 10px 0;
+	display: inline-block;
 }
 
 /* recipes cards */
 .card-title {
-  word-wrap: break-word;
+	word-wrap: break-word;
 
 }
+
 .card-content.custom-mushroom .center {
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
 }
 
 .card {
-  min-height: 700px;
-  border-radius: 20px;
+	min-height: 700px;
+	border-radius: 20px;
 }
 
 .col.m6 {
-  width: calc(50% - 20px) !important;
-  margin: 0 5px !important;
+	width: calc(50% - 20px) !important;
+	margin: 0 5px !important;
 }
 
 /* Round cards */
 /* --------------- */
 .round {
-  border-radius: 20px;
+	border-radius: 20px;
 }
 
 /* card scale/zoom */
 .zoom {
-  transition: 1s;
+	transition: 1s;
 }
 
 .zoom:hover {
-  transform: scale(1.04);
+	transform: scale(1.04);
 }
 
 /* Recipe Card Image */
 .card-image {
-  max-width: 800px;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
+	max-width: 800px;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
 }
 
 .recipe_img_txt {
-  background-color: #fff;
-  color: #000;
-  border-radius: 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 10px;
-  padding: 10px;
+	background-color: #fff;
+	color: #000;
+	border-radius: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 10px;
+	padding: 10px;
 }
 
 /* Add a recipe page */
 /* ---------------------------------------- */
 /* Add recipe card */
 .add-recipe {
-  align-content: center;
-  margin-left: 10%;
-  margin-right: 10%;
-  max-width: 80%;
+	align-content: center;
+	margin-left: 10%;
+	margin-right: 10%;
+	max-width: 80%;
 }
 
 /* recipe details page */
 /* ---------------------------------------- */
 /* Recipe Image */
 .recipe-details-img {
-  max-width: 80%;
-  height: auto;
-  border-radius: 10px;
+	max-width: 80%;
+	height: auto;
+	border-radius: 10px;
 }
 
 /* admin texts */
 .admin-text {
-  margin-left: 10%;
-  margin-right: 10%;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 /* Recipe Description */
 .recipe-description {
-  font-style: italic;
-  margin-top: 10px;
+	font-style: italic;
+	margin-top: 10px;
 }
 
 /* Recipe Information */
 .recipe-info {
-  margin-top: 20px;
+	margin-top: 20px;
 }
 
 /* Ingredients */
 .recipe-ingredients {
-  margin-top: 20px;
-  margin-left: 15%;
+	margin-top: 20px;
+	margin-left: 15%;
 }
 
 /* Ingredients List */
 .recipe-ingredients ul {
-  list-style-type: disc;
-  margin-left: 20px;
+	list-style-type: disc;
+	margin-left: 20px;
 }
 
 /* Steps */
 .recipe-steps {
-  margin-left: 15%;
-  margin-right: 15%;
+	margin-left: 15%;
+	margin-right: 15%;
 }
 
 /* Steps List */
 .recipe-steps ol {
-  list-style-type: decimal;
+	list-style-type: decimal;
 }
 
 /* Media Queries */
 /* ---------------------------------------- */
 /* Navbar media queries */
 @media only screen and (max-width: 992px) {
-  #nav-desktop {
-    display: none;
-  }
+	#nav-desktop {
+		display: none;
+	}
 
-  .dropdown-trigger.hide-on-large-only {
-    display: block;
-    padding: 10px;
-    padding-top: 0px;
-  }
+	.dropdown-trigger.hide-on-large-only {
+		display: block;
+		padding: 10px;
+		padding-top: 0px;
+	}
 
-  .dropdown-content li a {
-    color: white;
-  }
+	.dropdown-content li a {
+		color: white;
+	}
 }
 
 @media only screen and (min-width: 993px) {
-  #nav-desktop {
-    display: block;
-  }
+	#nav-desktop {
+		display: block;
+	}
 
-  .dropdown-trigger.hide-on-large-only {
-    display: none;
-  }
+	.dropdown-trigger.hide-on-large-only {
+		display: none;
+	}
 
-  .dropdown-content li a {
-    color: white;
-  }
+	.dropdown-content li a {
+		color: white;
+	}
 }
 
 @media (max-width: 600px) {
-  .dropdown-trigger.hide-on-large-only {
-    display: block;
-    padding: 10px;
-    padding-top: 20px;
-  }
+	.dropdown-trigger.hide-on-large-only {
+		display: block;
+		padding: 10px;
+		padding-top: 20px;
+	}
 
-  .dropdown-content li a {
-    color: white;
-  }
+	.dropdown-content li a {
+		color: white;
+	}
 }
 
 @media (max-width: 345px) {
-  .brand-logo.logo-text {
-    font-size: 16px;
-    white-space: nowrap; /* Prevent text from breaking into multiple lines */
-  }
+	.brand-logo.logo-text {
+		font-size: 16px;
+		white-space: nowrap;
+		/* Prevent text from breaking into multiple lines */
+	}
 }
 
 /* Recipe details page media queries */
 @media (min-width: 900px) {
-  .recipe-details-img {
-    max-width: 70%;
-    height: auto;
-  }
+	.recipe-details-img {
+		max-width: 70%;
+		height: auto;
+	}
 }
 
 @media (max-width: 360px) {
-  .recipe-details-btns {
-    margin-left: 15% !important;
-  }
+	.recipe-details-btns {
+		margin-left: 15% !important;
+	}
 }
 
 
 /* Show recipes media queries */
 /* Cards */
 @media only screen and (max-width: 992px) {
-  .col.m6 {
-    width: 80% !important;
-    margin-left: 10% !important;
-  }
+	.col.m6 {
+		width: 80% !important;
+		margin-left: 10% !important;
+	}
 }
 
 @media only screen and (max-width: 600px) {
-  .col.s12 {
-    width: 90% !important;
-    margin-left: 5% !important;
-  }
+	.col.s12 {
+		width: 90% !important;
+		margin-left: 5% !important;
+	}
 }
 
 @media only screen and (max-width: 540px) {
-  .card {
-    min-height: 750px;
-  }
+	.card {
+		min-height: 750px;
+	}
 }
 
 @media only screen and (max-width: 454px) {
-  .card {
-    min-height: 800px;
-  }
+	.card {
+		min-height: 800px;
+	}
 }
 
 @media only screen and (max-width: 360px) {
-  .card {
-    min-height: 875px;
-  }
-  .btn-small.custom-lightgreen {
-    display: inline-block;
-    margin-left: -10% !important;
-  }
+	.card {
+		min-height: 875px;
+	}
+
+	.btn-small.custom-lightgreen {
+		display: inline-block;
+		margin-left: -10% !important;
+	}
 }
 
 @media only screen and (max-width: 350px) {
-  .card.profile-card { 
-    min-height: 925px;
-  }
-} 
+	.card.profile-card {
+		min-height: 925px;
+	}
+}
 
 @media only screen and (max-width: 285px) {
-  .card {
-    min-height: 950px;
-  }
+	.card {
+		min-height: 950px;
+	}
 }
 
 /* Responsive recipe title */
 @media only screen and (max-width: 477px) {
-  .card-title h2 {
-    font-size: 2.75rem;
-    margin: 0;
-    word-wrap: break-word;
-  }
+	.card-title h2 {
+		font-size: 2.75rem;
+		margin: 0;
+		word-wrap: break-word;
+	}
 }
 
 @media only screen and (max-width: 400px) {
-  .card-title h2 {
-    font-size: 2.25rem;
-    word-wrap: break-word;
-  }
+	.card-title h2 {
+		font-size: 2.25rem;
+		word-wrap: break-word;
+	}
 
-  .card-title h3 {
-    font-size: 2.75rem;
-    word-wrap: break-word;
-  }
+	.card-title h3 {
+		font-size: 2.75rem;
+		word-wrap: break-word;
+	}
 }
 
 @media only screen and (max-width:335px) {
-  .response {
-    font-size: 2.25rem;
-  }
+	.response {
+		font-size: 2.25rem;
+	}
 }
 
 /* Add recipe card */
 @media only screen and (max-width: 450px) {
-  .add-recipe {
-    align-content: center;
-    margin-left: 5%;
-    margin-right: 5%;
-    max-width: 90%;
-  }
+	.add-recipe {
+		align-content: center;
+		margin-left: 5%;
+		margin-right: 5%;
+		max-width: 90%;
+	}
 }
 
 /* Buttons */
 @media only screen and (max-width: 540px) {
-  .btn-small.custom-lightgreen {
-    display: inline-block;
-    margin-right: 10%;
-  }
+	.btn-small.custom-lightgreen {
+		display: inline-block;
+		margin-right: 10%;
+	}
 }
