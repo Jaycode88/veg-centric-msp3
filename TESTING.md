@@ -219,14 +219,14 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 |------|-----------------|----------------|
 | Home(show_recipes) | ![mockup](static/documentation/lighthome.webp) | ![mockup](static/documentation/lighthomemob.webp) |
 | Sign In | ![mockup](static/documentation/lightsignin.webp) | ![mockup](static/documentation/lightsigninmob.webp) |
-| Sign Up | ![mockup]() |
-| Profile | ![mockup]() |
+| Sign Up | ![mockup](static/documentation/lightsignup.webp) | ![mockup](static/documentation/lightsignupmob.webp) |
+| Profile |  ![mockup](static/documentation/lightprof.webp) | ![mockup](static/documentation/lightprofmob.webp) |
 | Edit Profile | ![mockup]() |
 | Delete Profile | ![mockup]() |
 | Add Recipe | ![mockup]() |
 | View Recipe | ![mockup]() |
 | Edit Recipe | ![mockup]() |
-| About | ![mockup]() |
+| About | ![mockup](static/documentation/lightabout.webp) | ![mockup](static/documentation/lightaboutmob.webp) |
 | 404 | ![mockup]() |
 
 ## Responsiveness
