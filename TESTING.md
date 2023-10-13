@@ -218,11 +218,105 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 N.B Table or Images of Results
 
 ## Responsiveness
-I've tested my deployed project on multiple devices to check for responsiveness issues.
+ - **[Responsinator](http://www.responsinator.com/)**
+  Responsinator Is an online tool for testing responsiveness on a range of devices.
+  I tested every page of the Veg-Centric site.
+  To view results for the home page [Click Here](http://www.responsinator.com/?url=veg-centric-msp3-64721c5e710e.herokuapp.com%2F)
+  From this result you are able to navigate through the website on each device offered.
 
-N.B note here the minimum screen size and research on devices. add image of researched table.
+ - **Manual Device Testing**
 
-N.B Add responsiveness table as in previous project
+  | Device | Page | Expected look | Expected Function |
+  |--------|------|---------------|-------------------|
+  **Desktop 22"** 
+  | | Home(show_recipes) | Yes | Yes |
+  | | Sign In | Yes | Yes |
+  | | Sign Up | Yes | Yes |
+  | | Profile | Yes | Yes |
+  | | Edit Profile | Yes | Yes |
+  | | Delete Profile | Yes | Yes |
+  | | Add Recipe | Yes | Yes |
+  | | View Recipe | Yes | Yes |
+  | | Edit Recipe | Yes | Yes |
+  | | About | Yes | Yes |
+  | | 404 | Yes | Yes |
+  **Laptop 16"** 
+  | | Home(show_recipes) | Yes | Yes |
+  | | Sign In | Yes | Yes |
+  | | Sign Up | Yes | Yes |
+  | | Profile | Yes | Yes |
+  | | Edit Profile | Yes | Yes |
+  | | Delete Profile | Yes | Yes |
+  | | Add Recipe | Yes | Yes |
+  | | View Recipe | Yes | Yes |
+  | | Edit Recipe | Yes | Yes |
+  | | About | Yes | Yes |
+  | | 404 | Yes | Yes |
+  **Galaxy S20"** 
+  | | Home(show_recipes) | Yes | Yes |
+  | | Sign In | Yes | Yes |
+  | | Sign Up | Yes | Yes |
+  | | Profile | Yes | Yes |
+  | | Edit Profile | Yes | Yes |
+  | | Delete Profile | Yes | Yes |
+  | | Add Recipe | Yes | Yes |
+  | | View Recipe | Yes | Yes |
+  | | Edit Recipe | Yes | Yes |
+  | | About | Yes | Yes |
+  | | 404 | Yes | Yes |
+
+- **Manual Browser Testing**
+
+  | Browser | Page | Expected look | Expected Function |
+  |---------|------|---------------|-------------------|
+  **Chrome** 
+  | | Home(show_recipes) | Yes | Yes |
+  | | Sign In | Yes | Yes |
+  | | Sign Up | Yes | Yes |
+  | | Profile | Yes | Yes |
+  | | Edit Profile | Yes | Yes |
+  | | Delete Profile | Yes | Yes |
+  | | Add Recipe | Yes | Yes |
+  | | View Recipe | Yes | Yes |
+  | | Edit Recipe | Yes | Yes |
+  | | About | Yes | Yes |
+  | | 404 | Yes | Yes |
+  **Firefox** 
+  | | Home(show_recipes) | Yes | Yes |
+  | | Sign In | Yes | Yes |
+  | | Sign Up | Yes | Yes |
+  | | Profile | Yes | Yes |
+  | | Edit Profile | Yes | Yes |
+  | | Delete Profile | Yes | Yes |
+  | | Add Recipe | Yes | Yes |
+  | | View Recipe | Yes | Yes |
+  | | Edit Recipe | Yes | Yes |
+  | | About | Yes | Yes |
+  | | 404 | Yes | Yes |
+  **Edge** 
+  | | Home(show_recipes) | Yes | Yes |
+  | | Sign In | Yes | Yes |
+  | | Sign Up | Yes | Yes |
+  | | Profile | Yes | Yes |
+  | | Edit Profile | Yes | Yes |
+  | | Delete Profile | Yes | Yes |
+  | | Add Recipe | Yes | Yes |
+  | | View Recipe | Yes | Yes |
+  | | Edit Recipe | Yes | Yes |
+  | | About | Yes | Yes |
+  | | 404 | Yes | Yes |
+  **Opera** 
+  | | Home(show_recipes) | Yes | Yes |
+  | | Sign In | Yes | Yes |
+  | | Sign Up | Yes | Yes |
+  | | Profile | Yes | Yes |
+  | | Edit Profile | Yes | Yes |
+  | | Delete Profile | Yes | Yes |
+  | | Add Recipe | Yes | Yes |
+  | | View Recipe | Yes | Yes |
+  | | Edit Recipe | Yes | Yes |
+  | | About | Yes | Yes |
+  | | 404 | Yes | Yes |
 
 ## Automated Testing
 ### Jest Testing JQuery
