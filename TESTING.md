@@ -215,7 +215,19 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 ### LightHouse Testing
 I used Google Chrome Lighthouse testing to assess the quality of the web app.
 
-N.B Table or Images of Results
+| Page | Results desktop | Results mobile |
+|------|-----------------|----------------|
+| Home(show_recipes) | ![mockup](static/documentation/lighthome.webp) | ![mockup](static/documentation/lighthomemob.webp) |
+| Sign In | ![mockup](static/documentation/lightsignin.webp) | ![mockup](static/documentation/lightsigninmob.webp) |
+| Sign Up | ![mockup]() |
+| Profile | ![mockup]() |
+| Edit Profile | ![mockup]() |
+| Delete Profile | ![mockup]() |
+| Add Recipe | ![mockup]() |
+| View Recipe | ![mockup]() |
+| Edit Recipe | ![mockup]() |
+| About | ![mockup]() |
+| 404 | ![mockup]() |
 
 ## Responsiveness
  - **[Responsinator](http://www.responsinator.com/)**
