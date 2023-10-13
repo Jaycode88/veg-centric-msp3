@@ -221,13 +221,12 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 | Sign In | ![mockup](static/documentation/lightsignin.webp) | ![mockup](static/documentation/lightsigninmob.webp) |
 | Sign Up | ![mockup](static/documentation/lightsignup.webp) | ![mockup](static/documentation/lightsignupmob.webp) |
 | Profile |  ![mockup](static/documentation/lightprof.webp) | ![mockup](static/documentation/lightprofmob.webp) |
-| Edit Profile | ![mockup]() |
-| Delete Profile | ![mockup]() |
-| Add Recipe | ![mockup]() |
-| View Recipe | ![mockup]() |
-| Edit Recipe | ![mockup]() |
+| Edit Profile | ![mockup](static/documentation/lighteditprof.webp) | ![mockup](static/documentation/lighteditprofmob.webp) |
+| Delete Profile | ![mockup](static/documentation/lightdelprof.webp) | ![mockup](static/documentation/lightdelprofmob.webp) |
+| Add Recipe | ![mockup](static/documentation/lightaddrecipe.webp) | ![mockup](static/documentation/lightaddrecipemob.webp) |
+| Edit Recipe | ![mockup](static/documentation/lighteditrecipe.webp) | ![mockup](static/documentation/lighteditrecipemob.webp) |
 | About | ![mockup](static/documentation/lightabout.webp) | ![mockup](static/documentation/lightaboutmob.webp) |
-| 404 | ![mockup]() |
+| View Recipe | ![mockup]() |
 
 ## Responsiveness
  - **[Responsinator](http://www.responsinator.com/)**
