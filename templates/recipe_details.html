@@ -29,10 +29,11 @@
     <a href="{{ recipe.product_link }}" target="_blank"><img src="{{ recipe.product_image }}"
         alt="Image Of Suggested Product" class="recipe-details-img" width="800" height="800"></a>
   </div>
-  <a href="{{ recipe.product_link }}" target="_blank" class="btn-small custom-lightgreen black-text"
-    aria-label="Button To View Product Suggestion"> View Product <i
-      class="fas fa-brands fa-amazon darkgreen-text"></i></a>
-
+  <div class="center cust-btn-marg">
+    <a href="{{ recipe.product_link }}" target="_blank" class="btn-small custom-lightgreen black-text"
+      aria-label="Button To View Product Suggestion"> View Product <i
+        class="fas fa-brands fa-amazon darkgreen-text"></i></a>
+  </div>
 </div>
 {% else %}
 <div class="center">
@@ -70,7 +71,7 @@
 </div>
 
 <!-- Recipe Buttons -->
-<div class="center-align recipe-details-btns">
+<div class="center-align cust-btn-marg">
   {% if user %}
   {% if recipe._id in user.favorites %}
   <form method="POST" action="{{ url_for('remove_favorite', recipe_id=recipe['_id']) }}">

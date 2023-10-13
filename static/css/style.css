@@ -419,7 +419,7 @@ img {
 }
 
 @media (max-width: 360px) {
-	.recipe-details-btns {
+	.cust-btn-marg {
 		margin-left: 15% !important;
 	}
 

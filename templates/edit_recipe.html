@@ -178,7 +178,7 @@
 
         <!-- Form Buttons -->
         <div class="row">
-            <div class="col s12 center recipe-details-btns">
+            <div class="col s12 center cust-btn-marg">
                 <!-- post button -->
                 <button class="btn-small custom-lightgreen black-text" type="submit" name="post_button"
                     aria-label="Update Recipe Button"><strong>Update</strong> <i
@@ -188,7 +188,7 @@
         </div>
     </form>
     <!-- delete recipe button -->
-    <div class="center recipe-details-btns">
+    <div class="center cust-btn-marg">
         <form id="deleteRecipeForm{{ recipe._id }}" action="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
             method="post" onsubmit="return confirm('Are you sure you want to delete this recipe?');">
             <button type="submit" class="btn-small custom-lightgreen black-text" aria-label="Delete Recipe Button">
