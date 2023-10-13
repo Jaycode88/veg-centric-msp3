@@ -7,7 +7,7 @@
 
 <!-- Recipe Image -->
 <div class="center">
-  <img src="{{ recipe.image }}" alt="Image for {{ recipe.recipe_name }}" class="recipe-details-img">
+  <img src="{{ recipe.image }}" alt="Image for {{ recipe.recipe_name }}" class="recipe-details-img" width="1000" height="500">
 </div>
 {% if recipe.admin_description %}
 <div class="center">
@@ -27,7 +27,7 @@
   </div>
   <div class="center">
     <a href="{{ recipe.product_link }}" target="_blank"><img src="{{ recipe.product_image }}"
-        alt="Image Of Suggested Product" class="recipe-details-img"></a>
+        alt="Image Of Suggested Product" class="recipe-details-img" width="800" height="800"></a>
   </div>
   <a href="{{ recipe.product_link }}" target="_blank" class="btn-small custom-lightgreen black-text"
     aria-label="Button To View Product Suggestion"> View Product <i
