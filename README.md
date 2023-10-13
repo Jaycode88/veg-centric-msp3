@@ -1,10 +1,10 @@
 # Veg-Centric Recipes
 
-# A responsice web application for Users to view and share Veg-Centric recipes.
+# A responsive web application for Users to view and share Veg-Centric recipes.
 
 ## Code Intstitute - Milestone Project 3
 
-## HTML / CSS / Jquery / Python / Flask / MongoDB / Materialize / Cloudinary / Heroku
+## HTML / CSS / Jquery / Python / Jinja / Flask / MongoDB / Materialize / Cloudinary / Heroku
 
 ### By Joe Seabrook
 
@@ -344,17 +344,19 @@ The Admin Has extra options over Standard users many of these are to maintain re
         
         I would like to add option for users to be able to share recipes to their social media pages.
 
-- ## Future Features
+    - #### Product Database
+        I would like to add another database for suggested products so they do not have to be typed out seperately by admin for each recipe. I have held off of doing this so far as it has a down side that the product suggestions text is not personalised to the recipe, as it is currrently.
 
-    - I would like to add another database for suggested products so they do not have to be typed out seperately by admin for each recipe. I have held off of doing this so far as it has a down side that the product suggestions text is not personalised to the recipe, as it is currrently.
+    - #### Blog  
+        I think a Blog would make an excellent addition to this project, It could consist of posts containing a variety of information from topics such as: Shopping on a budget, Economical cooking ideas, Seasonal produce.
 
-    - I think a Blog would make an excellent addition to this project, It could consist of posts containing a variety of information from topics such as: Shopping on a budget, Economical cooking ideas, Seasonal produce.
+    - #### User Engagement
+        Once the Application has a small comunity of people posting recipes, It would be good marketing practice to highlight things like Best user posted recipe of the week etc to the facebook group and blog. This would encourage user engagement. Could possibly have small competitions.
 
-    - Once the Application has a small comunity of people posting recipes, It would be good marketing practice to highlight things like Best user posted recipe of the week etc to the facebook group and blog. This would encourage user engagement. Could possibly have small competitions.
+        If I were to make a blog for the Application I would like to offer users the oppurtunity to send in their own Veg-Centric blog articles which could be featured on the blog and facebook group.
 
-    - If I were to make a blog for the Application I would like to offer users the oppurtunity to send in their own Veg-Centric blog articles which could be featured on the blog and facebook group.
-
-    - It would be nice for admin to have a users control area, A base where admin can see user information such as recipes posted, date joined etc. This could also be a great way to track users that are posting spam or offensive content, It could include a send warning email to user function aswell as have the option to block the user from using the app.
+    - #### Admin Control 
+        It would be nice for admin to have a users control area, A base where admin can see user information such as recipes posted, date joined etc. This could also be a great way to track users that are posting spam or offensive content, It could include a send warning email to user function aswell as have the option to block the user from using the app.
 
 - ## **DATABASES**
     In this application, I rely on [MongoDB](https://mongodb.com/) as the primary database management system. MongoDB is a flexible NoSQL database that allows us to store and manage data in a format that seamlessly fits the dynamic nature of our project. It plays a crucial role in storing user information, recipes, categories, and other essential data.
