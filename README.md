@@ -223,7 +223,23 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
 - ## Wireframes
     The basic layout of Veg-Centric Recipes was created with [Balsamiq](https://balsamiq.com/).
 
-![Mock-up](static/documentation/wireframes.webp)
+    - **Homepage**
+    ![Mock-up](static/documentation/wireframes.webp)
+
+    - **About**
+    ![Mock-up](static/documentation/wfabout.webp)
+
+    - **Sign Up**
+    ![Mock-up](static/documentation/wfsignup.webp)
+
+    - **Sign In**
+    ![Mock-up](static/documentation/wfsignin.webp)
+
+    - **Profile**
+    ![Mock-up](static/documentation/wfprof.webp)
+
+    - **Add Recipe**
+    ![Mock-up](static/documentation/wfaddrecipe.webp)
 
 - ## High Fidelity Prototype
     The Prototype for the main page was made with [Figma](https://www.figma.com/)
