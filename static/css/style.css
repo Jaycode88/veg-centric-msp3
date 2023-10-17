@@ -458,19 +458,25 @@ img {
 
 @media only screen and (max-width: 540px) {
 	.card {
-		min-height: 750px;
+		min-height: 700px;
 	}
 }
 
-@media only screen and (max-width: 454px) {
+@media only screen and (max-width: 525px) {
 	.card {
-		min-height: 800px;
+		min-height: 710px;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.card {
+		min-height: 740px;
 	}
 }
 
 @media only screen and (max-width: 360px) {
 	.card {
-		min-height: 875px;
+		min-height: 765px;
 	}
 
 	.btn-small.custom-lightgreen {
