@@ -429,13 +429,15 @@ def add_recipe():
     - The 'datetime' module to record the date of recipe addition.
     - The 'database' object to interact with the database.
     - The 'upload' function to upload the recipe image to Cloudinary.
+    - The 'Pillow' library for image manipulation.
 
     Note:
     - Function assumes  existence of 'database.db.recipes', for recipe storage.
     - It expects fields named 'recipe_name', 'category', 'recipe_description',
       'method_step[]', 'ingredient[]', and 'quantity[]', 'recipe_image'.
-      - The 'recipe_image' field should contain recipe's image file for upload.
-
+    - The 'recipe_image' field should contain recipe's image file for upload.
+    - Image processing is done using Pillow to resize the image to 800x400
+    while preserving the aspect ratio and cropping as needed.
     """
 
     # set active page
@@ -460,8 +462,28 @@ def add_recipe():
             # Open the image using Pillow
             image = Image.open(image_file)
 
-            # Resize the image
-            image = image.resize((800, 400))
+            desired_width = 800
+            desired_height = 400
+            original_width, original_height = image.size
+
+            # Calculate the aspect ratios
+            aspect_ratio = desired_width / desired_height
+            original_aspect_ratio = original_width / original_height
+
+            if original_aspect_ratio > aspect_ratio:
+                # Crop the width to fit the aspect ratio
+                new_width = int(desired_height * original_aspect_ratio)
+                image = image.resize((new_width, desired_height))
+                left = (new_width - desired_width) / 2
+                right = (new_width + desired_width) / 2
+                image = image.crop((left, 0, right, desired_height))
+            else:
+                # Crop the height to fit the aspect ratio
+                new_height = int(desired_width / original_aspect_ratio)
+                image = image.resize((desired_width, new_height))
+                top = (new_height - desired_height) / 2
+                bottom = (new_height + desired_height) / 2
+                image = image.crop((0, top, desired_width, bottom))
 
             # Convert the image to WebP format
             output = io.BytesIO()
@@ -470,7 +492,8 @@ def add_recipe():
             image_file.seek(0)
 
             # Upload the modified image to Cloudinary
-            upload_result = upload(image_file, transformation={"crop": "fill"})
+            upload_result = upload(
+                image_file, transformation={"crop": "fill"})
             image_url = upload_result["secure_url"]
 
         for i in range(len(request.form.getlist("ingredient[]"))):
@@ -616,14 +639,16 @@ def edit_recipe(recipe_id):
     - The 'session' object to access the current user's information.
     - The 'database' object to interact with the database.
     - The 'upload' function to upload the updated recipe image to Cloudinary.
+    - The 'Pillow' library for image manipulation.
 
     Note:
     - Function assumes existence of 'database.db.recipes' for recipe storage.
     - It expects fields named 'recipe_name', 'category', 'recipe_description',
       'method_step[]', 'ingredient[]', and 'quantity[]', 'recipe_image'.
-      - The 'recipe_image' field should contain the updated recipe's
-        image file for upload.
-
+    - The 'recipe_image' field should contain the updated recipe's
+    image file for upload.
+    - Image processing is done using Pillow to resize the image to 800x400
+    while preserving the aspect ratio and cropping as needed.
     """
 
     # Check if the user is authenticated
@@ -660,20 +685,33 @@ def edit_recipe(recipe_id):
             image_url = recipe.get("image")
 
             # Check if a new image file has been uploaded
-            image_file = request.files.get("image")
+            image_file = request.files["image"]
             if image_file:
-                # Check if the recipe already has an image URL
-                if image_url:
-                    # Extract the public ID from the old image URL
-                    old_public_id = image_url.split("/")[-1].split(".")[0]
-                    # Delete the old image from Cloudinary
-                    cloudinary.uploader.destroy(old_public_id, invalidate=True)
-
                 # Open the image using Pillow
                 image = Image.open(image_file)
 
-                # Resize the image
-                image = image.resize((800, 400))
+                desired_width = 800
+                desired_height = 400
+                original_width, original_height = image.size
+
+                # Calculate the aspect ratios
+                aspect_ratio = desired_width / desired_height
+                original_aspect_ratio = original_width / original_height
+
+                if original_aspect_ratio > aspect_ratio:
+                    # Crop the width to fit the aspect ratio
+                    new_width = int(desired_height * original_aspect_ratio)
+                    image = image.resize((new_width, desired_height))
+                    left = (new_width - desired_width) / 2
+                    right = (new_width + desired_width) / 2
+                    image = image.crop((left, 0, right, desired_height))
+                else:
+                    # Crop the height to fit the aspect ratio
+                    new_height = int(desired_width / original_aspect_ratio)
+                    image = image.resize((desired_width, new_height))
+                    top = (new_height - desired_height) / 2
+                    bottom = (new_height + desired_height) / 2
+                    image = image.crop((0, top, desired_width, bottom))
 
                 # Convert the image to WebP format
                 output = io.BytesIO()
@@ -682,7 +720,8 @@ def edit_recipe(recipe_id):
                 image_file.seek(0)
 
                 # Upload the modified image to Cloudinary
-                upload_result = cloudinary.uploader.upload(image_file)
+                upload_result = upload(
+                    image_file, transformation={"crop": "fill"})
                 image_url = upload_result["secure_url"]
 
             for i in range(len(request.form.getlist("ingredient[]"))):
