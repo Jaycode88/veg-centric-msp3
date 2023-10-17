@@ -17,7 +17,7 @@ Image from [UI.dev](https://ui.dev/amiresponsive)
 
 ### Live Project Link
 
-[View Deployment Link](https://veg-centric-msp3-64721c5e710e.herokuapp.com/welcome)
+[View Deployment Link](https://veg-centric-msp3-64721c5e710e.herokuapp.com/)
 
 # Content
 
