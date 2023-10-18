@@ -104,10 +104,14 @@ img {
 }
 
 /* nav hover color */
-.nav-wrapper ul li a:hover {
+.nav-wrapper ul li:hover {
 	background-color: white;
 	border-radius: 5px;
 	border: 1px solid #5a873c;
+}
+
+.nav-wrapper ul li:hover a {
+	background-color: transparent;
 }
 
 /* Sticky Nav Bar */
