@@ -181,15 +181,13 @@ Veg-Centric Recipes addresses a growing need for economical and sustainable dini
 
     - Neutrality: White is a neutral background that allows the colors, textures, and shapes of food to stand out. It's a common choice for food presentation in fine dining.
 
-
- ### Design Brief:
 - ## Typography
  #### Font Choices
 In designing this project, I carefully selected fonts to convey the desired visual identity and user experience. My font choices which all came from [Google Fonts](https://fonts.google.com/), are as follows:
 
    - **Playfair Display (Logo and Headings)**
 
-   ![mockup](static/documentation/playfair.webp)
+![mockup](static/documentation/playfair.webp)
 
 - *Psychology*: Playfair Display is a serif font known for its elegance and sophistication. It carries a sense of tradition and classicism, making it an excellent choice for logos and headings. The distinctive serifs and high contrast between thick and thin strokes create a sense of luxury and refinement, aligning with the project's premium and professional aesthetic.
 
@@ -205,7 +203,7 @@ In designing this project, I carefully selected fonts to convey the desired visu
 
  As a best practice, I have also included a fallback font in The design. In cases where browsers or devices may not support the specific fonts mentioned above, we use a generic sans-serif font. This ensures that the text remains legible and maintains a consistent appearance across various platforms.
 
-Our font choices, including the fallback option, reflect the project's personality and goals, combining elegance with readability to create an engaging and visually appealing user interface.
+My font choices, including the fallback option, reflect the project's personality and goals, combining elegance with readability to create an engaging and visually appealing user interface.
 
 - ## Background
     In This design, I have chosen a white background as the primary canvas for several compelling reasons:
@@ -214,7 +212,7 @@ Our font choices, including the fallback option, reflect the project's personali
 
     - High Readability: White backgrounds ensure excellent text contrast, enhancing content readability. This is crucial for user engagement and comprehension in our user interface.
 
-    - Timelessness: hite backgrounds have a timeless quality, remaining relevant and appealing over time. They serve as a neutral canvas that allows other design elements to shine.
+    - Timelessness: White backgrounds have a timeless quality, remaining relevant and appealing over time. They serve as a neutral canvas that allows other design elements to shine.
 
     - Image Appeal: The decision to employ a plain white background serves a crucial purpose within the design. By opting for a minimalist backdrop, we intentionally create a canvas that allows the vibrant colors within the images to take center stage and captivate the user's attention.
 
@@ -337,7 +335,7 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
 
     - User Engagement: Engage with our community through interactive posts and discussions.
 
-![screenshot](static/documentation/fbpage.webp)
+    ![screenshot](static/documentation/fbpage.webp)
 
 - #### Admin Features
 The Admin Has extra options over Standard users many of these are to maintain readability standards such as editing spelling mistakes etc.
@@ -549,7 +547,7 @@ The Admin Has extra options over Standard users many of these are to maintain re
 
     - Database Operation: N/A 
 
-The sign out function works by removing the users session cookie.
+    The sign out function works by removing the users session cookie.
 
 4. **404 Error Handling (R):**
     - Function: 'page_not_found'
