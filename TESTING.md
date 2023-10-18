@@ -226,7 +226,7 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 | Add Recipe | ![mockup](static/documentation/lightaddrecipe.webp) | ![mockup](static/documentation/lightaddrecipemob.webp) |
 | Edit Recipe | ![mockup](static/documentation/lighteditrecipe.webp) | ![mockup](static/documentation/lighteditrecipemob.webp) |
 | About | ![mockup](static/documentation/lightabout.webp) | ![mockup](static/documentation/lightaboutmob.webp) |
-| View Recipe | ![mockup]() |
+| View Recipe | ![mockup](static/documentation/lightdetails.webp) | ![mockup](static/documentation/lightdetailsmob.webp) |
 
 ## Responsiveness
  - **[Responsinator](http://www.responsinator.com/)**
