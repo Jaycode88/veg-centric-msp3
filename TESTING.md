@@ -117,7 +117,7 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 | CREATE a Profile | Yes | Yes | Yes |
 | READ Profile Details | Yes | Yes | No(As Intended) |
 | UPDATE Profile Details | Yes | Yes | No(As Intended) |
-| DELETE Profile | Yes | Yes | Yes | No(As Intended) |
+| DELETE Profile | Yes | Yes | No(As Intended) |
 **Recipe**
 | CREATE a Recipe | Yes | Yes | No(As Intended) |
 | READ a Recipe | Yes | Yes | Yes |
@@ -251,6 +251,7 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
   | | Edit Recipe | Yes | Yes |
   | | About | Yes | Yes |
   | | 404 | Yes | Yes |
+  | | Modals | Yes | Yes |
   **Laptop 16"** 
   | | Home(show_recipes) | Yes | Yes |
   | | Sign In | Yes | Yes |
@@ -263,6 +264,7 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
   | | Edit Recipe | Yes | Yes |
   | | About | Yes | Yes |
   | | 404 | Yes | Yes |
+  | | Modals | Yes | Yes |
   **Galaxy S20"** 
   | | Home(show_recipes) | Yes | Yes |
   | | Sign In | Yes | Yes |
@@ -275,6 +277,7 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
   | | Edit Recipe | Yes | Yes |
   | | About | Yes | Yes |
   | | 404 | Yes | Yes |
+  | | Modals | Yes | Yes |
 
 - **Manual Browser Testing**
 
@@ -292,6 +295,7 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
   | | Edit Recipe | Yes | Yes |
   | | About | Yes | Yes |
   | | 404 | Yes | Yes |
+  | | Modals | Yes | Yes |
   **Firefox** 
   | | Home(show_recipes) | Yes | Yes |
   | | Sign In | Yes | Yes |
@@ -304,6 +308,7 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
   | | Edit Recipe | Yes | Yes |
   | | About | Yes | Yes |
   | | 404 | Yes | Yes |
+  | | Modals | Yes | Yes |
   **Edge** 
   | | Home(show_recipes) | Yes | Yes |
   | | Sign In | Yes | Yes |
@@ -316,6 +321,7 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
   | | Edit Recipe | Yes | Yes |
   | | About | Yes | Yes |
   | | 404 | Yes | Yes |
+  | | Modals | Yes | Yes |
   **Opera** 
   | | Home(show_recipes) | Yes | Yes |
   | | Sign In | Yes | Yes |
@@ -328,6 +334,7 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
   | | Edit Recipe | Yes | Yes |
   | | About | Yes | Yes |
   | | 404 | Yes | Yes |
+  | | Modals | Yes | Yes |
 
 ## Automated Testing
 ### Jest Testing JQuery
@@ -349,7 +356,7 @@ To install jQuery as a development dependancy:
 npm install --save-dev jquery
 ```
 
-I then created the jest.config.js file in the root directory as well as a new ```__tests__```folder containing my jquery-mock.js(to mock jquery globally. instead of writing it into each test) and my script.test.js(containing my tests). I kept recieving the this error:
+I then created the jest.config.js file in the root directory as well as a new ```__tests__```folder containing my jquery-mock.js(to mock jquery globally. instead of writing it into each test) and my script.test.js(containing my tests). I kept recieving the following error:
 ```
 ReferenceError: $ is not defined
 ```
@@ -413,32 +420,53 @@ Below is a description of the one function I attempted to test with no success.
 
   1. Image Sizing: Due to using user uploaded images it was impossible to determine there size In the card I found when pictures where square or portrait I would have an issue with space for the text beneath and the buttons overlaying the text.
 
-  The Solve: I found I was able to manipulate the image using Pillow before it was uploaded to cloudinary. I chose to set the image to 800x400px, Convert its format to webp and Crop the image to fit the size.
+  The Solve: I found I was able to manipulate the image using Pillow before it was uploaded to cloudinary. I chose to set the image to 800x400px, Convert its format to webp, This new code also checks wether the aspect ratio matches the requirements and if not it crops the image to match the aspect ratio.
   ```
-  # Upload the image to Cloudinary
-        image_file = request.files["recipe_image"]
-        if image_file:
-            # Open the image using Pillow
-            image = Image.open(image_file)
+  image_file = request.files["image"]
+            if image_file:
+                # Open the image using Pillow
+                image = Image.open(image_file)
 
-            # Resize the image
-            image = image.resize((800, 400))
+                desired_width = 800
+                desired_height = 400
+                original_width, original_height = image.size
 
-            # Convert the image to WebP format
-            output = io.BytesIO()
-            image.save(output, format='WebP')
-            image_file = io.BytesIO(output.getvalue())
-            image_file.seek(0)
+                # Calculate the aspect ratios
+                aspect_ratio = desired_width / desired_height
+                original_aspect_ratio = original_width / original_height
 
-            # Upload the modified image to Cloudinary
-            upload_result = upload(image_file, transformation={"crop": "fill"})
-            image_url = upload_result["secure_url"]
+                if original_aspect_ratio > aspect_ratio:
+                    # Crop the width to fit the aspect ratio
+                    new_width = int(desired_height * original_aspect_ratio)
+                    image = image.resize((new_width, desired_height))
+                    left = (new_width - desired_width) / 2
+                    right = (new_width + desired_width) / 2
+                    image = image.crop((left, 0, right, desired_height))
+                else:
+                    # Crop the height to fit the aspect ratio
+                    new_height = int(desired_width / original_aspect_ratio)
+                    image = image.resize((desired_width, new_height))
+                    top = (new_height - desired_height) / 2
+                    bottom = (new_height + desired_height) / 2
+                    image = image.crop((0, top, desired_width, bottom))
+
+                # Convert the image to WebP format
+                output = io.BytesIO()
+                image.save(output, format='WebP')
+                image_file = io.BytesIO(output.getvalue())
+                image_file.seek(0)
+
+                # Upload the modified image to Cloudinary
+                upload_result = upload(
+                    image_file, transformation={"crop": "fill"})
+                image_url = upload_result["secure_url"]
   ```
   To achive this I had to add the following imports:
   ```
   import io
   from PIL import Image
   ```
+  
   2. Text overlay when resizing: I had an issue with text being overlayed by buttons or dissapearing(being cut short) when changing screen sizes.
 
   The Solve: This was much easier to solve once I had the image issue resolved..
@@ -451,3 +479,7 @@ Below is a description of the one function I attempted to test with no success.
 - **Materialize Search Feature**
 
   During the building of the application I noticed that the user needed to have the cursor touching the underline and close to the icon in order for the form field to activate and accept text. It was Generally difficult to use requiring many clicks before I could type into the search field. This was an issue I put of until the end of the build and when I came back to it and ran some manual tests, I found that the Issue was no longer apparent. Wether this issue was unoticably fixed when fixing validation errors, Or wether it was just a temporary browser glitch, I can not confirm.
+
+- **Social Icon in Navigation bar**
+I found when the User hovered over the Facbook Icon in the Nav Bar the Highlighted area was more in height than when other links were hovered over.
+At first I attempted to set a height for the facebook icon to 63px the same as the nav bar how ever this then caused an issue with the mobile nav as the icon kept the height  of 63px. I then chose to ensure that when the desktop nav bar was in use(screens above 992px) all Nav bar links had a height of 63px. This solved the problem for me and by putting it as a media query it did not affect the mobile nav.

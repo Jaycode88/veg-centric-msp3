@@ -96,6 +96,7 @@ img {
 	font-weight: bold;
 }
 
+
 #nav-desktop li a,
 #mobile-dropdown li a {
 	text-shadow: none;
@@ -113,6 +114,7 @@ img {
 .nav-wrapper ul li:hover a {
 	background-color: transparent;
 }
+
 
 /* Sticky Nav Bar */
 .sticky {
@@ -368,6 +370,10 @@ img {
 		display: block;
 	}
 
+	#nav-desktop li a:hover {
+        height: 63px;
+	}
+	
 	.dropdown-trigger.hide-on-large-only {
 		display: none;
 	}
