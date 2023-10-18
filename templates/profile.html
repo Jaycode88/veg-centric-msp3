@@ -41,8 +41,12 @@
     <li>
         <div class="collapsible-header"><i class="fas fa-clipboard-user darkgreen-text"></i>Your Recipes</div>
         <div class="collapsible-body">
-            {% if user_recipes %}
             <div class="row">
+                {% if not user_recipes %}
+                <div class="center-align">
+                    <p class="black-text"><strong>You have not uploaded any recipes yet.</strong></p>
+                </div>
+                {% else %}
                 {% for recipe in user_recipes %}
                 <!-- Recipe Card -->
                 <div class="col s12 m6 offset-m2">
@@ -94,13 +98,8 @@
                     </div>
                 </div>
                 {% endfor %}
-                {% else %}
-                <div class="center-align">
-                    <p class="black-text"><strong>You have not uploaded any recipes yet.</strong></p>
-                </div>
+                {% endif %}
             </div>
-            {% endif %}
-        </div>
         </div>
     </li>
     <li>
