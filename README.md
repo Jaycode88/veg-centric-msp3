@@ -244,7 +244,11 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
 - ## High Fidelity Prototype
     The Prototype for the main page was made with [Figma](https://www.figma.com/)
 
-![Mock-up](static/documentation/highfidelity.webp)
+    - **Home Page**
+    ![Mock-up](static/documentation/highfidelity.webp)
+
+    - **Recipe details Page**
+    ![Mock-up](static/documentation/hfdetails.webp)
 
 - ## Features
  - #### Navigation Bar
