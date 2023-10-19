@@ -237,7 +237,6 @@ img {
 }
 
 .card-content.custom-mushroom .center {
-	position: absolute;
 	bottom: 10px;
 	width: 100%;
 }
@@ -468,19 +467,14 @@ img {
 
 @media only screen and (max-width: 540px) {
 	.card {
-		min-height: 700px;
+		min-height: 790px;
 	}
 }
 
-@media only screen and (max-width: 525px) {
-	.card {
-		min-height: 710px;
-	}
-}
 
-@media only screen and (max-width: 450px) {
-	.card {
-		min-height: 740px;
+@media only screen and (max-width: 430px) {
+	.card-content.custom-mushroom .center {
+		position: absolute;
 	}
 }
 
@@ -501,9 +495,9 @@ img {
 	}
 }
 
-@media only screen and (max-width: 285px) {
+@media only screen and (max-width: 310px) {
 	.card {
-		min-height: 950px;
+		min-height: 850px;
 	}
 }
 
