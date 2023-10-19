@@ -80,6 +80,10 @@ img {
 	/* This makes the message container not expand to full width */
 }
 
+.flashes h4.negative-message {
+	background-color: #FF6380;
+}
+
 /* Navbar */
 /* ---------------------------------------- */
 .nav-wrapper {

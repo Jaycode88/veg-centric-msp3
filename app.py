@@ -105,7 +105,7 @@ def search_recipes():
 
     # Check if there are no search results
     if not recipes:
-        flash("No results found.", "warning")
+        flash("No results found. Please Try Again", "warning")
         return redirect(url_for("show_recipes"))
 
     return render_template("recipes.html", recipes=recipes)
@@ -157,20 +157,20 @@ def sign_up():
         confirm_password = request.form.get("confirm_password")
         # if passwords dont match return flash error message
         if password != confirm_password:
-            flash("Passwords do not match", "error")
+            flash("Passwords do not match, Please Try Again", "error")
             return redirect(url_for("sign_up"))
         # Check username is not already taken
         existing_user = database.db.users.find_one(
             {"username": request.form.get("username").lower()})
         if existing_user:
-            flash("Username already in use")
+            flash("Username already in use, Please Try Again")
             return redirect(url_for("sign_up"))
 
         # Check if the email is already registered
         existing_email = database.db.users.find_one(
             {"email": request.form.get("email").lower()})
         if existing_email:
-            flash("Email already registered")
+            flash("Email already registered, Please Try Again")
             return redirect(url_for("sign_up"))
 
         # Hash the password using werkzueg and create user document
@@ -249,7 +249,7 @@ def sign_in():
             # change to url for profile when profile page built
             return redirect(url_for("show_recipes", username=session["user"]))
         else:
-            flash("Incorrect Username and/or Password")
+            flash("Incorrect Username and/or Password, Please Try Again")
             return redirect(url_for("sign_in"))
 
     # Render sign in page
@@ -293,7 +293,7 @@ def profile():
         )
     else:
         # Handle case when the user is not in session
-        flash("Please sign in to access your profile.")
+        flash("Error, Please sign in to access your profile.")
         return redirect(url_for("sign_in"))
 
 
@@ -584,7 +584,7 @@ def delete_recipe(recipe_id):
 
     # Check if the user is authenticated
     if "user" not in session:
-        flash("Please sign in to delete a recipe.")
+        flash("Error, Please sign in to delete a recipe.")
         return redirect(url_for("sign_in"))
 
     # Fetch the recipe details from the database using the recipe_id
@@ -608,7 +608,7 @@ def delete_recipe(recipe_id):
         flash("Recipe successfully deleted.")
         return redirect(url_for("profile"))
     else:
-        flash("You do not have permission to delete this recipe.")
+        flash("Error, You do not have permission to delete this recipe.")
         return redirect(url_for("profile"))
 
 
@@ -653,7 +653,7 @@ def edit_recipe(recipe_id):
 
     # Check if the user is authenticated
     if "user" not in session:
-        flash("Please sign in to edit a recipe.")
+        flash("Error, Please sign in to edit a recipe.")
         return redirect(url_for("sign_in"))
 
     # Fetch the existing recipe details from the database using the recipe_id
@@ -759,7 +759,7 @@ def edit_recipe(recipe_id):
         return render_template(
                 "edit_recipe.html", recipe=recipe, categories=categories)
     else:
-        flash("You do not have permission to edit this recipe.")
+        flash("Error, You do not have permission to edit this recipe.")
         return redirect(url_for("profile"))
 
 
@@ -782,9 +782,10 @@ def add_to_favorites(recipe_id):
                 {"username": username}, {"$push": {"favorites": recipe_id}})
             flash("Recipe added to favorites successfully", "success")
         else:
-            flash("Recipe is already in your favorites", "warning")
+            flash("Error, Recipe is already in your favorites", "warning")
     else:
-        flash("Please sign in to add recipes to your favorites.", "warning")
+        flash("Error, Please sign in to add recipes to your favorites.",
+              "warning")
 
     return redirect(url_for("profile", recipe_id=recipe_id))
 
@@ -867,7 +868,7 @@ def add_category():
                             {"category": category_name})
 
         if existing_category:
-            flash("Category already exists", "error")
+            flash("Error, Category already exists", "error")
         else:
             # Insert the new category into the database
             database.db.categories.insert_one({"category": category_name})
@@ -936,7 +937,8 @@ def delete_category(category_id):
         database.db.categories.delete_one({"_id": ObjectId(category_id)})
         flash("Category deleted successfully", "success")
     else:
-        flash("You do not have permission to delete categories", "error")
+        flash("Error, You do not have permission to delete categories",
+              "error")
 
     # Redirect back to the "Manage Categories" page
     return redirect(url_for("manage_categories"))

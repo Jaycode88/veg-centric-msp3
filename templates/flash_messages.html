@@ -3,7 +3,13 @@
     {% if messages %}
     {% for message in messages %}
     <div class="row flashes message-margin center-align">
-        <h4 class="message-padding alice">{{ message }}</h4>
+        {% if 'Error' in message %}
+            <h4 class="message-padding alice negative-message">{{ message }}</h4>
+        {% elif 'Please Try Again' in message %}
+        <h4 class="message-padding alice negative-message">{{ message }}</h4>
+        {% else %}
+            <h4 class="message-padding alice">{{ message }}</h4>
+        {% endif %}
     </div>
     {% endfor %}
     {% endif %}
