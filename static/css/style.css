@@ -300,6 +300,10 @@ img {
 	max-width: 80%;
 }
 
+#addIngredientButton {
+	border: 1px solid #5a873c;
+}
+
 /* recipe details page */
 /* ---------------------------------------- */
 /* Recipe Image */
