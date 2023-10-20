@@ -726,7 +726,9 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
  - All worded content was originally creating by myself and then edited and improved with suggestions from [Chat GPT](https://chat.openai.com/).
 
 - ### Media
-    - All Icons Used were from [Font Awesome](https://fontawesome.com/) 
+    - All Icons Used were from [Font Awesome](https://fontawesome.com/)
+    - The Veg-Centric Logo and Meta icon Were created with [Canva](https://www.canva.com/)
+
 
 - ### Tools & Technologies Used
     - [HTML](https://en.wikipedia.org/wiki/HTML)  is the backbone of web content. It defines the structure and content of the web pages.
@@ -745,7 +747,8 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
     - [Figma](https://www.figma.com/) used for wireframes and high fidelity prototypes.
     - [Adobe colour wheel](https://color.adobe.com/) used for selecting colour scheme.
     - [Chat GPT](https://chat.openai.com/) Used for trouble shooting.
-    - [Font Awesome](https://fontawesome.com/)
+    - [Font Awesome](https://fontawesome.com/) For Icons
+    - [Google Fonts](https://fonts.google.com/) for all Fonts.
     - [Medium]( https://medium.com/@ashley_howell/understanding-colour-psychology-for-restaurants-brands-dbb7ffbcecae) Used to research colour physcology in relation to restaurant and food brands.
     - [JennDavid](https://jenndavid.com/colors-that-influence-food-sales-infographic/) Used to research colours that influence food sales. 
 
