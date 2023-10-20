@@ -138,6 +138,9 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 
 | Aim | SM | MD | LG |
 |-----|----|----|----|
+**Search**
+| Search field must contain atleast 3 characters | Yes | Yes | Yes |
+| Reset and Search Buttons are visible and functioning | Yes | Yes | Yes |
 **Sign Up**
 | First Name field must only contain letters from 2 to 20 characters and is required | Yes | Yes | Yes |
 | Last Name field must only contain letters from 2 to 20 characters and is required | Yes | Yes | Yes |
@@ -146,9 +149,9 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 | Password field accepts only alphanumeric and limited special characters, must hide characters, Be between 6 - 15 charachters and is required | Yes | Yes | Yes |
 | Confirm Password field accepts only alphanumeric and limited special characters, must match password field and hide characters, Be between 6 - 15 charachters and is required | Yes | Yes | Yes |
 | Shows Terms and Privacy Policy read options | Yes | Yes | Yes |
-| Form Submits upon use of button | Yes | Yes | Yes |
+| Form Submits upon use of Sign Up button | Yes | Yes | Yes |
 | Form Resets upon use of button | Yes | Yes | Yes |
-| Sign Up button is visible and functioning | Yes | Yes | Yes || Sign Up button is visible and functioning | Yes | Yes | Yes |
+| Sign In button is visible and functioning | Yes | Yes | Yes |
 **Sign In**
 | Username Must match with user in the database | Yes | Yes | Yes |
 | Password field Must match with the password in the database for the username given | Yes | Yes | Yes |
@@ -161,7 +164,7 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 | New Password field accepts only alphanumeric and limited special characters, must hide characters, Be between 6 - 15 charachters and is required | Yes | Yes | Yes |
 | Confirm New Password field accepts only alphanumeric and limited special characters, must match New password field and hide characters, Be between 6 - 15 charachters and is required | Yes | Yes | Yes |
 | Form Submits upon use of save button | Yes | Yes | Yes |
-| Option to delete profile is shown | Yes | Yes | Yes |
+| Option to delete profile is shown and functional | Yes | Yes | Yes |
 **Add A Recipe**
 | Recipe name field must contain only alphanumeric characters, Be between 3 -30 characters and is required | Yes | Yes | Yes |
 | Recipe Category field Must display Dropdown of categories from database, Only dropdown Items can be selected(no manual input) and is required | Yes | Yes | Yes |
@@ -227,6 +230,9 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 | Edit Recipe | ![mockup](static/documentation/lighteditrecipe.webp) | ![mockup](static/documentation/lighteditrecipemob.webp) |
 | About | ![mockup](static/documentation/lightabout.webp) | ![mockup](static/documentation/lightaboutmob.webp) |
 | View Recipe | ![mockup](static/documentation/lightdetails.webp) | ![mockup](static/documentation/lightdetailsmob.webp) |
+
+I also used [WAVE](https://wave.webaim.org/) to check accessability which Raised no Errors.
+Results can be viewed [here](https://wave.webaim.org/report#/https://veg-centric-msp3-64721c5e710e.herokuapp.com).
 
 ## Responsiveness
  - **[Responsinator](http://www.responsinator.com/)**
