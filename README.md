@@ -738,6 +738,7 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
     | Beef Stew | [Freepik](https://www.freepik.com/free-photo/delicious-goulash-ready-dinner_25178985.htm#query=stew&position=14&from_view=search&track=sph) | [Freepik](https://www.freepik.com/free-photo/delicious-goulash-ready-dinner_25178985.htm#query=stew&position=14&from_view=search&track=sph) |
     | Mushroom & Lentil Bolegnese | [Pexels](https://www.pexels.com/photo/food-plate-italian-dinner-41320/) | [Public Domain Pictures](https://www.pexels.com/@public-domain-pictures/) |
     | Portobello Mushroom Fajitas | [Pexels](https://www.pexels.com/photo/person-holding-vegetable-tortilla-wrap-with-dipping-sauce-on-the-side-4955266/) | [Roman Odintsov](https://www.pexels.com/@roman-odintsov/) | 
+    | Thai Green Curry | [Pexels](https://pixabay.com/photos/green-curry-thai-food-2457236/) | [Huahom](https://pixabay.com/users/huahom-2139128/) |
 
 - ### Tools & Technologies Used
     - [HTML](https://en.wikipedia.org/wiki/HTML)  is the backbone of web content. It defines the structure and content of the web pages.
