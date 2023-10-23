@@ -440,6 +440,10 @@ def add_recipe():
     while preserving the aspect ratio and cropping as needed.
     """
 
+    if "user" not in session:
+        flash("Error, You must be logged in to access this page.")
+        return redirect(url_for("sign_in"))
+
     # set active page
     active_page = "add_recipe"
 
@@ -455,6 +459,10 @@ def add_recipe():
         method_step = request.form.getlist("method_step[]")
         date_added = datetime.datetime.now()
         formatted_date = date_added.strftime('%Y-%m-%d')
+        admin_description = request.form.get("admin_description")
+        product_link = request.form.get("product_link")
+        product_text = request.form.get("product_text")
+        product_image = request.form.get("product_image")
 
         # Upload the image to Cloudinary
         image_file = request.files["recipe_image"]
@@ -514,7 +522,11 @@ def add_recipe():
             "created_by": created_by,
             "date_added": formatted_date,
             "ingredients": ingredients,
-            "method_step": method_step
+            "method_step": method_step,
+            "admin_description": admin_description,
+            "product_link": product_link,
+            "product_text": product_text,
+            "product_image": product_image
             }
 
         database.db.recipes.insert_one(recipe)
