@@ -168,7 +168,7 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 **Add A Recipe**
 | Recipe name field must contain only alphanumeric characters, Be between 3 -30 characters and is required | Yes | Yes | Yes |
 | Recipe Category field Must display Dropdown of categories from database, Only dropdown Items can be selected(no manual input) and is required | Yes | Yes | Yes |
-| Recipe description field must only contain alphanumeric characters with a a length between 15 - 120 charachters and is required | Yes | Yes | Yes |
+| Recipe description field must only contain alphanumeric characters with a a length between 50 - 120 charachters and is required | Yes | Yes | Yes |
 | Prep Time field must only contain alphanumeric characters, Be between 4 - 20 characters and is required | Yes | Yes | Yes |
 | Cook Time field must only contain alphanumeric characters, Be between 4 - 20 characters and is required | Yes | Yes | Yes |
 | Servings field must only contain numeral characters and is required | Yes | Yes | Yes |
@@ -181,7 +181,7 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 **Edit a Recipe for user**
 | Recipe name field must contain only alphanumeric characters, Be between 3 -30 characters, is required and prefilled| Yes | Yes | Yes |
 | Recipe Category field Must display Dropdown of categories from database, Only dropdown Items can be selected(no manual input), is required and prefilled | Yes | Yes | Yes |
-| Recipe description field must only contain alphanumeric characters with a a length between 15 - 120 charachters and is required | Yes | Yes | Yes |
+| Recipe description field must only contain alphanumeric characters with a a length between 50 - 120 charachters and is required | Yes | Yes | Yes |
 | Prep Time field must only contain alphanumeric characters, Be between 4 - 20 characters, is required and prefilled | Yes | Yes | Yes |
 | Cook Time field must only contain alphanumeric characters, Be between 4 - 20 characters, is required and prefilled | Yes | Yes | Yes |
 | Servings field must only contain numeral characters, is required and prefilled | Yes | Yes | Yes |
