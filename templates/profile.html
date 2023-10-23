@@ -62,7 +62,7 @@
                                     height="400">
                                 <div class="card-title">
                                     <!-- Recipe Name and Category -->
-                                    <h2 class="recipe_img_txt">{{ recipe.recipe_name }}</h2><br>
+                                    <h2 class="recipe_img_txt">{{ recipe.recipe_name.capitalize() }}</h2><br>
                                     <h3 class="recipe_img_txt">{{ recipe.category }}</h3>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@
                                 <p><i class="fas fa-utensils darkgreen-text prefix"></i> <strong>Servings:</strong>
                                     {{ recipe.servings }}</p>
                                 <p><i class="fas fa-user prefix darkgreen-text"></i> <strong>Posted By:</strong>
-                                    {{ recipe.created_by }}</p>
+                                    {{ recipe.created_by.capitalize() }}</p>
                                 <br>
 
                                 <!-- Buttons -->
@@ -126,7 +126,7 @@
                                     height="400">
                                 <div class="card-title">
                                     <!-- Recipe Name and Category -->
-                                    <h2 class="recipe_img_txt">{{ recipe.recipe_name }}</h2><br>
+                                    <h2 class="recipe_img_txt">{{ recipe.recipe_name.capitalize() }}</h2><br>
                                     <h3 class="recipe_img_txt">{{ recipe.category }}</h3>
                                 </div>
                             </div>
@@ -140,7 +140,7 @@
                                 <p><i class="fas fa-utensils darkgreen-text prefix"></i> <strong>Servings:</strong>
                                     {{ recipe.servings }}</p>
                                 <p><i class="fas fa-user prefix darkgreen-text"></i> <strong>Posted By:</strong>
-                                    {{ recipe.created_by }}</p>
+                                    {{ recipe.created_by.capitalize() }}</p>
                                 <br>
 
                                 <div class="center">
