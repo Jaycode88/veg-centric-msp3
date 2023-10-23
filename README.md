@@ -740,6 +740,8 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
     | Portobello Mushroom Fajitas | [Pexels](https://www.pexels.com/photo/person-holding-vegetable-tortilla-wrap-with-dipping-sauce-on-the-side-4955266/) | [Roman Odintsov](https://www.pexels.com/@roman-odintsov/) | 
     | Thai Green Curry | [Pexels](https://pixabay.com/photos/green-curry-thai-food-2457236/) | [Huahom](https://pixabay.com/users/huahom-2139128/) |
 
+    All Product Images that were used, were displayed via their URL Directly from the Product's description/sales page on [Amazon](https://www.amazon.co.uk/)
+
 - ### Tools & Technologies Used
     - [HTML](https://en.wikipedia.org/wiki/HTML)  is the backbone of web content. It defines the structure and content of the web pages.
     - [CSS](https://en.wikipedia.org/wiki/CSS) used to control the visual presentation of the web application. It defines the layout, colors, fonts etc.
