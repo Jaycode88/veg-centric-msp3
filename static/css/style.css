@@ -480,7 +480,7 @@ img {
 }
 
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 455px) {
 	.card-content.custom-mushroom .center {
 		position: absolute;
 	}
