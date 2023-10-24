@@ -756,7 +756,7 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
     - [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
     - [Canva](https://www.canva.com/) used for meta icon and logo creation.
     - [Balsamiq](https://balsamiq.com/) used to create Wireframes.
-    - [Figma](https://www.figma.com/) used for wireframes and high fidelity prototypes.
+    - [Figma](https://www.figma.com/) used to create high fidelity prototypes.
     - [Adobe colour wheel](https://color.adobe.com/) used for selecting colour scheme.
     - [Chat GPT](https://chat.openai.com/) Used for trouble shooting.
     - [Font Awesome](https://fontawesome.com/) For Icons
