@@ -32,7 +32,7 @@
                     <div class="input-field col s12">
                         <i class="fas fa-envelope darkgreen-text prefix"></i>
                         <input id="email" name="email" type="email" class="validate" minlength="8" maxlength="50"
-                            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" value="{{ user.email }}"
+                            pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" value="{{ user.email }}"
                             autocomplete="email" required>
                         <label for="email">Email Address</label>
                     </div>
@@ -42,7 +42,7 @@
                     <div class="input-field col s12">
                         <i class="fas fa-key darkgreen-text prefix"></i>
                         <input id="new_password" name="new_password" type="password" minlength="6" maxlength="15"
-                            pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,15}$" class="validate" required>
+                            pattern="^[a-zA-Z0-9!@#\$%&\*\(\)_+:;,\.\?~\-=]{6,15}$" class="validate" required>
                         <label for="new_password">New Password</label>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                     <div class="input-field col s12">
                         <i class="fas fa-key darkgreen-text prefix"></i>
                         <input id="confirm_password" name="confirm_password" type="password" minlength="6"
-                            maxlength="15" pattern="^[a-zA-Z0-9!@#$%&*()_+{}:;,.?~-=]{6,15}$" class="validate" required>
+                            maxlength="15" pattern="^[a-zA-Z0-9!@#\$%&\*\(\)_+:;,\.\?~\-=]{6,15}$" class="validate" required>
                         <label for="confirm_password">Confirm New Password</label>
                     </div>
                 </div>
