@@ -497,15 +497,9 @@ img {
 	}
 }
 
-@media only screen and (max-width: 350px) {
-	.card.profile-card {
-		min-height: 925px;
-	}
-}
-
 @media only screen and (max-width: 310px) {
 	.card {
-		min-height: 850px;
+		min-height: 800px;
 	}
 }
 
