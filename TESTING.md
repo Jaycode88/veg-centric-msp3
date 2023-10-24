@@ -168,7 +168,7 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 **Add A Recipe For User**
 | Recipe name field must contain only alphanumeric characters, Be between 3 -30 characters and is required | Yes | Yes | Yes |
 | Recipe Category field Must display Dropdown of categories from database, Only dropdown Items can be selected(no manual input) and is required | Yes | Yes | Yes |
-| Recipe description field must only contain alphanumeric characters with a a length between 50 - 120 charachters and is required | Yes | Yes | Yes |
+| Recipe description field must only contain alphanumeric characters with a a length between 100 - 120 charachters and is required | Yes | Yes | Yes |
 | Prep Time field must only contain alphanumeric characters, Be between 4 - 20 characters and is required | Yes | Yes | Yes |
 | Cook Time field must only contain alphanumeric characters, Be between 4 - 20 characters and is required | Yes | Yes | Yes |
 | Servings field must only contain numeral characters and is required | Yes | Yes | Yes |
@@ -181,7 +181,7 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 **Add a Recipe for Admin**
 | Recipe name field must contain only alphanumeric characters, Be between 3 -30 characters, is required and prefilled | Yes | Yes | Yes |
 | Recipe Category field Must display Dropdown of categories from database, Only dropdown Items can be selected(no manual input), is required and prefilled | Yes | Yes | Yes |
-| Recipe description field must only contain alphanumeric characters with a a length between 15 - 120 charachters, is required and prefilled | Yes | Yes | Yes |
+| Recipe description field must only contain alphanumeric characters with a a length between 100 - 120 charachters, is required and prefilled | Yes | Yes | Yes |
 | Prep Time field must only contain alphanumeric characters, Be between 4 - 20 characters, is required and prefilled | Yes | Yes | Yes |
 | Cook Time field must only contain alphanumeric characters, Be between 4 - 20 characters, is required and prefilled | Yes | Yes | Yes |
 | Servings field must only contain numeral characters, is required and prefilled | Yes | Yes | Yes |
@@ -199,7 +199,7 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 **Edit a Recipe for user**
 | Recipe name field must contain only alphanumeric characters, Be between 3 -30 characters, is required and prefilled| Yes | Yes | Yes |
 | Recipe Category field Must display Dropdown of categories from database, Only dropdown Items can be selected(no manual input), is required and prefilled | Yes | Yes | Yes |
-| Recipe description field must only contain alphanumeric characters with a a length between 50 - 120 charachters and is required | Yes | Yes | Yes |
+| Recipe description field must only contain alphanumeric characters with a a length between 100 - 120 charachters and is required | Yes | Yes | Yes |
 | Prep Time field must only contain alphanumeric characters, Be between 4 - 20 characters, is required and prefilled | Yes | Yes | Yes |
 | Cook Time field must only contain alphanumeric characters, Be between 4 - 20 characters, is required and prefilled | Yes | Yes | Yes |
 | Servings field must only contain numeral characters, is required and prefilled | Yes | Yes | Yes |
@@ -213,7 +213,7 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 **Edit a Recipe for Admin**
 | Recipe name field must contain only alphanumeric characters, Be between 3 -30 characters, is required and prefilled | Yes | Yes | Yes |
 | Recipe Category field Must display Dropdown of categories from database, Only dropdown Items can be selected(no manual input), is required and prefilled | Yes | Yes | Yes |
-| Recipe description field must only contain alphanumeric characters with a a length between 15 - 120 charachters, is required and prefilled | Yes | Yes | Yes |
+| Recipe description field must only contain alphanumeric characters with a a length between 100 - 120 charachters, is required and prefilled | Yes | Yes | Yes |
 | Prep Time field must only contain alphanumeric characters, Be between 4 - 20 characters, is required and prefilled | Yes | Yes | Yes |
 | Cook Time field must only contain alphanumeric characters, Be between 4 - 20 characters, is required and prefilled | Yes | Yes | Yes |
 | Servings field must only contain numeral characters, is required and prefilled | Yes | Yes | Yes |
@@ -507,3 +507,32 @@ Below is a description of the one function I attempted to test with no success.
 - **Social Icon in Navigation bar**
 I found when the User hovered over the Facbook Icon in the Nav Bar the Highlighted area was more in height than when other links were hovered over.
 At first I attempted to set a height for the facebook icon to 63px the same as the nav bar how ever this then caused an issue with the mobile nav as the icon kept the height  of 63px. I then chose to ensure that when the desktop nav bar was in use(screens above 992px) all Nav bar links had a height of 63px. This solved the problem for me and by putting it as a media query it did not affect the mobile nav.
+
+### Open Issues
+#### Recipe Description
+- **The Problem**
+
+  The recipe description length was causing layout issues in the user interface.
+
+  If the user posts a recipe with a description shorter than 100 characters the information on the card does not display to the left and looks out of place compared to the other cards(see image below).
+  ![mockup](./static/documentation/errorshortdesc.webp)
+
+  If the user uses over 120 characters it causes issues when resizing.
+
+- **Attempts to solve**
+
+  I did attempt to fix the issue by placing the recipe description details in a div with CSS ruling the text to Align Left. This did not fix the issue. I also tried using the Materialize class "align-left" but this did not make any difference apart from making the buttons appear slightly more left.
+
+  I did attempt to seperate the buttons into a div with the materialize card-action class and then used the CSS and materialize class of "align-left" on the card-content div this did not solve the issue.
+
+- **Conclusion and Temporary Fix**
+
+  I concluded that the issue I am facing is more than likely within the Materialize card defaults and decdided to look for another solution to the problem.
+
+  Temporary Fix: Recipe descriptions are now required to be between 100 and 120 characters to prevent layout issues.
+  
+  My only concern with this is that it may be hard for all users to be able to fill the character requirment, Although it is a website targetted to foodies so I also presume most users would be able to describe their recipe to suit the requirements.
+
+- **Other Considerations**
+
+  I did look into the option of introducing functionality so that every time a recipe is uploaded or edited by a user, The admin recieves an email advising them there has been a change with a link to the recipe. This way the user could put any length description they wished and Admin can go in and change it after so it suits the requirements. In the short term while there is a small user base this would not be too bad, how ever with a larger user base this would be fairly labour intensive for the Admin.
