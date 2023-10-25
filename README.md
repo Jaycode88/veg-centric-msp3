@@ -258,6 +258,8 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
 
     -  Depending on the user's role and session status, the Nav Bar & Dropdown provide a set of relevant links for easy navigation
 
+    - The Naviagtion bar was created with [Materialize](https://materializecss.com/)
+
 ![screenshot](static/documentation/navigation.webp)
 
  - #### Footer Bar
@@ -268,6 +270,8 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
     - The contact us section: This section offers the user the option to get in contact via either email or facebook with icons for links.
 
     - The Developer information section: Here you can find important information behind Veg-Centric, Including icon links to the GitHub Repo and the developers LinkedIn Page.
+
+    - The footer was created with [Materialize](https://materializecss.com/)
 
 ![screenshot](static/documentation/footer.webp)
 
@@ -282,6 +286,8 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
     - Recipe cards are the visual representation of individual recipes within our web application. Each recipe card provides a comprehensive overview of a specific recipe, allowing users to quickly assess its details, category, and more.
 
     - The recipe cards are designed to offer a visually pleasing and user-friendly experience. They provide a quick and convenient way for users to browse through our recipe collection, find dishes of interest, and take actions based on their preferences.
+
+    - The recipe cards were created with [Materialize](https://materializecss.com/)
 
 ![screenshot](static/documentation/recipecard.webp)
 
@@ -315,16 +321,22 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
 
     - Users that are signed Up and Signed in are able to save favourite recipes aswell as edit and delete their own recipes.
 
+    - The Sign in and sign up forms are displayed on [Materialize](https://materializecss.com/) Cards.
+
 ![screenshot](static/documentation/signinup.webp)
 ![screenshot](static/documentation/signin.webp)
 
 - #### Profile Page
     - The Profile Page enhances the user experience by centralizing user-related information and actions. It allows users to manage their profile, access their uploaded recipes, and easily revisit their favorite recipes. Additionally, it provides a sense of ownership and engagement within the Veg-Centric community.
+    
+    - All contents on this page are arranged into a [Materialize](https://materializecss.com/) Collapsible.
 
 ![screenshot](static/documentation/profile.webp)
 
 - #### About Page
     - The About page in the project provides users with a comprehensive overview of Veg-Centric Recipes. It introduces the project's mission, highlights the significance of a veg-centric lifestyle, and delves into the vibrant community that makes this project unique. Additionally, links are provided to our Terms and Conditions and Privacy Policy for users to reference. This page aims to give users a clear understanding of what Veg-Centric Recipes is all about and how they can get involved.
+
+    - The "About" details are displayed on [Materialize](https://materializecss.com/) Card.
 
 ![mockup](static/documentation/about.webp)
 
@@ -748,6 +760,7 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
     - [JavaScript](https://www.javascript.com) is a client-side scripting language that enhances user interactivity on the web pages.
     - [Python](https://www.python.org/) is a versatile programming language commonly used for server-side development. It powers the logic and data processing of the web application.
     - [Jinja](https://jinja.palletsprojects.com/en/3.1.x/) Is a Python-based templating engine used to dynamically generate HTML content by inserting data into predefined templates.
+    - [Materialize](https://materializecss.com/) Is a responsive front-end  framework and was used for many of the app's features.
     - [Cloudinary](https://cloudinary.com/) is a cloud-based service for uploading, storing, optimizing, and delivering media assets such as images and videos.
     - [MongoDB](https://mongodb.com/) is a document-oriented NoSQL database used for storing and managing structured data.
     - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
