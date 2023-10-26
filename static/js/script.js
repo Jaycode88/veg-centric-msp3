@@ -97,7 +97,7 @@ $(document).ready(function() {
   });
 
 /**
- * Function to initialize and control the Terms and Privacy modals.
+ * Function to initialize and control all modals.
  * This function should be called when the document is ready.
  */
 $(document).ready(function () {
@@ -118,6 +118,14 @@ $(document).ready(function () {
    */
   $('#privacyLink').click(function () {
       $('#privacyModal').modal('open');
+  });
+
+  /**
+   * Open the Delete Recipe modal when the 'Delete Recipe' button is clicked.
+   * This click event handler opens the modal with the ID 'deleteModal'.
+   */
+  $('#openDeleteModalBtn').click(function () {
+    $('#deleteModal').modal('open');
   });
 });
 

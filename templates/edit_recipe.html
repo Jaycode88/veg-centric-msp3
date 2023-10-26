@@ -189,15 +189,24 @@
     </form>
     <!-- delete recipe button -->
     <div class="center cust-btn-marg">
-        <form id="deleteRecipeForm{{ recipe._id }}" action="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
-            method="post" onsubmit="return confirm('Are you sure you want to delete this recipe?');">
-            <button type="submit" class="btn-small custom-darkgreen black-text" aria-label="Delete Recipe Button">
+            <button id="openDeleteModalBtn" type="submit" class="btn-small custom-darkgreen black-text" aria-label="Delete Recipe Button">
                 <strong>Delete Recipe</strong> <i class="fas fa-trash-alt lightgreen-text"></i>
             </button>
-        </form>
     </div>
 </div>
 
+<!-- Modal confirmation of delete recipe -->
+<div id="deleteModal" class="modal">
+    <div class="modal-content"><p>Are you sure you want to delete this recipe?</p>
+        <form id="deleteRecipeForm{{ recipe._id }}" action="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+            method="post">
+            <button type="submit" class="btn-small custom-darkgreen black-text" aria-label="Delete Recipe Button">
+                <strong>Yes, Delete</strong> <i class="fas fa-trash-alt lightgreen-text"></i>
+            </button>
+            <a href="#!" class="modal-close btn-small custom-lightgreen black-text"><strong>No, Close</strong> <i class="fas fa-arrow-rotate-left darkgreen-text"></i></a>
+        </form>
+    </div>
+</div>
 {% endblock %}
 {% block scripts %}
 {% endblock %}
