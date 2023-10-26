@@ -78,9 +78,9 @@
     <a class="black-text custom-lightgreen btn-small" href="{{ url_for('show_recipes', recipe_id=recipe._id) }}"
       aria-label="Back to Recipes Button"><strong>Back
         to Recipes</strong> <i class="fas fa-rotate-left darkgreen-text"></i></a>
-    <button type="submit" class="btn-small custom-lightgreen black-text"
+    <button type="submit" class="btn-small custom-darkgreen black-text"
       aria-label="Remove Recipe from Favorites Button"><strong>Remove
-        Favorite</strong> <i class="fas fa-trash-alt darkgreen-text"></i></button>
+        Favorite</strong> <i class="fas fa-trash-alt lightgreen-text"></i></button>
   </form>
   {% else %}
   <form method="POST" action="{{ url_for('add_to_favorites', recipe_id=recipe['_id']) }}">
@@ -100,8 +100,8 @@
       aria-label="Edit Recipe Button"><strong>Edit Recipe
       </strong> <i class="fas fa-pen-to-square darkgreen-text"></i></a>
 
-    <button type="submit" class="btn-small custom-lightgreen black-text" aria-label="Delete Recipe Button">
-      <strong>Delete Recipe</strong> <i class="fas fa-trash-alt darkgreen-text"></i>
+    <button type="submit" class="btn-small custom-darkgreen black-text" aria-label="Delete Recipe Button">
+      <strong>Delete Recipe</strong> <i class="fas fa-trash-alt lightgreen-text"></i>
     </button>
   </form>
   {% endif %}

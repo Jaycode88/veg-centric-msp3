@@ -64,7 +64,7 @@
 {% if not user and not search %}
 <div class="row">
     <div class="col s12 center-align">
-        <p>4 random recipes displayed please <a href="{{ url_for('sign_in') }}" class="black-text"><strong>Sign In</strong></a> to view all recipes</p>
+        <p>4 random recipes displayed please <a href="{{ url_for('sign_in') }}" class="signin-link"><strong>Sign In</strong></a> to view all recipes</p>
     </div>
 </div>
 {% endif %}
@@ -116,9 +116,9 @@
                                 href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"
                                 aria-label="View Recipe Button"><strong>View Recipe</strong>
                                 <i class="fas fa-circle-info darkgreen-text"></i></a>
-                            <button type="submit" class="btn-small custom-lightgreen black-text"
+                            <button type="submit" class="btn-small custom-darkgreen black-text"
                                 aria-label="Remove Recipe from Favorites Button"><strong>Remove
-                                    Favorite</strong> <i class="fas fa-trash-alt darkgreen-text"></i></button>
+                                    Favorite</strong> <i class="fas fa-trash-alt lightgreen-text"></i></button>
                         </form>
                         {% else %}
                         <form method="POST" action="{{ url_for('add_to_favorites', recipe_id=recipe['_id']) }}">

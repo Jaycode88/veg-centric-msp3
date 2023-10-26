@@ -207,6 +207,11 @@ img {
 	text-decoration: underline;
 }
 
+.signin-link {
+	color: #2F4F4F;
+	text-decoration: underline;
+}
+
 /* form labels */
 .input-field label {
 	color: #000;
