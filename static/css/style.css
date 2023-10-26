@@ -250,11 +250,6 @@ img {
 	border-radius: 20px;
 }
 
-.col.m6 {
-	width: calc(50% - 20px) !important;
-	margin: 0 5px !important;
-}
-
 /* Round cards */
 /* --------------- */
 .round {
@@ -267,12 +262,12 @@ img {
 }
 
 .zoom:hover {
-	transform: scale(1.04);
+	transform: scale(1.02);
 }
 
 /* Recipe Card Image */
 .card-image {
-	max-width: 800px;
+	width: 100%;
 	height: auto;
 	display: flex;
 	justify-content: center;
