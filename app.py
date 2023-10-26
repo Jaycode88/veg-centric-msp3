@@ -80,8 +80,13 @@ def show_recipes():
     user = None
     if username:
         user = database.db.users.find_one({"username": username})
+        recipes = database.db.recipes.find()
 
-    recipes = database.db.recipes.find()
+    else:
+        recipes = (
+            [recipe for recipe in database.db.recipes.aggregate(
+                [{"$sample": {"size": 4}}])])
+
     return render_template(
         "recipes.html", recipes=recipes, user=user, active_page=active_page)
 
@@ -108,7 +113,7 @@ def search_recipes():
         flash("No results found. Please Try Again", "warning")
         return redirect(url_for("show_recipes"))
 
-    return render_template("recipes.html", recipes=recipes)
+    return render_template("recipes.html", recipes=recipes, search=True)
 
 
 # About page
