@@ -755,6 +755,7 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
     | Mushroom & Lentil Bolegnese | [Pexels](https://www.pexels.com/photo/food-plate-italian-dinner-41320/) | [Public Domain Pictures](https://www.pexels.com/@public-domain-pictures/) |
     | Portobello Mushroom Fajitas | [Pexels](https://www.pexels.com/photo/person-holding-vegetable-tortilla-wrap-with-dipping-sauce-on-the-side-4955266/) | [Roman Odintsov](https://www.pexels.com/@roman-odintsov/) | 
     | Thai Green Curry | [Pexels](https://pixabay.com/photos/green-curry-thai-food-2457236/) | [Huahom](https://pixabay.com/users/huahom-2139128/) |
+    | Stuffed Bell Peppers | [FreePik](https://www.freepik.com/) | [Kamran Aydinov](https://www.freepik.com/author/kamranaydinov) |
 
     All Product Images that were used, were displayed via their URL Directly from the Product's description/sales page on [Amazon](https://www.amazon.co.uk/)
 
@@ -779,7 +780,8 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
     - [Font Awesome](https://fontawesome.com/) For Icons
     - [Google Fonts](https://fonts.google.com/) for all Fonts.
     - [Medium]( https://medium.com/@ashley_howell/understanding-colour-psychology-for-restaurants-brands-dbb7ffbcecae) Used to research colour physcology in relation to restaurant and food brands.
-    - [JennDavid](https://jenndavid.com/colors-that-influence-food-sales-infographic/) Used to research colours that influence food sales. 
+    - [JennDavid](https://jenndavid.com/colors-that-influence-food-sales-infographic/) Used to research colours that influence food sales.
+    - [Pagecloud](https://www.pagecloud.com/blog/best-google-fonts-pairings) Used to research font pairings.
 
 - ### Acknowledgements
     - I would like to thank my Code Institute mentor, [Alex K](https://calendly.com/alex_mentor) for his amazing help, advice and support throughout the development of this project.
