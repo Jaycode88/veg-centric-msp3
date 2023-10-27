@@ -368,6 +368,10 @@ The Admin Has extra options over Standard users many of these are to maintain re
     ![mockup](static/documentation/adminxbtns.webp)
 
  - ## Future Features I would like to include
+    - #### Pagination
+
+        As the App's user base grows there will be many recipes being displayed on the show recipes(home) Page for users that are signed in. I believe I will need to add pagination to control the amount of recipes displaying on this page.
+        
     - #### User ratings
     
         I think it would be a nice touch for users to be able to rate recipes they have tried, With these ratings displaying among the recipe details.
