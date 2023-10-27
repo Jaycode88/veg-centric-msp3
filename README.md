@@ -756,6 +756,7 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
     | Portobello Mushroom Fajitas | [Pexels](https://www.pexels.com/photo/person-holding-vegetable-tortilla-wrap-with-dipping-sauce-on-the-side-4955266/) | [Roman Odintsov](https://www.pexels.com/@roman-odintsov/) | 
     | Thai Green Curry | [Pexels](https://pixabay.com/photos/green-curry-thai-food-2457236/) | [Huahom](https://pixabay.com/users/huahom-2139128/) |
     | Stuffed Bell Peppers | [FreePik](https://www.freepik.com/) | [Kamran Aydinov](https://www.freepik.com/author/kamranaydinov) |
+    | Stuffed Pasta Shells | [Pexels](https://www.pexels.com/photo/bowl-of-cooked-food-3590401/) | [Sebastian Coman Photography](https://www.pexels.com/@sebastian-coman-photography-1598188/) |
 
     All Product Images that were used, were displayed via their URL Directly from the Product's description/sales page on [Amazon](https://www.amazon.co.uk/)
 
