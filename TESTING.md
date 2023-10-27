@@ -440,9 +440,24 @@ Below is a description of the one function I attempted to test with no success.
 
 ## Bugs
 ### Fixed Bugs
+- **Mongo URI connection**
+
+  When first setting up the connection to my MongoDb database I used the URI that was provided by Mongo but it was not working, Upon asking the tutoring team I was informed that for an unknown reason the provided URI did not contain the Database name as it should. I now keep an example connection string on my desktop so I can refer to it when needed.
+
+  ```
+  mongodb+srv://Username:Password@Projectname.krzekji.mongodb.net/Collectionname?retryWrites=true&w=majority
+  ```
+  Username = Your MongoDB Username
+
+  Password = Your MongoDB Password
+
+  Projectname = Name of project you wish to connect to on MongoDB
+
+  Collectionname= Name of the collection you wish to connect to within the MongoDB project.
+
 - **Materialize Card Sizes**
 
-  1. Image Sizing: Due to using user uploaded images it was impossible to determine there size In the card I found when pictures where square or portrait I would have an issue with space for the text beneath and the buttons overlaying the text.
+   Image Sizing: Due to using user uploaded images it was impossible to determine there size In the card I found when pictures where square or portrait I would have an issue with space for the text beneath and the buttons overlaying the text.
 
   The Solve: I found I was able to manipulate the image using Pillow before it was uploaded to cloudinary. I chose to set the image to 800x400px, Convert its format to webp, This new code also checks wether the aspect ratio matches the requirements and if not it crops the image to match the aspect ratio.
   ```
@@ -490,15 +505,25 @@ Below is a description of the one function I attempted to test with no success.
   import io
   from PIL import Image
   ```
-  
-  2. Text overlay when resizing: I had an issue with text being overlayed by buttons or dissapearing(being cut short) when changing screen sizes.
 
-  The Solve: This was much easier to solve once I had the image issue resolved..
-  Now I could determine the image size. I could restrict the character amount on the description and set the minimum card height for the screen size break points.
+- **Recipe Description**
+  The recipe description length previously caused layout issues in the user interface.
+  When users posted a recipe with a description shorter than 100 characters, the information on the card did not display correctly, as shown in the image below:
+
+  ![mockup](./static/documentation/errorshortdesc.webp)
+
+  Additionally, if a user used over 120 characters in the description, it caused problems with buttons overlaying text or text being cut off when resizing.
+
+  Several attempts were made to address this issue. Initially, I tried placing the recipe description details in a div with CSS to align the text to the left. However, this approach did not resolve the problem. I also experimented with using the Materialize class "align-left," but it only had a minor impact on the issue.
+
+  I concluded that the issue I am facing is more than likely within the Materialize card defaults and decdided to look for another solution to the problem.
+
+  The Fix: Recipe descriptions are now required to be between 100 and 120 characters to prevent layout issues.
+  My only concern with this is that it may be hard for all users to be able to fill the character requirment, Although it is a website targetted to foodies so I also presume most users would be able to describe their recipe to suit the requirements.
 
 - **Text area PlaceHolder**
   
-  I experienced an Issue were Instead of displaying placeholder text in the text area of the admin description field of the edit recipe form, All that would display was a few tabbed spaces. With a little research I found this rather a rookie error and one I will not forget due to its simplicity. I was trying to use a placeholder attribute with the textarea which I found is not possible the place holder text goes between the text areas opening and closing tags.
+  I experienced an Issue were Instead of displaying placeholder text in the text area of the admin description field of the edit recipe form, All that would display was a few tabbed spaces. With a little research I found this to be rather a rookie error and one I will not forget due to its simplicity. I was trying to use a placeholder attribute with the textarea which I found is not possible the place holder text goes between the text areas opening and closing tags.
 
 - **Materialize Search Feature**
 
@@ -507,32 +532,3 @@ Below is a description of the one function I attempted to test with no success.
 - **Social Icon in Navigation bar**
 I found when the User hovered over the Facbook Icon in the Nav Bar the Highlighted area was more in height than when other links were hovered over.
 At first I attempted to set a height for the facebook icon to 63px the same as the nav bar how ever this then caused an issue with the mobile nav as the icon kept the height  of 63px. I then chose to ensure that when the desktop nav bar was in use(screens above 992px) all Nav bar links had a height of 63px. This solved the problem for me and by putting it as a media query it did not affect the mobile nav.
-
-### Open Issues
-#### Recipe Description
-- **The Problem**
-
-  The recipe description length was causing layout issues in the user interface.
-
-  If the user posts a recipe with a description shorter than 100 characters the information on the card does not display to the left and looks out of place compared to the other cards(see image below).
-  ![mockup](./static/documentation/errorshortdesc.webp)
-
-  If the user uses over 120 characters it causes issues when resizing.
-
-- **Attempts to solve**
-
-  I did attempt to fix the issue by placing the recipe description details in a div with CSS ruling the text to Align Left. This did not fix the issue. I also tried using the Materialize class "align-left" but this did not make any difference apart from making the buttons appear slightly more left.
-
-  I did attempt to seperate the buttons into a div with the materialize card-action class and then used the CSS and materialize class of "align-left" on the card-content div this did not solve the issue.
-
-- **Conclusion and Temporary Fix**
-
-  I concluded that the issue I am facing is more than likely within the Materialize card defaults and decdided to look for another solution to the problem.
-
-  Temporary Fix: Recipe descriptions are now required to be between 100 and 120 characters to prevent layout issues.
-  
-  My only concern with this is that it may be hard for all users to be able to fill the character requirment, Although it is a website targetted to foodies so I also presume most users would be able to describe their recipe to suit the requirements.
-
-- **Other Considerations**
-
-  I did look into the option of introducing functionality so that every time a recipe is uploaded or edited by a user, The admin recieves an email advising them there has been a change with a link to the recipe. This way the user could put any length description they wished and Admin can go in and change it after so it suits the requirements. In the short term while there is a small user base this would not be too bad, how ever with a larger user base this would be fairly labour intensive for the Admin.
