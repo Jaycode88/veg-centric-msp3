@@ -1,3 +1,5 @@
+/* jshint esversion: 11, jquery: true */
+
 /**
  * Initialize mobile navigation bar dropdown menus.
  *
@@ -43,8 +45,8 @@ $(document).ready(function() {
   
       // Create a new ingredient field container
       const newIngredient = $("<div class='ingredient'>" +
-        "<input type='text' name='ingredient[]' placeholder='Ingredient' aria-label='Ingredient Input'>" +
-        "<input type='text' name='quantity[]' placeholder='Quantity' aria-label='Quantity Input'>" +
+        "<input type='text' name='ingredient[]' placeholder='Ingredient' aria-label='Ingredient Input' required>" +
+        "<input type='text' name='quantity[]' placeholder='Quantity' aria-label='Quantity Input' required>" +
         "<button class='removeButton btn-small custom-darkgreen black-text' aria-label='Remove Ingredient Button'><strong>Remove</strong> <i class='fas fa-trash-alt black-text'></i></button>" +
         "</div>");
   
@@ -80,7 +82,7 @@ $(document).ready(function() {
   
       // Create a new method step field container
       const newMethodStep = $("<div class='method-step'>" +
-        "<input type='text' name='method_step[]' placeholder='Step' aria-label='Step of Method Input'>" +
+        "<input type='text' name='method_step[]' placeholder='Step' aria-label='Step of Method Input' required>" +
         "<button class='removeButton btn-small custom-darkgreen black-text' aria-label='Remove Step Button'><strong>Remove</strong> <i class='fas fa-trash-alt black-text'></i></button>" +
         "</div>");
   

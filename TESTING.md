@@ -13,51 +13,51 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 - Results: 
   - [Home](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2F)
   
-    ![mockup](static/documentation/homehtml.webp)
+    ![mockup](documentation/homehtml.webp)
 
   - [Add Recipe](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fadd_recipe)
   
-    ![mockup](static/documentation/addrecipehtml.webp)
+    ![mockup](documentation/addrecipehtml.webp)
 
   - [Profile](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fprofile%3Fusername%3Dtestuser)
   
-    ![mockup](static/documentation/validprofile.webp)
+    ![mockup](documentation/validprofile.webp)
 
   - [Sign In](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fsign_in)
   
-    ![mockup](static/documentation/validsignin.webp)
+    ![mockup](documentation/validsignin.webp)
 
   - [Sign Up](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fsign_up)
   
-    ![mockup](static/documentation/validsignup.webp)
+    ![mockup](documentation/validsignup.webp)
 
   - [About](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fabout)
   
-    ![mockup](static/documentation/validabout.webp)
+    ![mockup](documentation/validabout.webp)
 
   - [Edit Recipe](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fedit_recipe%2F6527b0b957b0bcdad6782f15)
   
-    ![mockup](static/documentation/valideditrecipe.webp)
+    ![mockup](documentation/valideditrecipe.webp)
 
   - [Edit Profile](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fedit_profile)
   
-    ![mockup](static/documentation/valideditprofile.webp)
+    ![mockup](documentation/valideditprofile.webp)
 
   - Delete Profile (Via Source code Input)
   
-    ![mockup](static/documentation/validdeleteprofile.webp)
+    ![mockup](documentation/validdeleteprofile.webp)
 
   - [Recipe Details](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Frecipe%2F65004285e4bb3a34c6930886)
 
-    ![mockup](static/documentation/validrecipedetails.webp)
+    ![mockup](documentation/validrecipedetails.webp)
 
   - [Manage Categories(admin only page)](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2Fmanage_categories)
   
-    ![mockup](static/documentation/validmanagecat.webp)
+    ![mockup](documentation/validmanagecat.webp)
 
   - 404 Error Page (Via Source code Input)
   
-    ![mockup](static/documentation/valid404.webp)
+    ![mockup](documentation/valid404.webp)
 
 ### CSS
 
@@ -65,7 +65,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 - link to results: [click here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
-![mockup](static/documentation/cssvalid.webp)
+![mockup](documentation/cssvalid.webp)
 
 ### JavaScript
 
@@ -76,36 +76,36 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate m
 ```
 
 **Results**
-![screenshot](static/documentation/jsvalidate.webp)
+![screenshot](documentation/jsvalidate.webp)
 
 ### PEP8
 
 I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInstitute) to check all Python files are PEP8 compliant.
   - App.py
-  ![mockup](static/documentation/pep8.webp)
+  ![mockup](documentation/pep8.webp)
 
   - settings.py
-  ![mockup](static/documentation/pep8settings.webp)
+  ![mockup](documentation/pep8settings.webp)
 
 ## User Story Testing
 
 | AIM | Achieved | Image|
 |-----|----------|------|
 **As a first time user to the website, I would like to...**
-| Enjoy a user freindly experience | Yes | ![mockup](static/documentation/navigation.webp)|
-| Browse Veg-Centric Recipes | Yes | ![mockup](static/documentation/search.webp) ![mockup](static/documentation/recipecard.webp) |
-| Join The Community | Yes | ![mockup](static/documentation/signinup.webp) |
-| Find information about Veg-Centric | Yes | ![mockup](static/documentation/about.webp) |
+| Enjoy a user freindly experience | Yes | ![mockup](documentation/navigation.webp)|
+| Browse Veg-Centric Recipes | Yes | ![mockup](documentation/search.webp) ![mockup](documentation/recipecard.webp) |
+| Join The Community | Yes | ![mockup](documentation/signinup.webp) |
+| Find information about Veg-Centric | Yes | ![mockup](documentation/about.webp) |
 **As a Returning user, I would like to...**
-| Contribute to the community | Yes | ![mockup](static/documentation/addrecipe.webp) |
-| Save Recipes As Favorites and view favorites | Yes | ![mockup](static/documentation/favorites.webp) |
-| View, Edit and Delete their own recipes | Yes | ![mockup](static/documentation/editrecipe.webp) ![mockup](static/documentation/editdeleterecipe.webp) |
-| To have a page with user information | Yes | ![mockup](static/documentation/profile.webp) |
+| Contribute to the community | Yes | ![mockup](documentation/addrecipe.webp) |
+| Save Recipes As Favorites and view favorites | Yes | ![mockup](documentation/favorites.webp) |
+| View, Edit and Delete their own recipes | Yes | ![mockup](documentation/editrecipe.webp) ![mockup](documentation/editdeleterecipe.webp) |
+| To have a page with user information | Yes | ![mockup](documentation/profile.webp) |
 **As Website Owner I would like to...**
-| Edit all recipes to ensure content quality | Yes | ![mockup](static/documentation/editrecipe.webp) ![mockup](static/documentation/editdeleterecipe.webp) |
-| Edit recipe images for aesthitical purposes | Yes | ![mockup](static/documentation/editdeleterecipe.webp) ![mockup](static/documentation/imageupload.webp) |
-| Add categories | Yes | ![mockup](static/documentation/admincat.webp) |
-| Generate profit through affiliate marketing | Yes | ![mockup](static/documentation/recipewithproduct.webp) |
+| Edit all recipes to ensure content quality | Yes | ![mockup](documentation/editrecipe.webp) ![mockup](documentation/editdeleterecipe.webp) |
+| Edit recipe images for aesthitical purposes | Yes | ![mockup](documentation/editdeleterecipe.webp) ![mockup](documentation/imageupload.webp) |
+| Add categories | Yes | ![mockup](documentation/admincat.webp) |
+| Generate profit through affiliate marketing | Yes | ![mockup](documentation/recipewithproduct.webp) |
 
 ## Browser Compatability / Cross Platform Testing
 
@@ -161,16 +161,16 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 | First Name field must only contain letters from 2 to 20 characters and is required | Yes | Yes | Yes |
 | Last Name field must only contain letters from 2 to 20 characters and is required | Yes | Yes | Yes |
 | Email field must contain @ in valid format, Between 8 - 50 characters and is required | Yes | Yes | Yes |
-| New Password field accepts only alphanumeric and limited special characters, must hide characters, Be between 6 - 15 charachters and is required | Yes | Yes | Yes |
-| Confirm New Password field accepts only alphanumeric and limited special characters, must match New password field and hide characters, Be between 6 - 15 charachters and is required | Yes | Yes | Yes |
+| New Password field accepts only alphanumeric and limited special characters, must hide characters, Be between 6 - 15 charachters | Yes | Yes | Yes |
+| Confirm New Password field accepts only alphanumeric and limited special characters, must match New password field and hide characters, Be between 6 - 15 charachters | Yes | Yes | Yes |
 | Form Submits upon use of save button | Yes | Yes | Yes |
 | Option to delete profile is shown and functional | Yes | Yes | Yes |
 **Add A Recipe For User**
 | Recipe name field must contain only alphanumeric characters, Be between 3 -30 characters and is required | Yes | Yes | Yes |
 | Recipe Category field Must display Dropdown of categories from database, Only dropdown Items can be selected(no manual input) and is required | Yes | Yes | Yes |
 | Recipe description field must only contain alphanumeric characters with a a length between 100 - 120 charachters and is required | Yes | Yes | Yes |
-| Prep Time field must only contain alphanumeric characters, Be between 4 - 20 characters and is required | Yes | Yes | Yes |
-| Cook Time field must only contain alphanumeric characters, Be between 4 - 20 characters and is required | Yes | Yes | Yes |
+| Prep Time field must only contain alphanumeric characters, Be upto 20 characters and is required | Yes | Yes | Yes |
+| Cook Time field must only contain alphanumeric characters, Be upto 20 characters and is required | Yes | Yes | Yes |
 | Servings field must only contain numeral characters and is required | Yes | Yes | Yes |
 | Upload image field Allows image file only to be uploaded and is required | Yes | Yes | Yes |
 | Add Ingredient and Add Step Buttons are visible and functional | Yes | Yes | Yes |
@@ -182,8 +182,8 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 | Recipe name field must contain only alphanumeric characters, Be between 3 -30 characters, is required and prefilled | Yes | Yes | Yes |
 | Recipe Category field Must display Dropdown of categories from database, Only dropdown Items can be selected(no manual input), is required and prefilled | Yes | Yes | Yes |
 | Recipe description field must only contain alphanumeric characters with a a length between 100 - 120 charachters, is required and prefilled | Yes | Yes | Yes |
-| Prep Time field must only contain alphanumeric characters, Be between 4 - 20 characters, is required and prefilled | Yes | Yes | Yes |
-| Cook Time field must only contain alphanumeric characters, Be between 4 - 20 characters, is required and prefilled | Yes | Yes | Yes |
+| Prep Time field must only contain alphanumeric characters, Be upto 20 characters, is required and prefilled | Yes | Yes | Yes |
+| Cook Time field must only contain alphanumeric characters, Be upto 20 characters, is required and prefilled | Yes | Yes | Yes |
 | Servings field must only contain numeral characters, is required and prefilled | Yes | Yes | Yes |
 | Upload image field Allows image file only to be uploaded, is required and prefilled | Yes | Yes | Yes |
 | Add Ingredient and Add Step Buttons are visible and functional | Yes | Yes | Yes |
@@ -200,8 +200,8 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 | Recipe name field must contain only alphanumeric characters, Be between 3 -30 characters, is required and prefilled| Yes | Yes | Yes |
 | Recipe Category field Must display Dropdown of categories from database, Only dropdown Items can be selected(no manual input), is required and prefilled | Yes | Yes | Yes |
 | Recipe description field must only contain alphanumeric characters with a a length between 100 - 120 charachters and is required | Yes | Yes | Yes |
-| Prep Time field must only contain alphanumeric characters, Be between 4 - 20 characters, is required and prefilled | Yes | Yes | Yes |
-| Cook Time field must only contain alphanumeric characters, Be between 4 - 20 characters, is required and prefilled | Yes | Yes | Yes |
+| Prep Time field must only contain alphanumeric characters, Be upto 20 characters, is required and prefilled | Yes | Yes | Yes |
+| Cook Time field must only contain alphanumeric characters, Be upto 20 characters, is required and prefilled | Yes | Yes | Yes |
 | Servings field must only contain numeral characters, is required and prefilled | Yes | Yes | Yes |
 | Upload image field Allows image file only to be uploaded, is required and prefilled | Yes | Yes | Yes |
 | Add Ingredient and Add Step Buttons are visible and functional | Yes | Yes | Yes |
@@ -214,8 +214,8 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 | Recipe name field must contain only alphanumeric characters, Be between 3 -30 characters, is required and prefilled | Yes | Yes | Yes |
 | Recipe Category field Must display Dropdown of categories from database, Only dropdown Items can be selected(no manual input), is required and prefilled | Yes | Yes | Yes |
 | Recipe description field must only contain alphanumeric characters with a a length between 100 - 120 charachters, is required and prefilled | Yes | Yes | Yes |
-| Prep Time field must only contain alphanumeric characters, Be between 4 - 20 characters, is required and prefilled | Yes | Yes | Yes |
-| Cook Time field must only contain alphanumeric characters, Be between 4 - 20 characters, is required and prefilled | Yes | Yes | Yes |
+| Prep Time field must only contain alphanumeric characters, Be upto 20 characters, is required and prefilled | Yes | Yes | Yes |
+| Cook Time field must only contain alphanumeric characters, Be upto 20 characters, is required and prefilled | Yes | Yes | Yes |
 | Servings field must only contain numeral characters, is required and prefilled | Yes | Yes | Yes |
 | Upload image field Allows image file only to be uploaded, is required and prefilled | Yes | Yes | Yes |
 | Add Ingredient and Add Step Buttons are visible and functional | Yes | Yes | Yes |
@@ -238,16 +238,16 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 
 | Page | Results desktop | Results mobile |
 |------|-----------------|----------------|
-| Home(show_recipes) | ![mockup](static/documentation/lighthome.webp) | ![mockup](static/documentation/lighthomemob.webp) |
-| Sign In | ![mockup](static/documentation/lightsignin.webp) | ![mockup](static/documentation/lightsigninmob.webp) |
-| Sign Up | ![mockup](static/documentation/lightsignup.webp) | ![mockup](static/documentation/lightsignupmob.webp) |
-| Profile |  ![mockup](static/documentation/lightprof.webp) | ![mockup](static/documentation/lightprofmob.webp) |
-| Edit Profile | ![mockup](static/documentation/lighteditprof.webp) | ![mockup](static/documentation/lighteditprofmob.webp) |
-| Delete Profile | ![mockup](static/documentation/lightdelprof.webp) | ![mockup](static/documentation/lightdelprofmob.webp) |
-| Add Recipe | ![mockup](static/documentation/lightaddrecipe.webp) | ![mockup](static/documentation/lightaddrecipemob.webp) |
-| Edit Recipe | ![mockup](static/documentation/lighteditrecipe.webp) | ![mockup](static/documentation/lighteditrecipemob.webp) |
-| About | ![mockup](static/documentation/lightabout.webp) | ![mockup](static/documentation/lightaboutmob.webp) |
-| View Recipe | ![mockup](static/documentation/lightdetails.webp) | ![mockup](static/documentation/lightdetailsmob.webp) |
+| Home(show_recipes) | ![mockup](documentation/lighthome.webp) | ![mockup](documentation/lighthomemob.webp) |
+| Sign In | ![mockup](documentation/lightsignin.webp) | ![mockup](documentation/lightsigninmob.webp) |
+| Sign Up | ![mockup](documentation/lightsignup.webp) | ![mockup](documentation/lightsignupmob.webp) |
+| Profile |  ![mockup](documentation/lightprof.webp) | ![mockup](documentation/lightprofmob.webp) |
+| Edit Profile | ![mockup](documentation/lighteditprof.webp) | ![mockup](documentation/lighteditprofmob.webp) |
+| Delete Profile | ![mockup](documentation/lightdelprof.webp) | ![mockup](documentation/lightdelprofmob.webp) |
+| Add Recipe | ![mockup](documentation/lightaddrecipe.webp) | ![mockup](documentation/lightaddrecipemob.webp) |
+| Edit Recipe | ![mockup](documentation/lighteditrecipe.webp) | ![mockup](documentation/lighteditrecipemob.webp) |
+| About | ![mockup](documentation/lightabout.webp) | ![mockup](documentation/lightaboutmob.webp) |
+| View Recipe | ![mockup](documentation/lightdetails.webp) | ![mockup](documentation/lightdetailsmob.webp) |
 
 I also used [WAVE](https://wave.webaim.org/) to check accessability which Raised no Errors.
 Results can be viewed [here](https://wave.webaim.org/report#/https://veg-centric-msp3-64721c5e710e.herokuapp.com).
@@ -417,7 +417,7 @@ module.exports = {
 ```
 From there I was able to write tests for the initializeDropdown, initializeCollapsible, handleAddIngridient, handleAddMethodStep and initializeFormSelect Functions which all passed:
 
-![mockup](./static/documentation/jestpassed.webp)
+![mockup](documentation/jestpassed.webp)
 
 Below is a description of the one function I attempted to test with no success.
 
@@ -510,7 +510,7 @@ Below is a description of the one function I attempted to test with no success.
   The recipe description length previously caused layout issues in the user interface.
   When users posted a recipe with a description shorter than 100 characters, the information on the card did not display correctly, as shown in the image below:
 
-  ![mockup](./static/documentation/errorshortdesc.webp)
+  ![mockup](documentation/errorshortdesc.webp)
 
   Additionally, if a user used over 120 characters in the description, it caused problems with buttons overlaying text or text being cut off when resizing.
 

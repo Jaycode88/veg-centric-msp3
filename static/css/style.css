@@ -254,6 +254,10 @@ img {
 	width: 100%;
 }
 
+.card-content.custom-mushroom {
+	min-width: 100%;
+}
+
 .card {
 	min-height: 700px;
 	border-radius: 20px;
@@ -467,6 +471,11 @@ img {
 	.col.m6 {
 		width: 80% !important;
 		margin-left: 10% !important;
+	}
+
+	.nav-wrapper ul li:hover {
+		border: none;
+		box-shadow: 2px 2px 2px #5a873c;
 	}
 }
 

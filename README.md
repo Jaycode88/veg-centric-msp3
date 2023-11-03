@@ -1,39 +1,35 @@
 # Veg-Centric Recipes
 
-# A responsive web application for Users to view and share Veg-Centric recipes.
+ A responsive web application for Users to view and share Veg-Centric recipes.
 
 ## Code Intstitute - Milestone Project 3
 
-## HTML / CSS / Jquery / Python / Jinja / Flask / MongoDB / Materialize / Cloudinary / Heroku
+HTML / CSS / Jquery / Python / Jinja / Flask / MongoDB / Materialize / Cloudinary / Heroku
 
-### By Joe Seabrook
+By Joe Seabrook
 
-![screenshot](static/documentation/amiresponsive.webp)
+![screenshot](documentation/amiresponsive.webp)
 Image from [UI.dev](https://ui.dev/amiresponsive)
-
-### Repository Link
-
-[View in GitHub Pages](https://github.com/Jaycode88/veg-centric-msp3)
 
 ### Live Project Link
 
 [View Deployment Link](https://veg-centric-msp3-64721c5e710e.herokuapp.com/)
 
-# Content
+### Content
 
-- ## The Why
+- ### The Why
 
 Veg-Centric Recipes addresses a growing need for economical and sustainable dining options. As people seek ways to reduce food costs, we recognize that incorporating more vegetables into meals is not only healthier but also more budget-friendly than heavy meat-based dishes. We're here to show that delicious, wallet-friendly meals can be centered around vibrant veggies.
 
-- ## Business Goal
+- ### Business Goal
 
 - Expand our user base to build a thriving community.
 
 - Gain revenue streams through advertising opportunities and affiliate marketing partnerships, enabling us to continue offering valuable resources and content to our users.
 
-- ### User Stories
+- #### User Stories
 
-    - #### First-Time User Goals
+    - ##### First-Time User Goals
 
         - Enjoy a User-Friendly Experience: A user-friendly interface and navigation system that allows users to easily explore the website and discover recipes and resources.
 
@@ -110,7 +106,7 @@ Veg-Centric Recipes addresses a growing need for economical and sustainable dini
 
 ## Design
 - ### Theme and Color Scheme
-![Mock-up](static/documentation/colorpallete.webp)
+![Mock-up](documentation/colorpallete.webp)
     Green And Goldenrod:
     This pallete Consists of the colors Olive Green (#5A873C), Apple Green (#8ABD4D), Pale Goldenrod (#DED8A0) and White (#FFFFF).
 
@@ -118,7 +114,7 @@ Veg-Centric Recipes addresses a growing need for economical and sustainable dini
     Below is the Physcology of each color and its relation to food.
 
 - **Olive Green**
-![mockup](static/documentation/olivegreen.webp)
+![mockup](documentation/olivegreen.webp)
     - Earthy and Sophisticated: Olive green is often associated with earthiness and sophistication. It's reminiscent of olive trees and has a muted, subdued quality.
 
     - Stability and Endurance: This shade of green can convey a sense of stability and endurance, making it suitable for products or environments that want to project reliability.
@@ -129,7 +125,7 @@ Veg-Centric Recipes addresses a growing need for economical and sustainable dini
     -   Olive green may be associated with earthy and savory flavors. It's often found in Mediterranean cuisine due to its connection with olives. It can also be used in packaging or decor to suggest a more mature or refined culinary experience.
 
 - **Apple Green**
-![mockup](static/documentation/applegreen.webp)
+![mockup](documentation/applegreen.webp)
     - Vibrancy and Freshness: Apple green, or bright green, is associated with vibrancy, freshness, and youthfulness. It's often used to create a lively and energetic atmosphere.
     
     - Creativity and Innovation: This shade of green can stimulate creativity and innovation. It's often used in marketing to catch attention and convey a sense of excitement.
@@ -143,10 +139,10 @@ Veg-Centric Recipes addresses a growing need for economical and sustainable dini
 
 - **Research of green used by Food Companys and Authoritys**
     - Upon research into the use of the color green within in the food sector I found many large companies and Authorities Use this color in different shades in their logos and marketing, Including 2 recipe websites.
-![Mock-up](static/documentation/greencompanies.webp)
+![Mock-up](documentation/greencompanies.webp)
 
 - **Pale Goldenrod**
-![mockup](static/documentation/mushroom.webp)
+![mockup](documentation/mushroom.webp)
 
      Whilst this colour is not normally considered in the normal mushroom range of colours I chose it due to it closeness to the mushroom range without the grey hue which can cause slight visibility problems with text, yet still holds the earthy undertones of mushroom. This color offers:
 
@@ -164,7 +160,7 @@ Veg-Centric Recipes addresses a growing need for economical and sustainable dini
     - Warm Desserts: In the realm of desserts, #DED8A0 might be likened to the golden-brown crust of a freshly baked pie or the warm, inviting color of a bread pudding. It conveys a sense of indulgence.
 
 - **White**
-![mockup](static/documentation/white.webp)
+![mockup](documentation/white.webp)
 
     While white may not be a traditional color associated with specific emotions, it carries its own psychological connotations:
     - Simplicity and Minimalism: White is frequently associated with simplicity and minimalism. It represents clarity, order, and a sense of space. In design and aesthetics, it's used to create clean, uncluttered visuals.
@@ -187,19 +183,19 @@ In designing this project, I carefully selected fonts to convey the desired visu
 
    - **Playfair Display (Logo and Headings)**
 
-![mockup](static/documentation/playfair.webp)
+![mockup](documentation/playfair.webp)
 
 - *Psychology*: Playfair Display is a serif font known for its elegance and sophistication. It carries a sense of tradition and classicism, making it an excellent choice for logos and headings. The distinctive serifs and high contrast between thick and thin strokes create a sense of luxury and refinement, aligning with the project's premium and professional aesthetic.
 
 - **Alice (Body Text)**
 
-![mockup](static/documentation/alice.webp)
+![mockup](documentation/alice.webp)
 
 - *Psychology*: Alice is a modern and legible sans-serif font. It offers a clean and friendly appearance, making it an ideal choice for body text. The simplicity and readability of Alice ensure that users can comfortably consume content without distraction. This font choice promotes a user-friendly experience, enhancing readability and accessibility. 
 
  #### Fallback Font
 
- ![mockup](static/documentation/sanserif.webp)
+ ![mockup](documentation/sanserif.webp)
 
  As a best practice, I have also included a fallback font in The design. In cases where browsers or devices may not support the specific fonts mentioned above, we use a generic sans-serif font. This ensures that the text remains legible and maintains a consistent appearance across various platforms.
 
@@ -222,33 +218,33 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
     The basic layout of Veg-Centric Recipes was created with [Balsamiq](https://balsamiq.com/).
 
     - **Homepage**
-    ![Mock-up](static/documentation/wireframes.webp)
+    ![Mock-up](documentation/wireframes.webp)
 
     - **About**
-    ![Mock-up](static/documentation/wfabout.webp)
+    ![Mock-up](documentation/wfabout.webp)
 
     - **Sign Up**
-    ![Mock-up](static/documentation/wfsignup.webp)
+    ![Mock-up](documentation/wfsignup.webp)
 
     - **Sign In**
-    ![Mock-up](static/documentation/wfsignin.webp)
+    ![Mock-up](documentation/wfsignin.webp)
 
     - **Profile**
-    ![Mock-up](static/documentation/wfprof.webp)
+    ![Mock-up](documentation/wfprof.webp)
 
     - **Add Recipe**
-    ![Mock-up](static/documentation/wfaddrecipe.webp)
+    ![Mock-up](documentation/wfaddrecipe.webp)
 
 - ## High Fidelity Prototype
     The Prototype for the main page was made with [Figma](https://www.figma.com/)
 
     - **Home Page**
     
-    ![Mock-up](static/documentation/highfidelity.webp)
+    ![Mock-up](documentation/highfidelity.webp)
 
     - **Recipe details Page**
     
-    ![Mock-up](static/documentation/hfdetails.webp)
+    ![Mock-up](documentation/hfdetails.webp)
 
 - ## Features
  - #### Navigation Bar
@@ -260,7 +256,7 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
 
     - The Naviagtion bar was created with [Materialize](https://materializecss.com/)
 
-![screenshot](static/documentation/navigation.webp)
+![screenshot](documentation/navigation.webp)
 
  - #### Footer Bar
     - The footer bar is a key component of Veg-Centric, designed to enhance user engagement, transparency, and accessibility. It appears at the bottom of every page and contains valuable information and links to various resources.
@@ -273,14 +269,14 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
 
     - The footer was created with [Materialize](https://materializecss.com/)
 
-![screenshot](static/documentation/footer.webp)
+![screenshot](documentation/footer.webp)
 
 - #### Recipe Search
     - The search feature enhances the user experience by providing a tailored way to find recipes that match their preferences. Users can quickly filter through a large collection of recipes and discover the ones that align with their culinary interests.
 
     - The search form was created with [Materialize](https://materializecss.com/)
 
-![screenshot](static/documentation/search.webp)
+![screenshot](documentation/search.webp)
 
 - #### Recipe Cards
     - Recipe cards are the visual representation of individual recipes within our web application. Each recipe card provides a comprehensive overview of a specific recipe, allowing users to quickly assess its details, category, and more.
@@ -289,7 +285,7 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
 
     - The recipe cards were created with [Materialize](https://materializecss.com/)
 
-![screenshot](static/documentation/recipecard.webp)
+![screenshot](documentation/recipecard.webp)
 
 - #### Recipe Details page
     - The Recipe Details Page offers users a rich and informative experience, enabling them to explore recipes in detail
@@ -298,20 +294,20 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
 
     - If Admin has edited a recipe to add affiliate products the Recipe Details page Transforms to include the product intro, Image and affiliate link
 
-![screensot](static/documentation/recipedetails1.webp)
+![screensot](documentation/recipedetails1.webp)
 
-![screensot](static/documentation/recipedetails.webp)
+![screensot](documentation/recipedetails.webp)
 
-![screenshot](static/documentation/recipewithproduct.webp)
+![screenshot](documentation/recipewithproduct.webp)
 
 - #### Add and Edit Recipe Forms
     - The Add and Edit Recipe forms are a fundamental feature of our veg-centric recipe sharing site, allowing users to contribute their own delicious Veg-Centric recipes to our growing community. 
     
     - The Edit recipe form Is pre-populated with the recipe data for the user to change.
 
-![screenshot](static/documentation/addrecipe.webp)
+![screenshot](documentation/addrecipe.webp)
 
-![screenshot](static/documentation/editrecipe.webp)
+![screenshot](documentation/editrecipe.webp)
 
 
 - #### Sign In and Sign Up
@@ -323,22 +319,22 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
 
     - The Sign in and sign up forms are displayed on [Materialize](https://materializecss.com/) Cards.
 
-![screenshot](static/documentation/signinup.webp)
-![screenshot](static/documentation/signin.webp)
+![screenshot](documentation/signinup.webp)
+![screenshot](documentation/signin.webp)
 
 - #### Profile Page
     - The Profile Page enhances the user experience by centralizing user-related information and actions. It allows users to manage their profile, access their uploaded recipes, and easily revisit their favorite recipes. Additionally, it provides a sense of ownership and engagement within the Veg-Centric community.
     
     - All contents on this page are arranged into a [Materialize](https://materializecss.com/) Collapsible.
 
-![screenshot](static/documentation/profile.webp)
+![screenshot](documentation/profile.webp)
 
 - #### About Page
     - The About page in the project provides users with a comprehensive overview of Veg-Centric Recipes. It introduces the project's mission, highlights the significance of a veg-centric lifestyle, and delves into the vibrant community that makes this project unique. Additionally, links are provided to our Terms and Conditions and Privacy Policy for users to reference. This page aims to give users a clear understanding of what Veg-Centric Recipes is all about and how they can get involved.
 
     - The "About" details are displayed on [Materialize](https://materializecss.com/) Card.
 
-![mockup](static/documentation/about.webp)
+![mockup](documentation/about.webp)
 
 - #### Facebook Page
   The design seamlessly integrates with the official Facebook page, enhancing user engagement and keeping users connected:
@@ -349,23 +345,23 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
 
     - User Engagement: Engage with our community through interactive posts and discussions.
 
-    ![screenshot](static/documentation/fbpage.webp)
+    ![screenshot](documentation/fbpage.webp)
 
 - #### Admin Features
 The Admin Has extra options over Standard users many of these are to maintain readability standards such as editing spelling mistakes etc.
 
  - **Manage Catagories page**
     On this page the Admin can add, edit and remove categories.
-    ![mockup](static/documentation/admincat.webp)
+    ![mockup](documentation/admincat.webp)
 
 - **Edit Recipe**
     The Admin's Edit recipe form includes more inputs, Allowing the site owner to edit users recipes for the purpose of removing spelling mistkes, changing the image for aesthetical purposes, Adding product information and links to affiliates.
 
-    ![mockup](static/documentation/adminedit.webp)
+    ![mockup](documentation/adminedit.webp)
 
     Admin also have extra buttons on the recipes details page allowing them to edit and delete all user recipes.
 
-    ![mockup](static/documentation/adminxbtns.webp)
+    ![mockup](documentation/adminxbtns.webp)
 
  - ## Future Features I would like to include
     - #### Pagination
@@ -403,7 +399,7 @@ The Admin Has extra options over Standard users many of these are to maintain re
 
     The arrows on the chart show the connections made between databases in my code.
 
-    ![screenshot](static/documentation/dataflow.webp)
+    ![screenshot](documentation/dataflow.webp)
 
 ### **CRUD Functionality**
 ##### User Management:
