@@ -758,6 +758,7 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
     | Stuffed Bell Peppers | [FreePik](https://www.freepik.com/) | [Kamran Aydinov](https://www.freepik.com/author/kamranaydinov) |
     | Stuffed Pasta Shells | [Pexels](https://www.pexels.com/photo/bowl-of-cooked-food-3590401/) | [Sebastian Coman Photography](https://www.pexels.com/@sebastian-coman-photography-1598188/) |
     | Mushroom Burger | [Pexels](https://www.pexels.com/photo/crop-woman-with-burger-at-table-5908059/) | [Katerina Holmes](https://www.pexels.com/@katerina-holmes/) |
+    | Chickpea & Sweet Potatoe curry | [Pexels](https://pixabay.com/photos/curry-chickpea-rice-avocado-slices-5460980/) | [Lucy Prior](https://pixabay.com/users/lucy_prior-4900276/) |
 
     All Product Images that were used, were displayed via their URL Directly from the Product's description/sales page on [Amazon](https://www.amazon.co.uk/)
 
