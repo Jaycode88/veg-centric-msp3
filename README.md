@@ -1,117 +1,82 @@
-# Veg-Centric Recipes
+# [Veg-Centric Recipes](https://veg-centric-msp3-64721c5e710e.herokuapp.com)
 
  A responsive web application for Users to view and share Veg-Centric recipes.
 
-## Code Intstitute - Milestone Project 3
+**Code Intstitute - Milestone Project 3**
 
-HTML / CSS / Jquery / Python / Jinja / Flask / MongoDB / Materialize / Cloudinary / Heroku
+HTML / CSS / Jquery / Python / Jinja2 / Flask / MongoDB / Materialize / Cloudinary / Heroku / Cloudinary / Pillow
 
 By Joe Seabrook
 
 ![screenshot](documentation/amiresponsive.webp)
 Image from [UI.dev](https://ui.dev/amiresponsive)
 
-### Live Project Link
+[View Live Deployment](https://veg-centric-msp3-64721c5e710e.herokuapp.com/)
 
-[View Deployment Link](https://veg-centric-msp3-64721c5e710e.herokuapp.com/)
+## Strategy
 
-### Content
+### THE 5 PLANES
 
-- ### The Why
+- **Purpose of the website?**
+
+    Provide a diverse and accessible collection of veg-centric recipes, cooking tips, and resources to inspire and assist users in their culinary journey.
+
+- **Target audience?**
+
+    * Home Cooks and Food Enthusiasts: Those who enjoy cooking and are looking for creative, vegetable-centric recipes that offer both flavor and nutrition.
+
+    * Health-Conscious Consumers: Individuals who prioritize their health and are seeking ways to incorporate more vegetables into their diets for improved well-being.
+
+    * Budget-Conscious Shoppers: People who are mindful of their food expenses and are interested in cost-effective meal options that don't compromise on taste or nutrition.
+
+- **Value to the user?**
+
+    * Economical Dining Solutions: We empower users to save money on their food expenses by sharing budget-friendly veg-centric recipes that prove that healthy eating doesn't have to break the bank.
+
+    * Inspiration for Healthier Living: The platform inspires users to make healthier dietary choices by showcasing the nutritional benefits of vegetable-centric meals, helping them achieve their wellness goals.
+
+    * Community and Connection: We foster a vibrant and supportive community where users can connect with like-minded individuals, share their culinary experiences, and exchange ideas for veg-centric living.
+
+- **What makes a good experience ?**
+
+    * User-Friendly Interface: A well-designed and intuitive interface that is easy to navigate, ensuring that users can find and upload recipes.
+
+    * Responsive Design: A website that adapts seamlessly to various devices and screen sizes, ensuring a consistent and enjoyable experience whether users are on desktop, tablet, or mobile.
+
+    * Search Option: Robust search feature that allow users to find specific recipes by Name, Category and User.
+
+    * Accessibility: Ensuring that the website is accessible to users with disabilities, including features like alt text for images and keyboard navigation.
+
+    * Community Engagement: A vibrant and active community where users can share their own recipes with others who share their interests.
+
+- **What we shouldn't do?**
+
+    * Spam or Over-Promotion: We do not engage in spammy practices, including excessive advertising, unsolicited emails, or intrusive pop-ups that disrupt the user experience.
+
+    * Misleading Information: We do not provide misleading or inaccurate information, especially regarding health, nutrition, or the environmental impact of food choices.
+
+    * Plagiarism: We do not plagiarize content from other sources. All content on our platform is original, properly attributed, and respects copyright laws.
+
+    * Neglecting User Privacy: We do not compromise user privacy by sharing or selling personal information without consent. We adhere to strict privacy policies to protect user data.
+
+### The Why
 
 Veg-Centric Recipes addresses a growing need for economical and sustainable dining options. As people seek ways to reduce food costs, we recognize that incorporating more vegetables into meals is not only healthier but also more budget-friendly than heavy meat-based dishes. We're here to show that delicious, wallet-friendly meals can be centered around vibrant veggies.
 
-- ### Business Goal
+### The Business Goal
 
 - Expand our user base to build a thriving community.
 
 - Gain revenue streams through advertising opportunities and affiliate marketing partnerships, enabling us to continue offering valuable resources and content to our users.
 
-- #### User Stories
-
-    - ##### First-Time User Goals
-
-        - Enjoy a User-Friendly Experience: A user-friendly interface and navigation system that allows users to easily explore the website and discover recipes and resources.
-
-        - Browse Veg-Centric Recipes: Users will want to discover simple and time-efficient vegetable-based recipes for their meals.
-
-        - Join the community: A User may want to join the community and share their own recipes
-
-        - Find information about Veg-Centric.
-
-    - #### Returning User Goals
-
-        - Contribute to the Community: Enable returning users to actively contribute to the community by sharing their own veg-centric recipes.
-
-        - Save Favorite Recipes: Allow users to save their favorite veg-centric recipes to their profile for easy access on return visits.
-
-        - To be able to view, edit and Delete their uploaded recipes.
-
-        - To have a page with user information with the option to update.
-
-    - #### Website Owner Goals
-
-        - Edit all Recipes to ensure content quality.
-
-        - Edit recipe images for aesthetical purposes.
-
-        - The ability to add Categories.
-
-        - Generate revenue Through Affiliate Marketing.
-
-## THE 5 PLANES
-- ### Strategy
-
-    - **Purpose of the website?**
-
-        Provide a diverse and accessible collection of veg-centric recipes, cooking tips, and resources to inspire and assist users in their culinary journey.
-
-    - **Target audience?**
-
-        * Home Cooks and Food Enthusiasts: Those who enjoy cooking and are looking for creative, vegetable-centric recipes that offer both flavor and nutrition.
-
-        * Health-Conscious Consumers: Individuals who prioritize their health and are seeking ways to incorporate more vegetables into their diets for improved well-being.
-
-        * Budget-Conscious Shoppers: People who are mindful of their food expenses and are interested in cost-effective meal options that don't compromise on taste or nutrition.
-
-    - **Value to the user?**
-
-        * Economical Dining Solutions: We empower users to save money on their food expenses by sharing budget-friendly veg-centric recipes that prove that healthy eating doesn't have to break the bank.
-
-        * Inspiration for Healthier Living: The platform inspires users to make healthier dietary choices by showcasing the nutritional benefits of vegetable-centric meals, helping them achieve their wellness goals.
-
-        * Community and Connection: We foster a vibrant and supportive community where users can connect with like-minded individuals, share their culinary experiences, and exchange ideas for veg-centric living.
-
-    - **What makes a good experience ?**
-
-      * User-Friendly Interface: A well-designed and intuitive interface that is easy to navigate, ensuring that users can find and upload recipes.
-
-      * Responsive Design: A website that adapts seamlessly to various devices and screen sizes, ensuring a consistent and enjoyable experience whether users are on desktop, tablet, or mobile.
-
-      * Search Option: Robust search feature that allow users to find specific recipes by Name, Category and User.
-
-      * Accessibility: Ensuring that the website is accessible to users with disabilities, including features like alt text for images and keyboard navigation.
-
-      * Community Engagement: A vibrant and active community where users can share their own recipes with others who share their interests.
-
-    - **What we shouldn't do?**
-
-        * Spam or Over-Promotion: We do not engage in spammy practices, including excessive advertising, unsolicited emails, or intrusive pop-ups that disrupt the user experience.
-
-        * Misleading Information: We do not provide misleading or inaccurate information, especially regarding health, nutrition, or the environmental impact of food choices.
-
-        * Plagiarism: We do not plagiarize content from other sources. All content on our platform is original, properly attributed, and respects copyright laws.
-
-        * Neglecting User Privacy: We do not compromise user privacy by sharing or selling personal information without consent. We adhere to strict privacy policies to protect user data.
-
-## Design
-- ### Theme and Color Scheme
+## UX
+### Color Scheme
 ![Mock-up](documentation/colorpallete.webp)
     Green And Goldenrod:
     This pallete Consists of the colors Olive Green (#5A873C), Apple Green (#8ABD4D), Pale Goldenrod (#DED8A0) and White (#FFFFF).
 
-- #### **Color by Color:**
-    Below is the Physcology of each color and its relation to food.
+#### Color by Color:
+Below is the Physcology of each color and its relation to food.
 
 - **Olive Green**
 ![mockup](documentation/olivegreen.webp)
@@ -177,77 +142,101 @@ Veg-Centric Recipes addresses a growing need for economical and sustainable dini
 
     - Neutrality: White is a neutral background that allows the colors, textures, and shapes of food to stand out. It's a common choice for food presentation in fine dining.
 
-- ## Typography
- #### Font Choices
+### Typography
 In designing this project, I carefully selected fonts to convey the desired visual identity and user experience. My font choices which all came from [Google Fonts](https://fonts.google.com/), are as follows:
 
-   - **Playfair Display (Logo and Headings)**
+- **Playfair Display (Logo and Headings)**
 
-![mockup](documentation/playfair.webp)
+    ![mockup](documentation/playfair.webp)
 
-- *Psychology*: Playfair Display is a serif font known for its elegance and sophistication. It carries a sense of tradition and classicism, making it an excellent choice for logos and headings. The distinctive serifs and high contrast between thick and thin strokes create a sense of luxury and refinement, aligning with the project's premium and professional aesthetic.
+- Psychology: Playfair Display is a serif font known for its elegance and sophistication. It carries a sense of tradition and classicism, making it an excellent choice for logos and headings. The distinctive serifs and high contrast between thick and thin strokes create a sense of luxury and refinement, aligning with the project's premium and professional aesthetic.
 
 - **Alice (Body Text)**
 
-![mockup](documentation/alice.webp)
+    ![mockup](documentation/alice.webp)
 
-- *Psychology*: Alice is a modern and legible sans-serif font. It offers a clean and friendly appearance, making it an ideal choice for body text. The simplicity and readability of Alice ensure that users can comfortably consume content without distraction. This font choice promotes a user-friendly experience, enhancing readability and accessibility. 
+- Psychology: Alice is a modern and legible sans-serif font. It offers a clean and friendly appearance, making it an ideal choice for body text. The simplicity and readability of Alice ensure that users can comfortably consume content without distraction. This font choice promotes a user-friendly experience, enhancing readability and accessibility. 
 
- #### Fallback Font
+- **Fallback Font**
 
- ![mockup](documentation/sanserif.webp)
+    ![mockup](documentation/sanserif.webp)
 
- As a best practice, I have also included a fallback font in The design. In cases where browsers or devices may not support the specific fonts mentioned above, we use a generic sans-serif font. This ensures that the text remains legible and maintains a consistent appearance across various platforms.
+- As a best practice, I have also included a fallback font in The design. In cases where browsers or devices may not support the specific fonts mentioned above, we use a generic sans-serif font. This ensures that the text remains legible and maintains a consistent appearance across various platforms.
 
 My font choices, including the fallback option, reflect the project's personality and goals, combining elegance with readability to create an engaging and visually appealing user interface.
 
-- ## Background
-    In This design, I have chosen a white background as the primary canvas for several compelling reasons:
+## User Stories
+
+- **First-Time User Goals**
+
+    - Enjoy a User-Friendly Experience: A user-friendly interface and navigation system that allows users to easily explore the website and discover recipes and resources.
+
+     - Browse Veg-Centric Recipes: Users will want to discover simple and time-efficient vegetable-based recipes for their meals.
+
+    - Join the community: A User may want to join the community and share their own recipes
+
+    - Find information about Veg-Centric.
+
+- **Returning User Goals**
+
+    - Contribute to the Community: Enable returning users to actively contribute to the community by sharing their own veg-centric recipes.
+
+    - Save Favorite Recipes: Allow users to save their favorite veg-centric recipes to their profile for easy access on return visits.
+
+    - To be able to view, edit and Delete their uploaded recipes.
+
+    - To have a page with user information with the option to update.
+
+- **Website Owner Goals**
+
+    - Edit all Recipes to ensure content quality.
+
+    - Edit recipe images for aesthetical purposes.
+
+    - The ability to add Categories.
+
+    - Generate revenue Through Affiliate Marketing.
+
+
+
+
+## Wireframes
+The basic layout of Veg-Centric Recipes was created with [Balsamiq](https://balsamiq.com/).
+
+- **Homepage**
+![Mock-up](documentation/wireframes.webp)
+
+- **About**
+![Mock-up](documentation/wfabout.webp)
+
+- **Sign Up**
+![Mock-up](documentation/wfsignup.webp)
+
+- **Sign In**
+![Mock-up](documentation/wfsignin.webp)
+
+- **Profile**
+![Mock-up](documentation/wfprof.webp)
+
+- **Add Recipe**
+![Mock-up](documentation/wfaddrecipe.webp)
+
+## High Fidelity Prototype
+The Prototype for the main page was made with [Figma](https://www.figma.com/)
+
+- **Home Page**
     
-    - Cleanliness and Freshness: White universally signifies cleanliness and freshness, aligning with our goal of presenting a clean and inviting interface. It provides a pristine, clutter-free backdrop that conveys purity and simplicity.
+![Mock-up](documentation/highfidelity.webp)
 
-    - High Readability: White backgrounds ensure excellent text contrast, enhancing content readability. This is crucial for user engagement and comprehension in our user interface.
-
-    - Timelessness: White backgrounds have a timeless quality, remaining relevant and appealing over time. They serve as a neutral canvas that allows other design elements to shine.
-
-    - Image Appeal: The decision to employ a plain white background serves a crucial purpose within the design. By opting for a minimalist backdrop, we intentionally create a canvas that allows the vibrant colors within the images to take center stage and captivate the user's attention.
-
-Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in certain interface sections for visual interest and subtle elegance.
-
-- ## Wireframes
-    The basic layout of Veg-Centric Recipes was created with [Balsamiq](https://balsamiq.com/).
-
-    - **Homepage**
-    ![Mock-up](documentation/wireframes.webp)
-
-    - **About**
-    ![Mock-up](documentation/wfabout.webp)
-
-    - **Sign Up**
-    ![Mock-up](documentation/wfsignup.webp)
-
-    - **Sign In**
-    ![Mock-up](documentation/wfsignin.webp)
-
-    - **Profile**
-    ![Mock-up](documentation/wfprof.webp)
-
-    - **Add Recipe**
-    ![Mock-up](documentation/wfaddrecipe.webp)
-
-- ## High Fidelity Prototype
-    The Prototype for the main page was made with [Figma](https://www.figma.com/)
-
-    - **Home Page**
+- **Recipe details Page**
     
-    ![Mock-up](documentation/highfidelity.webp)
+![Mock-up](documentation/hfdetails.webp)
 
-    - **Recipe details Page**
-    
-    ![Mock-up](documentation/hfdetails.webp)
+## Features
 
-- ## Features
- - #### Navigation Bar
+### Existing Features
+
+ - **Navigation Bar**
     - The navigation bar is a central feature that enhances the user experience by providing easy access to key functionalities and content within Veg-Centric.  Whether on a desktop or a mobile device, users can seamlessly navigate through the application with the help of this feature.
 
     - The Nav Bar consist of: The Brand Logo which when clicked directs the user to the homepage, Top bar Navigation for larger screens and Dropdown Nav for Mobile decvices.
@@ -258,7 +247,7 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
 
 ![screenshot](documentation/navigation.webp)
 
- - #### Footer Bar
+ - **Footer Bar**
     - The footer bar is a key component of Veg-Centric, designed to enhance user engagement, transparency, and accessibility. It appears at the bottom of every page and contains valuable information and links to various resources.
 
     - The Join our community section:  This is a a strategically placed text to entice users to join the community
@@ -271,14 +260,14 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
 
 ![screenshot](documentation/footer.webp)
 
-- #### Recipe Search
+- **Recipe Search**
     - The search feature enhances the user experience by providing a tailored way to find recipes that match their preferences. Users can quickly filter through a large collection of recipes and discover the ones that align with their culinary interests.
 
     - The search form was created with [Materialize](https://materializecss.com/)
 
 ![screenshot](documentation/search.webp)
 
-- #### Recipe Cards
+- **Recipe Cards**
     - Recipe cards are the visual representation of individual recipes within our web application. Each recipe card provides a comprehensive overview of a specific recipe, allowing users to quickly assess its details, category, and more.
 
     - The recipe cards are designed to offer a visually pleasing and user-friendly experience. They provide a quick and convenient way for users to browse through our recipe collection, find dishes of interest, and take actions based on their preferences.
@@ -287,7 +276,7 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
 
 ![screenshot](documentation/recipecard.webp)
 
-- #### Recipe Details page
+- **Recipe Details page**
     - The Recipe Details Page offers users a rich and informative experience, enabling them to explore recipes in detail
 
     - It encourages user interaction by offering the option of adding to favorites.
@@ -300,8 +289,10 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
 
 ![screenshot](documentation/recipewithproduct.webp)
 
-- #### Add and Edit Recipe Forms
-    - The Add and Edit Recipe forms are a fundamental feature of our veg-centric recipe sharing site, allowing users to contribute their own delicious Veg-Centric recipes to our growing community. 
+- **Add and Edit Recipe Forms**
+    - The Add and Edit Recipe forms are a fundamental feature of our veg-centric recipe sharing site, allowing users to contribute their own delicious Veg-Centric recipes to our growing community.
+
+    - The Forms allow users to upload images of their recipe which is manipulated with Piilow Then Stored with Cloudinary(Featured below.)
     
     - The Edit recipe form Is pre-populated with the recipe data for the user to change.
 
@@ -309,8 +300,9 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
 
 ![screenshot](documentation/editrecipe.webp)
 
+***********    ADD Image Upload Feature here *******
 
-- #### Sign In and Sign Up
+- **Sign In and Sign Up**
     - I added a Sign up Feature so users can join the community and upload their own recipes and save other user's recipes to their favorites.
 
     - The User is notified that by signing up they agree to the terms and conditions and privacy policy which can be viewed via the linked text which opens a modal to display the information.
@@ -322,21 +314,21 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
 ![screenshot](documentation/signinup.webp)
 ![screenshot](documentation/signin.webp)
 
-- #### Profile Page
+- **Profile Page**
     - The Profile Page enhances the user experience by centralizing user-related information and actions. It allows users to manage their profile, access their uploaded recipes, and easily revisit their favorite recipes. Additionally, it provides a sense of ownership and engagement within the Veg-Centric community.
     
     - All contents on this page are arranged into a [Materialize](https://materializecss.com/) Collapsible.
 
 ![screenshot](documentation/profile.webp)
 
-- #### About Page
+- **About Page**
     - The About page in the project provides users with a comprehensive overview of Veg-Centric Recipes. It introduces the project's mission, highlights the significance of a veg-centric lifestyle, and delves into the vibrant community that makes this project unique. Additionally, links are provided to our Terms and Conditions and Privacy Policy for users to reference. This page aims to give users a clear understanding of what Veg-Centric Recipes is all about and how they can get involved.
 
     - The "About" details are displayed on [Materialize](https://materializecss.com/) Card.
 
 ![mockup](documentation/about.webp)
 
-- #### Facebook Page
+- **Facebook Page**
   The design seamlessly integrates with the official Facebook page, enhancing user engagement and keeping users connected:
 
     - Community Connection: Join our culinary community for updates, discussions, and like-minded connections.
@@ -347,53 +339,55 @@ Additionally, I've introduced pale goldenrod cards (#DED8A0) strategically in ce
 
     ![screenshot](documentation/fbpage.webp)
 
-- #### Admin Features
+- **Admin Features**
 The Admin Has extra options over Standard users many of these are to maintain readability standards such as editing spelling mistakes etc.
 
- - **Manage Catagories page**
-    On this page the Admin can add, edit and remove categories.
-    ![mockup](documentation/admincat.webp)
+    - Manage Catagories page
+        On this page the Admin can add, edit and remove categories.
+        ![mockup](documentation/admincat.webp)
 
-- **Edit Recipe**
-    The Admin's Edit recipe form includes more inputs, Allowing the site owner to edit users recipes for the purpose of removing spelling mistkes, changing the image for aesthetical purposes, Adding product information and links to affiliates.
+    - Edit Recipe
+        The Admin's Edit recipe form includes more inputs, Allowing the site owner to edit users recipes for the purpose of removing spelling mistkes, changing the image for aesthetical purposes, Adding product information and links to affiliates.
 
-    ![mockup](documentation/adminedit.webp)
+        ![mockup](documentation/adminedit.webp)
 
     Admin also have extra buttons on the recipes details page allowing them to edit and delete all user recipes.
 
     ![mockup](documentation/adminxbtns.webp)
 
- - ## Future Features I would like to include
-    - #### Pagination
+ ## Future Features
 
-        As the App's user base grows there will be many recipes being displayed on the show recipes(home) Page for users that are signed in. I believe I will need to add pagination to control the amount of recipes displaying on this page.
+- **Pagination**
+
+    As the App's user base grows there will be many recipes being displayed on the show recipes(home) Page for users that are signed in. I believe I will need to add pagination to control the amount of recipes displaying on this page.
         
-    - #### User ratings
+- **User ratings**
     
-        I think it would be a nice touch for users to be able to rate recipes they have tried, With these ratings displaying among the recipe details.
+    I think it would be a nice touch for users to be able to rate recipes they have tried, With these ratings displaying among the recipe details.
 
-    - #### Social Media Share
+- **Social Media Share**
         
-        I would like to add option for users to be able to share recipes to their social media pages.
+    I would like to add option for users to be able to share recipes to their social media pages.
 
-    - #### Product Database
-        I would like to add another database for suggested products so they do not have to be typed out seperately by admin for each recipe. I have held off of doing this so far as it has a down side that the product suggestions text is not personalised to the recipe, as it is currrently.
+- **Product Database**
 
-    - #### Blog  
-        I think a Blog would make an excellent addition to this project, It could consist of posts containing a variety of information from topics such as: Shopping on a budget, Economical cooking ideas, Seasonal produce.
+    I would like to add another database for suggested products so they do not have to be typed out seperately by admin for each recipe. I have held off of doing this so far as it has a down side that the product suggestions text is not personalised to the recipe, as it is currrently.
 
-    - #### User Engagement
-        Once the Application has a small comunity of people posting recipes, It would be good marketing practice to highlight things like Best user posted recipe of the week etc to the facebook group and blog. This would encourage user engagement. Could possibly have small competitions.
+- **Blog** 
+    I think a Blog would make an excellent addition to this project, It could consist of posts containing a variety of information from topics such as: Shopping on a budget, Economical cooking ideas, Seasonal produce.
 
-        If I were to make a blog for the Application I would like to offer users the oppurtunity to send in their own Veg-Centric blog articles which could be featured on the blog and facebook group.
+- **User Engagement**
+    Once the Application has a small comunity of people posting recipes, It would be good marketing practice to highlight things like Best user posted recipe of the week etc to the facebook group and blog. This would encourage user engagement. Could possibly have small competitions.
 
-    - #### Admin Control 
-        It would be nice for admin to have a users control area, A base where admin can see user information such as recipes posted, date joined etc. This could also be a great way to track users that are posting spam or offensive content, It could include a send warning email to user function aswell as have the option to block the user from using the app.
+    If I were to make a blog for the Application I would like to offer users the oppurtunity to send in their own Veg-Centric blog articles which could be featured on the blog and facebook group.
 
-- ## **DATABASES**
-    In this application, I rely on [MongoDB](https://mongodb.com/) as the primary database management system. MongoDB is a flexible NoSQL database that allows us to store and manage data in a format that seamlessly fits the dynamic nature of our project. It plays a crucial role in storing user information, recipes, categories, and other essential data.
+- **Admin Control** 
+    It would be nice for admin to have a users control area, A base where admin can see user information such as recipes posted, date joined etc. This could also be a great way to track users that are posting spam or offensive content, It could include a send warning email to user function aswell as have the option to block the user from using the app.
 
-    The database schema is designed to efficiently handle the storage and retrieval of data, ensuring that users can seamlessly interact with the application. This section provides an insight into how the application leverages MongoDB to perform various operations, including user management, recipe management, and more.
+## **DATABASES**
+In this application, I rely on [MongoDB](https://mongodb.com/) as the primary database management system. MongoDB is a flexible NoSQL database that allows us to store and manage data in a format that seamlessly fits the dynamic nature of our project. It plays a crucial role in storing user information, recipes, categories, and other essential data.
+
+The database schema is designed to efficiently handle the storage and retrieval of data, ensuring that users can seamlessly interact with the application. This section provides an insight into how the application leverages MongoDB to perform various operations, including user management, recipe management, and more.
 
 - **Models Flow Chart**
 
@@ -401,8 +395,9 @@ The Admin Has extra options over Standard users many of these are to maintain re
 
     ![screenshot](documentation/dataflow.webp)
 
-### **CRUD Functionality**
-##### User Management:
+### CRUD Functionality
+
+- **User Management:**
 1. **Create User (C):**
     - Function: 'sign_up'
    - Description: Allows users to register by providing necessary information. Includes checks for:
@@ -441,7 +436,7 @@ The Admin Has extra options over Standard users many of these are to maintain re
 
     - Database Operation: Deletes the user's document from the "users" collection.
 
-##### Recipe Management:
+- **Recipe Management:**
 1. **Create Recipe (C):**
     - Function: 'add_recipe'
 
@@ -480,7 +475,7 @@ The Admin Has extra options over Standard users many of these are to maintain re
 
     - Database Operation: Deletes the recipe document from the "recipes" collection.
 
-##### Favorite Recipes:
+- **Favorite Recipes:**
 1. **Create Favorite Recipe (C):**
     - Function: 'add_to_favorites'
 
@@ -499,7 +494,7 @@ The Admin Has extra options over Standard users many of these are to maintain re
 
     - Database Operation: Updates the user's document to remove the recipe ID from their "favorites" list.
 
-##### Category Management (Admin Only):
+- **Category Management (Admin Only):**
 1. **Create Category (C):**
     - Function: 'add_category'
 
@@ -532,7 +527,7 @@ The Admin Has extra options over Standard users many of these are to maintain re
 
     - Database Operation: Deletes the category document from the "categories" collection.
 
-##### Other Functionality:
+- **Other Functionality:**
 1. **Search Recipes (R):**
     - Function: 'search_recipes'
 
@@ -576,172 +571,173 @@ The Admin Has extra options over Standard users many of these are to maintain re
 
 For the documentation of all testing,Please see [TESTING.md](TESTING.md) 
 
-## **DEPLOYMENT**
-- ### Local Deployment
+## DEPLOYMENT
+### Local Deployment
 This project can be cloned or forked in order to make a local copy on your own system.
 
-- #### Cloning
-    You can clone this repository by following these steps:
+#### Cloning
 
-    1. Go to the [GitHub repository](https://github.com/Jaycode88/veg-centric-msp3) 
-    2. Locate the Code button above the list of files and click it 
-    3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
-    4. Open Git Bash or Terminal
-    5. Change the current working directory to the one where you want the cloned directory
-    6. In your IDE Terminal, type the following command to clone my repository:
+You can clone this repository by following these steps:
+
+1. Go to the [GitHub repository](https://github.com/Jaycode88/veg-centric-msp3) 
+2. Locate the Code button above the list of files and click it 
+3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
+4. Open Git Bash or Terminal
+5. Change the current working directory to the one where you want the cloned directory
+6. In your IDE Terminal, type the following command to clone my repository:
         - `git clone https://github.com/Jaycode88/veg-centric-msp3.git`
-    7. Press Enter to create your local clone.
+7. Press Enter to create your local clone.
 
-    Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Jaycode88/veg-centric-msp3)
 
 Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
 A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension)
 
-- #### Forking
-    By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
-    You can fork this repository by using the following steps:
+#### Forking
 
-    1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Jaycode88/veg-centric-msp3)
-    2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-    3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
+By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
+    
+You can fork this repository by using the following steps:
 
- - **Running Locally**
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Jaycode88/veg-centric-msp3)
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
-    After you have cloned or forked the repository and navigated to the project directory, you can set up your local environment as follows:
+#### Running Locally
 
-    1. **Install Dependencies**: Make sure you have Python 3.x installed on your system. Then, install the required dependencies listed in the `requirements.txt` file:
+After you have cloned or forked the repository and navigated to the project directory, you can set up your local environment as follows:
 
-        ```  
-        pip install -r requirements.txt
-        ``` 
+1. **Install Dependencies**: Make sure you have Python 3.x installed on your system. Then, install the required dependencies listed in the `requirements.txt` file:
 
-    2. **Configure Environment Variables**: If your application requires environment variables, create a `.env` file in the project directory and add the necessary variables.
+    ```  
+    pip install -r requirements.txt
+    ``` 
 
-    3. **.gitignore File**: Ensure that you have a `.gitignore` file in your project to exclude sensitive information and files from being committed to version control. Common entries in a `.gitignore` file include `.env`, `.pyc` files, and other temporary or generated files.
+2. **Configure Environment Variables**: If your application requires environment variables, create a `.env` file in the project directory and add the necessary variables.
 
-    4. **Run the Application**: Start the local development server using the following command:
+3. **.gitignore File**: Ensure that you have a `.gitignore` file in your project to exclude sensitive information and files from being committed to version control. Common entries in a `.gitignore` file include `.env`, `.pyc` files, and other temporary or generated files.
 
-        ```
-        python3 app.py
-        ```
+4. **Run the Application**: Start the local development server using the following command:
 
-        Replace `app.py` with the actual name of your main application file.
+    ```
+    python3 app.py
+    ```
 
-- ### Deployment with Heroku
-    This application can be deployed on Heroku to make it accessible on the web. Follow these steps to deploy your app:
+Replace `app.py` with the actual name of your main application file.
 
-    - #### Prerequisites
+### Deployment with Heroku
 
-        Before deploying the app on Heroku, make sure you have the following prerequisites:
+This application can be deployed on Heroku to make it accessible on the web. Follow these steps to deploy your app:
 
-        1. [Heroku Account](https://signup.heroku.com/) - You need a Heroku account to deploy your app.
-        2. [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) - Install the Heroku Command Line Interface to interact with Heroku from your terminal.
+#### Prerequisites
 
-    - ### Deployment Steps
+Before deploying the app on Heroku, make sure you have the following prerequisites:
 
-    1. **Login to Heroku**: Open your terminal and log in to your Heroku account using the following command:
+1. [Heroku Account](https://signup.heroku.com/) - You need a Heroku account to deploy your app.
+2. [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) - Install the Heroku Command Line Interface to interact with Heroku from your terminal.
+
+#### Deployment Steps
+
+1. **Login to Heroku**: Open your terminal and log in to your Heroku account using the following command:
    
-        ```
-        heroku login
-        ```
-        Follow the prompts to log in to your Heroku account.
+    ```
+    heroku login
+    ```
+    Follow the prompts to log in to your Heroku account.
 
-    2. **Create a Heroku App**: Navigate to your project directory in the terminal and create a new Heroku app
-        ```
-        heroku create your-app-name
-        ```
-        Replace your-app-name with a unique name for your app. Heroku will provide you with a URL for your app (e.g., https://your-app-name.herokuapp.com/).
+2. **Create a Heroku App**: Navigate to your project directory in the terminal and create a new Heroku app
+    ```
+    heroku create your-app-name
+    ```
+    Replace your-app-name with a unique name for your app. Heroku will provide you with a URL for your app (e.g., https://your-app-name.herokuapp.com/).
 
-    3. **Configure Environment Variables**: Store sensitive information like secret keys and API credentials as environment variables on Heroku. You can set these variables using the Heroku CLI or through the Heroku Dashboard
-        ```
-        heroku config:set SECRET_KEY=your-secret-key
-        heroku config:set API_KEY=your-api-key
-        ```
-        Replace your-secret-key and your-api-key with the actual values you need to configure.
+3. **Configure Environment Variables**: Store sensitive information like secret keys and API credentials as environment variables on Heroku. You can set these variables using the Heroku CLI or through the Heroku Dashboard
+    ```
+    heroku config:set SECRET_KEY=your-secret-key
+    heroku config:set API_KEY=your-api-key
+    ```
+    Replace your-secret-key and your-api-key with the actual values you need to configure.
 
-    4. **Deploy to Heroku**: Deploy your app to Heroku by pushing your code to the Heroku remote repository
-        ```
-        git push heroku main
-        ```
-        Ensure that you have committed all your changes to the main branch before running this command.
+4. **Deploy to Heroku**: Deploy your app to Heroku by pushing your code to the Heroku remote repository
+    ```
+    git push heroku main
+    ```
+    Ensure that you have committed all your changes to the main branch before running this command.
 
-    5. **Open the App**: Once the deployment is complete, you can open your app in your web browser using the following command.
-        ```
-        heroku open
-        ```
-        This will open your app in a new browser window.
+5. **Open the App**: Once the deployment is complete, you can open your app in your web browser using the following command.
+    ```
+    heroku open
+    ```
+    This will open your app in a new browser window.
 
-    #### Congratulations
-    Your app is now deployed and live on Heroku with sensitive information securely managed as environment variables. You can share the Heroku app URL with others to access your application online.
+### Local vs Deployment
 
-- #### Local vs Deployment
+When working with this project, it's important to understand the differences between running the application locally and deploying it to Heroku:
 
-    When working with this project, it's important to understand the differences between running the application locally and deploying it to Heroku:
+- **Local Development**: Running the application locally is ideal for development and testing purposes. You can make changes, test new features, and experiment with the code in a controlled environment.
 
-    - **Local Development**: Running the application locally is ideal for development and testing purposes. You can make changes, test new features, and experiment with the code in a controlled environment.
+- **Heroku Deployment**: Deploying the application to Heroku makes it accessible to a wider audience on the web. It's suitable for sharing your project with others and providing a public URL for access.
 
-    - **Heroku Deployment**: Deploying the application to Heroku makes it accessible to a wider audience on the web. It's suitable for sharing your project with others and providing a public URL for access.
+Choose the deployment option that best suits your needs and project goals.
 
-    Choose the deployment option that best suits your needs and project goals.
+Always follow the steps and ensure that your sensitive information(API Keys, Database credentials, etc) are not visible to the public.
 
-    Always follow the steps and ensure that your sensitive information(API Keys, Database credentials, etc) are not visible to the public.
+## Connecting to Cloudinary for User-Uploaded Images
 
-- ### Connecting to Cloudinary for User-Uploaded Images
+This application uses Cloudinary to store user-uploaded images. To configure your own Cloudinary integration, follow these steps:
 
-    This application uses Cloudinary to store user-uploaded images. To configure your own Cloudinary integration, follow these steps:
+1. **Create a Cloudinary Account**: If you don't already have a Cloudinary account, sign up for one [here](https://cloudinary.com/).
 
-    1. **Create a Cloudinary Account**: If you don't already have a Cloudinary account, sign up for one [here](https://cloudinary.com/).
+2. **Obtain API Credentials**: After creating your Cloudinary account, obtain your API key, API secret, and cloud name from your Cloudinary dashboard.
 
-    2. **Obtain API Credentials**: After creating your Cloudinary account, obtain your API key, API secret, and cloud name from your Cloudinary dashboard.
+3. **Configure Environment Variables**: Store your Cloudinary API credentials as environment variables in your local `.env` file or on your hosting platform. Here's an example of what your `.env` file might look like:
 
-    3. **Configure Environment Variables**: Store your Cloudinary API credentials as environment variables in your local `.env` file or on your hosting platform. Here's an example of what your `.env` file might look like:
+    ```env
+    CLOUDINARY_API_KEY=your-api-key
+    CLOUDINARY_API_SECRET=your-api-secret
+    CLOUDINARY_CLOUD_NAME=your-cloud-name
+    ```
 
-        ```env
-        CLOUDINARY_API_KEY=your-api-key
-        CLOUDINARY_API_SECRET=your-api-secret
-        CLOUDINARY_CLOUD_NAME=your-cloud-name
-        ```
+    Replace `your-api-key`, `your-api-secret`, and `your-cloud-name` with your actual Cloudinary credentials.
 
-        Replace `your-api-key`, `your-api-secret`, and `your-cloud-name` with your actual Cloudinary credentials.
-
-    4. **Integrate Cloudinary in Your Application**: Modify your application code to use these environment variables to connect to Cloudinary for image uploads and management. Refer to your application's documentation for specific integration details.
+4. **Integrate Cloudinary in Your Application**: Modify your application code to use these environment variables to connect to Cloudinary for image uploads and management. Refer to your application's documentation for specific integration details.
 
     Now, your application should be configured to use Cloudinary for storing user-uploaded images.
 
-- ### Connecting to MongoDB Database
+## Connecting to MongoDB Database
 
-    This application uses MongoDB as its database. To set up your own MongoDB database and configure it for your application, follow these steps:
+This application uses MongoDB as its database. To set up your own MongoDB database and configure it for your application, follow these steps:
 
-    1. **Create a MongoDB Account**: If you don't already have a MongoDB account, sign up for one [here](https://www.mongodb.com/cloud/atlas).
+1. **Create a MongoDB Account**: If you don't already have a MongoDB account, sign up for one [here](https://www.mongodb.com/cloud/atlas).
 
-    2. **Set Up a Database Cluster**: Create a new database cluster in your MongoDB Atlas dashboard. Follow the MongoDB documentation or your application's documentation for guidance on cluster creation.
+2. **Set Up a Database Cluster**: Create a new database cluster in your MongoDB Atlas dashboard. Follow the MongoDB documentation or your application's documentation for guidance on cluster creation.
 
-    3. **Obtain Connection Credentials**: After setting up your cluster, obtain the connection string, including the username and password, from your MongoDB Atlas dashboard.
+3. **Obtain Connection Credentials**: After setting up your cluster, obtain the connection string, including the username and password, from your MongoDB Atlas dashboard.
 
-    4. **Configure Environment Variables**: Store your MongoDB connection string as an environment variable in your local `.env` file or on your hosting platform. Here's an example of what your `.env` file might look like:
+4. **Configure Environment Variables**: Store your MongoDB connection string as an environment variable in your local `.env` file or on your hosting platform. Here's an example of what your `.env` file might look like:
 
-        ```
-        MONGODB_URI=your-connection-string
-        ```
+    ```
+    MONGODB_URI=your-connection-string
+    ```
 
-        Replace `your-connection-string` with your actual MongoDB connection string.
+    Replace `your-connection-string` with your actual MongoDB connection string.
 
-    5. **Integrate MongoDB in Your Application**: Modify your application code to use the environment variable to connect to your MongoDB database. Refer to your application's documentation for specific integration details.
+5. **Integrate MongoDB in Your Application**: Modify your application code to use the environment variable to connect to your MongoDB database. Refer to your application's documentation for specific integration details.
 
-    Now, your application should be configured to use MongoDB as its database.
+Now, your application should be configured to use MongoDB as its database.
 
 ## Credits
 
-- ### Content
+### Content
  - All worded content was originally creating by myself and then edited and improved with suggestions from [Chat GPT](https://chat.openai.com/).
 
-- ### Media
-    - All Icons Used were from [Font Awesome](https://fontawesome.com/)
-    - The Veg-Centric Logo and Meta icon Were created with [Canva](https://www.canva.com/)
+### Media
+- All Icons Used were from [Font Awesome](https://fontawesome.com/)
+- The Veg-Centric Logo and Meta icon Were created with [Canva](https://www.canva.com/)
 
-    **Images**
+- **Images**
     
     | Recipe | Image Source | Image Creator |
     |--------|--------------|---------------|
@@ -758,33 +754,33 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
 
     All Product Images that were used, were displayed via their URL Directly from the Product's description/sales page on [Amazon](https://www.amazon.co.uk/)
 
-- ### Tools & Technologies Used
-    - [HTML](https://en.wikipedia.org/wiki/HTML)  is the backbone of web content. It defines the structure and content of the web pages.
-    - [CSS](https://en.wikipedia.org/wiki/CSS) used to control the visual presentation of the web application. It defines the layout, colors, fonts etc.
-    - [JavaScript](https://www.javascript.com) is a client-side scripting language that enhances user interactivity on the web pages.
-    - [Python](https://www.python.org/) is a versatile programming language commonly used for server-side development. It powers the logic and data processing of the web application.
-    - [Jinja](https://jinja.palletsprojects.com/en/3.1.x/) Is a Python-based templating engine used to dynamically generate HTML content by inserting data into predefined templates.
-    - [Materialize](https://materializecss.com/) Is a responsive front-end  framework and was used for many of the app's features.
-    - [Cloudinary](https://cloudinary.com/) is a cloud-based service for uploading, storing, optimizing, and delivering media assets such as images and videos.
-    - [MongoDB](https://mongodb.com/) is a document-oriented NoSQL database used for storing and managing structured data.
-    - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
-    - [GitHub](https://github.com) used for secure online code storage.
-    - [Heroku](https://heroku.com) To create and Host the Deployed App.
-    - [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
-    - [Canva](https://www.canva.com/) used for meta icon and logo creation.
-    - [Balsamiq](https://balsamiq.com/) used to create Wireframes.
-    - [Figma](https://www.figma.com/) used to create high fidelity prototypes.
-    - [Adobe colour wheel](https://color.adobe.com/) used for selecting colour scheme.
-    - [Chat GPT](https://chat.openai.com/) Used for trouble shooting.
-    - [Font Awesome](https://fontawesome.com/) For Icons
-    - [Google Fonts](https://fonts.google.com/) for all Fonts.
-    - [Medium]( https://medium.com/@ashley_howell/understanding-colour-psychology-for-restaurants-brands-dbb7ffbcecae) Used to research colour physcology in relation to restaurant and food brands.
-    - [JennDavid](https://jenndavid.com/colors-that-influence-food-sales-infographic/) Used to research colours that influence food sales.
-    - [Pagecloud](https://www.pagecloud.com/blog/best-google-fonts-pairings) Used to research font pairings.
-
-- ### Acknowledgements
-    - I would like to thank my Code Institute mentor, [Alex K](https://calendly.com/alex_mentor) for his amazing help, advice and support throughout the development of this project.
-    - I would like to thank Tim Nelson for his ongoing support.
-    - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
-    - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the great advice.
-    - I would like to thank freinds for there on going support and reviewing of the Web App.
+### Tools & Technologies Used
+- [HTML](https://en.wikipedia.org/wiki/HTML)  is the backbone of web content. It defines the structure and content of the web pages.
+- [CSS](https://en.wikipedia.org/wiki/CSS) used to control the visual presentation of the web application. It defines the layout, colors, fonts etc.
+- [JavaScript](https://www.javascript.com) is a client-side scripting language that enhances user interactivity on the web pages.
+- [Python](https://www.python.org/) is a versatile programming language commonly used for server-side development. It powers the logic and data processing of the web application.
+- [Jinja](https://jinja.palletsprojects.com/en/3.1.x/) Is a Python-based templating engine used to dynamically generate HTML content by inserting data into predefined templates.
+- [Materialize](https://materializecss.com/) Is a responsive front-end  framework and was used for many of the app's features.
+- [Cloudinary](https://cloudinary.com/) is a cloud-based service for uploading, storing, optimizing, and delivering media assets such as images and videos.
+- [MongoDB](https://mongodb.com/) is a document-oriented NoSQL database used for storing and managing structured data.
+- [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
+- [GitHub](https://github.com) used for secure online code storage.
+- [Heroku](https://heroku.com) To create and Host the Deployed App.
+- [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
+- [Canva](https://www.canva.com/) used for meta icon and logo creation.
+- [Balsamiq](https://balsamiq.com/) used to create Wireframes.
+- [Figma](https://www.figma.com/) used to create high fidelity prototypes.
+- [Adobe colour wheel](https://color.adobe.com/) used for selecting colour scheme.
+- [Chat GPT](https://chat.openai.com/) Used for trouble shooting.
+- [Font Awesome](https://fontawesome.com/) For Icons
+- [Google Fonts](https://fonts.google.com/) for all Fonts.
+- [Medium]( https://medium.com/@ashley_howell/understanding-colour-psychology-for-restaurants-brands-dbb7ffbcecae) Used to research colour physcology in relation to restaurant and food brands.
+- [JennDavid](https://jenndavid.com/colors-that-influence-food-sales-infographic/) Used to research colours that influence food sales.
+- [Pagecloud](https://www.pagecloud.com/blog/best-google-fonts-pairings) Used to research font pairings.
+- [Pillow](https://pillow.readthedocs.io/en/stable/) Used to manipulate user uploaded images before storing.
+### Acknowledgements
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://tim.2bn.dev/)  for his amazing help, advice and support throughout the development of this project.
+- I would like to thank [Alex K](https://calendly.com/alex_mentor) for his ongoing support.
+- I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
+- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the great advice.
+- I would like to thank freinds for there on going support and reviewing of the Web App.

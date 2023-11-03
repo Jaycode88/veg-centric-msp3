@@ -499,7 +499,12 @@ Below is a description of the one function I attempted to test with no success.
                     image_file, transformation={"crop": "fill"})
                 image_url = upload_result["secure_url"]
   ```
-  To achive this I had to add the following imports:
+  To achive this I had to install Pillow using:
+  ```
+  pip install Pillow
+  ```
+
+  add the following imports to my python file:
   ```
   import io
   from PIL import Image
