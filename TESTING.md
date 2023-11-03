@@ -69,10 +69,9 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 ### JavaScript
 
-I have used the recommended [JShint Validator](https://jshint.com) to validate my JS file. I used version 11 which does not throw errors due to use of ES6 syntax, Aswell as informing JSHint that I was intenionally using jQuery and the $ symbol. To set up JSHint in the same manner use the following notes at the top of your test:
+I have used the recommended [JShint Validator](https://jshint.com) to validate my JS file. I used version 11 which does not throw errors due to use of ES6 syntax, Aswell as informing JSHint that I was intenionally using jQuery. To do so I have added the following line to the top of my script.js file:
 ```
-/* jshint esversion: 11 */
-/* global $ */
+/* jshint esversion: 11, jquery: true */
 ```
 
 **Results**
@@ -81,10 +80,11 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate m
 ### PEP8
 
 I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInstitute) to check all Python files are PEP8 compliant.
-  - App.py
+
+  - [App.py](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/veg-centric-msp3/main/app.py)
   ![mockup](documentation/pep8.webp)
 
-  - settings.py
+  - [settings.py](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/veg-centric-msp3/main/settings.py)
   ![mockup](documentation/pep8settings.webp)
 
 ## User Story Testing
