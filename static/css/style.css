@@ -179,7 +179,6 @@ img {
 	margin-top: 5px;
 	margin-bottom: 5px;
 	border-radius: 5px;
-	border: 1px solid transparent;
 }
 
 /* button hover effects */
@@ -217,8 +216,13 @@ img {
 	color: #000;
 }
 
+/* profile card */
 .prof-card-head {
 	font-size: 2.75rem;
+}
+
+.line-break {
+	word-wrap: break-word;
 }
 
 /* show recipes page / Homepage */
@@ -261,6 +265,10 @@ img {
 .card {
 	min-height: 700px;
 	border-radius: 20px;
+}
+
+.card-action {
+	border-radius: 20px !important;
 }
 
 /* Round cards */
@@ -455,9 +463,6 @@ img {
 }
 
 @media (max-width: 360px) {
-	.cust-btn-marg {
-		margin-left: 15% !important;
-	}
 
 	#error-btn {
 		margin-left: 20% !important;
@@ -493,20 +498,20 @@ img {
 }
 
 
-@media only screen and (max-width: 455px) {
-	.card-content.custom-mushroom .center {
-		position: absolute;
+@media only screen and (max-width: 360px) {
+	.card {
+		min-height: 800px;
+	}
+}
+@media only screen and (max-width: 364px) {
+	.card.profile-card {
+		min-height: 835px;
 	}
 }
 
-@media only screen and (max-width: 360px) {
-	.card {
-		min-height: 765px;
-	}
-
-	.btn-small.custom-lightgreen {
-		display: inline-block;
-		margin-left: -10% !important;
+@media only screen and (max-width: 332px) {
+	.card.profile-card {
+		min-height: 860px;
 	}
 }
 

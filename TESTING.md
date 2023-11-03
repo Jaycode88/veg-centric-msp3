@@ -168,28 +168,27 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 **Add A Recipe For User**
 | Recipe name field must contain only alphanumeric characters, Be between 3 -30 characters and is required | Yes | Yes | Yes |
 | Recipe Category field Must display Dropdown of categories from database, Only dropdown Items can be selected(no manual input) and is required | Yes | Yes | Yes |
-| Recipe description field must only contain alphanumeric characters with a a length between 100 - 120 charachters and is required | Yes | Yes | Yes |
+| Recipe description field must only contain alphanumeric characters with a a length between 20 - 100 charachters and is required | Yes | Yes | Yes |
 | Prep Time field must only contain alphanumeric characters, Be upto 20 characters and is required | Yes | Yes | Yes |
 | Cook Time field must only contain alphanumeric characters, Be upto 20 characters and is required | Yes | Yes | Yes |
 | Servings field must only contain numeral characters and is required | Yes | Yes | Yes |
 | Upload image field Allows image file only to be uploaded and is required | Yes | Yes | Yes |
 | Add Ingredient and Add Step Buttons are visible and functional | Yes | Yes | Yes |
-| Add ingredients field must contain alphanumeric characters, Remove ingredient field button is visible and functional | Yes | Yes | Yes |
-| Add method step field must contain alphanumeric characters, Remove step field button is visible and functional | Yes | Yes | Yes |
+| Add ingredients field must contain alphanumeric characters and is required, Remove ingredient field button is visible and functional | Yes | Yes | Yes |
+| Add method step field must contain alphanumeric characters and is required, Remove step field button is visible and functional | Yes | Yes | Yes |
 | Form Submits upon use of Post button | Yes | Yes | Yes |
 | Form Resets upon use of Reset button | Yes | Yes | Yes |
 **Add a Recipe for Admin**
-| Recipe name field must contain only alphanumeric characters, Be between 3 -30 characters, is required and prefilled | Yes | Yes | Yes |
-| Recipe Category field Must display Dropdown of categories from database, Only dropdown Items can be selected(no manual input), is required and prefilled | Yes | Yes | Yes |
-| Recipe description field must only contain alphanumeric characters with a a length between 100 - 120 charachters, is required and prefilled | Yes | Yes | Yes |
-| Prep Time field must only contain alphanumeric characters, Be upto 20 characters, is required and prefilled | Yes | Yes | Yes |
-| Cook Time field must only contain alphanumeric characters, Be upto 20 characters, is required and prefilled | Yes | Yes | Yes |
-| Servings field must only contain numeral characters, is required and prefilled | Yes | Yes | Yes |
-| Upload image field Allows image file only to be uploaded, is required and prefilled | Yes | Yes | Yes |
+| Recipe name field must contain only alphanumeric characters, Be between 3 -30 characters and is required | Yes | Yes | Yes |
+| Recipe Category field Must display Dropdown of categories from database, Only dropdown Items can be selected(no manual input) and is required | Yes | Yes | Yes |
+| Recipe description field must only contain alphanumeric characters with a a length between 20 - 100 charachters, and is required | Yes | Yes | Yes |
+| Prep Time field must only contain alphanumeric characters, Be upto 20 characters and is required | Yes | Yes | Yes |
+| Cook Time field must only contain alphanumeric characters, Be upto 20 characters and is required | Yes | Yes | Yes |
+| Servings field must only contain numeral characters and is required | Yes | Yes | Yes |
+| Upload image field Allows image file only to be uploaded, is required | Yes | Yes | Yes |
 | Add Ingredient and Add Step Buttons are visible and functional | Yes | Yes | Yes |
-| Previously added ingredients and methods are shown | Yes | Yes | Yes |
-| Add ingredients field must contain alphanumeric characters, Remove ingredient field button is visible and functional | Yes | Yes | Yes |
-| Add method step field must contain alphanumeric characters, Remove step field button is visible and functional | Yes | Yes | Yes |
+| Add ingredients field must contain alphanumeric characters and is required, Remove ingredient field button is visible and functional | Yes | Yes | Yes |
+| Add method step field must contain alphanumeric characters and is required, Remove step field button is visible and functional | Yes | Yes | Yes |
 | Admin Description field must be between 15-5000 characters and is not required | Yes | Yes | Yes |
 | Product text field must contain alphanumeric characters and be between 15 - 500 characters and is not required | Yes | Yes | Yes |
 | Product image field accepts alphanumeric characthers for image urls, between 15 - 500 charachters long and is not required | Yes | Yes | Yes |
@@ -199,29 +198,29 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 **Edit a Recipe for user**
 | Recipe name field must contain only alphanumeric characters, Be between 3 -30 characters, is required and prefilled| Yes | Yes | Yes |
 | Recipe Category field Must display Dropdown of categories from database, Only dropdown Items can be selected(no manual input), is required and prefilled | Yes | Yes | Yes |
-| Recipe description field must only contain alphanumeric characters with a a length between 100 - 120 charachters and is required | Yes | Yes | Yes |
+| Recipe description field must only contain alphanumeric characters with a a length between 20 - 100 charachters and is required | Yes | Yes | Yes |
 | Prep Time field must only contain alphanumeric characters, Be upto 20 characters, is required and prefilled | Yes | Yes | Yes |
 | Cook Time field must only contain alphanumeric characters, Be upto 20 characters, is required and prefilled | Yes | Yes | Yes |
 | Servings field must only contain numeral characters, is required and prefilled | Yes | Yes | Yes |
-| Upload image field Allows image file only to be uploaded, is required and prefilled | Yes | Yes | Yes |
+| Upload image field Allows image file only to be uploaded | Yes | Yes | Yes |
 | Add Ingredient and Add Step Buttons are visible and functional | Yes | Yes | Yes |
 | Previously added ingredients and methods are shown | Yes | Yes | Yes |
-| Add ingredients field must contain alphanumeric characters, Remove ingredient field button is visible and functional | Yes | Yes | Yes |
-| Add method step field must contain alphanumeric characters, Remove step field button is visible and functional | Yes | Yes | Yes |
+| Add ingredients field must contain alphanumeric characters and is required, Remove ingredient field button is visible and functional | Yes | Yes | Yes |
+| Add method step field must contain alphanumeric characters and is required, Remove step field button is visible and functional | Yes | Yes | Yes |
 | Form Submits upon use of Update button | Yes | Yes | Yes |
 | Delete Recipe button is visible and functional | Yes | Yes | Yes |
 **Edit a Recipe for Admin**
 | Recipe name field must contain only alphanumeric characters, Be between 3 -30 characters, is required and prefilled | Yes | Yes | Yes |
 | Recipe Category field Must display Dropdown of categories from database, Only dropdown Items can be selected(no manual input), is required and prefilled | Yes | Yes | Yes |
-| Recipe description field must only contain alphanumeric characters with a a length between 100 - 120 charachters, is required and prefilled | Yes | Yes | Yes |
+| Recipe description field must only contain alphanumeric characters with a a length between 20 - 100 charachters, is required and prefilled | Yes | Yes | Yes |
 | Prep Time field must only contain alphanumeric characters, Be upto 20 characters, is required and prefilled | Yes | Yes | Yes |
 | Cook Time field must only contain alphanumeric characters, Be upto 20 characters, is required and prefilled | Yes | Yes | Yes |
 | Servings field must only contain numeral characters, is required and prefilled | Yes | Yes | Yes |
-| Upload image field Allows image file only to be uploaded, is required and prefilled | Yes | Yes | Yes |
+| Upload image field Allows image file only to be uploaded | Yes | Yes | Yes |
 | Add Ingredient and Add Step Buttons are visible and functional | Yes | Yes | Yes |
 | Previously added ingredients and methods are shown | Yes | Yes | Yes |
-| Add ingredients field must contain alphanumeric characters, Remove ingredient field button is visible and functional | Yes | Yes | Yes |
-| Add method step field must contain alphanumeric characters, Remove step field button is visible and functional | Yes | Yes | Yes |
+| Add ingredients field must contain alphanumeric characters and is required, Remove ingredient field button is visible and functional | Yes | Yes | Yes |
+| Add method step field must contain alphanumeric characters and is required, Remove step field button is visible and functional | Yes | Yes | Yes |
 | Admin Description field must be between 15-5000 characters and is not required | Yes | Yes | Yes |
 | Product text field must contain alphanumeric characters and be between 15 - 500 characters and is not required | Yes | Yes | Yes |
 | Product image field accepts alphanumeric characthers for image urls, between 15 - 500 charachters long and is not required | Yes | Yes | Yes |

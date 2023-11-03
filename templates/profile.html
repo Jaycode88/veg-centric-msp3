@@ -30,7 +30,7 @@
                                 class="fas fa-envelope darkgreen-text prefix"></i> <strong>Email
                                 Address:</strong>
                         </p>
-                        <p><strong>{{ user.email }}</strong></p>
+                        <p class="line-break"><strong>{{ user.email }}</strong></p>
                         <!-- Edit profile button -->
                         <div class="center cust-btn-marg">
                             <a href="{{ url_for('edit_profile') }}" class="btn-small custom-lightgreen black-text"
@@ -80,7 +80,7 @@
                                 <br>
 
                                 <!-- Buttons -->
-                                <div class="center">
+                                <div class="card-action center-align">
                                     <a class="black-text custom-lightgreen btn-small"
                                         href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"
                                         aria-label="View Recipe Button"><strong>View Recipe</strong> <i
@@ -136,7 +136,7 @@
                                     {{ recipe.created_by.capitalize() }}</p>
                                 <br>
 
-                                <div class="center">
+                                <div class="card-action center-align">
                                     <!-- Buttons -->
                                     <form action="{{ url_for('remove_favorite', recipe_id=recipe._id) }}" method="post">
                                         <a class="black-text custom-lightgreen btn-small"
@@ -145,7 +145,7 @@
                                                 class="fas fa-circle-info darkgreen-text"></i></a>
                                         <button type="submit" class="btn-small custom-darkgreen black-text"
                                             aria-label="Remove Recipe From Favorites Button">
-                                            <strong>Remove Favorite</strong> <i
+                                            <strong>Remove</strong> <i
                                                 class="fas fa-trash-alt lightgreen-text"></i>
                                         </button>
                                     </form>
