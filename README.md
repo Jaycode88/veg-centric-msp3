@@ -300,7 +300,17 @@ The Prototype for the main page was made with [Figma](https://www.figma.com/)
 
 ![screenshot](documentation/editrecipe.webp)
 
-***********    ADD Image Upload Feature here *******
+- **Image Upload and processing with Pillow**
+
+    - On the add and edit recipe forms the user is required to upload an image of the prepared recipe. The image is first manipulated with Pillow before being stored with Cloudinary.
+    
+
+    - This feature allows the user to upload and process images using the Python Imaging Library, Pillow. It's an essential part of the project's functionality for handling image uploads and ensuring they meet specific size and aspect ratio requirements.
+
+    -  First the function opens the image using pillow. Pillow checks if the aspect ratio matches the desired aspect ratio, If it doesn't Pillow crops the image to the desired ratio. Once the ratio is correct , Pillow resizes the image to the preferred width. With adjustments made Pillow then converts the image to a format called 'webp'. The modified image is then sent to Cloudinary, So it is stored securely and available for use on the app.
+
+    ![mockup](documentation/imageupload1.webp)
+    ![mockup](documentation/imageupload.webp)
 
 - **Sign In and Sign Up**
     - I added a Sign up Feature so users can join the community and upload their own recipes and save other user's recipes to their favorites.
