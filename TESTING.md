@@ -324,20 +324,25 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Update and Delete Category buttons are visible and functional | Yes | Yes | Yes |
 
 ## User Story Testing
-
+**As a first time user to the website, I would like to...**
 | AIM | Achieved | Image|
 |-----|----------|------|
-**As a first time user to the website, I would like to...**
 | Enjoy a user freindly experience | Yes | ![mockup](documentation/navigation.webp)|
 | Browse Veg-Centric Recipes | Yes | ![mockup](documentation/search.webp) ![mockup](documentation/recipecard.webp) |
 | Join The Community | Yes | ![mockup](documentation/signinup.webp) |
 | Find information about Veg-Centric | Yes | ![mockup](documentation/about.webp) |
+
 **As a Returning user, I would like to...**
+| AIM | Achieved | Image|
+|-----|----------|------|
 | Contribute to the community | Yes | ![mockup](documentation/addrecipe.webp) |
 | Save Recipes As Favorites and view favorites | Yes | ![mockup](documentation/favorites.webp) |
 | View, Edit and Delete their own recipes | Yes | ![mockup](documentation/editrecipe.webp) ![mockup](documentation/editdeleterecipe.webp) |
 | To have a page with user information | Yes | ![mockup](documentation/profile.webp) |
+
 **As Website Owner I would like to...**
+| AIM | Achieved | Image|
+|-----|----------|------|
 | Edit all recipes to ensure content quality | Yes | ![mockup](documentation/editrecipe.webp) ![mockup](documentation/editdeleterecipe.webp) |
 | Edit recipe images for aesthitical purposes | Yes | ![mockup](documentation/editdeleterecipe.webp) ![mockup](documentation/imageupload.webp) |
 | Add categories | Yes | ![mockup](documentation/admincat.webp) |

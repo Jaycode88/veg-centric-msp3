@@ -51,9 +51,9 @@
                     <button type="submit" class="btn-small custom-lightgreen black-text"
                         aria-label="Search Recipes Button"><strong>Search</strong> <i
                             class="fas fa-search darkgreen-text"></i></button>
-                            <a href="{{ url_for('show_recipes')}}" class="btn-small custom-darkgreen black-text"
-                            aria-label="Reset Search From Button"><strong>Reset</strong> <i
-                                class="fa-solid fa-rotate-left lightgreen-text"></i></a>
+                    <a href="{{ url_for('show_recipes')}}" class="btn-small custom-darkgreen black-text"
+                        aria-label="Reset Search From Button"><strong>Reset</strong> <i
+                            class="fa-solid fa-rotate-left lightgreen-text"></i></a>
                 </div>
             </div>
         </form>
@@ -64,7 +64,8 @@
 {% if not user and not search %}
 <div class="row">
     <div class="col s12 center-align">
-        <p>4 random recipes displayed please <a href="{{ url_for('sign_in') }}" class="signin-link"><strong>Sign In</strong></a> to view all recipes</p>
+        <p>4 random recipes displayed please <a href="{{ url_for('sign_in') }}" class="signin-link"><strong>Sign
+                    In</strong></a> to view all recipes</p>
     </div>
 </div>
 {% endif %}
@@ -180,7 +181,8 @@
 </div>
 {% endif %}
 <div class="center">
-    <img src="{{ url_for('static', filename='images/logo.webp') }}" alt="Veg-Centric Logo" class="responsive-img" width="335" height="500">
+    <a href="{{ url_for('show_recipes') }}"><img src="{{ url_for('static', filename='images/logo.webp') }}"
+            alt="Veg-Centric Logo" class="responsive-img" width="335" height="500"></a>
 </div>
 
 {% endblock %}
