@@ -10,7 +10,7 @@ body {
 	flex-direction: column;
 }
 
-.content {
+.content, .error {
 	flex-grow: 1;
 }
 
