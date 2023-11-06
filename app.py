@@ -355,6 +355,7 @@ def edit_profile():
             }})
 
             # Redirect to the user's profile page after editing
+            flash("Profile Updated Successfully")
             return redirect(url_for("profile"))
         else:
             flash("Passwords do not match. Please try again.", "error")
@@ -839,17 +840,17 @@ def remove_favorite(recipe_id):
 def manage_categories():
     """
     Allows administrator to manage recipe categories.
-
-    This route is intended for administrators to manage recipe categories.
-    It provides a list of categories that can be modified or deleted by
-    administrators.
-
-    Returns:
-        Flask.render_template: HTML template rendering the manage categories
-        page.
     """
+    # Check the user's role (assuming the role is stored in a session variable)
+    user = session.get("user")
 
-    # set active page
+    # Check if the user is an admin
+    if user != "admin":
+        # User is not an admin, handle unauthorized access
+        flash("Error, Access Denied")
+        return render_template("sign_in.html")
+
+    # If the user is an admin, proceed with rendering the page
     active_page = "categories"
 
     categories = database.db.categories.find().sort("category", 1)

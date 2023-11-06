@@ -343,6 +343,8 @@ I also used [WAVE](https://wave.webaim.org/) to check accessability which Raised
 Results can be viewed [here](https://wave.webaim.org/report#/https://veg-centric-msp3-64721c5e710e.herokuapp.com).
 
 ## Defensive Programming
+The table below covers manual tests for User actions Please note that form validation has been minimised to correct form completion and incorrect completion the reason for this is that full form validation testing has been documented above in the Cross platform testing section. 
+
 | Page | User Status | User Action | Expected Result | Pass/Fail |
 |------|-------------|-------------|-----------------|-----------|
 | All(Except 404) | All Users | Click Logo text in navbar | Be Re-directed to homepage | Pass |
@@ -388,9 +390,65 @@ Results can be viewed [here](https://wave.webaim.org/report#/https://veg-centric
 |  |   | Click delete recipe | Modal opens to confirm | Pass |
 |  |   | click yes delete in modal | Recipe is deleted and user is redirected to profile page | Pass |
 |    |   | Click no close in modal | modal closes and recipe is not deleted | Pass |
-
-
-
+| Add Recipe | Signed in | fill in form and click reset button | Form fields reset | Pass |
+|    |     | Clicks add ingredient button | Ingredient field appears with remove button | Pass |
+|    |     | clicks remove ingredient button | Ingredient field correlating to button is removed | Pass |
+|    |     | Clicks add step button | Step field appears with remove button | Pass |
+|    |     | clicks remove step button | Ingredient field correlating to button is removed | Pass |
+|    |    | Fill in form correctly and press post button | Recipe is uploaded and user is redirected to home message with flash message | Pass |
+|    |    | Fill in form incorrectly and press post button | Error message displayed | Pass |
+|    | Not Signed in | Attempt to access add recipe page via force | Error message displayed | Pass |
+| Edit Recipe | Recipe owner | Clicks add ingredient button | Ingredient field appears with remove button | Pass | 
+|    |     | clicks remove ingredient button | Ingredient field correlating to button is removed | Pass |
+|    |     | Clicks add step button | Step field appears with remove button | Pass |
+|    |     | clicks remove step button | Ingredient field correlating to button is removed | Pass |
+|    |    | Fill in form correctly and press update button | Recipe is updated and user is redirected to home message with flash message | Pass |
+|    |    | Fill in form incorrectly and press post button | Error message displayed | Pass |
+|    |    | click delete recipe button | Modal appears to confirm deletion of recipe | Pass |
+|    |    | click yes delete in modal | recipe is deleted user is re-directed to profile page with a flash message | Pass |
+|    | Admin |  Clicks add ingredient button | Ingredient field appears with remove button | Pass | 
+|    |     | clicks remove ingredient button | Ingredient field correlating to button is removed | Pass |
+|    |     | Clicks add step button | Step field appears with remove button | Pass |
+|    |     | clicks remove step button | Ingredient field correlating to button is removed | Pass |
+|    |    | Fill in form correctly and press update button | Recipe is updated and user is redirected to home message with flash message | Pass |
+|    |    | Fill in form incorrectly and press post button | Error message displayed | Pass |
+|    |    | click delete recipe button | Modal appears to confirm deletion of recipe | Pass |
+|    |    | click yes delete in modal | recipe is deleted user is re-directed to profile page with a flash message | Pass |
+|  | Signed in (Not recipe owner) |  Attempt to access edit recipe page via force | Error message displayed | Pass |
+|    | Not Signed in | Attempt to access edit recipe page via force | Error message displayed | Pass |
+| Profile | Not signed in | Attempt to access profile page by force | error message displayed | Pass |
+|  | Signed in(not profile owner) | Attempt to access profile page by force | Correct profile for user is displayed | Pass |
+|  | Signed in | Clicks Your profile section of accordian | Profile card is displayed in accordian drop down | Pass |
+|   |   | Clicks edit button on profile card | Re-directed to edit profile page | Pass |
+|  |   | Clicks your recipes section of accordian | User posted recipe cards are shown in accordian dropdown | Pass |
+|   |    | Clicks view recipe on recipe card | Re-directed to recipe details page | Pass |
+|   |    | Clicks Edit recipe on recipe card | Re-directed to edit recipe page | Pass |
+|   |    | Clicks Your favorites section of accordian | User's favorite recipe cards are displayed in accordian dropdown | Pass |
+|   |    | Clicks view recipe on favorite recipe card | Re-directed to recipe details page | Pass |
+|   |    | Clicks remove on favorite recipe card | Recipe removed from favorites, user redirected to homepage with flash message | Pass |
+|   |    | Clicks logo | Re-directed to home page | Pass |
+|   | Not signed in | Attempts to access profile page with force | Error message displayed | Pass |
+| Edit Profile | Not signed in | Attempt to access edit profile page by force | error message displayed | Pass |
+|  | Signed in(not profile owner) | Attempt to access edit profile page by force | error message displayed | Pass |
+| | Signed in| clicks delete profile button | Re-directed to delete profile page for confirmation | Pass |
+|      |     | Edits form but incorrectly completes fields and clicks save changes | Error is displayed | Pass |
+|   |   | Edits forms correctly completes all fields and clicks save changes | re-directed to profile page with flash message | Pass |
+| Delete profile page | Not signed in | Attempt to access delete profile page by force | error message displayed | Pass |
+|  | Signed in(not profile owner) | Attempt to access delete profile page by force | error message displayed | Pass |
+| | Signed in | Clicks cancel button | Re-directed to profile page | Pass |
+|   |   | Clicks delete profile button | user profile and details is deleted, user re-directed to sign in page with flash message | Pass |
+|  |    | Clicks Logo | Re-directed to homepage | Pass |
+| About | All Users | Clicks Terms and conditions link | Terms modal opens |
+|       |    | Clicks Privacy policy link | Provacy policy modal opens |
+|   |   | Clicks close button in modal | Modal closes | Pass |
+|   | Not signed in | Clicks sign up buton | Re-directed to sign up page | Pass |
+|   |   | Clicks sign in button | Re-directed to sign in page | Pass |
+| Manage Categories page | Not signed in | Attempts to access page by force | Error message is displayed | Pass |
+|   | Signed in (not admin) | Attempts to access page by force | Error message is displayed | Pass |
+|   | Admin | Clicks add category button without filling in form field | Error displayed | Pass |
+|   |   | Edits a form incorrectly and clicks update category | Error message displayed | Pass |
+|   |   | Edits a category form correctly and clicks update category | Category is updated | Pass |
+| | | clicks delete category button | Category is deleted | Pass |
 
 ## User Story Testing
 **As a first time user to the website, I would like to...**
@@ -477,6 +535,7 @@ From there I was able to write tests for the initializeDropdown, initializeColla
 
 ![mockup](documentation/jestpassed.webp)
 
+#### Jest test Issues 
 Below is a description of the one function I attempted to test with no success.
 
 - **initializeModals Function**
