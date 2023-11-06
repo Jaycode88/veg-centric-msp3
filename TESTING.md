@@ -107,7 +107,65 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
 | Add categories | Yes | ![mockup](documentation/admincat.webp) |
 | Generate profit through affiliate marketing | Yes | ![mockup](documentation/recipewithproduct.webp) |
 
-## Browser Compatability / Cross Platform Testing
+## Browser Compatability
+I've tested my deployed project on multiple browsers to check for compatibility issues. 
+
+  | Browser | Page | Expected look | Expected Function | ScreenShot |
+  |---------|------|---------------|-------------------|------------|
+  **Chrome** 
+  | | Home(show_recipes) | Yes | Yes | [image](documentation/chromehome.webp) |
+  | | Sign In | Yes | Yes | [image](documentation/chromesignin.webp) |
+  | | Sign Up | Yes | Yes | [image](documentation/chromesignup.webp) |
+  | | Profile | Yes | Yes | [image](documentation/chromeprofile.webp) |
+  | | Edit Profile | Yes | Yes | [image](documentation/chromeeditprof.webp) |
+  | | Delete Profile | Yes | Yes | [image](documentation/chromeprofdel.webp) |
+  | | Add Recipe | Yes | Yes | [image](documentation/chromeaddrecipe.webp) |
+  | | View Recipe | Yes | Yes | [image](documentation/chromeview.webp) |
+  | | Edit Recipe | Yes | Yes | [image](documentation/chromeeditrecipe.webp) |
+  | | About | Yes | Yes | [image](documentation/chromeabout.webp) |
+  | | 404 | Yes | Yes | [image](documentation/chrome404.webp) |
+  | | Modals | Yes | Yes | [image](documentation/chromemodals.webp) |
+  **Firefox** 
+  | | Home(show_recipes) | Yes | Yes | [image](documentation/firehome.webp) |
+  | | Sign In | Yes | Yes | [image](documentation/firesignin.webp) |
+  | | Sign Up | Yes | Yes | [image](documentation/firesignup.webp) |
+  | | Profile | Yes | Yes | [image](documentation/fireprof.webp) |
+  | | Edit Profile | Yes | Yes | [image](documentation/fireeditprof.webp) |
+  | | Delete Profile | Yes | Yes | [image](documentation/firedelprof.webp) |
+  | | Add Recipe | Yes | Yes | [image](documentation/fireaddrecipe.webp) |
+  | | View Recipe | Yes | Yes | [image](documentation/fireview.webp) |
+  | | Edit Recipe | Yes | Yes | [image](documentation/fireeditrecipe.webp) |
+  | | About | Yes | Yes | [image](documentation/fireabout.webp) |
+  | | 404 | Yes | Yes | [image](documentation/fire404.webp) |
+  | | Modals | Yes | Yes | [image](documentation/firemodal.webp) |
+  **Edge** 
+  | | Home(show_recipes) | Yes | Yes |
+  | | Sign In | Yes | Yes |
+  | | Sign Up | Yes | Yes |
+  | | Profile | Yes | Yes |
+  | | Edit Profile | Yes | Yes |
+  | | Delete Profile | Yes | Yes |
+  | | Add Recipe | Yes | Yes |
+  | | View Recipe | Yes | Yes |
+  | | Edit Recipe | Yes | Yes |
+  | | About | Yes | Yes |
+  | | 404 | Yes | Yes |
+  | | Modals | Yes | Yes |
+  **Opera** 
+  | | Home(show_recipes) | Yes | Yes |
+  | | Sign In | Yes | Yes |
+  | | Sign Up | Yes | Yes |
+  | | Profile | Yes | Yes |
+  | | Edit Profile | Yes | Yes |
+  | | Delete Profile | Yes | Yes |
+  | | Add Recipe | Yes | Yes |
+  | | View Recipe | Yes | Yes |
+  | | Edit Recipe | Yes | Yes |
+  | | About | Yes | Yes |
+  | | 404 | Yes | Yes |
+  | | Modals | Yes | Yes | 
+
+## Cross Platform Testing
 
 ### CRUD (create, read, update, delete) Testing
 
@@ -302,62 +360,7 @@ Results can be viewed [here](https://wave.webaim.org/report#/https://veg-centric
   | | 404 | Yes | Yes |
   | | Modals | Yes | Yes |
 
-- **Manual Browser Testing**
 
-  | Browser | Page | Expected look | Expected Function |
-  |---------|------|---------------|-------------------|
-  **Chrome** 
-  | | Home(show_recipes) | Yes | Yes |
-  | | Sign In | Yes | Yes |
-  | | Sign Up | Yes | Yes |
-  | | Profile | Yes | Yes |
-  | | Edit Profile | Yes | Yes |
-  | | Delete Profile | Yes | Yes |
-  | | Add Recipe | Yes | Yes |
-  | | View Recipe | Yes | Yes |
-  | | Edit Recipe | Yes | Yes |
-  | | About | Yes | Yes |
-  | | 404 | Yes | Yes |
-  | | Modals | Yes | Yes |
-  **Firefox** 
-  | | Home(show_recipes) | Yes | Yes |
-  | | Sign In | Yes | Yes |
-  | | Sign Up | Yes | Yes |
-  | | Profile | Yes | Yes |
-  | | Edit Profile | Yes | Yes |
-  | | Delete Profile | Yes | Yes |
-  | | Add Recipe | Yes | Yes |
-  | | View Recipe | Yes | Yes |
-  | | Edit Recipe | Yes | Yes |
-  | | About | Yes | Yes |
-  | | 404 | Yes | Yes |
-  | | Modals | Yes | Yes |
-  **Edge** 
-  | | Home(show_recipes) | Yes | Yes |
-  | | Sign In | Yes | Yes |
-  | | Sign Up | Yes | Yes |
-  | | Profile | Yes | Yes |
-  | | Edit Profile | Yes | Yes |
-  | | Delete Profile | Yes | Yes |
-  | | Add Recipe | Yes | Yes |
-  | | View Recipe | Yes | Yes |
-  | | Edit Recipe | Yes | Yes |
-  | | About | Yes | Yes |
-  | | 404 | Yes | Yes |
-  | | Modals | Yes | Yes |
-  **Opera** 
-  | | Home(show_recipes) | Yes | Yes |
-  | | Sign In | Yes | Yes |
-  | | Sign Up | Yes | Yes |
-  | | Profile | Yes | Yes |
-  | | Edit Profile | Yes | Yes |
-  | | Delete Profile | Yes | Yes |
-  | | Add Recipe | Yes | Yes |
-  | | View Recipe | Yes | Yes |
-  | | Edit Recipe | Yes | Yes |
-  | | About | Yes | Yes |
-  | | 404 | Yes | Yes |
-  | | Modals | Yes | Yes |
 
 ## Automated Testing
 ### Jest Testing JQuery
