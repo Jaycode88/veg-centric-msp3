@@ -87,27 +87,9 @@ I have used [Python Linter](https://pep8ci.herokuapp.com/) (Provided by CodeInst
   - [settings.py](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Jaycode88/veg-centric-msp3/main/settings.py)
   ![mockup](documentation/pep8settings.webp)
 
-## User Story Testing
+## Cross Platform Testing
 
-| AIM | Achieved | Image|
-|-----|----------|------|
-**As a first time user to the website, I would like to...**
-| Enjoy a user freindly experience | Yes | ![mockup](documentation/navigation.webp)|
-| Browse Veg-Centric Recipes | Yes | ![mockup](documentation/search.webp) ![mockup](documentation/recipecard.webp) |
-| Join The Community | Yes | ![mockup](documentation/signinup.webp) |
-| Find information about Veg-Centric | Yes | ![mockup](documentation/about.webp) |
-**As a Returning user, I would like to...**
-| Contribute to the community | Yes | ![mockup](documentation/addrecipe.webp) |
-| Save Recipes As Favorites and view favorites | Yes | ![mockup](documentation/favorites.webp) |
-| View, Edit and Delete their own recipes | Yes | ![mockup](documentation/editrecipe.webp) ![mockup](documentation/editdeleterecipe.webp) |
-| To have a page with user information | Yes | ![mockup](documentation/profile.webp) |
-**As Website Owner I would like to...**
-| Edit all recipes to ensure content quality | Yes | ![mockup](documentation/editrecipe.webp) ![mockup](documentation/editdeleterecipe.webp) |
-| Edit recipe images for aesthitical purposes | Yes | ![mockup](documentation/editdeleterecipe.webp) ![mockup](documentation/imageupload.webp) |
-| Add categories | Yes | ![mockup](documentation/admincat.webp) |
-| Generate profit through affiliate marketing | Yes | ![mockup](documentation/recipewithproduct.webp) |
-
-## Browser Compatability
+### Browser Compatability
 I've tested my deployed project on multiple browsers to check for compatibility issues. 
 
   | Browser | Page | Expected look | Expected Function | ScreenShot |
@@ -139,11 +121,11 @@ I've tested my deployed project on multiple browsers to check for compatibility 
   | | 404 | Yes | Yes | [image](documentation/fire404.webp) |
   | | Modals | Yes | Yes | [image](documentation/firemodal.webp) |
   **Edge** 
-  | | Home(show_recipes) | Yes | Yes |
-  | | Sign In | Yes | Yes |
-  | | Sign Up | Yes | Yes |
-  | | Profile | Yes | Yes |
-  | | Edit Profile | Yes | Yes |
+  | | Home(show_recipes) | Yes | Yes | [image](documentation/edgehome.webp) |
+  | | Sign In | Yes | Yes | [image](documentation/edgesignin.webp) |
+  | | Sign Up | Yes | Yes | [image](documentation/edgesignup.webp) |
+  | | Profile | Yes | Yes | [image](documentation/edgeprof.webp) |
+  | | Edit Profile | Yes | Yes | [image](documentation/edgeeditprof.webp) |
   | | Delete Profile | Yes | Yes |
   | | Add Recipe | Yes | Yes |
   | | View Recipe | Yes | Yes |
@@ -165,7 +147,58 @@ I've tested my deployed project on multiple browsers to check for compatibility 
   | | 404 | Yes | Yes |
   | | Modals | Yes | Yes | 
 
-## Cross Platform Testing
+### Responsiveness
+
+ - **[Responsinator](http://www.responsinator.com/)**
+
+    Responsinator Is an online tool for testing responsiveness on a range of devices.
+    I tested every page of the Veg-Centric site.
+    To view results for the home page [Click Here](http://www.responsinator.com/?url=veg-centric-msp3-64721c5e710e.herokuapp.com%2F)
+    From this result you are able to navigate through the website on each device offered.
+
+ - **Manual Device Testing**
+
+  | Device | Page | Expected look | Expected Function |
+  |--------|------|---------------|-------------------|
+  **Desktop 22"** 
+  | | Home(show_recipes) | Yes | Yes |
+  | | Sign In | Yes | Yes |
+  | | Sign Up | Yes | Yes |
+  | | Profile | Yes | Yes |
+  | | Edit Profile | Yes | Yes |
+  | | Delete Profile | Yes | Yes |
+  | | Add Recipe | Yes | Yes |
+  | | View Recipe | Yes | Yes |
+  | | Edit Recipe | Yes | Yes |
+  | | About | Yes | Yes |
+  | | 404 | Yes | Yes |
+  | | Modals | Yes | Yes |
+  **Laptop 16"** 
+  | | Home(show_recipes) | Yes | Yes |
+  | | Sign In | Yes | Yes |
+  | | Sign Up | Yes | Yes |
+  | | Profile | Yes | Yes |
+  | | Edit Profile | Yes | Yes |
+  | | Delete Profile | Yes | Yes |
+  | | Add Recipe | Yes | Yes |
+  | | View Recipe | Yes | Yes |
+  | | Edit Recipe | Yes | Yes |
+  | | About | Yes | Yes |
+  | | 404 | Yes | Yes |
+  | | Modals | Yes | Yes |
+  **Galaxy S20"** 
+  | | Home(show_recipes) | Yes | Yes |
+  | | Sign In | Yes | Yes |
+  | | Sign Up | Yes | Yes |
+  | | Profile | Yes | Yes |
+  | | Edit Profile | Yes | Yes |
+  | | Delete Profile | Yes | Yes |
+  | | Add Recipe | Yes | Yes |
+  | | View Recipe | Yes | Yes |
+  | | Edit Recipe | Yes | Yes |
+  | | About | Yes | Yes |
+  | | 404 | Yes | Yes |
+  | | Modals | Yes | Yes |
 
 ### CRUD (create, read, update, delete) Testing
 
@@ -290,6 +323,26 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Edit Category field accepts alphanumeric characters , is required and prefilled | Yes | Yes | Yes |
 | Update and Delete Category buttons are visible and functional | Yes | Yes | Yes |
 
+## User Story Testing
+
+| AIM | Achieved | Image|
+|-----|----------|------|
+**As a first time user to the website, I would like to...**
+| Enjoy a user freindly experience | Yes | ![mockup](documentation/navigation.webp)|
+| Browse Veg-Centric Recipes | Yes | ![mockup](documentation/search.webp) ![mockup](documentation/recipecard.webp) |
+| Join The Community | Yes | ![mockup](documentation/signinup.webp) |
+| Find information about Veg-Centric | Yes | ![mockup](documentation/about.webp) |
+**As a Returning user, I would like to...**
+| Contribute to the community | Yes | ![mockup](documentation/addrecipe.webp) |
+| Save Recipes As Favorites and view favorites | Yes | ![mockup](documentation/favorites.webp) |
+| View, Edit and Delete their own recipes | Yes | ![mockup](documentation/editrecipe.webp) ![mockup](documentation/editdeleterecipe.webp) |
+| To have a page with user information | Yes | ![mockup](documentation/profile.webp) |
+**As Website Owner I would like to...**
+| Edit all recipes to ensure content quality | Yes | ![mockup](documentation/editrecipe.webp) ![mockup](documentation/editdeleterecipe.webp) |
+| Edit recipe images for aesthitical purposes | Yes | ![mockup](documentation/editdeleterecipe.webp) ![mockup](documentation/imageupload.webp) |
+| Add categories | Yes | ![mockup](documentation/admincat.webp) |
+| Generate profit through affiliate marketing | Yes | ![mockup](documentation/recipewithproduct.webp) |
+
 ### LightHouse Testing
 I used Google Chrome Lighthouse testing to assess the quality of the web app.
 
@@ -308,59 +361,6 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 
 I also used [WAVE](https://wave.webaim.org/) to check accessability which Raised no Errors.
 Results can be viewed [here](https://wave.webaim.org/report#/https://veg-centric-msp3-64721c5e710e.herokuapp.com).
-
-## Responsiveness
- - **[Responsinator](http://www.responsinator.com/)**
-  Responsinator Is an online tool for testing responsiveness on a range of devices.
-  I tested every page of the Veg-Centric site.
-  To view results for the home page [Click Here](http://www.responsinator.com/?url=veg-centric-msp3-64721c5e710e.herokuapp.com%2F)
-  From this result you are able to navigate through the website on each device offered.
-
- - **Manual Device Testing**
-
-  | Device | Page | Expected look | Expected Function |
-  |--------|------|---------------|-------------------|
-  **Desktop 22"** 
-  | | Home(show_recipes) | Yes | Yes |
-  | | Sign In | Yes | Yes |
-  | | Sign Up | Yes | Yes |
-  | | Profile | Yes | Yes |
-  | | Edit Profile | Yes | Yes |
-  | | Delete Profile | Yes | Yes |
-  | | Add Recipe | Yes | Yes |
-  | | View Recipe | Yes | Yes |
-  | | Edit Recipe | Yes | Yes |
-  | | About | Yes | Yes |
-  | | 404 | Yes | Yes |
-  | | Modals | Yes | Yes |
-  **Laptop 16"** 
-  | | Home(show_recipes) | Yes | Yes |
-  | | Sign In | Yes | Yes |
-  | | Sign Up | Yes | Yes |
-  | | Profile | Yes | Yes |
-  | | Edit Profile | Yes | Yes |
-  | | Delete Profile | Yes | Yes |
-  | | Add Recipe | Yes | Yes |
-  | | View Recipe | Yes | Yes |
-  | | Edit Recipe | Yes | Yes |
-  | | About | Yes | Yes |
-  | | 404 | Yes | Yes |
-  | | Modals | Yes | Yes |
-  **Galaxy S20"** 
-  | | Home(show_recipes) | Yes | Yes |
-  | | Sign In | Yes | Yes |
-  | | Sign Up | Yes | Yes |
-  | | Profile | Yes | Yes |
-  | | Edit Profile | Yes | Yes |
-  | | Delete Profile | Yes | Yes |
-  | | Add Recipe | Yes | Yes |
-  | | View Recipe | Yes | Yes |
-  | | Edit Recipe | Yes | Yes |
-  | | About | Yes | Yes |
-  | | 404 | Yes | Yes |
-  | | Modals | Yes | Yes |
-
-
 
 ## Automated Testing
 ### Jest Testing JQuery
