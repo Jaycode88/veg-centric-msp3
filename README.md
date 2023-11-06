@@ -405,6 +405,8 @@ The database schema is designed to efficiently handle the storage and retrieval 
 
     ![screenshot](documentation/dataflow.webp)
 
+    The Models flow chart was created with [Diagrams.net](https://draw.io/)
+
 ### CRUD Functionality
 
 - **User Management:**
@@ -788,6 +790,14 @@ Now, your application should be configured to use MongoDB as its database.
 - [JennDavid](https://jenndavid.com/colors-that-influence-food-sales-infographic/) Used to research colours that influence food sales.
 - [Pagecloud](https://www.pagecloud.com/blog/best-google-fonts-pairings) Used to research font pairings.
 - [Pillow](https://pillow.readthedocs.io/en/stable/) Used to manipulate user uploaded images before storing.
+- [Diagrams.net](https://draw.io) Used to create database model Flow chart.
+- [W3C Html Validator](https://validator.w3.org/) Used to validate HTML.
+- [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) Used to validate CSS.
+- [JSHint](https://jshint.com/) Used to validate JQuery.
+- [CodeInstitute Python Linter](https://pep8ci.herokuapp.com/) Used to Check Python for PEP-8 Compliance.
+- [WAVE](https://wave.webaim.org/) Used to check accesability.
+- [Responsinator](http://www.responsinator.com/) Used to check responsiveness.
+
 ### Acknowledgements
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://tim.2bn.dev/)  for his amazing help, advice and support throughout the development of this project.
 - I would like to thank [Alex K](https://calendly.com/alex_mentor) for his ongoing support.
