@@ -126,26 +126,26 @@ I've tested my deployed project on multiple browsers to check for compatibility 
   | | Sign Up | Yes | Yes | [image](documentation/edgesignup.webp) |
   | | Profile | Yes | Yes | [image](documentation/edgeprof.webp) |
   | | Edit Profile | Yes | Yes | [image](documentation/edgeeditprof.webp) |
-  | | Delete Profile | Yes | Yes |
-  | | Add Recipe | Yes | Yes |
-  | | View Recipe | Yes | Yes |
-  | | Edit Recipe | Yes | Yes |
-  | | About | Yes | Yes |
-  | | 404 | Yes | Yes |
-  | | Modals | Yes | Yes |
+  | | Delete Profile | Yes | Yes | [image](documentation/edgedelprof.webp) |
+  | | Add Recipe | Yes | Yes | [image](documentation/edgeaddrecipe.webp) |
+  | | View Recipe | Yes | Yes | [image](documentation/edgeview.webp) |
+  | | Edit Recipe | Yes | Yes | [image](documentation/edgeeditrecipe.webp) |
+  | | About | Yes | Yes | [image](documentation/edgeabout.webp) |
+  | | 404 | Yes | Yes | [image](documentation/edge404.webp) |
+  | | Modals | Yes | Yes | [image](documentation/edgemodal.webp) |
   **Opera** 
-  | | Home(show_recipes) | Yes | Yes |
-  | | Sign In | Yes | Yes |
-  | | Sign Up | Yes | Yes |
-  | | Profile | Yes | Yes |
-  | | Edit Profile | Yes | Yes |
-  | | Delete Profile | Yes | Yes |
-  | | Add Recipe | Yes | Yes |
-  | | View Recipe | Yes | Yes |
-  | | Edit Recipe | Yes | Yes |
-  | | About | Yes | Yes |
-  | | 404 | Yes | Yes |
-  | | Modals | Yes | Yes | 
+  | | Home(show_recipes) | Yes | Yes | [image](documentation/operahome.webp) |
+  | | Sign In | Yes | Yes | [image](documentation/operasignin.webp) |
+  | | Sign Up | Yes | Yes | [image](documentation/operasignup.webp) |
+  | | Profile | Yes | Yes | [image](documentation/operaprof.webp) |
+  | | Edit Profile | Yes | Yes | [image](documentation/operaeditprof.webp) |
+  | | Delete Profile | Yes | Yes | [image](documentation/operadelprof.webp) |
+  | | Add Recipe | Yes | Yes | [image](documentation/operaaddrecipe.webp) |
+  | | View Recipe | Yes | Yes | [image](documentation/operaview.webp) |
+  | | Edit Recipe | Yes | Yes | [image](documentation/operaedit.webp) |
+  | | About | Yes | Yes | [image](documentation/operaabout.webp) |
+  | | 404 | Yes | Yes | [image](documentation/opera404.webp) |
+  | | Modals | Yes | Yes | [image](documentation/operamodal.webp) |
 
 ### Responsiveness
 
@@ -158,47 +158,47 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
  - **Manual Device Testing**
 
-  | Device | Page | Expected look | Expected Function |
-  |--------|------|---------------|-------------------|
+  | Device | Page | Expected look | Expected Function | Image |
+  |--------|------|---------------|-------------------|-------|
   **Desktop 22"** 
-  | | Home(show_recipes) | Yes | Yes |
-  | | Sign In | Yes | Yes |
-  | | Sign Up | Yes | Yes |
-  | | Profile | Yes | Yes |
-  | | Edit Profile | Yes | Yes |
-  | | Delete Profile | Yes | Yes |
-  | | Add Recipe | Yes | Yes |
-  | | View Recipe | Yes | Yes |
-  | | Edit Recipe | Yes | Yes |
-  | | About | Yes | Yes |
-  | | 404 | Yes | Yes |
-  | | Modals | Yes | Yes |
+  | | Home(show_recipes) | Yes | Yes | [image](documentation/operahome.webp) |
+  | | Sign In | Yes | Yes | [image](documentation/operasignin.webp) |
+  | | Sign Up | Yes | Yes | [image](documentation/operasignup.webp) |
+  | | Profile | Yes | Yes | [image](documentation/operaprof.webp) |
+  | | Edit Profile | Yes | Yes | [image](documentation/operaeditprof.webp) |
+  | | Delete Profile | Yes | Yes | [image](documentation/operadelprof.webp) |
+  | | Add Recipe | Yes | Yes | [image](documentation/operaaddrecipe.webp) |
+  | | View Recipe | Yes | Yes | [image](documentation/operaview.webp) |
+  | | Edit Recipe | Yes | Yes | [image](documentation/operaedit.webp) |
+  | | About | Yes | Yes | [image](documentation/operaabout.webp) |
+  | | 404 | Yes | Yes | [image](documentation/opera404.webp) |
+  | | Modals | Yes | Yes | [image](documentation/operamodal.webp) |
   **Laptop 16"** 
   | | Home(show_recipes) | Yes | Yes |
   | | Sign In | Yes | Yes |
   | | Sign Up | Yes | Yes |
-  | | Profile | Yes | Yes |
+  | | Profile | Yes | Yes | 
   | | Edit Profile | Yes | Yes |
-  | | Delete Profile | Yes | Yes |
+  | | Delete Profile | Yes | Yes | 
   | | Add Recipe | Yes | Yes |
-  | | View Recipe | Yes | Yes |
+  | | View Recipe | Yes | Yes | 
   | | Edit Recipe | Yes | Yes |
   | | About | Yes | Yes |
   | | 404 | Yes | Yes |
   | | Modals | Yes | Yes |
   **Galaxy S20"** 
-  | | Home(show_recipes) | Yes | Yes |
-  | | Sign In | Yes | Yes |
-  | | Sign Up | Yes | Yes |
-  | | Profile | Yes | Yes |
-  | | Edit Profile | Yes | Yes |
-  | | Delete Profile | Yes | Yes |
-  | | Add Recipe | Yes | Yes |
-  | | View Recipe | Yes | Yes |
-  | | Edit Recipe | Yes | Yes |
-  | | About | Yes | Yes |
-  | | 404 | Yes | Yes |
-  | | Modals | Yes | Yes |
+  | | Home(show_recipes) | Yes | Yes | [image](documentation/mobilehome.webp) |
+  | | Sign In | Yes | Yes | [image](documentation/mobilesignin.webp) |
+  | | Sign Up | Yes | Yes | [image](documentation/mobilesignup.webp) |
+  | | Profile | Yes | Yes |[image](documentation/mobileprof.webp) |
+  | | Edit Profile | Yes | Yes | [image](documentation/mobileeditprof.webp) |
+  | | Delete Profile | Yes | Yes | [image](documentation/mobiledelprof.webp) |
+  | | Add Recipe | Yes | Yes | [image](documentation/mobileaddrecipe.webp) |
+  | | View Recipe | Yes | Yes |[image](documentation/mobileview.webp) |
+  | | Edit Recipe | Yes | Yes | [image](documentation/mobileeditrecipe.webp) |
+  | | About | Yes | Yes | [image](documentation/mobileabout.webp) |
+  | | 404 | Yes | Yes | [image](documentation/mobile404.webp) |
+  | | Modals | Yes | Yes | [image](documentation/mobilemodal.webp) |
 
 ### CRUD (create, read, update, delete) Testing
 
