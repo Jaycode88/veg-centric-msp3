@@ -323,6 +323,75 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Edit Category field accepts alphanumeric characters , is required and prefilled | Yes | Yes | Yes |
 | Update and Delete Category buttons are visible and functional | Yes | Yes | Yes |
 
+### LightHouse Testing
+I used Google Chrome Lighthouse testing to assess the quality of the web app.
+
+| Page | Results desktop | Results mobile |
+|------|-----------------|----------------|
+| Home(show_recipes) | ![mockup](documentation/lighthome.webp) | ![mockup](documentation/lighthomemob.webp) |
+| Sign In | ![mockup](documentation/lightsignin.webp) | ![mockup](documentation/lightsigninmob.webp) |
+| Sign Up | ![mockup](documentation/lightsignup.webp) | ![mockup](documentation/lightsignupmob.webp) |
+| Profile |  ![mockup](documentation/lightprof.webp) | ![mockup](documentation/lightprofmob.webp) |
+| Edit Profile | ![mockup](documentation/lighteditprof.webp) | ![mockup](documentation/lighteditprofmob.webp) |
+| Delete Profile | ![mockup](documentation/lightdelprof.webp) | ![mockup](documentation/lightdelprofmob.webp) |
+| Add Recipe | ![mockup](documentation/lightaddrecipe.webp) | ![mockup](documentation/lightaddrecipemob.webp) |
+| Edit Recipe | ![mockup](documentation/lighteditrecipe.webp) | ![mockup](documentation/lighteditrecipemob.webp) |
+| About | ![mockup](documentation/lightabout.webp) | ![mockup](documentation/lightaboutmob.webp) |
+| View Recipe | ![mockup](documentation/lightdetails.webp) | ![mockup](documentation/lightdetailsmob.webp) |
+
+I also used [WAVE](https://wave.webaim.org/) to check accessability which Raised no Errors.
+Results can be viewed [here](https://wave.webaim.org/report#/https://veg-centric-msp3-64721c5e710e.herokuapp.com).
+
+## Defensive Programming
+| Page | User Status | User Action | Expected Result | Pass/Fail |
+|------|-------------|-------------|-----------------|-----------|
+| All(Except 404) | All Users | Click Logo text in navbar | Be Re-directed to homepage | Pass |
+|       |         | Click internal Nav link | Be Redirected to requested page | Pass |
+|   |             | Click Facebook Nav link | Open FB Page In New Tab | Pass |
+|       |         | Click Facebook Footer link | Open FB Page In New Tab | Pass |
+|   |   | Click Email Footer link | Open users default email with new mail to vegcentric | Pass |
+|         |        | Click Github footer link | Open developer's Github page in new tab | Pass |
+|    |      | click LinkedIn footer link | Open developer's LinkedIn profile page in new tab | Pass |
+| 404 | All Users | Click Logo | Be re-directed to homepage | Pass |
+|     |           | Click "Go Back" button |  Be re-directed to homepage | Pass |
+| Home | All Users | Click Logo |  Be re-directed to homepage | Pass |
+|      |           | Enter Search term and click Reset | Reset Search form | Pass |
+|      |           | Enter search term and click search | Return results or no results found message | Pass |
+|      |           | Submit an empty search form | Error to display | Pass |
+|      |      | Click view recipe buttons | Be re-directed to selected recipe's details page | Pass |
+|      | Non Resgistered | View welcome cards with sign in and sign up buttons | Welcome cards to display before and after recipe cards | Pass|
+|   |  | Click sign in button on welcome cards | be re-directed to sign in page | Pass |
+|   |  | Click  sign up button on welcome cards | Be re-directed to Sign up page | Pass |
+|   |  | View 4 random Recipe cards | 4 random recipe cards and sign in link should be displayed | Pass |
+|   |  | Click sign in button on recipe cards | be re-directed to sign in page | Pass |
+|  |  | Click Sign in link above recipe cards | Be re-directed to sign in page | Pass |
+|  | Signed In | view All Recipes | All recipes should be displayed on cards | Pass |
+|  |      | Click Add to favorites button | Add selected recipe to user favorite list and redirect to profile page | Pass |
+|   |    | Click remove favorite button | Remove recipe from user favorites list and redirect to homepage | Pass |
+| Sign Up | Non registered | Fill in form and click reset | Sign up form Resets | Pass |
+|   |    | Fill in sign up form correctly and click sign up | User created and redirected to sign in page with flash requesting sign in | Pass |
+|  |   | Fill in sign up form incorrectly and click sign up | Error displayed | Pass |
+|  |   | Click the sign in button | Be re-directed to the sign in page | Pass |
+|  |   | Click terms modal | Modal appears displaying terms and conditions | Pass |
+|  |   | Click Privacy modal | Modal appears displaying privacy policy | Pass |
+| Sign In | not signed in | Enters correct username and password and clicks sign in button | Be redirected to homepage with flash staing welcome user | Pass |
+|    |    | Enters incorrect username or password and clicks sign in button | Error is displayed | Pass |
+|    |   | Clicks logo | Be re-directed to homepage | Pass |
+|   |   | Clicks sign up button | Be re-directed to Sign up page | Pass |
+| View Recipe | All Users | View recipe details | Recipe details and image should be displayed with ingredients and steps | Pass |
+|    |   | Click Back to recipes button | Be re-directed to homepage | Pass |
+|    | not signed in | Click sign in button | Be re-directed to sign in page | Pass |
+|   |    | Click sign up button | Be re-directed to sign up page | Pass |
+|   | Signed in | Click add to favorites button | Selected recipe is added to users favorites list and user is Re-directed to their profile page | Pass |
+|   |    | Clcik remove from favorites button | Remove selected recipe from user favorites and redirect user to home page | Pass |
+|   | Recipe Creator | Click edit recipe | Be re-directed to the edit recipe page | Pass |
+|  |   | Click delete recipe | Modal opens to confirm | Pass |
+|  |   | click yes delete in modal | Recipe is deleted and user is redirected to profile page | Pass |
+|    |   | Click no close in modal | modal closes and recipe is not deleted | Pass |
+
+
+
+
 ## User Story Testing
 **As a first time user to the website, I would like to...**
 | AIM | Achieved | Image|
@@ -348,24 +417,6 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Add categories | Yes | ![mockup](documentation/admincat.webp) |
 | Generate profit through affiliate marketing | Yes | ![mockup](documentation/recipewithproduct.webp) |
 
-### LightHouse Testing
-I used Google Chrome Lighthouse testing to assess the quality of the web app.
-
-| Page | Results desktop | Results mobile |
-|------|-----------------|----------------|
-| Home(show_recipes) | ![mockup](documentation/lighthome.webp) | ![mockup](documentation/lighthomemob.webp) |
-| Sign In | ![mockup](documentation/lightsignin.webp) | ![mockup](documentation/lightsigninmob.webp) |
-| Sign Up | ![mockup](documentation/lightsignup.webp) | ![mockup](documentation/lightsignupmob.webp) |
-| Profile |  ![mockup](documentation/lightprof.webp) | ![mockup](documentation/lightprofmob.webp) |
-| Edit Profile | ![mockup](documentation/lighteditprof.webp) | ![mockup](documentation/lighteditprofmob.webp) |
-| Delete Profile | ![mockup](documentation/lightdelprof.webp) | ![mockup](documentation/lightdelprofmob.webp) |
-| Add Recipe | ![mockup](documentation/lightaddrecipe.webp) | ![mockup](documentation/lightaddrecipemob.webp) |
-| Edit Recipe | ![mockup](documentation/lighteditrecipe.webp) | ![mockup](documentation/lighteditrecipemob.webp) |
-| About | ![mockup](documentation/lightabout.webp) | ![mockup](documentation/lightaboutmob.webp) |
-| View Recipe | ![mockup](documentation/lightdetails.webp) | ![mockup](documentation/lightdetailsmob.webp) |
-
-I also used [WAVE](https://wave.webaim.org/) to check accessability which Raised no Errors.
-Results can be viewed [here](https://wave.webaim.org/report#/https://veg-centric-msp3-64721c5e710e.herokuapp.com).
 
 ## Automated Testing
 ### Jest Testing JQuery
