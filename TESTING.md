@@ -107,6 +107,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
   | | About | Yes | Yes | [image](documentation/chromeabout.webp) |
   | | 404 | Yes | Yes | [image](documentation/chrome404.webp) |
   | | Modals | Yes | Yes | [image](documentation/chromemodals.webp) |
+  | | Manage Categories | Yes | Yes | [image](documentation/chromecat.webp) |
   **Firefox** 
   | | Home(show_recipes) | Yes | Yes | [image](documentation/firehome.webp) |
   | | Sign In | Yes | Yes | [image](documentation/firesignin.webp) |
@@ -120,6 +121,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
   | | About | Yes | Yes | [image](documentation/fireabout.webp) |
   | | 404 | Yes | Yes | [image](documentation/fire404.webp) |
   | | Modals | Yes | Yes | [image](documentation/firemodal.webp) |
+  | | Manage Categories | Yes | Yes | [image](documentation/firecat.webp) |
   **Edge** 
   | | Home(show_recipes) | Yes | Yes | [image](documentation/edgehome.webp) |
   | | Sign In | Yes | Yes | [image](documentation/edgesignin.webp) |
@@ -133,6 +135,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
   | | About | Yes | Yes | [image](documentation/edgeabout.webp) |
   | | 404 | Yes | Yes | [image](documentation/edge404.webp) |
   | | Modals | Yes | Yes | [image](documentation/edgemodal.webp) |
+  | | Manage Categories | Yes | Yes | [image](documentation/edgecat.webp) |
   **Opera** 
   | | Home(show_recipes) | Yes | Yes | [image](documentation/operahome.webp) |
   | | Sign In | Yes | Yes | [image](documentation/operasignin.webp) |
@@ -146,6 +149,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
   | | About | Yes | Yes | [image](documentation/operaabout.webp) |
   | | 404 | Yes | Yes | [image](documentation/opera404.webp) |
   | | Modals | Yes | Yes | [image](documentation/operamodal.webp) |
+  | | Manage Categories | Yes | Yes | [image](documentation/operacat.webp) |
 
 ### Responsiveness
 
@@ -173,6 +177,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
   | | About | Yes | Yes | [image](documentation/operaabout.webp) |
   | | 404 | Yes | Yes | [image](documentation/opera404.webp) |
   | | Modals | Yes | Yes | [image](documentation/operamodal.webp) |
+  | | Manage Categories | Yes | Yes | [image](documentation/operacat.webp) |
   **Laptop 16"** 
   | | Home(show_recipes) | Yes | Yes | [image](documentation/laptophome.jpg) |
   | | Sign In | Yes | Yes | [image](documentation/laptopsignin.jpg) |
@@ -200,6 +205,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
   | | About | Yes | Yes | [image](documentation/mobileabout.jpg) |
   | | 404 | Yes | Yes | [image](documentation/mobile404.jpg) |
   | | Modals | Yes | Yes | [image](documentation/mobilemodal.jpg) |
+  | | Manage Categories | Yes | Yes | [image](documentation/mobilecat.jpg) |
 
 ### CRUD (create, read, update, delete) Testing
 
@@ -225,6 +231,11 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | READ a Favorite | Yes | Yes | No(As Intended) |
 | UPDATE a Favorite | No(As Intended) | No(As Intended) | No(As Intended) |
 | DELETE a Favorite | Yes | Yes | No(As Intended) |
+**Categories**
+| Create a Category | Yes | No(As Intended) | No(As Intended) |
+| Read a Category | Yes | Yes | Yes | None user can see a category on a recipe but can not select a category as does not have permission to create or edit a recipe |
+| Update a Category | Yes | No(As Intended) | No(As Intended) |
+| Delete a Category | Yes | No(As Intended) | No(As Intended) |
 
 ### Form Validation Testing
 
@@ -339,6 +350,7 @@ I used Google Chrome Lighthouse testing to assess the quality of the web app.
 | Edit Recipe | ![mockup](documentation/lighteditrecipe.webp) | ![mockup](documentation/lighteditrecipemob.webp) |
 | About | ![mockup](documentation/lightabout.webp) | ![mockup](documentation/lightaboutmob.webp) |
 | View Recipe | ![mockup](documentation/lightdetails.webp) | ![mockup](documentation/lightdetailsmob.webp) |
+| Manage Categories | ![mockup](documentation/catlightdesk.webp) | ![mockup](documentation/catlightmob.webp) |
 
 I also used [WAVE](https://wave.webaim.org/) to check accessability which Raised no Errors.
 Results can be viewed [here](https://wave.webaim.org/report#/https://veg-centric-msp3-64721c5e710e.herokuapp.com).
