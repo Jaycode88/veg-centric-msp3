@@ -174,18 +174,19 @@ I've tested my deployed project on multiple browsers to check for compatibility 
   | | 404 | Yes | Yes | [image](documentation/opera404.webp) |
   | | Modals | Yes | Yes | [image](documentation/operamodal.webp) |
   **Laptop 16"** 
-  | | Home(show_recipes) | Yes | Yes |
-  | | Sign In | Yes | Yes |
-  | | Sign Up | Yes | Yes |
-  | | Profile | Yes | Yes | 
-  | | Edit Profile | Yes | Yes |
-  | | Delete Profile | Yes | Yes | 
-  | | Add Recipe | Yes | Yes |
-  | | View Recipe | Yes | Yes | 
-  | | Edit Recipe | Yes | Yes |
-  | | About | Yes | Yes |
-  | | 404 | Yes | Yes |
-  | | Modals | Yes | Yes |
+  | | Home(show_recipes) | Yes | Yes | [image](documentation/laptophome.jpg) |
+  | | Sign In | Yes | Yes | [image](documentation/laptopsignin.jpg) |
+  | | Sign Up | Yes | Yes | [image](documentation/laptopsignup.jpg) |
+  | | Profile | Yes | Yes | [image](documentation/laptopprof.jpg) | 
+  | | Edit Profile | Yes | Yes | [image](documentation/laptopeditprof.jpg) |
+  | | Delete Profile | Yes | Yes | [image](documentation/laptopdelprof.jpg) | 
+  | | Add Recipe | Yes | Yes | [image](documentation/laptopaddrecipe.jpg) |
+  | | View Recipe | Yes | Yes | [image](documentation/laptopview.jpg) | 
+  | | Edit Recipe | Yes | Yes | [image](documentation/laptopeditrecipe.jpg) |
+  | | About | Yes | Yes | [image](documentation/laptopabout.jpg) |
+  | | 404 | Yes | Yes | [image](documentation/laptop404.jpg) |
+  | | Modals | Yes | Yes | [image](documentation/laptopmodal.jpg) |
+  | | Manage Categories | Yes | Yes | [image](documentation/laptopcategory.jpg) |
   **Galaxy S20"** 
   | | Home(show_recipes) | Yes | Yes | [image](documentation/mobilehome.jpg) |
   | | Sign In | Yes | Yes | [image](documentation/mobilesignin.jpg) |
