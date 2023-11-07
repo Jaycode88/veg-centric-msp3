@@ -187,18 +187,18 @@ I've tested my deployed project on multiple browsers to check for compatibility 
   | | 404 | Yes | Yes |
   | | Modals | Yes | Yes |
   **Galaxy S20"** 
-  | | Home(show_recipes) | Yes | Yes | [image](documentation/mobilehome.webp) |
-  | | Sign In | Yes | Yes | [image](documentation/mobilesignin.webp) |
-  | | Sign Up | Yes | Yes | [image](documentation/mobilesignup.webp) |
-  | | Profile | Yes | Yes |[image](documentation/mobileprof.webp) |
-  | | Edit Profile | Yes | Yes | [image](documentation/mobileeditprof.webp) |
-  | | Delete Profile | Yes | Yes | [image](documentation/mobiledelprof.webp) |
-  | | Add Recipe | Yes | Yes | [image](documentation/mobileaddrecipe.webp) |
-  | | View Recipe | Yes | Yes |[image](documentation/mobileview.webp) |
-  | | Edit Recipe | Yes | Yes | [image](documentation/mobileeditrecipe.webp) |
-  | | About | Yes | Yes | [image](documentation/mobileabout.webp) |
-  | | 404 | Yes | Yes | [image](documentation/mobile404.webp) |
-  | | Modals | Yes | Yes | [image](documentation/mobilemodal.webp) |
+  | | Home(show_recipes) | Yes | Yes | [image](documentation/mobilehome.jpg) |
+  | | Sign In | Yes | Yes | [image](documentation/mobilesignin.jpg) |
+  | | Sign Up | Yes | Yes | [image](documentation/mobilesignup.jpg) |
+  | | Profile | Yes | Yes |[image](documentation/mobileprof.jpg) |
+  | | Edit Profile | Yes | Yes | [image](documentation/mobileeditprof.jpg) |
+  | | Delete Profile | Yes | Yes | [image](documentation/mobiledelprof.jpg) |
+  | | Add Recipe | Yes | Yes | [image](documentation/mobileaddrecipe.jpg) |
+  | | View Recipe | Yes | Yes |[image](documentation/mobileview.jpg) |
+  | | Edit Recipe | Yes | Yes | [image](documentation/mobileeditrecipe.jpg) |
+  | | About | Yes | Yes | [image](documentation/mobileabout.jpg) |
+  | | 404 | Yes | Yes | [image](documentation/mobile404.jpg) |
+  | | Modals | Yes | Yes | [image](documentation/mobilemodal.jpg) |
 
 ### CRUD (create, read, update, delete) Testing
 
