@@ -202,18 +202,18 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 ### CRUD (create, read, update, delete) Testing
 
-| Aim | Admin | User | Non User |
-|-----|-------|------|----------|
+| Aim | Admin | User | Non User | Note |
+|-----|-------|------|----------|------|
 **Profile**
-| CREATE a Profile | Yes | Yes | Yes |
+| CREATE a Profile | No(As Intended) | No(As Intended) | Yes | A user may create a second account but with a different email address |
 | READ Profile Details | Yes | Yes | No(As Intended) |
 | UPDATE Profile Details | Yes | Yes | No(As Intended) |
 | DELETE Profile | Yes | Yes | No(As Intended) |
 **Recipe**
 | CREATE a Recipe | Yes | Yes | No(As Intended) |
 | READ a Recipe | Yes | Yes | Yes |
-| UPDATE a Recipe | Yes | Yes | No(As Intended) |
-| DELETE a Recipe | Yes | Yes | No(As Intended) |
+| UPDATE a Recipe | Yes | Yes | No(As Intended) | Only recipe poster or Admin can update a recipe |
+| DELETE a Recipe | Yes | Yes | No(As Intended) | Only recipe poster or Admin can delete a recipe |
 **Recipe Product Suggestions**
 | CREATE a Suggestion | Yes | No(As Intended) | No(As Intended) |
 | READ a Suggestion | Yes | Yes | Yes |
@@ -343,112 +343,161 @@ I also used [WAVE](https://wave.webaim.org/) to check accessability which Raised
 Results can be viewed [here](https://wave.webaim.org/report#/https://veg-centric-msp3-64721c5e710e.herokuapp.com).
 
 ## Defensive Programming
-The table below covers manual tests for User actions Please note that form validation has been minimised to correct form completion and incorrect completion the reason for this is that full form validation testing has been documented above in the Cross platform testing section. 
+The tables below cover manual tests for User actions on each page, Please note that form validation has been minimised to correct form completion and incorrect completion, the reason for this is that full form validation testing has been documented above in the Cross platform testing section.
 
-| Page | User Status | User Action | Expected Result | Pass/Fail |
-|------|-------------|-------------|-----------------|-----------|
-| All(Except 404) | All Users | Click Logo text in navbar | Be Re-directed to homepage | Pass |
-|       |         | Click internal Nav link | Be Redirected to requested page | Pass |
-|   |             | Click Facebook Nav link | Open FB Page In New Tab | Pass |
-|       |         | Click Facebook Footer link | Open FB Page In New Tab | Pass |
-|   |   | Click Email Footer link | Open users default email with new mail to vegcentric | Pass |
-|         |        | Click Github footer link | Open developer's Github page in new tab | Pass |
-|    |      | click LinkedIn footer link | Open developer's LinkedIn profile page in new tab | Pass |
-| 404 | All Users | Click Logo | Be re-directed to homepage | Pass |
-|     |           | Click "Go Back" button |  Be re-directed to homepage | Pass |
-| Home | All Users | Click Logo |  Be re-directed to homepage | Pass |
-|      |           | Enter Search term and click Reset | Reset Search form | Pass |
-|      |           | Enter search term and click search | Return results or no results found message | Pass |
-|      |           | Submit an empty search form | Error to display | Pass |
-|      |      | Click view recipe buttons | Be re-directed to selected recipe's details page | Pass |
-|      | Non Resgistered | View welcome cards with sign in and sign up buttons | Welcome cards to display before and after recipe cards | Pass|
-|   |  | Click sign in button on welcome cards | be re-directed to sign in page | Pass |
-|   |  | Click  sign up button on welcome cards | Be re-directed to Sign up page | Pass |
-|   |  | View 4 random Recipe cards | 4 random recipe cards and sign in link should be displayed | Pass |
-|   |  | Click sign in button on recipe cards | be re-directed to sign in page | Pass |
-|  |  | Click Sign in link above recipe cards | Be re-directed to sign in page | Pass |
-|  | Signed In | view All Recipes | All recipes should be displayed on cards | Pass |
-|  |      | Click Add to favorites button | Add selected recipe to user favorite list and redirect to profile page | Pass |
-|   |    | Click remove favorite button | Remove recipe from user favorites list and redirect to homepage | Pass |
-| Sign Up | Non registered | Fill in form and click reset | Sign up form Resets | Pass |
-|   |    | Fill in sign up form correctly and click sign up | User created and redirected to sign in page with flash requesting sign in | Pass |
-|  |   | Fill in sign up form incorrectly and click sign up | Error displayed | Pass |
-|  |   | Click the sign in button | Be re-directed to the sign in page | Pass |
-|  |   | Click terms modal | Modal appears displaying terms and conditions | Pass |
-|  |   | Click Privacy modal | Modal appears displaying privacy policy | Pass |
-| Sign In | not signed in | Enters correct username and password and clicks sign in button | Be redirected to homepage with flash staing welcome user | Pass |
-|    |    | Enters incorrect username or password and clicks sign in button | Error is displayed | Pass |
-|    |   | Clicks logo | Be re-directed to homepage | Pass |
-|   |   | Clicks sign up button | Be re-directed to Sign up page | Pass |
-| View Recipe | All Users | View recipe details | Recipe details and image should be displayed with ingredients and steps | Pass |
-|    |   | Click Back to recipes button | Be re-directed to homepage | Pass |
-|    | not signed in | Click sign in button | Be re-directed to sign in page | Pass |
-|   |    | Click sign up button | Be re-directed to sign up page | Pass |
-|   | Signed in | Click add to favorites button | Selected recipe is added to users favorites list and user is Re-directed to their profile page | Pass |
-|   |    | Clcik remove from favorites button | Remove selected recipe from user favorites and redirect user to home page | Pass |
-|   | Recipe Creator | Click edit recipe | Be re-directed to the edit recipe page | Pass |
-|  |   | Click delete recipe | Modal opens to confirm | Pass |
-|  |   | click yes delete in modal | Recipe is deleted and user is redirected to profile page | Pass |
-|    |   | Click no close in modal | modal closes and recipe is not deleted | Pass |
-| Add Recipe | Signed in | fill in form and click reset button | Form fields reset | Pass |
-|    |     | Clicks add ingredient button | Ingredient field appears with remove button | Pass |
-|    |     | clicks remove ingredient button | Ingredient field correlating to button is removed | Pass |
-|    |     | Clicks add step button | Step field appears with remove button | Pass |
-|    |     | clicks remove step button | Ingredient field correlating to button is removed | Pass |
-|    |    | Fill in form correctly and press post button | Recipe is uploaded and user is redirected to home message with flash message | Pass |
-|    |    | Fill in form incorrectly and press post button | Error message displayed | Pass |
-|    | Not Signed in | Attempt to access add recipe page via force | Error message displayed | Pass |
-| Edit Recipe | Recipe owner | Clicks add ingredient button | Ingredient field appears with remove button | Pass | 
-|    |     | clicks remove ingredient button | Ingredient field correlating to button is removed | Pass |
-|    |     | Clicks add step button | Step field appears with remove button | Pass |
-|    |     | clicks remove step button | Ingredient field correlating to button is removed | Pass |
-|    |    | Fill in form correctly and press update button | Recipe is updated and user is redirected to home message with flash message | Pass |
-|    |    | Fill in form incorrectly and press post button | Error message displayed | Pass |
-|    |    | click delete recipe button | Modal appears to confirm deletion of recipe | Pass |
-|    |    | click yes delete in modal | recipe is deleted user is re-directed to profile page with a flash message | Pass |
-|    | Admin |  Clicks add ingredient button | Ingredient field appears with remove button | Pass | 
-|    |     | clicks remove ingredient button | Ingredient field correlating to button is removed | Pass |
-|    |     | Clicks add step button | Step field appears with remove button | Pass |
-|    |     | clicks remove step button | Ingredient field correlating to button is removed | Pass |
-|    |    | Fill in form correctly and press update button | Recipe is updated and user is redirected to home message with flash message | Pass |
-|    |    | Fill in form incorrectly and press post button | Error message displayed | Pass |
-|    |    | click delete recipe button | Modal appears to confirm deletion of recipe | Pass |
-|    |    | click yes delete in modal | recipe is deleted user is re-directed to profile page with a flash message | Pass |
-|  | Signed in (Not recipe owner) |  Attempt to access edit recipe page via force | Error message displayed | Pass |
-|    | Not Signed in | Attempt to access edit recipe page via force | Error message displayed | Pass |
-| Profile | Not signed in | Attempt to access profile page by force | error message displayed | Pass |
-|  | Signed in(not profile owner) | Attempt to access profile page by force | Correct profile for user is displayed | Pass |
-|  | Signed in | Clicks Your profile section of accordian | Profile card is displayed in accordian drop down | Pass |
-|   |   | Clicks edit button on profile card | Re-directed to edit profile page | Pass |
-|  |   | Clicks your recipes section of accordian | User posted recipe cards are shown in accordian dropdown | Pass |
-|   |    | Clicks view recipe on recipe card | Re-directed to recipe details page | Pass |
-|   |    | Clicks Edit recipe on recipe card | Re-directed to edit recipe page | Pass |
-|   |    | Clicks Your favorites section of accordian | User's favorite recipe cards are displayed in accordian dropdown | Pass |
-|   |    | Clicks view recipe on favorite recipe card | Re-directed to recipe details page | Pass |
-|   |    | Clicks remove on favorite recipe card | Recipe removed from favorites, user redirected to homepage with flash message | Pass |
-|   |    | Clicks logo | Re-directed to home page | Pass |
-|   | Not signed in | Attempts to access profile page with force | Error message displayed | Pass |
-| Edit Profile | Not signed in | Attempt to access edit profile page by force | error message displayed | Pass |
-|  | Signed in(not profile owner) | Attempt to access edit profile page by force | error message displayed | Pass |
-| | Signed in| clicks delete profile button | Re-directed to delete profile page for confirmation | Pass |
-|      |     | Edits form but incorrectly completes fields and clicks save changes | Error is displayed | Pass |
-|   |   | Edits forms correctly completes all fields and clicks save changes | re-directed to profile page with flash message | Pass |
-| Delete profile page | Not signed in | Attempt to access delete profile page by force | error message displayed | Pass |
-|  | Signed in(not profile owner) | Attempt to access delete profile page by force | error message displayed | Pass |
-| | Signed in | Clicks cancel button | Re-directed to profile page | Pass |
-|   |   | Clicks delete profile button | user profile and details is deleted, user re-directed to sign in page with flash message | Pass |
-|  |    | Clicks Logo | Re-directed to homepage | Pass |
-| About | All Users | Clicks Terms and conditions link | Terms modal opens |
-|       |    | Clicks Privacy policy link | Provacy policy modal opens |
-|   |   | Clicks close button in modal | Modal closes | Pass |
-|   | Not signed in | Clicks sign up buton | Re-directed to sign up page | Pass |
-|   |   | Clicks sign in button | Re-directed to sign in page | Pass |
-| Manage Categories page | Not signed in | Attempts to access page by force | Error message is displayed | Pass |
-|   | Signed in (not admin) | Attempts to access page by force | Error message is displayed | Pass |
-|   | Admin | Clicks add category button without filling in form field | Error displayed | Pass |
-|   |   | Edits a form incorrectly and clicks update category | Error message displayed | Pass |
-|   |   | Edits a category form correctly and clicks update category | Category is updated | Pass |
-| | | clicks delete category button | Category is deleted | Pass |
+**All(Except 404)**
+| User Status | User Action | Expected Result | Pass/Fail |
+|-------------|-------------|-----------------|-----------|
+| All Users | Click Logo text in navbar | Be Re-directed to homepage | Pass |
+|         | Click internal Nav link | Be Redirected to requested page | Pass |
+|             | Click Facebook Nav link | Open FB Page In New Tab | Pass |
+|         | Click Facebook Footer link | Open FB Page In New Tab | Pass |
+|   | Click Email Footer link | Open users default email with new mail to vegcentric | Pass |
+|        | Click Github footer link | Open developer's Github page in new tab | Pass |
+|      | click LinkedIn footer link | Open developer's LinkedIn profile page in new tab | Pass |
+
+**404**
+| User Status | User Action | Expected Result | Pass/Fail |
+|-------------|-------------|-----------------|-----------|
+| All Users | Click Logo | Be re-directed to homepage | Pass |
+|           | Click "Go Back" button |  Be re-directed to homepage | Pass |
+
+**Home**
+| User Status | User Action | Expected Result | Pass/Fail |
+|-------------|-------------|-----------------|-----------|
+| All Users | Click Logo |  Be re-directed to homepage | Pass |
+|           | Enter Search term and click Reset | Reset Search form | Pass |
+|           | Enter search term and click search | Return results or no results found message | Pass |
+|           | Submit an empty search form | Error to display | Pass |
+|      | Click view recipe buttons | Be re-directed to selected recipe's details page | Pass |
+| Non Resgistered | View welcome cards with sign in and sign up buttons | Welcome cards to display before and after recipe cards | Pass|
+|  | Click sign in button on welcome cards | be re-directed to sign in page | Pass |
+|  | Click  sign up button on welcome cards | Be re-directed to Sign up page | Pass |
+|  | View 4 random Recipe cards | 4 random recipe cards and sign in link should be displayed | Pass |
+|  | Click sign in button on recipe cards | be re-directed to sign in page | Pass |
+|  | Click Sign in link above recipe cards | Be re-directed to sign in page | Pass |
+| Signed In | view All Recipes | All recipes should be displayed on cards | Pass |
+|      | Click Add to favorites button | Add selected recipe to user favorite list and redirect to profile page | Pass |
+|    | Click remove favorite button | Remove recipe from user favorites list and redirect to homepage | Pass |
+
+**Sign Up**
+| User Status | User Action | Expected Result | Pass/Fail |
+|-------------|-------------|-----------------|-----------|
+| Non registered | Fill in form and click reset | Sign up form Resets | Pass |
+|    | Fill in sign up form correctly and click sign up | User created and redirected to sign in page with flash requesting sign in | Pass |
+|   | Fill in sign up form incorrectly and click sign up | Error displayed | Pass |
+|   | Click the sign in button | Be re-directed to the sign in page | Pass |
+|   | Click terms modal | Modal appears displaying terms and conditions | Pass |
+|   | Click Privacy modal | Modal appears displaying privacy policy | Pass |
+
+**Sign In**
+| User Status | User Action | Expected Result | Pass/Fail |
+|-------------|-------------|-----------------|-----------|
+| not signed in | Enters correct username and password and clicks sign in button | Be redirected to homepage with flash staing welcome user | Pass |
+|    | Enters incorrect username or password and clicks sign in button | Error is displayed | Pass |
+|   | Clicks logo | Be re-directed to homepage | Pass |
+|   | Clicks sign up button | Be re-directed to Sign up page | Pass |
+
+**View Recipe**
+| User Status | User Action | Expected Result | Pass/Fail |
+|-------------|-------------|-----------------|-----------|
+| All Users | View recipe details | Recipe details and image should be displayed with ingredients and steps | Pass |
+|   | Click Back to recipes button | Be re-directed to homepage | Pass |
+| not signed in | Click sign in button | Be re-directed to sign in page | Pass |
+|    | Click sign up button | Be re-directed to sign up page | Pass |
+| Signed in | Click add to favorites button | Selected recipe is added to users favorites list and user is Re-directed to their profile page | Pass |
+|    | Clcik remove from favorites button | Remove selected recipe from user favorites and redirect user to home page | Pass |
+| Recipe Creator | Click edit recipe | Be re-directed to the edit recipe page | Pass |
+|   | Click delete recipe | Modal opens to confirm | Pass |
+|   | click yes delete in modal | Recipe is deleted and user is redirected to profile page | Pass |
+|   | Click no close in modal | modal closes and recipe is not deleted | Pass |
+
+**Add Recipe**
+| User Status | User Action | Expected Result | Pass/Fail |
+|-------------|-------------|-----------------|-----------|
+| Signed in | fill in form and click reset button | Form fields reset | Pass |
+|     | Clicks add ingredient button | Ingredient field appears with remove button | Pass |
+|     | clicks remove ingredient button | Ingredient field correlating to button is removed | Pass |
+|     | Clicks add step button | Step field appears with remove button | Pass |
+|     | clicks remove step button | Ingredient field correlating to button is removed | Pass |
+|    | Fill in form correctly and press post button | Recipe is uploaded and user is redirected to home message with flash message | Pass |
+|    | Fill in form incorrectly and press post button | Error message displayed | Pass |
+| Not Signed in | Attempt to access add recipe page via force | Error message displayed | Pass |
+
+**Edit Recipe**
+| User Status | User Action | Expected Result | Pass/Fail |
+|-------------|-------------|-----------------|-----------|
+| Recipe owner | Clicks add ingredient button | Ingredient field appears with remove button | Pass | 
+|     | clicks remove ingredient button | Ingredient field correlating to button is removed | Pass |
+|     | Clicks add step button | Step field appears with remove button | Pass |
+|     | clicks remove step button | Ingredient field correlating to button is removed | Pass |
+|    | Fill in form correctly and press update button | Recipe is updated and user is redirected to home message with flash message | Pass |
+|    | Fill in form incorrectly and press post button | Error message displayed | Pass |
+|    | click delete recipe button | Modal appears to confirm deletion of recipe | Pass |
+|    | click yes delete in modal | recipe is deleted user is re-directed to profile page with a flash message | Pass |
+| Admin |  Clicks add ingredient button | Ingredient field appears with remove button | Pass | 
+|     | clicks remove ingredient button | Ingredient field correlating to button is removed | Pass |
+|     | Clicks add step button | Step field appears with remove button | Pass |
+|     | clicks remove step button | Ingredient field correlating to button is removed | Pass |
+|    | Fill in form correctly and press update button | Recipe is updated and user is redirected to home message with flash message | Pass |
+|    | Fill in form incorrectly and press post button | Error message displayed | Pass |
+|    | click delete recipe button | Modal appears to confirm deletion of recipe | Pass |
+|    | click yes delete in modal | recipe is deleted user is re-directed to profile page with a flash message | Pass |
+| Signed in (Not recipe owner) |  Attempt to access edit recipe page via force | Error message displayed | Pass |
+| Not Signed in | Attempt to access edit recipe page via force | Error message displayed | Pass |
+
+**Profile**
+| User Status | User Action | Expected Result | Pass/Fail |
+|-------------|-------------|-----------------|-----------|
+| Not signed in | Attempt to access profile page by force | error message displayed | Pass |
+| Signed in(not profile owner) | Attempt to access profile page by force | Correct profile for the user that is signed in is displayed | Pass |
+| Signed in | Clicks Your profile section of accordian | Profile card is displayed in accordian drop down | Pass |
+|   | Clicks edit button on profile card | Re-directed to edit profile page | Pass |
+|   | Clicks your recipes section of accordian | User posted recipe cards are shown in accordian dropdown | Pass |
+|    | Clicks view recipe on recipe card | Re-directed to recipe details page | Pass |
+|    | Clicks Edit recipe on recipe card | Re-directed to edit recipe page | Pass |
+|    | Clicks Your favorites section of accordian | User's favorite recipe cards are displayed in accordian dropdown | Pass |
+|    | Clicks view recipe on favorite recipe card | Re-directed to recipe details page | Pass |
+|    | Clicks remove on favorite recipe card | Recipe removed from favorites, user redirected to homepage with flash message | Pass |
+|    | Clicks logo | Re-directed to home page | Pass |
+| Not signed in | Attempts to access profile page with force | Error message displayed | Pass |
+
+**Edit Profile**
+| User Status | User Action | Expected Result | Pass/Fail |
+|-------------|-------------|-----------------|-----------|
+| Not signed in | Attempt to access edit profile page by force | error message displayed | Pass |
+| Signed in(not profile owner) | Attempt to access edit profile page by force | Empty and un-functional edit profile page is displayed | Pass |
+| Signed in| clicks delete profile button | Re-directed to delete profile page for confirmation | Pass |
+|     | Edits form but incorrectly completes fields and clicks save changes | Error is displayed | Pass |
+|   | Edits forms correctly completes all fields and clicks save changes | re-directed to profile page with flash message | Pass |
+
+**Delete profile**
+| User Status | User Action | Expected Result | Pass/Fail |
+|-------------|-------------|-----------------|-----------|
+| Not signed in | Attempt to access delete profile page by force | error message displayed | Pass |
+| Signed in(not profile owner) | Attempt to access delete profile page by force | error message displayed | Pass |
+| Signed in | Clicks cancel button | Re-directed to profile page | Pass |
+|   | Clicks delete profile button | user profile and details is deleted, user re-directed to sign in page with flash message | Pass |
+|    | Clicks Logo | Re-directed to homepage | Pass |
+
+**About**
+| User Status | User Action | Expected Result | Pass/Fail |
+|-------------|-------------|-----------------|-----------|
+| All Users | Clicks Terms and conditions link | Terms modal opens |
+|    | Clicks Privacy policy link | Provacy policy modal opens |
+|   | Clicks close button in modal | Modal closes | Pass |
+| Not signed in | Clicks sign up buton | Re-directed to sign up page | Pass |
+|   | Clicks sign in button | Re-directed to sign in page | Pass |
+
+**Manage Categories**
+| User Status | User Action | Expected Result | Pass/Fail |
+|-------------|-------------|-----------------|-----------|
+| Not signed in | Attempts to access page by force | Error message is displayed | Pass |
+| Signed in (not admin) | Attempts to access page by force | Error message is displayed | Pass |
+| Admin | Clicks add category button without filling in form field | Error displayed | Pass |
+|   | Edits a form incorrectly and clicks update category | Error message displayed | Pass |
+|   | Edits a category form correctly and clicks update category | Category is updated | Pass |
+| | clicks delete category button | Category is deleted | Pass |
 
 ## User Story Testing
 **As a first time user to the website, I would like to...**
@@ -640,8 +689,7 @@ Below is a description of the one function I attempted to test with no success.
 
   I concluded that the issue I am facing is more than likely within the Materialize card defaults and decdided to look for another solution to the problem.
 
-  The Fix: Recipe descriptions are now required to be between 100 and 120 characters to prevent layout issues.
-  My only concern with this is that it may be hard for all users to be able to fill the character requirment, Although it is a website targetted to foodies so I also presume most users would be able to describe their recipe to suit the requirements.
+  The Fix: I found that if I set the card content width to 100%  it solved my problem. I also set the max-length of the entered decritpion to 100 characters which with card heights set stopped the overlay of information and buttons.
 
 - **Text area PlaceHolder**
   
