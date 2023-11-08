@@ -616,6 +616,100 @@ Below is a description of the one function I attempted to test with no success.
 
     6. **Conclusion**: Due to the issues encountered and the challenges faced in simulating the modal open behavior, I was unable to complete testing for the `initializeModals` function. I have documented my testing process and challenges in this document for future reference. As well as conduct manual user testing on these modals.
 
+### Python unit testing
+I Used [pytest](https://pypi.org/project/pytest-html/) along with flask-testing using the following command:
+  ```
+  pip install pytest Flask-Testing
+  ```
+
+I then needed to create a tests directory in the root directory to hold the test_app.py file. Before I could start coding tests It was nessacery to add the needed import the app at the top of the test_app.py file:
+  ```
+  from app import app
+  ```
+
+I then proceeded to write 18 tests testing basic route navigation.
+
+I did also install pytest-html in attempt to get a detailed report, How ever I could not get the report to display in an understandable manner, There for I have provided a manual break down of all tests conducted below:
+
+ - **test_show_recipes_route**
+    
+    Test passed: Response status code is 200 (OK)
+
+- **test_search_recipes_route**
+  
+  Test passed: Response status code is 200 (OK)
+
+- **test_about_route**
+
+  Test passed: Response status code is 200 (OK)
+
+- **test_sign_up_route_get**
+
+  Test passed: Response status code is 200 (OK) for the GET request
+
+- **test_sign_in_route_get**
+
+  Test passed: Response status code is 200 (OK) for the GET request
+
+- **test_profile_route_get**
+
+  Test passed: Response status code is 302 (redirect)
+
+- **test_edit_profile_route_get**
+
+  Test passed: Response status code is 302 (redirect)
+
+- **test_delete_profile_route**
+
+  Test passed: Response status code is 200 (OK) for the GET request
+  Test passed: Response status code is 302 (Found/Redirect) for a successful profile deletion
+
+- **test_add_recipe_route_get**
+
+  Test passed: Response status code is 200 (OK) for the GET request
+
+- **test_view_recipe_route_authenticated_user**
+
+  Test passed: Response status code is 200 (OK)
+
+- **test_view_recipe_route_non_user**
+
+  Test passed: Response status code is 200 (OK)
+
+- **test_delete_recipe_route_authorized_user**
+
+  Test passed: Response status code is 302 (Found/Redirect) for successful recipe deletion
+
+- **test_delete_recipe_route_unauthenticated_user**
+
+  Test passed: Response status code is 302 (Found/Redirect) for unauthenticated user
+
+- **test_edit_recipe_route_authorized_user**
+
+  Test passed: Response status code is 302 (Found/Redirect) for viewing the edit form
+  Test passed: Response status code is 302 (Found/Redirect) for successful recipe update
+
+- **test_edit_recipe_route_unauthenticated_user**
+
+  Test passed: Response status code is 302 (Found/Redirect) for unauthenticated user
+
+- **test_manage_categories_route_admin**
+
+  Test passed: Response status code is 200 (OK)
+
+- **test_manage_categories_route_non_admin**
+
+  Test passed: Response status code is 200 (OK) or another status code that you expect (e.g., 302 for unauthorized access)
+
+- **test_sign_out_route**
+
+  Test passed: Response status code is 302 (Found/Redirect) after signing out
+  Test passed: User is removed from the session
+
+
+In an ideal scenario in which I had a little more time to complete, I would have like to cover tests over a much wider range of scenarios and expected behaviours.
+
+
 ## Bugs
 ### Fixed Bugs
 - **Mongo URI connection**
