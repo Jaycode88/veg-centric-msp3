@@ -835,3 +835,5 @@ In an ideal scenario in which I had a little more time to complete, I would have
   ```
   In summary, the provided CSS code sets the styling for the ```<body>``` element of an HTML document and two elements with class names "content" and "error." It configures the ```<body>``` element to have a minimum height of 100% of the viewport height and to use a flexbox layout in a column direction. The "content" and "error" elements within the ```<body>``` will expand to fill available space equally.
 
+### Unfixed Bugs
+There are no remaining bugs that I am aware of.
