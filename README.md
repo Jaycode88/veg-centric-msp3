@@ -359,18 +359,22 @@ The Prototype for the main page was made with [Figma](https://www.figma.com/)
     ![screenshot](documentation/fbpage.webp)
 
 - **Admin Features**
-The Admin Has extra options over Standard users many of these are to maintain readability standards such as editing spelling mistakes etc.
+    
+    The Admin user Has extra options over other users many of these are to maintain readability standards such as editing spelling mistakes etc.
 
-    - Manage Catagories page
+    - **Manage Catagories page**
+
         On this page the Admin can add, edit and remove categories.
+
         ![mockup](documentation/admincat.webp)
 
-    - Edit Recipe
+    - **Edit Recipe**
+        
         The Admin's Edit recipe form includes more inputs, Allowing the site owner to edit users recipes for the purpose of removing spelling mistkes, changing the image for aesthetical purposes, Adding product information and links to affiliates.
 
         ![mockup](documentation/adminedit.webp)
 
-    Admin also have extra buttons on the recipes details page allowing them to edit and delete all user recipes.
+    Admin also have extra buttons on the recipes details page allowing them to edit and delete all user's recipes.
 
     ![mockup](documentation/adminxbtns.webp)
 
