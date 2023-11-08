@@ -75,7 +75,14 @@ Veg-Centric Recipes addresses a growing need for economical and sustainable dini
     Green And Goldenrod:
     This pallete Consists of the colors Olive Green (#5A873C), Apple Green (#8ABD4D), Pale Goldenrod (#DED8A0) and White (#FFFFF).
 
+[Adobe Color wheel](https://color.adobe.com/create/color-wheel) was used to generate the color pallete.
+
+I used [Medium]( https://medium.com/@ashley_howell/understanding-colour-psychology-for-restaurants-brands-dbb7ffbcecae) to research colour physcology in relation to restaurant and food brands.
+
+I also used [JennDavid](https://jenndavid.com/colors-that-influence-food-sales-infographic/) to research colours that influence food sales.
+
 #### Color by Color:
+
 Below is the Physcology of each color and its relation to food.
 
 - **Olive Green**
@@ -164,6 +171,8 @@ In designing this project, I carefully selected fonts to convey the desired visu
 - As a best practice, I have also included a fallback font in The design. In cases where browsers or devices may not support the specific fonts mentioned above, we use a generic sans-serif font. This ensures that the text remains legible and maintains a consistent appearance across various platforms.
 
 My font choices, including the fallback option, reflect the project's personality and goals, combining elegance with readability to create an engaging and visually appealing user interface.
+
+I used [Pagecloud](https://www.pagecloud.com/blog/best-google-fonts-pairings) to research font pairings.
 
 ## User Stories
 
@@ -797,10 +806,13 @@ Now, your application should be configured to use MongoDB as its database.
 - [CodeInstitute Python Linter](https://pep8ci.herokuapp.com/) Used to Check Python for PEP-8 Compliance.
 - [WAVE](https://wave.webaim.org/) Used to check accesability.
 - [Responsinator](http://www.responsinator.com/) Used to check responsiveness.
+- [UI.dev](https://ui.dev/amiresponsive) Used to create am I responsive image.
+
 
 ### Acknowledgements
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://tim.2bn.dev/)  for his amazing help, advice and support throughout the development of this project.
 - I would like to thank [Alex K](https://calendly.com/alex_mentor) for his ongoing support.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the great advice.
+- I would like to thank [Sassan Tazayoni](https://github.com/SasanTazayoni) For his continued Motivation and insightful feedback
 - I would like to thank freinds for there on going support and reviewing of the Web App.

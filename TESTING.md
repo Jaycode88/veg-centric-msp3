@@ -712,5 +712,26 @@ Below is a description of the one function I attempted to test with no success.
   During the building of the application I noticed that the user needed to have the cursor touching the underline and close to the icon in order for the form field to activate and accept text. It was Generally difficult to use requiring many clicks before I could type into the search field. This was an issue I put off until the end of the build and when I came back to it and ran some manual tests, I found that the Issue was no longer apparent. Wether this issue was unoticably fixed when fixing validation errors, Or wether it was just a temporary browser glitch, I can not confirm.
 
 - **Social Icon in Navigation bar**
-I found when the User hovered over the Facbook Icon in the Nav Bar the Highlighted area was more in height than when other links were hovered over.
-At first I attempted to set a height for the facebook icon to 63px the same as the nav bar how ever this then caused an issue with the mobile nav as the icon kept the height  of 63px. I then chose to ensure that when the desktop nav bar was in use(screens above 992px) all Nav bar links had a height of 63px. This solved the problem for me and by putting it as a media query it did not affect the mobile nav.
+
+  I found when the User hovered over the Facbook Icon in the Nav Bar the Highlighted area was more in height than when other links were hovered over.
+  At first I attempted to set a height for the facebook icon to 63px the same as the nav bar how ever this then caused an issue with the mobile nav as the icon kept the height  of 63px. I then chose to ensure that when the desktop nav bar was in use(screens above 992px) all Nav bar links had a height of 63px. This solved the problem for me and by putting it as a media query it did not affect the mobile nav.
+
+- **Footer Bar Position**
+
+  I found When there was Little content on a page the footer bar would rise to meet the bottom of the content leaving a white space  below. I remembered sorting this issue earlier in the project but believe I may have accidently removed the line of code at some stage in the project as to solve the issue the only line of code I needed to add to my css was:
+
+  ```
+  .content, .error {
+	flex-grow: 1;
+  }
+  ``` 
+  The code I already had that is also needed for this to work is:
+  ```
+  body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+  }
+  ```
+  In summary, the provided CSS code sets the styling for the ```<body>``` element of an HTML document and two elements with class names "content" and "error." It configures the ```<body>``` element to have a minimum height of 100% of the viewport height and to use a flexbox layout in a column direction. The "content" and "error" elements within the ```<body>``` will expand to fill available space equally.
+
