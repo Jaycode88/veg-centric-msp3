@@ -629,6 +629,11 @@ I then needed to create a tests directory in the root directory to hold the test
 
 I then proceeded to write 18 tests testing basic route navigation.
 
+To run the test I used the following terminal command:
+  ```
+  pytest
+  ```
+
 I did also install pytest-html in attempt to get a detailed report, How ever I could not get the report to display in an understandable manner, There for I have provided a manual break down of all tests conducted below:
 
  - **test_show_recipes_route**
@@ -706,6 +711,7 @@ I did also install pytest-html in attempt to get a detailed report, How ever I c
   Test passed: Response status code is 302 (Found/Redirect) after signing out
   Test passed: User is removed from the session
 
+![mockup](documentation/pythonunit.webp)
 
 In an ideal scenario in which I had a little more time to complete, I would have like to cover tests over a much wider range of scenarios and expected behaviours.
 

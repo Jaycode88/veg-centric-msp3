@@ -807,6 +807,7 @@ Now, your application should be configured to use MongoDB as its database.
 - [WAVE](https://wave.webaim.org/) Used to check accesability.
 - [Responsinator](http://www.responsinator.com/) Used to check responsiveness.
 - [UI.dev](https://ui.dev/amiresponsive) Used to create am I responsive image.
+- [Pytest](https://pypi.org/project/pytest/) Used for Python unit testing.
 
 
 ### Acknowledgements
