@@ -479,7 +479,6 @@ The tables below cover manual tests for User actions on each page, Please note t
 | User Status | User Action | Expected Result | Pass/Fail |
 |-------------|-------------|-----------------|-----------|
 | Not signed in | Attempt to access edit profile page by force | error message displayed | Pass |
-| Signed in(not profile owner) | Attempt to access edit profile page by force | Empty and un-functional edit profile page is displayed | Pass |
 | Signed in| clicks delete profile button | Re-directed to delete profile page for confirmation | Pass |
 |     | Edits form but incorrectly completes fields and clicks save changes | Error is displayed | Pass |
 |   | Edits forms correctly completes all fields and clicks save changes | re-directed to profile page with flash message | Pass |
