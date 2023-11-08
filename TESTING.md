@@ -11,7 +11,7 @@ I have used various tools to Test Funcionality, Validity and responsiveness. I h
 I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files. I checked validated by both URI and Copying and pasting the rendered page's source code into the checker.
 
 - **Results:**
- 
+
   - [Home](https://validator.w3.org/nu/?doc=https%3A%2F%2Fveg-centric-msp3-64721c5e710e.herokuapp.com%2F)
   
     ![mockup](documentation/homehtml.webp)
@@ -496,8 +496,8 @@ The tables below cover manual tests for User actions on each page, Please note t
 **About**
 | User Status | User Action | Expected Result | Pass/Fail |
 |-------------|-------------|-----------------|-----------|
-| All Users | Clicks Terms and conditions link | Terms modal opens |
-|    | Clicks Privacy policy link | Provacy policy modal opens |
+| All Users | Clicks Terms and conditions link | Terms modal opens | Pass |
+|    | Clicks Privacy policy link | Provacy policy modal opens | Pass |
 |   | Clicks close button in modal | Modal closes | Pass |
 | Not signed in | Clicks sign up buton | Re-directed to sign up page | Pass |
 |   | Clicks sign in button | Re-directed to sign in page | Pass |
