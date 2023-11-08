@@ -292,10 +292,10 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Add Ingredient and Add Step Buttons are visible and functional | Yes | Yes | Yes |
 | Add ingredients field must contain alphanumeric characters and is required, Remove ingredient field button is visible and functional | Yes | Yes | Yes |
 | Add method step field must contain alphanumeric characters and is required, Remove step field button is visible and functional | Yes | Yes | Yes |
-| Admin Description field must be between 15-5000 characters and is not required | Yes | Yes | Yes |
-| Product text field must contain alphanumeric characters and be between 15 - 500 characters and is not required | Yes | Yes | Yes |
-| Product image field accepts alphanumeric characthers for image urls, between 15 - 500 charachters long and is not required | Yes | Yes | Yes |
-| Product link field accepts alphanumeric characthers between 15 - 500 charachters long and is not required | Yes | Yes | Yes |
+| Admin Description field must be between 15-2000 characters and is required | Yes | Yes | Yes |
+| Product text field must contain alphanumeric characters and be between 15 - 500 characters and is required | Yes | Yes | Yes |
+| Product image field accepts alphanumeric characthers for image urls, between 15 - 500 charachters long and is required | Yes | Yes | Yes |
+| Product link field accepts alphanumeric characthers between 15 - 500 charachters long and is required | Yes | Yes | Yes |
 | Form Submits upon use of Update button | Yes | Yes | Yes |
 | Delete Recipe button is visible and functional | Yes | Yes | Yes |
 **Edit a Recipe for user**
@@ -324,10 +324,10 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Previously added ingredients and methods are shown | Yes | Yes | Yes |
 | Add ingredients field must contain alphanumeric characters and is required, Remove ingredient field button is visible and functional | Yes | Yes | Yes |
 | Add method step field must contain alphanumeric characters and is required, Remove step field button is visible and functional | Yes | Yes | Yes |
-| Admin Description field must be between 15-5000 characters and is not required | Yes | Yes | Yes |
-| Product text field must contain alphanumeric characters and be between 15 - 500 characters and is not required | Yes | Yes | Yes |
-| Product image field accepts alphanumeric characthers for image urls, between 15 - 500 charachters long and is not required | Yes | Yes | Yes |
-| Product link field accepts alphanumeric characthers between 15 - 500 charachters long and is not required | Yes | Yes | Yes |
+| Admin Description field must be between 15-2000 characters and is required | Yes | Yes | Yes |
+| Product text field must contain alphanumeric characters and be between 15 - 500 characters and is required | Yes | Yes | Yes |
+| Product image field accepts alphanumeric characthers for image urls, between 15 - 500 charachters long and is required | Yes | Yes | Yes |
+| Product link field accepts alphanumeric characthers between 15 - 500 charachters long and is required | Yes | Yes | Yes |
 | Form Submits upon use of Update button | Yes | Yes | Yes |
 | Delete Recipe button is visible and functional | Yes | Yes | Yes |
 **Manage Categories for Admin**

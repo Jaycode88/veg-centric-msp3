@@ -50,8 +50,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-pepper-hot prefix darkgreen-text"></i>
-                <textarea id="admin_description" name="admin_description" minlength="15" maxlength="5000"
-                    class="validate"></textarea>
+                <textarea id="admin_description" name="admin_description" minlength="15" maxlength="2000"
+                    class="validate" required></textarea>
                 <label for="admin_description">Admin's Description</label>
             </div>
         </div>
@@ -60,7 +60,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-pepper-hot prefix darkgreen-text"></i>
-                <input type="text" id="product_text" name="product_text" minlength="15" maxlength="500" class="validate">
+                <input type="text" id="product_text" name="product_text" minlength="15" maxlength="500" class="validate"
+                    required>
                 <label for="product_text">Product Text</label>
             </div>
         </div>
@@ -70,7 +71,7 @@
             <div class="input-field col s12">
                 <i class="fas fa-pepper-hot prefix darkgreen-text"></i>
                 <input type="text" id="product_image" name="product_image" minlength="15" maxlength="500"
-                    class="validate">
+                    class="validate" required>
                 <label for="product_image">Product Image URL</label>
             </div>
         </div>
@@ -79,8 +80,9 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-pepper-hot prefix darkgreen-text"></i>
-                <input type="text" id="product_link" name="product_link" minlength="15" maxlength="500" class="validate">
-                <label for="product_link">Product Link</label>
+                <input type="text" id="product_link" name="product_link" minlength="15" maxlength="500"
+                    class="validate"required>
+                <label for="product_link" >Product Link</label>
             </div>
         </div>
         {% endif %}
@@ -89,8 +91,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-clock prefix darkgreen-text"></i>
-                <input type="text" id="prep_time" name="prep_time" maxlength="20" class="validate"
-                    required>
+                <input type="text" id="prep_time" name="prep_time" maxlength="20" class="validate" required>
                 <label for="prep_time">Preparation Time</label>
             </div>
         </div>
@@ -99,8 +100,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-clock prefix darkgreen-text"></i>
-                <input type="text" id="cook_time" name="cook_time"  maxlength="20" class="validate"
-                    required>
+                <input type="text" id="cook_time" name="cook_time" maxlength="20" class="validate" required>
                 <label for="cook_time">Cooking Time</label>
             </div>
         </div>

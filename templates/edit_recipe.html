@@ -53,8 +53,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-pepper-hot prefix darkgreen-text"></i>
-                <textarea id="admin_description" name="admin_description" minlength="15" maxlength="5000"
-                    class="validate">{{ recipe.admin_description }}</textarea>
+                <textarea id="admin_description" name="admin_description" minlength="15" maxlength="2000"
+                    class="validate" required>{{ recipe.admin_description }}</textarea>
                 <label for="admin_description">Admin's Description</label>
             </div>
         </div>
@@ -64,7 +64,7 @@
             <div class="input-field col s12">
                 <i class="fas fa-pepper-hot prefix darkgreen-text"></i>
                 <input type="text" id="product_text" name="product_text" minlength="15" maxlength="500" class="validate"
-                    value="{{ recipe.product_text }}">
+                    value="{{ recipe.product_text }}" required>
                 <label for="product_text">Product Text</label>
             </div>
         </div>
@@ -74,7 +74,7 @@
             <div class="input-field col s12">
                 <i class="fas fa-pepper-hot prefix darkgreen-text"></i>
                 <input type="text" id="product_image" name="product_image" minlength="15" maxlength="500"
-                    class="validate" value="{{ recipe.product_image }}">
+                    class="validate" value="{{ recipe.product_image }}" required>
                 <label for="product_image">Product Image URL</label>
             </div>
         </div>
@@ -84,7 +84,7 @@
             <div class="input-field col s12">
                 <i class="fas fa-pepper-hot prefix darkgreen-text"></i>
                 <input type="text" id="product_link" name="product_link" minlength="15" maxlength="500" class="validate"
-                    value="{{ recipe.product_link }}">
+                    value="{{ recipe.product_link }}" required>
                 <label for="product_link">Product Link</label>
             </div>
         </div>
