@@ -325,7 +325,7 @@ def edit_profile():
             form.
 
         """
-    
+
     # Check if the user is signed in
     if "user" not in session:
         flash("Error, You need to sign in to edit your profile.")
@@ -334,7 +334,7 @@ def edit_profile():
     # Get the current user's information from the database
     username = session.get("user")
     user = database.db.users.find_one({"username": username})
-    
+
     if request.method == "POST":
         # Retrieve and update the user's information from the form
         user["firstname"] = request.form.get("firstname").capitalize()
